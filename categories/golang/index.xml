@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on zy.hua</title>
+    <link>https://rx-78-kum0.github.io/categories/golang/</link>
+    <description>Recent content in golang on zy.hua</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Jun 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://rx-78-kum0.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>time</title>
+      <link>https://rx-78-kum0.github.io/post/golang/time/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/post/golang/time/</guid>
+      <description>package util-time import ( &amp;#34;strconv&amp;#34; &amp;#34;time&amp;#34; ) // 获取当前的时间 - 字符串 func GetCurrentDate() string { return time.Now().Format(&amp;#34;2006/01/02 15:04:05&amp;#34;) } // 获取当前的时间 - Unix时间戳 func GetCurrentUnix() int64 { return time.Now().Unix() } // 获取当前的时间 - 毫秒级时间戳 func GetCurrentMilliUnix() int64 { return time.Now().UnixNano() / 1000000 } // 获取当前的时间 - 纳秒级时间戳 func GetCurrentNanoUnix() int64 { return time.Now().UnixNano() } func GetCurrentTime() string { var cstSh, _ = time.LoadLocation(&amp;#34;Asia/Shanghai&amp;#34;) t := time.Now().In(cstSh).Format(&amp;#34;2006/01/02/ 15:04:05&amp;#34;) return t } func GetCurrentHour() int { var cstSh, _ = time.</description>
+    </item>
+    
+  </channel>
+</rss>
