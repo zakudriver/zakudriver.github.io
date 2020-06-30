@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>rx-78-kum0</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000084" />
+    <link rel="icon" href="https://rx-78-kum0.github.io//favicon.ico">
+    <link rel="canonical" href="https://rx-78-kum0.github.io/">
+    
+    
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https://rx-78-kum0.github.io/">rx-78-kum0</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    
+                    
+                        
+                            <li>
+                                <a href="/post/">
+                                    
+                                    <span>Posts</span>
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a href="/about/">
+                                    
+                                    <span>About</span>
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav><div id="content" class="container">
+
+<div class="row-fluid navmargin">
+    <div class="page-header">
+        <h1>bochsrc - Tue, May 26, 2020</h1>
+    </div>
+    <p class="lead">nasm编译配置</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e">###############################################################</span>
+<span style="color:#75715e"># Configuration file for Bochs</span>
+<span style="color:#75715e">###############################################################</span>
+
+<span style="color:#75715e"># how much memory the emulated machine will have</span>
+<span style="color:#66d9ef">megs</span>: <span style="color:#ae81ff">32</span>
+
+<span style="color:#75715e"># filename of ROM images</span>
+<span style="color:#66d9ef">romimage</span>: file=/usr/local/share/bochs/BIOS-bochs-latest
+<span style="color:#66d9ef">vgaromimage</span>: file=/usr/local/share/bochs/VGABIOS-lgpl-latest
+
+<span style="color:#75715e"># what disk images will be used</span>
+<span style="color:#66d9ef">floppya</span>: 1_44=a.img, status=inserted
+
+<span style="color:#75715e"># choose the boot disk.</span>
+<span style="color:#66d9ef">boot</span>: floppy
+
+<span style="color:#75715e"># where do we send log messages?</span>
+<span style="color:#75715e"># log: bochsout.txt</span>
+
+<span style="color:#75715e"># disable the mouse</span>
+<span style="color:#66d9ef">mouse</span>: enabled=<span style="color:#ae81ff">0</span>
+
+<span style="color:#75715e"># enable key mapping, using US layout as default.</span>
+<span style="color:#75715e"># keyboard_mapping: enabled=1, map=/usr/local/share/bochs/keymaps/x11-pc-us.map</span>
+<span style="color:#66d9ef">keyboard</span>:  keymap=/usr/local/share/bochs/keymaps/x11-pc-us.map
+</code></pre></div>
+    <h4><a href="https://rx-78-kum0.github.io/">Back to Home</a></h4>
+</div>
+
+
+        </div><footer class="container">
+    <hr class="soften">
+    <p>
+
+&copy; 
+
+    JM Fergeau
+
+<span id="thisyear">2020</span>
+
+</p>
+    <p class="text-center">
+        
+        
+        
+        <a href="https://github.com/rx-78-kum0">GitHub</a> 
+        
+    </p>
+</footer>
+
+</body><link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/bootstrap-responsive.css">
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap-386.js"></script>
+<script src="/js/bootstrap-transition.js"></script>
+<script src="/js/bootstrap-alert.js"></script>
+<script src="/js/bootstrap-modal.js"></script>
+<script src="/js/bootstrap-dropdown.js"></script>
+<script src="/js/bootstrap-scrollspy.js"></script>
+<script src="/js/bootstrap-tab.js"></script>
+<script src="/js/bootstrap-tooltip.js"></script>
+<script src="/js/bootstrap-popover.js"></script>
+<script src="/js/bootstrap-button.js"></script>
+<script src="/js/bootstrap-collapse.js"></script>
+<script src="/js/bootstrap-carousel.js"></script>
+<script src="/js/bootstrap-typeahead.js"></script>
+<script src="/js/bootstrap-affix.js"></script>
+<script>
+    _386 = { 
+        fastLoad: true ,
+        onePass: true , 
+        speedFactor: 5 
+    };
+
+    
+    function ThisYear() {
+        document.getElementById('thisyear').innerHTML = new Date().getFullYear();
+    };
+</script></html>

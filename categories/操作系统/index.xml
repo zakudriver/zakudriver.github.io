@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>操作系统 on rx-78-kum0</title>
+    <link>https://rx-78-kum0.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+    <description>Recent content in 操作系统 on rx-78-kum0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Jun 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://rx-78-kum0.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GDT&amp;LDT</title>
+      <link>https://rx-78-kum0.github.io/post/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/gdtldt/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/post/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/gdtldt/</guid>
+      <description>GDT(Global Descriptor Table)全局描述符表Ⅰ GDT是一个以 段描述符 为表项的数组类型的数据结构，在内存中线性存放。每个段描述符占 8 个字节。
+GDTR寄存器存放GDT表的基地址和表长界限(高32位存放GDT基址，低16为存放GDT限长)。指令LGDT和SGDT分别用于加载和保存GDTR寄存器的内容。在机器刚加电或处理器复位后，基地址被默认地设置为0，而长度值被设置成0xFFFF。在保护模式初始化过程中必须给GDTR加载一个新值。
+段选择子(Segement Selector) 由GDTR访问全局描述符表是通过“段选择子”(实模式下的段寄存器)来完成的。段选择子是一个16位的寄存器(同实模式下的段寄存器相同)。
+段选择子共16bit，由三部分组成: 描述符索引(index)、TI、请求特权级(RPL)  描述符索引(index): 在描述符表中定位一个段描述符。 TI: 描述符表指示器， TI＝0 时，表示描述符在 GDT 中； TI＝1 时，描述符在 LDT 中。 RPL: 请求特权级，表示给出当前选择子访问的内存段的特权级别。每一个段都有一个特定的级别。每当一个程序试图访问某一个段时，就将该程序所拥有的特权级与要访问的特权级进行比较，以决定能否访问该段。系统约定，CPU只能访问同一特权级或级别较低特权级的段。  因为每个描述符占 8 字节，因此描述符在表内的偏移地址是索引号乘以 8 处理器在执行任何改变段选择器的指令时(比如 pop、 mov、jmp far、 call far、 iret、 retf)，就将指令中提供的索引号乘以 8 作为偏移地址，同 GDTR 中提供的线性基地址相加，以访问 GDT。在表内找到的描述符，并加载到不可见的描述符高速缓存部分。此后每当有访问内存的指令时，就不再访问 GDT 中的描述符，直接用当前段寄存器描述符高速缓存器提供线性基地址。
+段描述符(Segment Descriptor) 每个段描述符占 8 个字节。由三部分组成: 线性基地址、段界限和段的访问属性。
+    G: 粒度位，用于解释段界限的含义。当 G 位是&amp;quot;0&amp;quot;时，段界限以字节为单位。此时，段的扩展范围是从 1 字节到 1 兆字节（ 1B～1MB），因为描述符中的界限值是 20 位的。相反，如果该位是&amp;quot;1&amp;rdquo;，那么，段界限是以 4KB 为单位的。这样，段的扩展范围是从 4KB到 4GB。</description>
+    </item>
+    
+    <item>
+      <title>多线程</title>
+      <link>https://rx-78-kum0.github.io/post/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/post/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
+      <description>线程: 执行指令序列 保留了并发的优点, 避免了进程切换的代价. 实质: 映射表不变, PC指针变.
+价值, 用处 浏览器
+ 一个线程用来从服务器接收数据 一个线程用来显示文本 一个线程用来处理图片(解压缩) 一个线程用来显示图片  接收数据线程等待时可以切换到另一个线程(如显示文本), 更加高效利用CPU, 程序交互更加人性化.
+线程切换 多线程执行互不干扰, 所以一个线程执行序列对应一个(或套)栈. 线程切换就是切换TCB.
+TCB (Thread Control Block) 保存线程的信息(执行序列的栈). 与PCB相似, 只是比PCB储存的信息少而已.
+用户级线程 用户态切来切去. CPL为3. TCB在用户程序中.
+void ThreadCeate(A) { TCB *tcb = malloc(); // 申请内存创建TCB  *stack = malloc(); // 创建栈  *stack = A; // 保存栈  tcb.esp = stack } // 线程切换 void Yield() { TCB2.esp = esp; esp = TCB1.</description>
+    </item>
+    
+    <item>
+      <title>多进程</title>
+      <link>https://rx-78-kum0.github.io/post/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/post/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</guid>
+      <description>进程: 进行中的程序 进行中的程序与磁盘中的静态程序不一样. 进程是描述一个运行中的程序. 进程 = 资源(映射表) + 多个执行指令序列(线程) 进程只能在内核. 要分配资源, 访问文件.
+ 有开始, 结束 走走停停(切换) 需要记录  为了充分使用CPU 一次IO操作对应数百万(很多很多)次CPU计算操作. 为了充分合理使用CPU, 需要多个进程交替执行. &amp;ndash; [并发]
+多进程是操作系统的核心 操作系统的核心就是记录, 管理, 合理推进多个进程. 使用计算机就是启用多个进程.
+多进程的组织 PCB + 状态 + 队列
+PCB(Proess Control Block) 记录进程信息的数据结构. 便于切回时继续执行.
+状态  就绪态 阻塞态 运行态  就绪态 &amp;mdash;&amp;mdash;&amp;ndash;&amp;raquo; 运行态 \ / \ / 阻塞态
+队列  就绪队列 PCB1 &amp;ndash; PCB3 &amp;ndash; PCB5 磁盘等待队列 PCB2 &amp;ndash; PCB4 &amp;ndash; PCB6  多进程的交替 队列 + 调度 + 切换</description>
+    </item>
+    
+  </channel>
+</rss>

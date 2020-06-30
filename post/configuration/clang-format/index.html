@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>rx-78-kum0</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000084" />
+    <link rel="icon" href="https://rx-78-kum0.github.io//favicon.ico">
+    <link rel="canonical" href="https://rx-78-kum0.github.io/">
+    
+    
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https://rx-78-kum0.github.io/">rx-78-kum0</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    
+                    
+                        
+                            <li>
+                                <a href="/post/">
+                                    
+                                    <span>Posts</span>
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a href="/about/">
+                                    
+                                    <span>About</span>
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav><div id="content" class="container">
+
+<div class="row-fluid navmargin">
+    <div class="page-header">
+        <h1>clang-format - Tue, Feb 25, 2020</h1>
+    </div>
+    <p class="lead">clang-format格式化工具配置</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># .clang-format</span>
+
+<span style="color:#66d9ef">BasedOnStyle</span>: LLVM
+
+Language:	Cpp
+
+<span style="color:#66d9ef">IndentWidth </span>: <span style="color:#ae81ff">2</span>
+
+<span style="color:#75715e"># 开括号(开圆括号、开尖括号、开方括号)后的对齐: Align, DontAlign, AlwaysBreak(总是在开括号后换行)</span>
+AlignAfterOpenBracket:	Align
+
+<span style="color:#75715e"># 大括号换行，只有当BreakBeforeBraces设置为Custom时才有效</span>
+<span style="color:#66d9ef">BraceWrapping</span>:
+  <span style="color:#75715e"># class定义后面</span>
+  AfterClass:	<span style="color:#66d9ef">false</span>
+  <span style="color:#75715e"># 控制语句后面</span>
+  AfterControlStatement:	<span style="color:#66d9ef">false</span>
+  <span style="color:#75715e"># enum定义后面</span>
+  AfterEnum:	<span style="color:#66d9ef">false</span>
+  <span style="color:#75715e"># 函数定义后面</span>
+  AfterFunction:	<span style="color:#66d9ef">true</span>
+  <span style="color:#75715e"># 命名空间定义后面</span>
+  AfterNamespace:	<span style="color:#66d9ef">false</span>
+  <span style="color:#75715e"># ObjC定义后面</span>
+  AfterObjCDeclaration:	<span style="color:#66d9ef">false</span>
+  <span style="color:#75715e"># struct定义后面</span>
+  AfterStruct:	<span style="color:#66d9ef">false</span>
+  <span style="color:#75715e"># union定义后面</span>
+  AfterUnion:	<span style="color:#66d9ef">false</span>
+  <span style="color:#75715e"># catch之前</span>
+  BeforeCatch:	<span style="color:#66d9ef">true</span>
+  <span style="color:#75715e"># else之前</span>
+  BeforeElse:	<span style="color:#66d9ef">true</span>
+  <span style="color:#75715e"># 缩进大括号</span>
+  IndentBraces:	<span style="color:#66d9ef">false</span>
+
+BreakBeforeBraces:	Custom
+</code></pre></div>
+    <h4><a href="https://rx-78-kum0.github.io/">Back to Home</a></h4>
+</div>
+
+
+        </div><footer class="container">
+    <hr class="soften">
+    <p>
+
+&copy; 
+
+    JM Fergeau
+
+<span id="thisyear">2020</span>
+
+</p>
+    <p class="text-center">
+        
+        
+        
+        <a href="https://github.com/rx-78-kum0">GitHub</a> 
+        
+    </p>
+</footer>
+
+</body><link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/bootstrap-responsive.css">
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap-386.js"></script>
+<script src="/js/bootstrap-transition.js"></script>
+<script src="/js/bootstrap-alert.js"></script>
+<script src="/js/bootstrap-modal.js"></script>
+<script src="/js/bootstrap-dropdown.js"></script>
+<script src="/js/bootstrap-scrollspy.js"></script>
+<script src="/js/bootstrap-tab.js"></script>
+<script src="/js/bootstrap-tooltip.js"></script>
+<script src="/js/bootstrap-popover.js"></script>
+<script src="/js/bootstrap-button.js"></script>
+<script src="/js/bootstrap-collapse.js"></script>
+<script src="/js/bootstrap-carousel.js"></script>
+<script src="/js/bootstrap-typeahead.js"></script>
+<script src="/js/bootstrap-affix.js"></script>
+<script>
+    _386 = { 
+        fastLoad: true ,
+        onePass: true , 
+        speedFactor: 5 
+    };
+
+    
+    function ThisYear() {
+        document.getElementById('thisyear').innerHTML = new Date().getFullYear();
+    };
+</script></html>

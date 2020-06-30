@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>oh-my-zsh on rx-78-kum0</title>
+    <link>https://rx-78-kum0.github.io/tags/oh-my-zsh/</link>
+    <description>Recent content in oh-my-zsh on rx-78-kum0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://rx-78-kum0.github.io/tags/oh-my-zsh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>nyan</title>
+      <link>https://rx-78-kum0.github.io/post/shell/nyan/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/post/shell/nyan/</guid>
+      <description>#!/usr/bin/env bash  # Print nyan cat # https://github.com/steckel/Git-Nyan-Graph/blob/master/nyan.sh # If you want big animated version: `telnet miku.acm.uiuc.edu` e=&amp;#39;\033&amp;#39; RESET=&amp;#34;$e[0m&amp;#34; BOLD=&amp;#34;$e[1m&amp;#34; CYAN=&amp;#34;$e[0;96m&amp;#34; RED=&amp;#34;$e[0;91m&amp;#34; YELLOW=&amp;#34;$e[0;93m&amp;#34; GREEN=&amp;#34;$e[0;92m&amp;#34; echo if [ $[$RANDOM%2] -eq &amp;#34;0&amp;#34; ]; then echo -en $RED&amp;#39;`·.,¸,.·*·.&amp;#39; echo -e $RESET$BOLD&amp;#39;╭━━━━╮&amp;#39;$RESET echo -en $YELLOW&amp;#39;`·.,¸,.·*·.&amp;#39; echo -e $RESET$BOLD&amp;#39;|::: /\_/\\&amp;#39;$RESET echo -en $GREEN&amp;#39;`·.,¸,.·*·.&amp;#39; echo -e $RESET$BOLD&amp;#39;|:::( ◕ᴥ◕)&amp;#39;$RESET echo -en $CYAN&amp;#39;`·.,¸,.·*·.&amp;#39; echo -e $RESET$BOLD&amp;#39;u-u━━-u--u&amp;#39;$RESET else echo -en $RED&amp;#39;-_-_-_-_-_-_-_&amp;#39; echo -e $RESET$BOLD&amp;#39;,------,&amp;#39;$RESET echo -en $YELLOW&amp;#39;_-_-_-_-_-_-_-&amp;#39; echo -e $RESET$BOLD&amp;#39;| /\_/\\&amp;#39;$RESET echo -en $GREEN&amp;#39;-_-_-_-_-_-_-&amp;#39; echo -e $RESET$BOLD&amp;#39;~|__( ^ .</description>
+    </item>
+    
+  </channel>
+</rss>

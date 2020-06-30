@@ -1,31 +1,112 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on zy.hua</title>
+    <title>Categories on rx-78-kum0</title>
     <link>https://rx-78-kum0.github.io/categories/</link>
-    <description>Recent content in Categories on zy.hua</description>
+    <description>Recent content in Categories on rx-78-kum0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Jun 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2020 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://rx-78-kum0.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>golang</title>
+      <link>https://rx-78-kum0.github.io/categories/golang/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>操作系统</title>
+      <link>https://rx-78-kum0.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>汇编</title>
+      <link>https://rx-78-kum0.github.io/categories/%E6%B1%87%E7%BC%96/</link>
+      <pubDate>Tue, 09 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/categories/%E6%B1%87%E7%BC%96/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>emacs</title>
       <link>https://rx-78-kum0.github.io/categories/emacs/</link>
-      <pubDate>Mon, 29 Jun 2020 00:00:00 +0800</pubDate>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/categories/emacs/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>golang</title>
-      <link>https://rx-78-kum0.github.io/categories/golang/</link>
-      <pubDate>Mon, 29 Jun 2020 00:00:00 +0800</pubDate>
+      <title>configuration</title>
+      <link>https://rx-78-kum0.github.io/categories/configuration/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://rx-78-kum0.github.io/categories/golang/</guid>
+      <guid>https://rx-78-kum0.github.io/categories/configuration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>https://rx-78-kum0.github.io/categories/mysql/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/categories/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>https://rx-78-kum0.github.io/categories/css/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/categories/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://rx-78-kum0.github.io/categories/web/</link>
+      <pubDate>Sun, 29 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/categories/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://rx-78-kum0.github.io/categories/shell/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/categories/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>typescript</title>
+      <link>https://rx-78-kum0.github.io/categories/typescript/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/categories/typescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>angular</title>
+      <link>https://rx-78-kum0.github.io/categories/angular/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/categories/angular/</guid>
       <description></description>
     </item>
     

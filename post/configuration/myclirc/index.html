@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>rx-78-kum0</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000084" />
+    <link rel="icon" href="https://rx-78-kum0.github.io//favicon.ico">
+    <link rel="canonical" href="https://rx-78-kum0.github.io/">
+    
+    
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https://rx-78-kum0.github.io/">rx-78-kum0</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    
+                    
+                        
+                            <li>
+                                <a href="/post/">
+                                    
+                                    <span>Posts</span>
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a href="/about/">
+                                    
+                                    <span>About</span>
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav><div id="content" class="container">
+
+<div class="row-fluid navmargin">
+    <div class="page-header">
+        <h1>myclirc - Tue, Dec 10, 2019</h1>
+    </div>
+    <p class="lead">myclirc配置</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># vi: ft=dosini</span>
+[main]
+
+<span style="color:#75715e"># Enables context sensitive auto-completion. If this is disabled the all</span>
+<span style="color:#75715e"># possible completions will be listed.</span>
+smart_completion = True
+
+<span style="color:#75715e"># Multi-line mode allows breaking up the sql statements into multiple lines. If</span>
+<span style="color:#75715e"># this is set to True, then the end of the statements must have a semi-colon.</span>
+<span style="color:#75715e"># If this is set to False then sql statements can&#39;t be split into multiple</span>
+<span style="color:#75715e"># lines. End of line (return) is considered as the end of the statement.</span>
+multi_line = True
+
+<span style="color:#75715e"># Destructive warning mode will alert you before executing a sql statement</span>
+<span style="color:#75715e"># that may cause harm to the database such as &#34;drop table&#34;, &#34;drop database&#34;</span>
+<span style="color:#75715e"># or &#34;shutdown&#34;.</span>
+destructive_warning = True
+
+<span style="color:#75715e"># log_file location.</span>
+log_file = ~/.mycli.log
+
+<span style="color:#75715e"># Default log level. Possible values: &#34;CRITICAL&#34;, &#34;ERROR&#34;, &#34;WARNING&#34;, &#34;INFO&#34;</span>
+<span style="color:#75715e"># and &#34;DEBUG&#34;. &#34;NONE&#34; disables logging.</span>
+log_level = INFO
+
+<span style="color:#75715e"># Log every query and its results to a file. Enable this by uncommenting the</span>
+<span style="color:#75715e"># line below.</span>
+<span style="color:#75715e"># audit_log = ~/.mycli-audit.log</span>
+
+<span style="color:#75715e"># Timing of sql statments and table rendering.</span>
+timing = True
+
+<span style="color:#75715e"># Table format. Possible values: psql, plain, simple, grid, fancy_grid, pipe,</span>
+<span style="color:#75715e"># orgtbl, rst, mediawiki, html, latex, latex_booktabs, tsv.</span>
+<span style="color:#75715e"># Recommended: psql, fancy_grid and grid.</span>
+table_format = psql
+
+<span style="color:#75715e"># Syntax coloring style. Possible values (many support the &#34;-dark&#34; suffix):</span>
+<span style="color:#75715e"># manni, igor, xcode, vim, autumn, vs, rrt, native, perldoc, borland, tango, emacs,</span>
+<span style="color:#75715e"># friendly, monokai, paraiso, colorful, murphy, bw, pastie, paraiso, trac, default,</span>
+<span style="color:#75715e"># fruity.</span>
+<span style="color:#75715e"># Screenshots at http://mycli.net/syntax</span>
+syntax_style = default
+
+<span style="color:#75715e"># Keybindings: Possible values: emacs, vi.</span>
+<span style="color:#75715e"># Emacs mode: Ctrl-A is home, Ctrl-E is end. All emacs keybindings are available in the REPL.</span>
+<span style="color:#75715e"># When Vi mode is enabled you can use modal editing features offered by Vi in the REPL.</span>
+key_bindings = emacs
+
+<span style="color:#75715e"># Enabling this option will show the suggestions in a wider menu. Thus more items are suggested.</span>
+wider_completion_menu = False
+
+<span style="color:#75715e"># MySQL prompt</span>
+<span style="color:#75715e"># \t - Product type (Percona, MySQL, Mariadb)</span>
+<span style="color:#75715e"># \u - Username</span>
+<span style="color:#75715e"># \h - Hostname of the server</span>
+<span style="color:#75715e"># \d - Database name</span>
+<span style="color:#75715e"># \n - Newline</span>
+prompt = <span style="color:#e6db74">&#39;\t \u@\h:\d&gt; &#39;</span>
+prompt_continuation = <span style="color:#e6db74">&#39;-&gt; &#39;</span>
+
+<span style="color:#75715e"># Skip intro info on startup and outro info on exit</span>
+less_chatty = False
+
+<span style="color:#75715e"># Use alias from --login-path instead of host name in prompt</span>
+login_path_as_host = False
+
+<span style="color:#75715e"># Custom colors for the completion menu, toolbar, etc.</span>
+[colors]
+<span style="color:#75715e"># Completion menus.</span>
+Token.Menu.Completions.Completion.Current = <span style="color:#e6db74">&#39;bg:#00aaaa #000000&#39;</span>
+Token.Menu.Completions.Completion = <span style="color:#e6db74">&#39;bg:#008888 #ffffff&#39;</span>
+Token.Menu.Completions.MultiColumnMeta = <span style="color:#e6db74">&#39;bg:#aaffff #000000&#39;</span>
+Token.Menu.Completions.ProgressButton = <span style="color:#e6db74">&#39;bg:#003333&#39;</span>
+Token.Menu.Completions.ProgressBar = <span style="color:#e6db74">&#39;bg:#00aaaa&#39;</span>
+
+<span style="color:#75715e"># Selected text.</span>
+Token.SelectedText = <span style="color:#e6db74">&#39;#ffffff bg:#6666aa&#39;</span>
+
+<span style="color:#75715e"># Search matches. (reverse-i-search)</span>
+Token.SearchMatch = <span style="color:#e6db74">&#39;#ffffff bg:#4444aa&#39;</span>
+Token.SearchMatch.Current = <span style="color:#e6db74">&#39;#ffffff bg:#44aa44&#39;</span>
+
+<span style="color:#75715e"># The bottom toolbar.</span>
+Token.Toolbar = <span style="color:#e6db74">&#39;bg:#222222 #aaaaaa&#39;</span>
+Token.Toolbar.Off = <span style="color:#e6db74">&#39;bg:#222222 #888888&#39;</span>
+Token.Toolbar.On = <span style="color:#e6db74">&#39;bg:#222222 #ffffff&#39;</span>
+
+<span style="color:#75715e"># Search/arg/system toolbars.</span>
+Token.Toolbar.Search = <span style="color:#e6db74">&#39;noinherit bold&#39;</span>
+Token.Toolbar.Search.Text = <span style="color:#e6db74">&#39;nobold&#39;</span>
+Token.Toolbar.System = <span style="color:#e6db74">&#39;noinherit bold&#39;</span>
+Token.Toolbar.Arg = <span style="color:#e6db74">&#39;noinherit bold&#39;</span>
+Token.Toolbar.Arg.Text = <span style="color:#e6db74">&#39;nobold&#39;</span>
+
+<span style="color:#75715e"># Favorite queries.</span>
+[favorite_queries]
+</code></pre></div>
+    <h4><a href="https://rx-78-kum0.github.io/">Back to Home</a></h4>
+</div>
+
+
+        </div><footer class="container">
+    <hr class="soften">
+    <p>
+
+&copy; 
+
+    JM Fergeau
+
+<span id="thisyear">2020</span>
+
+</p>
+    <p class="text-center">
+        
+        
+        
+        <a href="https://github.com/rx-78-kum0">GitHub</a> 
+        
+    </p>
+</footer>
+
+</body><link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/bootstrap-responsive.css">
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap-386.js"></script>
+<script src="/js/bootstrap-transition.js"></script>
+<script src="/js/bootstrap-alert.js"></script>
+<script src="/js/bootstrap-modal.js"></script>
+<script src="/js/bootstrap-dropdown.js"></script>
+<script src="/js/bootstrap-scrollspy.js"></script>
+<script src="/js/bootstrap-tab.js"></script>
+<script src="/js/bootstrap-tooltip.js"></script>
+<script src="/js/bootstrap-popover.js"></script>
+<script src="/js/bootstrap-button.js"></script>
+<script src="/js/bootstrap-collapse.js"></script>
+<script src="/js/bootstrap-carousel.js"></script>
+<script src="/js/bootstrap-typeahead.js"></script>
+<script src="/js/bootstrap-affix.js"></script>
+<script>
+    _386 = { 
+        fastLoad: true ,
+        onePass: true , 
+        speedFactor: 5 
+    };
+
+    
+    function ThisYear() {
+        document.getElementById('thisyear').innerHTML = new Date().getFullYear();
+    };
+</script></html>

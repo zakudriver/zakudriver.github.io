@@ -1,31 +1,76 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on zy.hua</title>
+    <title>Tags on rx-78-kum0</title>
     <link>https://rx-78-kum0.github.io/tags/</link>
-    <description>Recent content in Tags on zy.hua</description>
+    <description>Recent content in Tags on rx-78-kum0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Jun 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2020 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://rx-78-kum0.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>c&#43;&#43;</title>
-      <link>https://rx-78-kum0.github.io/tags/c&#43;&#43;/</link>
-      <pubDate>Mon, 29 Jun 2020 00:00:00 +0800</pubDate>
+      <title>code</title>
+      <link>https://rx-78-kum0.github.io/tags/code/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://rx-78-kum0.github.io/tags/c&#43;&#43;/</guid>
+      <guid>https://rx-78-kum0.github.io/tags/code/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>code</title>
-      <link>https://rx-78-kum0.github.io/tags/code/</link>
-      <pubDate>Mon, 29 Jun 2020 00:00:00 +0800</pubDate>
+      <title>lsp</title>
+      <link>https://rx-78-kum0.github.io/tags/lsp/</link>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://rx-78-kum0.github.io/tags/code/</guid>
+      <guid>https://rx-78-kum0.github.io/tags/lsp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>https://rx-78-kum0.github.io/tags/mac/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/tags/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nasm</title>
+      <link>https://rx-78-kum0.github.io/tags/nasm/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/tags/nasm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>db</title>
+      <link>https://rx-78-kum0.github.io/tags/db/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/tags/db/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://rx-78-kum0.github.io/tags/docker/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oh-my-zsh</title>
+      <link>https://rx-78-kum0.github.io/tags/oh-my-zsh/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/tags/oh-my-zsh/</guid>
       <description></description>
     </item>
     

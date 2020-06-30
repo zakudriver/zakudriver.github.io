@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>configuration on rx-78-kum0</title>
+    <link>https://rx-78-kum0.github.io/categories/configuration/</link>
+    <description>Recent content in configuration on rx-78-kum0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 May 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://rx-78-kum0.github.io/categories/configuration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>bochsrc</title>
+      <link>https://rx-78-kum0.github.io/post/configuration/bochsrc/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/post/configuration/bochsrc/</guid>
+      <description>############################################################### # Configuration file for Bochs ############################################################### # how much memory the emulated machine will have megs: 32 # filename of ROM images romimage: file=/usr/local/share/bochs/BIOS-bochs-latest vgaromimage: file=/usr/local/share/bochs/VGABIOS-lgpl-latest # what disk images will be used floppya: 1_44=a.img, status=inserted # choose the boot disk. boot: floppy # where do we send log messages? # log: bochsout.txt # disable the mouse mouse: enabled=0 # enable key mapping, using US layout as default. # keyboard_mapping: enabled=1, map=/usr/local/share/bochs/keymaps/x11-pc-us.</description>
+    </item>
+    
+    <item>
+      <title>clang-format</title>
+      <link>https://rx-78-kum0.github.io/post/configuration/clang-format/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/post/configuration/clang-format/</guid>
+      <description># .clang-format BasedOnStyle: LLVM Language:	Cpp IndentWidth : 2 # 开括号(开圆括号、开尖括号、开方括号)后的对齐: Align, DontAlign, AlwaysBreak(总是在开括号后换行) AlignAfterOpenBracket:	Align # 大括号换行，只有当BreakBeforeBraces设置为Custom时才有效 BraceWrapping: # class定义后面 AfterClass:	false # 控制语句后面 AfterControlStatement:	false # enum定义后面 AfterEnum:	false # 函数定义后面 AfterFunction:	true # 命名空间定义后面 AfterNamespace:	false # ObjC定义后面 AfterObjCDeclaration:	false # struct定义后面 AfterStruct:	false # union定义后面 AfterUnion:	false # catch之前 BeforeCatch:	true # else之前 BeforeElse:	true # 缩进大括号 IndentBraces:	false BreakBeforeBraces:	Custom </description>
+    </item>
+    
+    <item>
+      <title>myclirc</title>
+      <link>https://rx-78-kum0.github.io/post/configuration/myclirc/</link>
+      <pubDate>Tue, 10 Dec 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/post/configuration/myclirc/</guid>
+      <description># vi: ft=dosini [main] # Enables context sensitive auto-completion. If this is disabled the all # possible completions will be listed. smart_completion = True # Multi-line mode allows breaking up the sql statements into multiple lines. If # this is set to True, then the end of the statements must have a semi-colon. # If this is set to False then sql statements can&amp;#39;t be split into multiple # lines. End of line (return) is considered as the end of the statement.</description>
+    </item>
+    
+    <item>
+      <title>vimrc</title>
+      <link>https://rx-78-kum0.github.io/post/configuration/vimrc/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/post/configuration/vimrc/</guid>
+      <description>&amp;#34; .vimrc &amp;#34; Configuration file for vim set modelines=0 &amp;#34; Don&amp;#39;t write backup file if vim is being called by &amp;#34;crontab -e&amp;#34; &amp;#34; au BufWrite /private/tmp/crontab.* set nowritebackup nobackup &amp;#34; Don&amp;#39;t write backup file if vim is being called by &amp;#34;chpass&amp;#34; &amp;#34; au BufWrite /private/etc/pw.* set nowritebackup nobackup set nobackup set nowritebackup let skip_defaults_vim=1 &amp;#34; &amp;lt;leader&amp;gt; let g:mapleader=&amp;#34;,&amp;#34; &amp;#34; 去掉有关vi一致性模式，避免以前版本的bug和局限 set nocompatible &amp;#34; 设置退格键可用 set backspace=2 &amp;#34; utf-8 set encoding=UTF-8 &amp;#34; 主题 &amp;#34; set background=dark &amp;#34; colorscheme dracula &amp;#34; 函数方法名加粗 let g:enable_bold_font = 1 &amp;#34; 注释斜体 let g:enable_italic_font = 1 &amp;#34; 透明背景 let g:hybrid_transparent_background = 1 &amp;#34; airline_theme let g:airline_theme = &amp;#34;hybrid&amp;#34; &amp;#34; 行号 set nu!</description>
+    </item>
+    
+    <item>
+      <title>vscode</title>
+      <link>https://rx-78-kum0.github.io/post/configuration/vscode/</link>
+      <pubDate>Sat, 02 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/post/configuration/vscode/</guid>
+      <description>{ // editor &amp;#34;editor.fontSize&amp;#34;: 14, &amp;#34;editor.snippetSuggestions&amp;#34;: &amp;#34;top&amp;#34;, &amp;#34;editor.formatOnSave&amp;#34;: true, &amp;#34;explorer.confirmDragAndDrop&amp;#34;: true, &amp;#34;explorer.confirmDelete&amp;#34;: false, &amp;#34;editor.detectIndentation&amp;#34;: false, &amp;#34;files.autoSave&amp;#34;: &amp;#34;off&amp;#34;, // &amp;#34;editor.fontFamily&amp;#34;: &amp;#34;&amp;#39;FuraCode&amp;#39;, Menlo, Monaco, &amp;#39;Courier New&amp;#39;, monospace&amp;#34;, &amp;#34;editor.fontLigatures&amp;#34;: true, &amp;#34;workbench.iconTheme&amp;#34;: &amp;#34;material-icon-theme&amp;#34;, &amp;#34;workbench.colorTheme&amp;#34;: &amp;#34;Nebula&amp;#34;, // prettier &amp;#34;prettier.printWidth&amp;#34;: 120, &amp;#34;editor.tabSize&amp;#34;: 2, &amp;#34;prettier.singleQuote&amp;#34;: true, &amp;#34;prettier.semi&amp;#34;: true, // typescript &amp;#34;typescript.updateImportsOnFileMove.enabled&amp;#34;: &amp;#34;always&amp;#34;, // emmet &amp;#34;emmet.includeLanguages&amp;#34;: { &amp;#34;javascript&amp;#34;: &amp;#34;javascriptreact&amp;#34;, &amp;#34;typescript&amp;#34;: &amp;#34;typescriptreact&amp;#34; }, &amp;#34;emmet.triggerExpansionOnTab&amp;#34;: true, // 装饰器 &amp;#34;javascript.implicitProjectConfig.experimentalDecorators&amp;#34;: true, // stylus &amp;#34;stylusSupremacy.insertColons&amp;#34;: false, // 是否插入冒号 &amp;#34;stylusSupremacy.insertSemicolons&amp;#34;: false, // 是否插入分好 &amp;#34;stylusSupremacy.</description>
+    </item>
+    
+  </channel>
+</rss>

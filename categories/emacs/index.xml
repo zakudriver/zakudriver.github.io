@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>emacs on zy.hua</title>
+    <title>emacs on rx-78-kum0</title>
     <link>https://rx-78-kum0.github.io/categories/emacs/</link>
-    <description>Recent content in emacs on zy.hua</description>
+    <description>Recent content in emacs on rx-78-kum0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Jun 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2020 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://rx-78-kum0.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>irony-server-install</title>
       <link>https://rx-78-kum0.github.io/post/emacs/irony-server-install/</link>
-      <pubDate>Mon, 29 Jun 2020 00:00:00 +0800</pubDate>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/post/emacs/irony-server-install/</guid>
       <description>Mac   首先需安装cmake和llvm
