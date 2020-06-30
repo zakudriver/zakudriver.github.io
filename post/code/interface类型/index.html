@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+        interface类型 - rx-78-kum0
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="golang interface类型" />
+    <meta name="generator" content="Hugo 0.74.0-DEV with theme pure" />
+    <title>interface类型 - rx-78-kum0</title>
+    
+    
+    <link rel="stylesheet" href="https://rx-78-kum0.github.io/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="interface类型" />
+<meta property="og:description" content="golang interface类型" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rx-78-kum0.github.io/post/code/interface%E7%B1%BB%E5%9E%8B/" />
+<meta property="article:published_time" content="2020-03-09T00:00:00+08:00" />
+<meta property="article:modified_time" content="2020-06-30T18:01:34+08:00" />
+<meta itemprop="name" content="interface类型">
+<meta itemprop="description" content="golang interface类型">
+<meta itemprop="datePublished" content="2020-03-09T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-30T18:01:34&#43;08:00" />
+<meta itemprop="wordCount" content="4820">
+
+
+
+<meta itemprop="keywords" content="golang," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="interface类型"/>
+<meta name="twitter:description" content="golang interface类型"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-purple" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://github.com/rx-78-kum0" target="_blank">
+            <img class="img-circle img-rotate" src="https://rx-78-kum0.github.io/avatar.jpg" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">zyhua</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">rx-78-kum0 ( ‵▽′)ψ</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>China</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/post/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Archives</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Categories</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about/">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">Tags</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">Happy Hacking. ;)
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://rx-78-kum0.github.io/categories/code/" class="category-list-link">code</a><span class="category-list-count">20</span></li>
+            <li class="category-list-item"><a href="https://rx-78-kum0.github.io/categories/configuration/" class="category-list-link">configuration</a><span class="category-list-count">5</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/angular/" class="tag-list-link">angular</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/css/" class="tag-list-link">css</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/docker/" class="tag-list-link">docker</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/emacs/" class="tag-list-link">emacs</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/golang/" class="tag-list-link">golang</a><span
+                    class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/mac/" class="tag-list-link">mac</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/mysql/" class="tag-list-link">mysql</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/nasm/" class="tag-list-link">nasm</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/shell/" class="tag-list-link">shell</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/tools/" class="tag-list-link">tools</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/typescript/" class="tag-list-link">typescript</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/vim/" class="tag-list-link">vim</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/vscode/" class="tag-list-link">vscode</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/web/" class="tag-list-link">web</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="tag-list-link">操作系统</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/%E6%B1%87%E7%BC%96/" class="tag-list-link">汇编</a><span
+                    class="tag-list-count">3</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/post/code/gc%E4%BC%98%E5%8C%96/" class="title">golang gc优化</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-23 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-23</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/post/code/time/" class="title">golang time工具函数</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-23 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-23</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/post/code/gdtldt/" class="title">GDT&amp;LDT</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-11 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-11</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/post/code/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7home%E7%9B%AE%E5%BD%95%E8%B7%AF%E5%BE%84/" class="title">获取用户home目录路径</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-10 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-10</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/post/code/%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%87%E7%AD%BE/" class="title">变量和标签</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-09 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-09</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/post/code/interface%E7%B1%BB%E5%9E%8B/"
+    >interface类型</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://rx-78-kum0.github.io/post/code/interface%E7%B1%BB%E5%9E%8B/" class="article-date">
+  <time datetime="2020-03-09 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-03-09</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/code/"> code </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/golang/"> golang </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/post/code/interface%E7%B1%BB%E5%9E%8B/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 4820words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 10minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h2 id="go-语言与鸭子类型的关系">Go 语言与鸭子类型的关系</h2>
+<blockquote>
+<p>If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck.</p>
+<p>如果某个东西长得像鸭子, 像鸭子一样游泳, 像鸭子一样嘎嘎叫, 那它就可以被看成是一只鸭子.</p>
+<p>在 Go 语言中, 如果类型的方法集完全包含接口的方法集，则可认为该类型实现了该接口.</p>
+</blockquote>
+<p>鸭子类型是一种动态语言的风格, 在这种风格中, 一个对象有效的语义, 不是由继承自特定的类或实现特定的接口, 而是由它&quot;当前方法和属性的集合&quot;决定.
+Go 作为一种静态语言, 通过接口实现了 鸭子类型, 实际上是 Go 的编译器在其中作了隐匿的转换工作.</p>
+<h2 id="值接收者和指针接收者的区别">值接收者和指针接收者的区别</h2>
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+type Person struct {
+  age int
+}
+
+func (p Person) howOld() int {
+  return p.age
+}
+
+func (p *Person) growUp() {
+  p.age += 1
+}
+
+func main() {
+  // qcrao 是值类型
+  qcrao := Person{age: 18}
+
+  // 值类型 调用接收者也是值类型的方法
+  fmt.Println(qcrao.howOld())
+
+  // 值类型 调用接收者是指针类型的方法
+  qcrao.growUp()
+  fmt.Println(qcrao.howOld())
+
+  // ----------------------
+
+  // stefno 是指针类型
+  stefno := &amp;Person{age: 100}
+
+  // 指针类型 调用接收者是值类型的方法
+  fmt.Println(stefno.howOld())
+
+  // 指针类型 调用接收者也是指针类型的方法
+  stefno.growUp()
+  fmt.Println(stefno.howOld())
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>值接收者</th>
+<th>指针接收者</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>值类型调用者</td>
+<td>方法会使用调用者的一个副本，类似于&quot;传值&rdquo;</td>
+<td>使用值的引用来调用方法, 上例中 qcrao.growUp() 实际上是 (&amp;qcrao).growUp()</td>
+</tr>
+<tr>
+<td>指针类型调用者</td>
+<td>指针被解引用为值, 上例中, stefno.howOld() 实际上是 (*stefno).howOld()</td>
+<td>实际上也是&quot;传值&rdquo;, 方法里的操作会影响到调用者, 类似于指针传参, 拷贝了一份指针</td>
+</tr>
+</tbody>
+</table>
+<h3 id="区别">区别</h3>
+<p>如果方法的接收者是值类型, 无论调用者是对象还是对象指针, 修改的都是对象的副本, 不影响调用者; 如果方法的接收者是指针类型, 则调用者修改的是指针指向的对象本身.</p>
+<p>使用值接收者还是指针接收者, 不是由该方法是否修改了调用者 (也就是接收者) 来决定, 而是应该基于该类型的本质.</p>
+<ul>
+<li>如果类型具备&quot;原始的本质&rdquo;, 也就是说它的成员都是由 Go 语言里内置的原始类型, 如字符串, 整型值等, 那就定义值接收者类型的方法.
+像内置的引用类型, 如 slice, map, interface, channel, 这些类型比较特殊, 声明他们的时候, 实际上是创建了一个 header, 对于他们也是直接定义值接收者类型的方法.
+这样, 调用函数时, 是直接 copy 了这些类型的 header, 而 header 本身就是为复制设计的.</li>
+<li>如果类型具备非原始的本质, 不能被安全地复制, 这种类型总是应该被共享, 那就定义指针接收者的方法.
+比如 go 源码里的文件结构体 (struct File) 就不应该被复制, 应该只有一份实体.</li>
+</ul>
+<h2 id="iface-和-eface-的区别">iface 和 eface 的区别</h2>
+<p>iface 和 eface 都是 Go 中描述接口的底层结构体, 区别在于 iface 描述的接口包含方法, 而 eface 则是不包含任何方法的空接口: interface{}.</p>
+<h3 id="iface">iface</h3>
+<pre><code class="language-go">import &quot;unsafe&quot;
+
+type iface struct {
+  tab  *itab          // 接口类型以及实际类型
+  data unsafe.Pointer // 接口具体的值, 一般而言是一个指向堆内存的指针
+}
+
+type itab struct {
+  inter *interfacetype
+  _type *_type
+  hash  uint32 // copy of _type.hash. Used for type switches.
+  _     [4]byte
+  fun   [1]uintptr // variable sized. 存储的是第一个方法的函数指针，如果有更多的方法，在它之后的内存空间里继续存储.
+}
+
+type interfacetype struct {
+  typ     _type
+  pkgpath name
+  mhdr    []imethod
+}
+
+type _type struct {
+  // 类型大小
+  size    uintptr
+  ptrdata uintptr
+  // 类型的 hash 值
+  hash uint32
+  // 类型的 flag，和反射相关
+  tflag tflag
+  // 内存对齐相关
+  align      uint8
+  fieldalign uint8
+  // 类型的编号，有bool, slice, struct 等等等等
+  kind  uint8
+  equal func(unsafe.Pointer, unsafe.Pointer) bool
+  // gc 相关
+  gcdata    *byte
+  str       nameOff
+  ptrToThis typeOff
+}
+</code></pre>
+<figure>
+    <img src="/ox-hugo/2020-03-09_22-22-05_56564826-82527600-65e1-11e9-956d-d98a212bc863.png" width="400px"/> 
+</figure>
+
+<h3 id="eface">eface</h3>
+<pre><code class="language-go">type eface struct {
+    _type *_type
+    data  unsafe.Pointer
+}
+</code></pre>
+<h3 id="type">_type</h3>
+<p>_type 是描述 Go 语言中各种数据类型的结构体</p>
+<pre><code class="language-go">type _type struct {
+  // 类型大小
+  size    uintptr
+  ptrdata uintptr
+  // 类型的 hash 值
+  hash uint32
+  // 类型的 flag，和反射相关
+  tflag tflag
+  // 内存对齐相关
+  align      uint8
+  fieldalign uint8
+  // 类型的编号，有bool, slice, struct 等等等等
+  kind  uint8
+  equal func(unsafe.Pointer, unsafe.Pointer) bool
+  // gc 相关
+  gcdata    *byte
+  str       nameOff
+  ptrToThis typeOff
+}
+</code></pre>
+<p>Go 语言各种数据类型都是在 _type 字段的基础上, 增加一些额外的字段来进行管理的:</p>
+<pre><code class="language-go">type arraytype struct {
+  typ   _type
+  elem  *_type
+  slice *_type
+  len   uintptr
+}
+
+type chantype struct {
+  typ  _type
+  elem *_type
+  dir  uintptr
+}
+
+type slicetype struct {
+  typ  _type
+  elem *_type
+}
+
+type functype struct {
+  typ      _type
+  inCount  uint16
+  outCount uint16
+}
+
+type ptrtype struct {
+  typ  _type
+  elem *_type
+}
+
+type structfield struct {
+  name       name
+  typ        *_type
+  offsetAnon uintptr
+}
+</code></pre>
+<p>这些数据类型的结构体定义, 是反射实现的基础.</p>
+<h2 id="接口的动态类型和动态值">接口的动态类型和动态值</h2>
+<pre><code class="language-go">import &quot;unsafe&quot;
+
+type iface struct {
+  tab  *itab          // 接口类型以及实际类型
+  data unsafe.Pointer // 接口具体的值, 一般而言是一个指向堆内存的指针
+}
+</code></pre>
+<p>iface 类型包含两个字段:</p>
+<ul>
+<li>tab: 是接口表指针，指向类型信息</li>
+<li>data: 是数据指针，则指向具体的数据</li>
+</ul>
+<h3 id="接口类型和-nil-作比较">接口类型和 nil 作比较</h3>
+<p>接口值的零值是指动态类型和动态值都为 nil, 这个接口才能被认为 <strong>接口值 == nil</strong>.</p>
+<ol>
+<li>
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+func main() {
+  var a interface{}
+  fmt.Println(c == nil) // true
+
+  var b *string
+  fmt.Println(b == nil) // true
+
+  a = b
+  fmt.Println(a == nil) // false
+}
+</code></pre>
+<p>b 赋值给 a 后, a 的动态类型为 *string , 动态值为 nil , 所以 a == nil 为 false .</p>
+</li>
+<li>
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+type MyError string
+
+func (i MyError) Error() string {
+  return i
+}
+
+func main() {
+  err := HandleError()
+
+  fmt.Println(err == nil) // false
+}
+
+func HandleError() error {
+  var err *MyError = nil
+  return err
+}
+</code></pre>
+<p>调用 HandleError 返回 error 接口类型, 动态类型为 *MyError , 动态值为 nil .</p>
+</li>
+</ol>
+<h4 id="打印接口的动态值和类型">打印接口的动态值和类型</h4>
+<pre><code class="language-go">package main
+
+import (
+    &quot;unsafe&quot;
+    &quot;fmt&quot;
+)
+
+type iface struct {
+    itab, data uintptr
+}
+
+func main() {
+    var a interface{} = nil
+
+    var b interface{} = (*int)(nil)
+
+    x := 5
+    var c interface{} = (*int)(&amp;x)
+
+    ia := *(*iface)(unsafe.Pointer(&amp;a))
+    ib := *(*iface)(unsafe.Pointer(&amp;b))
+    ic := *(*iface)(unsafe.Pointer(&amp;c))
+
+  fmt.Println(ia) // {0 0}
+  fmt.Println(ib) // {17426912 0}
+  fmt.Println(ic) // {17426912 842350714568}
+
+  fmt.Println(*(*int)(unsafe.Pointer(ic.data))) // 5
+}
+</code></pre>
+<ul>
+<li>a 的动态类型和动态值的地址均为 0, 也就是 nil;</li>
+<li>b 的动态类型和 c 的动态类型一致, 都是 *int;</li>
+<li>c 的动态值为 5.</li>
+</ul>
+<h3 id="编译器自动检测类型是否实现接口">编译器自动检测类型是否实现接口</h3>
+<pre><code class="language-go">var _ io.Writer = (*myWriter)(nil)
+</code></pre>
+<p>编译器会由此检查 *myWriter 类型是否实现了 io.Writer 接口.</p>
+<pre><code class="language-go">package main
+
+import &quot;io&quot;
+
+type myWriter string
+
+func (w *myWriter) Write(p []byte) (n int, err error) {
+  return
+}
+
+func main() {
+  // 检查 *myWriter 类型是否实现了 io.Writer 接口
+  var _ io.Writer = (*myWriter)(nil)
+
+  // 检查 myWriter 类型是否实现了 io.Writer 接口
+  var _ io.Writer = myWriter{}
+}
+</code></pre>
+<pre><code class="language-shell">src/main.go:15:6: cannot use myWriter literal (type myWriter) as type io.Writer in assignment:
+    myWriter does not implement io.Writer (missing Write method)
+</code></pre>
+<p>myWriter 没用实现 io.Writer</p>
+<h2 id="接口类型的赋值--构造--和断言">接口类型的赋值 (构造) 和断言</h2>
+<h3 id="赋值">赋值</h3>
+<p>针对不同类型有以下函数:</p>
+<blockquote>
+<p>convT2E16, convT2I16
+convT2E32, convT2I32
+convT2E64, convT2I64
+convT2Estring, convT2Istring
+convT2Eslice, convT2Islice
+convT2Enoptr, convT2Inoptr</p>
+</blockquote>
+<pre><code class="language-go">func convT2I(tab *itab, elem unsafe.Pointer) (i iface) {
+  t := tab._type
+  if raceenabled {
+    raceReadObjectPC(t, elem, getcallerpc(), funcPC(convT2I))
+  }
+  if msanenabled {
+    msanread(elem, t.size)
+  }
+  x := mallocgc(t.size, t, true)
+  typedmemmove(t, x, elem)
+  i.tab = tab
+  i.data = x
+  return
+}
+</code></pre>
+<p>把 tab 赋给了 iface 的 tab 字段; data 部分则是在堆上申请了一块内存, 然后将 elem 指向的数据拷贝过去.</p>
+<h3 id="断言">断言</h3>
+<pre><code class="language-go">func assertI2I(inter *interfacetype, i iface) (r iface) {
+  tab := i.tab
+  if tab == nil {
+    // explicit conversions require non-nil interface value.
+    panic(&amp;TypeAssertionError{nil, nil, &amp;inter.typ, &quot;&quot;})
+  }
+  if tab.inter == inter {
+    r.tab = tab
+    r.data = i.data
+    return
+  }
+  r.tab = getitab(inter, tab._type, false)
+  r.data = i.data
+  return
+}
+
+func assertI2I2(inter *interfacetype, i iface) (r iface, b bool) {
+  tab := i.tab
+  if tab == nil {
+    return
+  }
+  if tab.inter != inter {
+    tab = getitab(inter, tab._type, true)
+    if tab == nil {
+      return
+    }
+  }
+  r.tab = tab
+  r.data = i.data
+  b = true
+  return
+}
+
+func assertE2I(inter *interfacetype, e eface) (r iface) {
+  t := e._type
+  if t == nil {
+    // explicit conversions require non-nil interface value.
+    panic(&amp;TypeAssertionError{nil, nil, &amp;inter.typ, &quot;&quot;})
+  }
+  r.tab = getitab(inter, t, false)
+  r.data = e.data
+  return
+}
+
+func assertE2I2(inter *interfacetype, e eface) (r iface, b bool) {
+  t := e._type
+  if t == nil {
+    return
+  }
+  tab := getitab(inter, t, true)
+  if tab == nil {
+    return
+  }
+  r.tab = tab
+  r.data = e.data
+  b = true
+  return
+}
+</code></pre>
+<p>判断需断言的变量 (iface) 是否满足接口类型 (interfacetype).</p>
+<p>assertI2I 对应 接口断言返回一个参数:</p>
+<pre><code class="language-go">package main
+
+import (
+  &quot;errors&quot;
+  &quot;fmt&quot;
+)
+
+func main(args) {
+  var a interface{} = errors.New(&quot;error&quot;)
+
+  err := a.(error)
+  fmt.Println(err.Error())
+}
+</code></pre>
+<p>assertI2I2 则对应返回两个参数的情况:</p>
+<pre><code class="language-go">package main
+
+import (
+  &quot;errors&quot;
+  &quot;fmt&quot;
+)
+
+func main(args) {
+  var a interface{} = errors.New(&quot;error&quot;)
+
+  if err, ok := a.(error); ok {
+    fmt.Println(err.Error())
+  }
+}
+</code></pre>
+<p>都在编译阶段编译器判断.</p>
+<h3 id="打印接口类型的hash值">打印接口类型的hash值</h3>
+<pre><code class="language-go">package main
+
+import (
+  &quot;fmt&quot;
+  &quot;unsafe&quot;
+)
+
+type iface struct {
+  tab  *itab
+  data unsafe.Pointer
+}
+
+type itab struct {
+  inter uintptr
+  _type uintptr
+  hash  uint32
+  _     [4]byte
+  fun   [1]uintptr
+}
+
+func main() {
+  p := Person(Student{age: 18})
+
+  iface := (*iface)(unsafe.Pointer(&amp;p))
+  fmt.Printf(&quot;iface.tab.hash = %#x\n&quot;, iface.tab.hash) // iface.tab.hash = 0xd4209fda
+}
+</code></pre>
+<h2 id="类型转换和断言的区别">类型转换和断言的区别</h2>
+<h3 id="类型转换">类型转换</h3>
+<p>Go 语言中不允许隐式类型转换, 也就是说 = 两边, 不允许出现类型不相同的变量.
+类型转换前后的两个类型必须相互兼容.</p>
+<blockquote>
+<p>&lt;结果类型&gt; := &lt;目标类型&gt; ( &lt;表达式&gt; )</p>
+</blockquote>
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+func main() {
+  var i int = 9
+
+  var f float64
+  f = float64(i)
+  fmt.Printf(&quot;%T, %v\n&quot;, f, f)
+
+  f = 10.8
+  a := int(f)
+  fmt.Printf(&quot;%T, %v\n&quot;, a, a)
+
+  // s := []int(i)
+}
+</code></pre>
+<h3 id="断言">断言</h3>
+<p>空接口 interface{} 没有定义任何函数, 因此 Go 中所有类型都实现了空接口.
+当一个函数的形参是 interface{}, 那么在函数中, 需要对形参进行断言, 从而得到它的真实类型.</p>
+<blockquote>
+<p>&lt;目标类型的值&gt;，&lt;布尔参数&gt; := &lt;表达式&gt;.( 目标类型 ) // 安全类型断言
+&lt;目标类型的值&gt; := &lt;表达式&gt;.( 目标类型 )　　        //非安全类型断言</p>
+</blockquote>
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+type Student struct {
+  Name string
+  Age  int
+}
+
+func main() {
+  var i interface{} = new(Student)
+  s := i.(*Student)
+
+  fmt.Println(s)
+}
+</code></pre>
+<p>switch 形式断言</p>
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+type Student struct {
+  Name string
+  Age  int
+}
+
+func main() {
+  var i interface{}
+
+
+  judge(i)
+}
+
+func judge(v interface{}) {
+  fmt.Printf(&quot;%p %v\n&quot;, &amp;v, v)
+
+  switch v := v.(type) {
+  case nil:
+    fmt.Printf(&quot;%p %v\n&quot;, &amp;v, v)
+    fmt.Printf(&quot;nil type[%T] %v\n&quot;, v, v)
+
+  case Student:
+    fmt.Printf(&quot;%p %v\n&quot;, &amp;v, v)
+    fmt.Printf(&quot;Student type[%T] %v\n&quot;, v, v)
+
+  case *Student:
+    fmt.Printf(&quot;%p %v\n&quot;, &amp;v, v)
+    fmt.Printf(&quot;*Student type[%T] %v\n&quot;, v, v)
+
+  default:
+    fmt.Printf(&quot;%p %v\n&quot;, &amp;v, v)
+    fmt.Printf(&quot;unknow\n&quot;)
+  }
+}
+
+</code></pre>
+<h3 id="fmt-dot-println-函数">fmt.Println 函数</h3>
+<p>fmt.Println 函数的参数是 interface{}. 对于内置类型, 函数内部会用穷举法, 得出它的真实类型, 然后转换为字符串打印.
+而对于自定义类型, 首先确定该类型是否实现了 String() 方法. 如果实现了, 则直接打印输出 String() 方法的结果; 否则, 会通过反射来遍历对象的成员进行打印.</p>
+<p>因为 Student 结构体没有实现 String() 方法, 所以 fmt.Println 会利用反射挨个打印成员变量:</p>
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+type Student struct {
+  Name string
+  Age  int
+}
+
+func main() {
+  s := Student{
+    Name: &quot;zzz&quot;,
+    Age:  18,
+  }
+
+  fmt.Println(s) // {zzz 18}
+}
+</code></pre>
+<p>增加一个 String() 方法的实现:</p>
+<pre><code class="language-go">import &quot;fmt&quot;
+
+func (s Student) String() string {
+  return fmt.Sprintf(&quot;[Name: %s], [Age: %d]&quot;, s.Name, s.Age) // [Name: zzz], [Age: 18]
+}
+</code></pre>
+<p>修改 String() 方法:</p>
+<pre><code class="language-go">import &quot;fmt&quot;
+
+func (s *Student) String() string {
+  return fmt.Sprintf(&quot;[Name: %s], [Age: %d]&quot;, s.Name, s.Age) // {zzz 18}
+}
+</code></pre>
+<p>打印结果并没用调用 String() ,因为:</p>
+<blockquote>
+<p>类型 T 只有接受者是 T 的方法; 而类型 *T 拥有接受者是 T 和 *T 的方法. 语法上 T 能直接调 *T 的方法仅仅是 Go 的语法糖.</p>
+</blockquote>
+<p>要调用 String() 需要:</p>
+<pre><code class="language-go">fmt.Println(&amp;s)
+</code></pre>
+<h2 id="接口转换的原理">接口转换的原理</h2>
+<p>类型有 m 个方法, 某接口有 n 个方法, 则很容易知道这种判定的时间复杂度为 O(mn); Go 会对方法集的函数按照函数名的字典序进行排序, 所以实际的时间复杂度为 O(m+n).</p>
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+type coder interface {
+  code()
+  run()
+}
+
+type runner interface {
+  run()
+}
+
+type Gopher struct {
+  language string
+}
+
+func (g Gopher) code() {
+  return
+}
+
+func (g Gopher) run() {
+  return
+}
+
+func main() {
+  var c coder = Gopher{}
+
+  var r runner
+  r = c
+  fmt.Println(c, r)
+}
+</code></pre>
+<p>Gopher 类型同时满足 coder 接口和 runner 接口.</p>
+<p>convI2I 函数将一个 interface 转换成 另一个 interface .</p>
+<pre><code class="language-go">func convI2I(inter *interfacetype, i iface) (r iface) {
+  tab := i.tab
+  if tab == nil {
+    return
+  }
+  if tab.inter == inter {
+    r.tab = tab
+    r.data = i.data
+    return
+  }
+  r.tab = getitab(inter, tab._type, false)
+  r.data = i.data
+  return
+}
+</code></pre>
+<p>inter 表示要转成的接口类型, i 表示一个实体类型.
+如果要转换的接口类型和实体类型的接口类型相同就直接返回; 否则就用调用 getitab 函数去匹配满转方法集的接口.</p>
+<pre><code class="language-go">import &quot;unsafe&quot;
+
+func getitab(inter *interfacetype, typ *_type, canfail bool) *itab {
+  if len(inter.mhdr) == 0 {
+    throw(&quot;internal error - misuse of itab&quot;)
+  }
+
+  // easy case
+  if typ.tflag&amp;tflagUncommon == 0 {
+    if canfail {
+      return nil
+    }
+    name := inter.typ.nameOff(inter.mhdr[0].name)
+    panic(&amp;TypeAssertionError{nil, typ, &amp;inter.typ, name.name()})
+  }
+
+  var m *itab
+
+  // First, look in the existing table to see if we can find the itab we need.
+  // This is by far the most common case, so do it without locks.
+  // Use atomic to ensure we see any previous writes done by the thread
+  // that updates the itabTable field (with atomic.Storep in itabAdd).
+  t := (*itabTableType)(atomic.Loadp(unsafe.Pointer(&amp;itabTable)))
+  if m = t.find(inter, typ); m != nil {
+    goto finish
+  }
+
+  // Not found.  Grab the lock and try again.
+  lock(&amp;itabLock)
+  if m = itabTable.find(inter, typ); m != nil {
+    unlock(&amp;itabLock)
+    goto finish
+  }
+
+  // Entry doesn't exist yet. Make a new entry &amp; add it.
+  m = (*itab)(persistentalloc(unsafe.Sizeof(itab{})+uintptr(len(inter.mhdr)-1)*sys.PtrSize, 0, &amp;memstats.other_sys))
+  m.inter = inter
+  m._type = typ
+  // The hash is used in type switches. However, compiler statically generates itab's
+  // for all interface/type pairs used in switches (which are added to itabTable
+  // in itabsinit). The dynamically-generated itab's never participate in type switches,
+  // and thus the hash is irrelevant.
+  // Note: m.hash is _not_ the hash used for the runtime itabTable hash table.
+  m.hash = 0
+  m.init()
+  itabAdd(m)
+  unlock(&amp;itabLock)
+finish:
+  if m.fun[0] != 0 {
+    return m
+  }
+  if canfail {
+    return nil
+  }
+  // this can only happen if the conversion
+  // was already done once using the , ok form
+  // and we have a cached negative result.
+  // The cached result doesn't record which
+  // interface function was missing, so initialize
+  // the itab again to get the missing function name.
+  panic(&amp;TypeAssertionError{concrete: typ, asserted: &amp;inter.typ, missingMethod: m.init()})
+}
+</code></pre>
+<p>getitab 函数会根据 interfacetype 和 _type 去全局的 itab 哈希表中查找, 如果能找到, 则直接返回; 否则, 会根据给定的 interfacetype 和 _type 新生成一个 itab, 并插入到 itab 哈希表, 这样下一次就可以直接拿到 itab.</p>
+<p>这里查找了两次, 并且第二次上锁了, 这是因为如果第一次没找到, 在第二次仍然没有找到相应的 itab 的情况下, 需要新生成一个, 并且写入哈希表, 因此需要加锁.
+这样, 其他协程在查找相同的 itab 并且也没有找到时, 第二次查找时, 会被挂住, 之后, 就会查到第一个协程写入哈希表的 itab.</p>
+<p>itabAdd 函数会把 itab 写入到全局itabTable</p>
+<pre><code class="language-go">import &quot;unsafe&quot;
+
+func itabAdd(m *itab) {
+  // Bugs can lead to calling this while mallocing is set,
+  // typically because this is called while panicing.
+  // Crash reliably, rather than only when we need to grow
+  // the hash table.
+  if getg().m.mallocing != 0 {
+    throw(&quot;malloc deadlock&quot;)
+  }
+
+  t := itabTable
+  if t.count &gt;= 3*(t.size/4) { // 75% load factor
+    // Grow hash table.
+    // t2 = new(itabTableType) + some additional entries
+    // We lie and tell malloc we want pointer-free memory because
+    // all the pointed-to values are not in the heap.
+    t2 := (*itabTableType)(mallocgc((2+2*t.size)*sys.PtrSize, nil, true))
+    t2.size = t.size * 2
+
+    // Copy over entries.
+    // Note: while copying, other threads may look for an itab and
+    // fail to find it. That's ok, they will then try to get the itab lock
+    // and as a consequence wait until this copying is complete.
+    iterate_itabs(t2.add)
+    if t2.count != t.count {
+      throw(&quot;mismatched count during itab table copy&quot;)
+    }
+    // Publish new hash table. Use an atomic write: see comment in getitab.
+    atomicstorep(unsafe.Pointer(&amp;itabTable), unsafe.Pointer(t2))
+    // Adopt the new table as our own.
+    t = itabTable
+    // Note: the old table can be GC'ed here.
+  }
+  t.add(m)
+}
+
+func iterate_itabs(fn func(*itab)) {
+  // Note: only runs during stop the world or with itabLock held,
+  // so no other locks/atomics needed.
+  t := itabTable
+  for i := uintptr(0); i &lt; t.size; i++ {
+    m := *(**itab)(add(unsafe.Pointer(&amp;t.entries), i*sys.PtrSize))
+    if m != nil {
+      fn(m)
+    }
+  }
+}
+</code></pre>
+<h2 id="如何用-interface-实现多态">如何用 interface 实现多态</h2>
+<p>多态是一种运行期的行为, 它有以下几个特点:</p>
+<ol>
+<li>一种类型具有多种类型的能力</li>
+<li>允许不同的对象对同一消息做出灵活的反应</li>
+<li>以一种通用的方式对待个使用的对象</li>
+<li>非动态语言必须通过继承和接口的方式来实现</li>
+</ol>
+<!-- raw HTML omitted -->
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+func main() {
+  s := Student{age: 18}
+  whatJob(&amp;s)
+
+  growUp(&amp;s)
+  fmt.Println(s)
+
+  p := Programmer{age: 100}
+  whatJob(p)
+
+  growUp(p)
+  fmt.Println(p)
+}
+
+func whatJob(p Person) {
+  p.job()
+}
+
+func growUp(p Person) {
+  p.growUp()
+}
+
+type Person interface {
+  job()
+  growUp()
+}
+
+type Student struct {
+  age int
+}
+
+func (p Student) job() {
+  fmt.Println(&quot;I am a student.&quot;)
+  return
+}
+
+func (p *Student) growUp() {
+  p.age += 1
+  return
+}
+
+type Programmer struct {
+  age int
+}
+
+func (p Programmer) job() {
+  fmt.Println(&quot;I am a programmer.&quot;)
+  return
+}
+
+func (p Programmer) growUp() {
+  p.age += 10
+  return
+}
+</code></pre>
+<h2 id="go-接口与-c-plus-plus-接口有何异同">Go 接口与 C++ 接口有何异同</h2>
+<p>接口定义了一种规范, 描述了类的行为和功能, 而不做具体实现.</p>
+<p>C++ 的接口是使用抽象类来实现的, 如果类中至少有一个函数被声明为纯虚函数, 则这个类就是抽象类.
+纯虚函数是通过在声明中使用 &ldquo;= 0&rdquo; 来指定的. 例如:</p>
+<pre><code class="language-c++">class Shape {
+public:
+  // 纯虚函数
+  virtual double getArea() = 0;
+
+private:
+  string name; // 名称
+};
+</code></pre>
+<blockquote>
+<p>设计抽象类的目的, 是为了给其他类提供一个可以继承的适当的基类. 抽象类不能被用于实例化对象, 它只能作为接口使用.
+派生类需要明确地声明它继承自基类, 并且需要实现基类中所有的纯虚函数.</p>
+<p>C++ 定义接口的方式称为“侵入式”, 而 Go 采用的是 “非侵入式”, 不需要显式声明, 只需要实现接口定义的函数, 编译器自动会识别.</p>
+<p>C++ 和 Go 在定义接口方式上的不同, 也导致了底层实现上的不同. C++ 通过虚函数表来实现基类调用派生类的函数;
+而 Go 通过 itab 中的 fun 字段来实现接口变量调用实体类型的函数. C++ 中的虚函数表是在编译期生成的; 而 Go 的 itab 中的 fun 字段是在运行期间动态生成的.
+原因在于, Go 中实体类型可能会无意中实现 N 多接口, 很多接口并不是本来需要的, 所以不能为类型实现的所有接口都生成一个 itab, 这也是“非侵入式”带来的影响;
+这在 C++ 中是不存在的, 因为派生需要显示声明它继承自哪个基类.</p>
+</blockquote>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="https://rx-78-kum0.github.io/post/code/interface%E7%B1%BB%E5%9E%8B/" title="interface类型" target="_blank" rel="external">https://rx-78-kum0.github.io/post/code/interface%E7%B1%BB%E5%9E%8B/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/rx-78-kum0" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://rx-78-kum0.github.io/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/rx-78-kum0" target="_blank"><span class="text-dark">zyhua</span><small class="ml-1x">rx-78-kum0 ( ‵▽′)ψ</small></a></h3>
+        <div>obsessive;)</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://rx-78-kum0.github.io/post/code/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/" title="文字超出显示省略号"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            <li class="next">
+                <a href="https://rx-78-kum0.github.io/post/code/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/"
+                    title="浏览器显示emoji"><span>Newer&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/rx-78-kum0" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://rx-78-kum0.github.io/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2018  -
+    2020
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/go.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://rx-78-kum0.github.io/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
+<script src="https://rx-78-kum0.github.io/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/rx-78-kum0.github.io\/',
+            CONTENT_URL: 'https:\/\/rx-78-kum0.github.io\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://rx-78-kum0.github.io/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+
+  </body>
+</html>

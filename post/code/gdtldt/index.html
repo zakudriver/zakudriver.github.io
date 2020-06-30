@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+        GDT&amp;LDT - rx-78-kum0
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="GDT&LDT" />
+    <meta name="generator" content="Hugo 0.74.0-DEV with theme pure" />
+    <title>GDT&amp;LDT - rx-78-kum0</title>
+    
+    
+    <link rel="stylesheet" href="https://rx-78-kum0.github.io/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="GDT&amp;LDT" />
+<meta property="og:description" content="GDT&amp;LDT" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rx-78-kum0.github.io/post/code/gdtldt/" />
+<meta property="article:published_time" content="2020-06-11T00:00:00+08:00" />
+<meta property="article:modified_time" content="2020-06-30T18:03:42+08:00" />
+<meta itemprop="name" content="GDT&amp;LDT">
+<meta itemprop="description" content="GDT&amp;LDT">
+<meta itemprop="datePublished" content="2020-06-11T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-30T18:03:42&#43;08:00" />
+<meta itemprop="wordCount" content="1728">
+
+
+
+<meta itemprop="keywords" content="操作系统," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="GDT&amp;LDT"/>
+<meta name="twitter:description" content="GDT&amp;LDT"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-purple" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://github.com/rx-78-kum0" target="_blank">
+            <img class="img-circle img-rotate" src="https://rx-78-kum0.github.io/avatar.jpg" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">zyhua</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">rx-78-kum0 ( ‵▽′)ψ</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>China</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/post/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Archives</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Categories</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about/">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">Tags</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">Happy Hacking. ;)
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://rx-78-kum0.github.io/categories/code/" class="category-list-link">code</a><span class="category-list-count">20</span></li>
+            <li class="category-list-item"><a href="https://rx-78-kum0.github.io/categories/configuration/" class="category-list-link">configuration</a><span class="category-list-count">5</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/angular/" class="tag-list-link">angular</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/css/" class="tag-list-link">css</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/docker/" class="tag-list-link">docker</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/emacs/" class="tag-list-link">emacs</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/golang/" class="tag-list-link">golang</a><span
+                    class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/mac/" class="tag-list-link">mac</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/mysql/" class="tag-list-link">mysql</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/nasm/" class="tag-list-link">nasm</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/shell/" class="tag-list-link">shell</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/tools/" class="tag-list-link">tools</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/typescript/" class="tag-list-link">typescript</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/vim/" class="tag-list-link">vim</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/vscode/" class="tag-list-link">vscode</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/web/" class="tag-list-link">web</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="tag-list-link">操作系统</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/%E6%B1%87%E7%BC%96/" class="tag-list-link">汇编</a><span
+                    class="tag-list-count">3</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/post/code/gc%E4%BC%98%E5%8C%96/" class="title">golang gc优化</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-23 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-23</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/post/code/time/" class="title">golang time工具函数</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-23 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-23</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/post/code/gdtldt/" class="title">GDT&amp;LDT</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-11 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-11</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/post/code/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7home%E7%9B%AE%E5%BD%95%E8%B7%AF%E5%BE%84/" class="title">获取用户home目录路径</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-10 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-10</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/post/code/%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%87%E7%AD%BE/" class="title">变量和标签</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-09 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-09</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/post/code/gdtldt/"
+    >GDT&amp;LDT</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://rx-78-kum0.github.io/post/code/gdtldt/" class="article-date">
+  <time datetime="2020-06-11 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-11</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/code/"> code </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"> 操作系统 </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/post/code/gdtldt/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1728words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 4minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h2 id="gdt--global-descriptor-table--全局描述符表ⅰ">GDT(Global Descriptor Table)全局描述符表Ⅰ</h2>
+<p>GDT是一个以 <strong>段描述符</strong> 为表项的数组类型的数据结构，在内存中线性存放。每个段描述符占 8 个字节。</p>
+<p>GDTR寄存器存放GDT表的基地址和表长界限(高32位存放GDT基址，低16为存放GDT限长)。指令LGDT和SGDT分别用于加载和保存GDTR寄存器的内容。在机器刚加电或处理器复位后，基地址被默认地设置为0，而长度值被设置成0xFFFF。在保护模式初始化过程中必须给GDTR加载一个新值。</p>
+<h2 id="段选择子--segement-selector">段选择子(Segement Selector)</h2>
+<p>由GDTR访问全局描述符表是通过“段选择子”(实模式下的段寄存器)来完成的。段选择子是一个16位的寄存器(同实模式下的段寄存器相同)。</p>
+<h3 id="段选择子共16bit-由三部分组成-描述符索引--index--ti-请求特权级--rpl">段选择子共16bit，由三部分组成: 描述符索引(index)、TI、请求特权级(RPL)</h3>
+<ul>
+<li>描述符索引(index): 在描述符表中定位一个段描述符。</li>
+<li>TI: 描述符表指示器， TI＝0 时，表示描述符在 GDT 中； TI＝1 时，描述符在 LDT 中。</li>
+<li>RPL: 请求特权级，表示给出当前选择子访问的内存段的特权级别。每一个段都有一个特定的级别。每当一个程序试图访问某一个段时，就将该程序所拥有的特权级与要访问的特权级进行比较，以决定能否访问该段。系统约定，CPU只能访问同一特权级或级别较低特权级的段。</li>
+</ul>
+<h3 id="因为每个描述符占-8-字节-因此描述符在表内的偏移地址是索引号乘以-8">因为每个描述符占 8 字节，因此描述符在表内的偏移地址是索引号乘以 8</h3>
+<p>处理器在执行任何改变段选择器的指令时(比如 pop、 mov、jmp far、 call far、 iret、 retf)，就将指令中提供的索引号乘以 8 作为偏移地址，同 GDTR 中提供的线性基地址相加，以访问 GDT。在表内找到的描述符，并加载到不可见的描述符高速缓存部分。此后每当有访问内存的指令时，就不再访问 GDT 中的描述符，直接用当前段寄存器描述符高速缓存器提供线性基地址。</p>
+<h2 id="段描述符--segment-descriptor">段描述符(Segment Descriptor)</h2>
+<p>每个段描述符占 8 个字节。由三部分组成: 线性基地址、段界限和段的访问属性。</p>
+<figure>
+    <img src="/ox-hugo/2020-06-12_18-50-34_929457-20161230154447711-2105143159.png"/> 
+</figure>
+
+<ul>
+<li>
+<p>G: 粒度位，用于解释段界限的含义。当 G 位是&quot;0&quot;时，段界限以字节为单位。此时，段的扩展范围是从 1 字节到 1 兆字节（ 1B～1MB），因为描述符中的界限值是 20 位的。相反，如果该位是&quot;1&rdquo;，那么，段界限是以 4KB 为单位的。这样，段的扩展范围是从 4KB到 4GB。</p>
+</li>
+<li>
+<p>D/B: &ldquo;默认的操作数大小&rdquo;(Default Operation Size)或者&quot;默认的堆栈指针大小&rdquo;，又或者&quot;上部边界&quot;标志。设立该标志位，主要是为了能够在 32 位处理器上兼容运行 16 位保护模式的程序。D＝0 表示指令中的偏移地址或者操作数是 16 位的； D＝1，指示 32 位的偏移地址或者操作数。</p>
+</li>
+<li>
+<p>L:  64 位代码段标志。保留此位给 64 位处理器使用。32位将此位置&quot;0&rdquo;。</p>
+</li>
+<li>
+<p>AVL: 保留位。可以被系统软件使用。</p>
+</li>
+<li>
+<p>P: 段存在位(Segment Present)。 P 位用于指示描述符所对应的段是否存在。一般来说，描述符所指示的段都位于内存中。但是，当内存空间紧张时，有可能只是建立了描述符，对应的内存空间并不存在，这时，就应当把描述符的 P 位清零，表示段并不存在。P 位是由处理器负责检查的。每当通过描述符访问内存中的段时，如果 P 位是&quot;0&rdquo;，处理器就会产生一个异常中断。</p>
+</li>
+<li>
+<p>DPL: 描述符的特权级(Descriptor Privilege Level， DPL)。这两位用于指定段的特权级。共有 4 种处理器支持的特权级别，分别是 0、 1、 2、 3，其中 0 是最高特权级别， 3 是最低特权级别。刚进入保护模式时执行的代码具有最高特权级 0(可以看成是从处理器那里继承来的)，这些代码通常都是操作系统代码(内核段)，因此它的特权级别最高。每当操作系统加载一个用户程序时，它通常都会指定一个稍低的特权级(用户段)，比如 3 特权级。不同特权级别的程序是互相隔离的，其互访是严格限制的，而且有些处理器指令(特权指令)只能由 0 特权级的程序来执行，为的就是安全。这里再次点明了为何叫保护模式。</p>
+</li>
+<li>
+<p>S: 用于指定描述符的类型(Descriptor Type)。当该位是&quot;0&quot;时，表示是一个系统段；为&quot;1&quot;时，表示是一个代码段或者数据段(堆栈段也是特殊的数据段)。</p>
+</li>
+<li>
+<p>TYPE: 共 4 位，用于指示描述符的子类型，或者说是类别。</p>
+</li>
+</ul>
+<h3 id="描述符类型">描述符类型</h3>
+<figure>
+    <img src="/ox-hugo/2020-06-12_18-48-27_929457-20161230155710164-891968633.png"/> 
+</figure>
+
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="https://rx-78-kum0.github.io/post/code/gdtldt/" title="GDT&amp;LDT" target="_blank" rel="external">https://rx-78-kum0.github.io/post/code/gdtldt/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/rx-78-kum0" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://rx-78-kum0.github.io/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/rx-78-kum0" target="_blank"><span class="text-dark">zyhua</span><small class="ml-1x">rx-78-kum0 ( ‵▽′)ψ</small></a></h3>
+        <div>obsessive;)</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://rx-78-kum0.github.io/post/code/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7home%E7%9B%AE%E5%BD%95%E8%B7%AF%E5%BE%84/" title="获取用户home目录路径"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            <li class="next">
+                <a href="https://rx-78-kum0.github.io/post/code/time/"
+                    title="golang time工具函数"><span>Newer&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/rx-78-kum0" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://rx-78-kum0.github.io/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2018  -
+    2020
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/go.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://rx-78-kum0.github.io/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
+<script src="https://rx-78-kum0.github.io/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/rx-78-kum0.github.io\/',
+            CONTENT_URL: 'https:\/\/rx-78-kum0.github.io\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://rx-78-kum0.github.io/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+
+  </body>
+</html>

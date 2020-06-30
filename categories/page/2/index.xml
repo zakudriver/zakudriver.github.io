@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on rx-78-kum0</title>
+    <link>https://rx-78-kum0.github.io/categories/</link>
+    <description>Recent content in Categories on rx-78-kum0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 23 Jun 2020 00:00:00 +0800</lastBuildDate>
+    
+        <atom:link href="https://rx-78-kum0.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://rx-78-kum0.github.io/about/</link>
+      <pubDate>Sat, 22 Feb 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/about/</guid>
+      <description> obsessive;) JavaScript/Typescript, Golang, Elisp, Dart. Emacser/Vimer. Happy Hacking.  </description>
+    </item>
+    
+    <item>
+      <title>myclirc</title>
+      <link>https://rx-78-kum0.github.io/post/configuration/myclirc/</link>
+      <pubDate>Tue, 10 Dec 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/post/configuration/myclirc/</guid>
+      <description># vi: ft=dosini [main] # Enables context sensitive auto-completion. If this is disabled the all # possible completions will be listed. smart_completion = True # Multi-line mode allows breaking up the sql statements into multiple lines. If # this is set to True, then the end of the statements must have a semi-colon. # If this is set to False then sql statements can&#39;t be split into multiple # lines.</description>
+    </item>
+    
+    <item>
+      <title>Angular自定义双向绑定表单组件</title>
+      <link>https://rx-78-kum0.github.io/post/code/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/post/code/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/</guid>
+      <description>angular的ControlValueAccessor是一个连接表单模型和视图DOM的抽象类接口 使自定义表单组件像原生input一样映射到</description>
+    </item>
+    
+    <item>
+      <title>vimrc</title>
+      <link>https://rx-78-kum0.github.io/post/configuration/vimrc/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/post/configuration/vimrc/</guid>
+      <description>&amp;quot; .vimrc &amp;quot; Configuration file for vim set modelines=0 &amp;quot; Don&#39;t write backup file if vim is being called by &amp;quot;crontab -e&amp;quot; &amp;quot; au BufWrite /private/tmp/crontab.* set nowritebackup nobackup &amp;quot; Don&#39;t write backup file if vim is being called by &amp;quot;chpass&amp;quot; &amp;quot; au BufWrite /private/etc/pw.* set nowritebackup nobackup set nobackup set nowritebackup let skip_defaults_vim=1 &amp;quot; &amp;lt;leader&amp;gt; let g:mapleader=&amp;quot;,&amp;quot; &amp;quot; 去掉有关vi一致性模式</description>
+    </item>
+    
+    <item>
+      <title>一个包含 nil 指针的接口不是 nil 接口</title>
+      <link>https://rx-78-kum0.github.io/post/code/%E4%B8%80%E4%B8%AA%E5%8C%85%E5%90%AB-nil-%E6%8C%87%E9%92%88%E7%9A%84%E6%8E%A5%E5%8F%A3%E4%B8%8D%E6%98%AF-nil-%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/post/code/%E4%B8%80%E4%B8%AA%E5%8C%85%E5%90%AB-nil-%E6%8C%87%E9%92%88%E7%9A%84%E6%8E%A5%E5%8F%A3%E4%B8%8D%E6%98%AF-nil-%E6%8E%A5%E5%8F%A3/</guid>
+      <description>golang 接口值: 一个包含 nil 指针的接口不是 nil 接口. 一个不包含任何值的 nil 接口值和一个刚好包含 nil 指针的接口值是不同的. 接口值由两个部分组成: 一个具体的类</description>
+    </item>
+    
+    <item>
+      <title>vscode配置</title>
+      <link>https://rx-78-kum0.github.io/post/configuration/vscode/</link>
+      <pubDate>Sat, 02 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/post/configuration/vscode/</guid>
+      <description>{ // editor &amp;quot;editor.fontSize&amp;quot;: 14, &amp;quot;editor.snippetSuggestions&amp;quot;: &amp;quot;top&amp;quot;, &amp;quot;editor.formatOnSave&amp;quot;: true, &amp;quot;explorer.confirmDragAndDrop&amp;quot;: true, &amp;quot;explorer.confirmDelete&amp;quot;: false, &amp;quot;editor.detectIndentation&amp;quot;: false, &amp;quot;files.autoSave&amp;quot;: &amp;quot;off&amp;quot;, // &amp;quot;editor.fontFamily&amp;quot;: &amp;quot;&#39;FuraCode&#39;, Menlo, Monaco, &#39;Courier New&#39;, monospace&amp;quot;, &amp;quot;editor.fontLigatures&amp;quot;: true, &amp;quot;workbench.iconTheme&amp;quot;: &amp;quot;material-icon-theme&amp;quot;, &amp;quot;workbench.colorTheme&amp;quot;: &amp;quot;Nebula&amp;quot;, // prettier &amp;quot;prettier.printWidth&amp;quot;: 120, &amp;quot;editor.tabSize&amp;quot;: 2, &amp;quot;prettier.singleQuote&amp;quot;: true, &amp;quot;prettier.semi&amp;quot;: true, // typescript &amp;quot;typescript.updateImportsOnFileMove.enabled&amp;quot;: &amp;quot;always&amp;quot;, // emmet &amp;quot;emmet.includeLanguages&amp;quot;: { &amp;quot;javascript&amp;quot;: &amp;quot;javascriptreact&amp;quot;, &amp;quot;typescript&amp;quot;: &amp;quot;typescriptreact&amp;quot; }, &amp;quot;emmet.triggerExpansionOnTab&amp;quot;: true, // 装饰器 &amp;quot;javascript.implicitProjectConfig.experimentalDecorators&amp;quot;: true, // stylus &amp;quot;stylusSupremacy.insertColons&amp;quot;: false, // 是否插</description>
+    </item>
+    
+  </channel>
+</rss>
