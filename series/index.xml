@@ -33,7 +33,7 @@
       <pubDate>Thu, 11 Jun 2020 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/2020/06/gdtldt/</guid>
-      <description>GDT(Global Descriptor Table)全局描述符表Ⅰ GDT是一个以 段描述符 为表项的数组类型的数据结构，在内存中线性存放。每个段描述符占 8 个字节。 GDTR寄存器存放</description>
+      <description>GDT(Global Descriptor Table)全局描述符表 GDT是一个以 段描述符 为表项的数组类型的数据结构，在内存中线性存放。每个段描述符占 8 个字节。 GDTR寄存器存放G</description>
     </item>
     
     <item>
