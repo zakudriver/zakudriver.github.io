@@ -352,66 +352,76 @@
 <ol>
 <li>
 <p>首先需安装cmake和llvm</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">brew install cmake llvm
-</code></pre></div></li>
+<pre><code class="language-shell">brew install cmake llvm
+</code></pre>
+</li>
 <li>
 <p>emacs里执行M-x irony-install-server得到安装执行命令</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cmake -DCMAKE_INSTALL_PREFIX<span style="color:#ae81ff">\=</span>/Users/kumotyou/.emacs.d/irony/ <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>/Users/kumotyou/.emacs.d/elpa/irony-20200130.849/server <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span><span style="color:#f92672">&amp;&amp;</span> cmake --build . --use-stderr --config Release --target install
-</code></pre></div></li>
+<pre><code class="language-shell">cmake -DCMAKE_INSTALL_PREFIX\=/Users/kumotyou/.emacs.d/irony/ \
+/Users/kumotyou/.emacs.d/elpa/irony-20200130.849/server \
+&amp;&amp; cmake --build . --use-stderr --config Release --target install
+</code></pre>
+</li>
 <li>
 <p>添加环境变量</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">-DCMAKE_PREFIX_PATH<span style="color:#f92672">=</span>/usr/local/opt/llvm
--DCMAKE_INSTALL_RPATH_USE_LINK_PATH<span style="color:#f92672">=</span>ON
--DLIBCLANG_INCLUDE_DIR<span style="color:#f92672">=</span>/usr/local/opt/llvm/include
--DLIBCLANG_LIBRARY<span style="color:#f92672">=</span>/usr/local/opt/llvm/lib/libclang.dylib
-</code></pre></div></li>
+<pre><code class="language-shell">-DCMAKE_PREFIX_PATH=/usr/local/opt/llvm
+-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=ON
+-DLIBCLANG_INCLUDE_DIR=/usr/local/opt/llvm/include
+-DLIBCLANG_LIBRARY=/usr/local/opt/llvm/lib/libclang.dylib
+</code></pre>
+</li>
 <li>
 <p>最终编译命令</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cmake -DCMAKE_INSTALL_PREFIX<span style="color:#ae81ff">\=</span>/Users/kumotyou/.emacs.d/irony/ <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-DCMAKE_PREFIX_PATH<span style="color:#f92672">=</span>/usr/local/opt/llvm <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-DCMAKE_INSTALL_RPATH_USE_LINK_PATH<span style="color:#f92672">=</span>ON <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-DLIBCLANG_INCLUDE_DIR<span style="color:#f92672">=</span>/usr/local/opt/llvm/include <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-DLIBCLANG_LIBRARY<span style="color:#f92672">=</span>/usr/local/opt/llvm/lib/libclang.dylib <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>/Users/kumotyou/.emacs.d/elpa/irony-20200130.849/server <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span><span style="color:#f92672">&amp;&amp;</span> cmake --build . --use-stderr --config Release --target install
-</code></pre></div></li>
+<pre><code class="language-shell">cmake -DCMAKE_INSTALL_PREFIX\=/Users/kumotyou/.emacs.d/irony/ \
+-DCMAKE_PREFIX_PATH=/usr/local/opt/llvm \
+-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=ON \
+-DLIBCLANG_INCLUDE_DIR=/usr/local/opt/llvm/include \
+-DLIBCLANG_LIBRARY=/usr/local/opt/llvm/lib/libclang.dylib \
+/Users/kumotyou/.emacs.d/elpa/irony-20200130.849/server \
+&amp;&amp; cmake --build . --use-stderr --config Release --target install
+</code></pre>
+</li>
 </ol>
 <h2 id="ubuntu">Ubuntu</h2>
 <ol>
 <li>
 <p>拉取ccls源码, 并进入ccls根目录</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/MaskRay/ccls
+<pre><code class="language-shell">git clone https://github.com/MaskRay/ccls
 
 cd ccls
-</code></pre></div></li>
+</code></pre>
+</li>
 <li>
 <p>拉取第三方依赖. (主要是rapidjson)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git submodule update --init --recursive
-</code></pre></div></li>
+<pre><code class="language-shell">git submodule update --init --recursive
+</code></pre>
+</li>
 <li>
 <p>下载llvm的二进制包并解压</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">wget -c http://releases.llvm.org/9.0.0/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+<pre><code class="language-shell">wget -c http://releases.llvm.org/9.0.0/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
 
 tar xf clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
-</code></pre></div></li>
+</code></pre>
+</li>
 <li>
 <p>在根目录下执行cmake 执行结果保存到Release文件夹中</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cmake -H. -BRelease -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release -DCMAKE_PREFIX_PATH<span style="color:#f92672">=</span>/path/to/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04
+<pre><code class="language-shell">cmake -H. -BRelease -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/path/to/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04
 
 cmake --build Release
-</code></pre></div></li>
+</code></pre>
+</li>
 <li>
 <p>开始编译</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd Release
+<pre><code class="language-shell">cd Release
 
-make -j4 <span style="color:#75715e">#使用4线程编译</span>
-</code></pre></div></li>
+make -j4 #使用4线程编译
+</code></pre>
+</li>
 <li>
 <p>编译完成, 安装</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo make install
-</code></pre></div></li>
+<pre><code class="language-shell">sudo make install
+</code></pre>
+</li>
 </ol>
 
     </div>

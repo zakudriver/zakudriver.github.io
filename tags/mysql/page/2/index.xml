@@ -25,11 +25,11 @@
       <pubDate>Tue, 10 Dec 2019 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/2019/12/myclirc/</guid>
-      <description># vi: ft=dosini [main] # Enables context sensitive auto-completion. If this is disabled the all # possible completions will be listed. smart_completion = True # Multi-line mode allows breaking up the sql statements into multiple lines. If # this is set to True, then the end of the statements must have a semi-colon. # If this is set to False then sql statements can&amp;#39;t be split into multiple # lines.</description>
+      <description># vi: ft=dosini [main] # Enables context sensitive auto-completion. If this is disabled the all # possible completions will be listed. smart_completion = True # Multi-line mode allows breaking up the sql statements into multiple lines. If # this is set to True, then the end of the statements must have a semi-colon. # If this is set to False then sql statements can&#39;t be split into multiple # lines.</description>
     </item>
     
     <item>
-      <title>Angular自定义双向绑定表单组件</title>
+      <title>angular自定义双向绑定表单组件</title>
       <link>https://rx-78-kum0.github.io/2019/07/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/</link>
       <pubDate>Mon, 08 Jul 2019 00:00:00 +0800</pubDate>
       
@@ -43,7 +43,7 @@
       <pubDate>Tue, 04 Jun 2019 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/2019/06/vimrc/</guid>
-      <description>&amp;#34; .vimrc &amp;#34; Configuration file for vim set modelines=0 &amp;#34; Don&amp;#39;t write backup file if vim is being called by &amp;#34;crontab -e&amp;#34; &amp;#34; au BufWrite /private/tmp/crontab.* set nowritebackup nobackup &amp;#34; Don&amp;#39;t write backup file if vim is being called by &amp;#34;chpass&amp;#34; &amp;#34; au BufWrite /private/etc/pw.* set nowritebackup nobackup set nobackup set nowritebackup let skip_defaults_vim=1 &amp;#34; &amp;lt;leader&amp;gt; let g:mapleader=&amp;#34;,&amp;#34; &amp;#34; 去掉有关vi一致性模式</description>
+      <description>&amp;quot; .vimrc &amp;quot; Configuration file for vim set modelines=0 &amp;quot; Don&#39;t write backup file if vim is being called by &amp;quot;crontab -e&amp;quot; &amp;quot; au BufWrite /private/tmp/crontab.* set nowritebackup nobackup &amp;quot; Don&#39;t write backup file if vim is being called by &amp;quot;chpass&amp;quot; &amp;quot; au BufWrite /private/etc/pw.* set nowritebackup nobackup set nobackup set nowritebackup let skip_defaults_vim=1 &amp;quot; &amp;lt;leader&amp;gt; let g:mapleader=&amp;quot;,&amp;quot; &amp;quot; 去掉有关vi一致性模式</description>
     </item>
     
     <item>
@@ -61,7 +61,7 @@
       <pubDate>Sat, 02 Mar 2019 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/2019/03/vscode/</guid>
-      <description>{ // editor &amp;#34;editor.fontSize&amp;#34;: 14, &amp;#34;editor.snippetSuggestions&amp;#34;: &amp;#34;top&amp;#34;, &amp;#34;editor.formatOnSave&amp;#34;: true, &amp;#34;explorer.confirmDragAndDrop&amp;#34;: true, &amp;#34;explorer.confirmDelete&amp;#34;: false, &amp;#34;editor.detectIndentation&amp;#34;: false, &amp;#34;files.autoSave&amp;#34;: &amp;#34;off&amp;#34;, // &amp;#34;editor.fontFamily&amp;#34;: &amp;#34;&amp;#39;FuraCode&amp;#39;, Menlo, Monaco, &amp;#39;Courier New&amp;#39;, monospace&amp;#34;, &amp;#34;editor.fontLigatures&amp;#34;: true, &amp;#34;workbench.iconTheme&amp;#34;: &amp;#34;material-icon-theme&amp;#34;, &amp;#34;workbench.colorTheme&amp;#34;: &amp;#34;Nebula&amp;#34;, // prettier &amp;#34;prettier.printWidth&amp;#34;: 120, &amp;#34;editor.tabSize&amp;#34;: 2, &amp;#34;prettier.singleQuote&amp;#34;: true, &amp;#34;prettier.semi&amp;#34;: true, // typescript &amp;#34;typescript.updateImportsOnFileMove.enabled&amp;#34;: &amp;#34;always&amp;#34;, // emmet &amp;#34;emmet.includeLanguages&amp;#34;: { &amp;#34;javascript&amp;#34;: &amp;#34;javascriptreact&amp;#34;, &amp;#34;typescript&amp;#34;: &amp;#34;typescriptreact&amp;#34; }, &amp;#34;emmet.triggerExpansionOnTab&amp;#34;: true, // 装饰器 &amp;#34;javascript.implicitProjectConfig.experimentalDecorators&amp;#34;: true, // stylus &amp;#34;stylusSupremacy.insertColons&amp;#34;: false, // 是否插</description>
+      <description>{ // editor &amp;quot;editor.fontSize&amp;quot;: 14, &amp;quot;editor.snippetSuggestions&amp;quot;: &amp;quot;top&amp;quot;, &amp;quot;editor.formatOnSave&amp;quot;: true, &amp;quot;explorer.confirmDragAndDrop&amp;quot;: true, &amp;quot;explorer.confirmDelete&amp;quot;: false, &amp;quot;editor.detectIndentation&amp;quot;: false, &amp;quot;files.autoSave&amp;quot;: &amp;quot;off&amp;quot;, // &amp;quot;editor.fontFamily&amp;quot;: &amp;quot;&#39;FuraCode&#39;, Menlo, Monaco, &#39;Courier New&#39;, monospace&amp;quot;, &amp;quot;editor.fontLigatures&amp;quot;: true, &amp;quot;workbench.iconTheme&amp;quot;: &amp;quot;material-icon-theme&amp;quot;, &amp;quot;workbench.colorTheme&amp;quot;: &amp;quot;Nebula&amp;quot;, // prettier &amp;quot;prettier.printWidth&amp;quot;: 120, &amp;quot;editor.tabSize&amp;quot;: 2, &amp;quot;prettier.singleQuote&amp;quot;: true, &amp;quot;prettier.semi&amp;quot;: true, // typescript &amp;quot;typescript.updateImportsOnFileMove.enabled&amp;quot;: &amp;quot;always&amp;quot;, // emmet &amp;quot;emmet.includeLanguages&amp;quot;: { &amp;quot;javascript&amp;quot;: &amp;quot;javascriptreact&amp;quot;, &amp;quot;typescript&amp;quot;: &amp;quot;typescriptreact&amp;quot; }, &amp;quot;emmet.triggerExpansionOnTab&amp;quot;: true, // 装饰器 &amp;quot;javascript.implicitProjectConfig.experimentalDecorators&amp;quot;: true, // stylus &amp;quot;stylusSupremacy.insertColons&amp;quot;: false, // 是否插</description>
     </item>
     
   </channel>

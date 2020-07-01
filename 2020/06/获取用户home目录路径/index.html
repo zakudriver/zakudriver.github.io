@@ -348,58 +348,59 @@
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Home</span>() (<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">error</span>) {
-  <span style="color:#a6e22e">user</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">Current</span>()
-  <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">err</span> {
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">HomeDir</span>, <span style="color:#66d9ef">nil</span>
+      <pre><code class="language-go">func Home() (string, error) {
+  user, err := user.Current()
+  if nil == err {
+    return user.HomeDir, nil
   }
 
-  <span style="color:#75715e">// cross compile support
-</span><span style="color:#75715e"></span>
-  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">runtime</span>.<span style="color:#a6e22e">GOOS</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;windows&#34;</span>  {
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">homeWindows</span>()
+  // cross compile support
+
+  if runtime.GOOS == &quot;windows&quot;  {
+    return homeWindows()
   }
 
-  <span style="color:#75715e">// Unix-like system, so just assume Unix
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">homeUnix</span>()
+  // Unix-like system, so just assume Unix
+  return homeUnix()
 }
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">homeUnix</span>() (<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">error</span>) {
-  <span style="color:#75715e">// First prefer the HOME environmental variable
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">home</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;HOME&#34;</span>); <span style="color:#a6e22e">home</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span> {
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">home</span>, <span style="color:#66d9ef">nil</span>
+func homeUnix() (string, error) {
+  // First prefer the HOME environmental variable
+  if home := os.Getenv(&quot;HOME&quot;); home != &quot;&quot; {
+    return home, nil
   }
 
-  <span style="color:#75715e">// If that fails, try the shell
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">stdout</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>
-  <span style="color:#a6e22e">cmd</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;sh&#34;</span>, <span style="color:#e6db74">&#34;-c&#34;</span>, <span style="color:#e6db74">&#34;eval echo ~$USER&#34;</span>)
-  <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Stdout</span> = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">stdout</span>
-  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Run</span>(); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">err</span>
+  // If that fails, try the shell
+  var stdout bytes.Buffer
+  cmd := exec.Command(&quot;sh&quot;, &quot;-c&quot;, &quot;eval echo ~$USER&quot;)
+  cmd.Stdout = &amp;stdout
+  if err := cmd.Run(); err != nil {
+    return &quot;&quot;, err
   }
 
-  <span style="color:#a6e22e">result</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">TrimSpace</span>(<span style="color:#a6e22e">stdout</span>.<span style="color:#a6e22e">String</span>())
-  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> {
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">errors</span>.<span style="color:#a6e22e">New</span>(<span style="color:#e6db74">&#34;blank output when reading home directory&#34;</span>)
+  result := strings.TrimSpace(stdout.String())
+  if result == &quot;&quot; {
+    return &quot;&quot;, errors.New(&quot;blank output when reading home directory&quot;)
   }
 
-  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>, <span style="color:#66d9ef">nil</span>
+  return result, nil
 }
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">homeWindows</span>() (<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">error</span>) {
-  <span style="color:#a6e22e">drive</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;HOMEDRIVE&#34;</span>)
-  <span style="color:#a6e22e">path</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;HOMEPATH&#34;</span>)
-  <span style="color:#a6e22e">home</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">drive</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">path</span>
-  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">drive</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> {
-    <span style="color:#a6e22e">home</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;USERPROFILE&#34;</span>)
+func homeWindows() (string, error) {
+  drive := os.Getenv(&quot;HOMEDRIVE&quot;)
+  path := os.Getenv(&quot;HOMEPATH&quot;)
+  home := drive + path
+  if drive == &quot;&quot; || path == &quot;&quot; {
+    home = os.Getenv(&quot;USERPROFILE&quot;)
   }
-  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">home</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> {
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">errors</span>.<span style="color:#a6e22e">New</span>(<span style="color:#e6db74">&#34;HOMEDRIVE, HOMEPATH, and USERPROFILE are blank&#34;</span>)
+  if home == &quot;&quot; {
+    return &quot;&quot;, errors.New(&quot;HOMEDRIVE, HOMEPATH, and USERPROFILE are blank&quot;)
   }
 
-  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">home</span>, <span style="color:#66d9ef">nil</span>
+  return home, nil
 }
-</code></pre></div>
+</code></pre>
+
     </div>
     <div class="article-footer">
 <blockquote class="mt-2x">

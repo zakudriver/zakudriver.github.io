@@ -349,104 +349,105 @@
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># vi: ft=dosini</span>
+      <pre><code class="language-yaml"># vi: ft=dosini
 [main]
 
-<span style="color:#75715e"># Enables context sensitive auto-completion. If this is disabled the all</span>
-<span style="color:#75715e"># possible completions will be listed.</span>
+# Enables context sensitive auto-completion. If this is disabled the all
+# possible completions will be listed.
 smart_completion = True
 
-<span style="color:#75715e"># Multi-line mode allows breaking up the sql statements into multiple lines. If</span>
-<span style="color:#75715e"># this is set to True, then the end of the statements must have a semi-colon.</span>
-<span style="color:#75715e"># If this is set to False then sql statements can&#39;t be split into multiple</span>
-<span style="color:#75715e"># lines. End of line (return) is considered as the end of the statement.</span>
+# Multi-line mode allows breaking up the sql statements into multiple lines. If
+# this is set to True, then the end of the statements must have a semi-colon.
+# If this is set to False then sql statements can't be split into multiple
+# lines. End of line (return) is considered as the end of the statement.
 multi_line = True
 
-<span style="color:#75715e"># Destructive warning mode will alert you before executing a sql statement</span>
-<span style="color:#75715e"># that may cause harm to the database such as &#34;drop table&#34;, &#34;drop database&#34;</span>
-<span style="color:#75715e"># or &#34;shutdown&#34;.</span>
+# Destructive warning mode will alert you before executing a sql statement
+# that may cause harm to the database such as &quot;drop table&quot;, &quot;drop database&quot;
+# or &quot;shutdown&quot;.
 destructive_warning = True
 
-<span style="color:#75715e"># log_file location.</span>
+# log_file location.
 log_file = ~/.mycli.log
 
-<span style="color:#75715e"># Default log level. Possible values: &#34;CRITICAL&#34;, &#34;ERROR&#34;, &#34;WARNING&#34;, &#34;INFO&#34;</span>
-<span style="color:#75715e"># and &#34;DEBUG&#34;. &#34;NONE&#34; disables logging.</span>
+# Default log level. Possible values: &quot;CRITICAL&quot;, &quot;ERROR&quot;, &quot;WARNING&quot;, &quot;INFO&quot;
+# and &quot;DEBUG&quot;. &quot;NONE&quot; disables logging.
 log_level = INFO
 
-<span style="color:#75715e"># Log every query and its results to a file. Enable this by uncommenting the</span>
-<span style="color:#75715e"># line below.</span>
-<span style="color:#75715e"># audit_log = ~/.mycli-audit.log</span>
+# Log every query and its results to a file. Enable this by uncommenting the
+# line below.
+# audit_log = ~/.mycli-audit.log
 
-<span style="color:#75715e"># Timing of sql statments and table rendering.</span>
+# Timing of sql statments and table rendering.
 timing = True
 
-<span style="color:#75715e"># Table format. Possible values: psql, plain, simple, grid, fancy_grid, pipe,</span>
-<span style="color:#75715e"># orgtbl, rst, mediawiki, html, latex, latex_booktabs, tsv.</span>
-<span style="color:#75715e"># Recommended: psql, fancy_grid and grid.</span>
+# Table format. Possible values: psql, plain, simple, grid, fancy_grid, pipe,
+# orgtbl, rst, mediawiki, html, latex, latex_booktabs, tsv.
+# Recommended: psql, fancy_grid and grid.
 table_format = psql
 
-<span style="color:#75715e"># Syntax coloring style. Possible values (many support the &#34;-dark&#34; suffix):</span>
-<span style="color:#75715e"># manni, igor, xcode, vim, autumn, vs, rrt, native, perldoc, borland, tango, emacs,</span>
-<span style="color:#75715e"># friendly, monokai, paraiso, colorful, murphy, bw, pastie, paraiso, trac, default,</span>
-<span style="color:#75715e"># fruity.</span>
-<span style="color:#75715e"># Screenshots at http://mycli.net/syntax</span>
+# Syntax coloring style. Possible values (many support the &quot;-dark&quot; suffix):
+# manni, igor, xcode, vim, autumn, vs, rrt, native, perldoc, borland, tango, emacs,
+# friendly, monokai, paraiso, colorful, murphy, bw, pastie, paraiso, trac, default,
+# fruity.
+# Screenshots at http://mycli.net/syntax
 syntax_style = default
 
-<span style="color:#75715e"># Keybindings: Possible values: emacs, vi.</span>
-<span style="color:#75715e"># Emacs mode: Ctrl-A is home, Ctrl-E is end. All emacs keybindings are available in the REPL.</span>
-<span style="color:#75715e"># When Vi mode is enabled you can use modal editing features offered by Vi in the REPL.</span>
+# Keybindings: Possible values: emacs, vi.
+# Emacs mode: Ctrl-A is home, Ctrl-E is end. All emacs keybindings are available in the REPL.
+# When Vi mode is enabled you can use modal editing features offered by Vi in the REPL.
 key_bindings = emacs
 
-<span style="color:#75715e"># Enabling this option will show the suggestions in a wider menu. Thus more items are suggested.</span>
+# Enabling this option will show the suggestions in a wider menu. Thus more items are suggested.
 wider_completion_menu = False
 
-<span style="color:#75715e"># MySQL prompt</span>
-<span style="color:#75715e"># \t - Product type (Percona, MySQL, Mariadb)</span>
-<span style="color:#75715e"># \u - Username</span>
-<span style="color:#75715e"># \h - Hostname of the server</span>
-<span style="color:#75715e"># \d - Database name</span>
-<span style="color:#75715e"># \n - Newline</span>
-prompt = <span style="color:#e6db74">&#39;\t \u@\h:\d&gt; &#39;</span>
-prompt_continuation = <span style="color:#e6db74">&#39;-&gt; &#39;</span>
+# MySQL prompt
+# \t - Product type (Percona, MySQL, Mariadb)
+# \u - Username
+# \h - Hostname of the server
+# \d - Database name
+# \n - Newline
+prompt = '\t \u@\h:\d&gt; '
+prompt_continuation = '-&gt; '
 
-<span style="color:#75715e"># Skip intro info on startup and outro info on exit</span>
+# Skip intro info on startup and outro info on exit
 less_chatty = False
 
-<span style="color:#75715e"># Use alias from --login-path instead of host name in prompt</span>
+# Use alias from --login-path instead of host name in prompt
 login_path_as_host = False
 
-<span style="color:#75715e"># Custom colors for the completion menu, toolbar, etc.</span>
+# Custom colors for the completion menu, toolbar, etc.
 [colors]
-<span style="color:#75715e"># Completion menus.</span>
-Token.Menu.Completions.Completion.Current = <span style="color:#e6db74">&#39;bg:#00aaaa #000000&#39;</span>
-Token.Menu.Completions.Completion = <span style="color:#e6db74">&#39;bg:#008888 #ffffff&#39;</span>
-Token.Menu.Completions.MultiColumnMeta = <span style="color:#e6db74">&#39;bg:#aaffff #000000&#39;</span>
-Token.Menu.Completions.ProgressButton = <span style="color:#e6db74">&#39;bg:#003333&#39;</span>
-Token.Menu.Completions.ProgressBar = <span style="color:#e6db74">&#39;bg:#00aaaa&#39;</span>
+# Completion menus.
+Token.Menu.Completions.Completion.Current = 'bg:#00aaaa #000000'
+Token.Menu.Completions.Completion = 'bg:#008888 #ffffff'
+Token.Menu.Completions.MultiColumnMeta = 'bg:#aaffff #000000'
+Token.Menu.Completions.ProgressButton = 'bg:#003333'
+Token.Menu.Completions.ProgressBar = 'bg:#00aaaa'
 
-<span style="color:#75715e"># Selected text.</span>
-Token.SelectedText = <span style="color:#e6db74">&#39;#ffffff bg:#6666aa&#39;</span>
+# Selected text.
+Token.SelectedText = '#ffffff bg:#6666aa'
 
-<span style="color:#75715e"># Search matches. (reverse-i-search)</span>
-Token.SearchMatch = <span style="color:#e6db74">&#39;#ffffff bg:#4444aa&#39;</span>
-Token.SearchMatch.Current = <span style="color:#e6db74">&#39;#ffffff bg:#44aa44&#39;</span>
+# Search matches. (reverse-i-search)
+Token.SearchMatch = '#ffffff bg:#4444aa'
+Token.SearchMatch.Current = '#ffffff bg:#44aa44'
 
-<span style="color:#75715e"># The bottom toolbar.</span>
-Token.Toolbar = <span style="color:#e6db74">&#39;bg:#222222 #aaaaaa&#39;</span>
-Token.Toolbar.Off = <span style="color:#e6db74">&#39;bg:#222222 #888888&#39;</span>
-Token.Toolbar.On = <span style="color:#e6db74">&#39;bg:#222222 #ffffff&#39;</span>
+# The bottom toolbar.
+Token.Toolbar = 'bg:#222222 #aaaaaa'
+Token.Toolbar.Off = 'bg:#222222 #888888'
+Token.Toolbar.On = 'bg:#222222 #ffffff'
 
-<span style="color:#75715e"># Search/arg/system toolbars.</span>
-Token.Toolbar.Search = <span style="color:#e6db74">&#39;noinherit bold&#39;</span>
-Token.Toolbar.Search.Text = <span style="color:#e6db74">&#39;nobold&#39;</span>
-Token.Toolbar.System = <span style="color:#e6db74">&#39;noinherit bold&#39;</span>
-Token.Toolbar.Arg = <span style="color:#e6db74">&#39;noinherit bold&#39;</span>
-Token.Toolbar.Arg.Text = <span style="color:#e6db74">&#39;nobold&#39;</span>
+# Search/arg/system toolbars.
+Token.Toolbar.Search = 'noinherit bold'
+Token.Toolbar.Search.Text = 'nobold'
+Token.Toolbar.System = 'noinherit bold'
+Token.Toolbar.Arg = 'noinherit bold'
+Token.Toolbar.Arg.Text = 'nobold'
 
-<span style="color:#75715e"># Favorite queries.</span>
+# Favorite queries.
 [favorite_queries]
-</code></pre></div>
+</code></pre>
+
     </div>
     <div class="article-footer">
 <blockquote class="mt-2x">
@@ -483,7 +484,7 @@ Token.Toolbar.Arg.Text = <span style="color:#e6db74">&#39;nobold&#39;</span>
     <div class="bar-inner">
         <ul class="pager pull-left">
             <li class="prev">
-                <a href="https://rx-78-kum0.github.io/2019/07/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/" title="Angular自定义双向绑定表单组件"><i
+                <a href="https://rx-78-kum0.github.io/2019/07/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/" title="angular自定义双向绑定表单组件"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
             </li>

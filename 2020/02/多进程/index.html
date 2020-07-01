@@ -385,27 +385,29 @@
 </ul>
 <h2 id="多进程的交替">多进程的交替</h2>
 <p>队列 + 调度 + 切换</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">schedule</span>()
+<pre><code class="language-c">void schedule()
 {
-  pNew <span style="color:#f92672">=</span> getNext(ReadyQueue); <span style="color:#75715e">// 调度
-</span><span style="color:#75715e"></span>  switch_to(pCur, pNew);      <span style="color:#75715e">// pCur, pNew PCB
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>把当前进程保存起来, 切入另一个的进程.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">swtich_to</span>(pCur, pNew)
-{
-  pCur.ax <span style="color:#f92672">=</span> CPU.ax;
-  pCur.bx <span style="color:#f92672">=</span> CPU.bx;
-    <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>  pCur.cs <span style="color:#f92672">=</span> CPU.cs;
-  pCur.retpc <span style="color:#f92672">=</span> CPU.pc;
-
-  CPU.ax <span style="color:#f92672">=</span> pNew.ax;
-  CPU.bx <span style="color:#f92672">=</span> pNew.bx;
-    <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>  CPU.cs <span style="color:#f92672">=</span> pNew.cs;
-  CPU.pc <span style="color:#f92672">=</span> pNew.retpc;
+  pNew = getNext(ReadyQueue); // 调度
+  switch_to(pCur, pNew);      // pCur, pNew PCB
 }
-</code></pre></div><h2 id="多进程的内存管理">多进程的内存管理</h2>
+</code></pre>
+<p>把当前进程保存起来, 切入另一个的进程.</p>
+<pre><code class="language-c">void swtich_to(pCur, pNew)
+{
+  pCur.ax = CPU.ax;
+  pCur.bx = CPU.bx;
+    // ...
+  pCur.cs = CPU.cs;
+  pCur.retpc = CPU.pc;
+
+  CPU.ax = pNew.ax;
+  CPU.bx = pNew.bx;
+    // ...
+  CPU.cs = pNew.cs;
+  CPU.pc = pNew.retpc;
+}
+</code></pre>
+<h2 id="多进程的内存管理">多进程的内存管理</h2>
 <p>通过映射表实现内存地址空间的分离.</p>
 <p>进程1 内存地址[100] &mdash;&gt; 进程1的映射表 &mdash;-&gt;  物理内存 780
 进程2 内存地址[100] &mdash;&gt; 进程2的映射表 &mdash;-&gt;  物理内存 1260</p>
@@ -448,7 +450,7 @@
     <div class="bar-inner">
         <ul class="pager pull-left">
             <li class="prev">
-                <a href="https://rx-78-kum0.github.io/2020/02/typescript%E5%85%83%E7%BC%96%E7%A8%8B/" title="Typescript元编程"><i
+                <a href="https://rx-78-kum0.github.io/2020/02/typescript%E5%85%83%E7%BC%96%E7%A8%8B/" title="typescript元编程"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
             </li>

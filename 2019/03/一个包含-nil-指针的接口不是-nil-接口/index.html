@@ -388,44 +388,49 @@
 </tbody>
 </table>
 <p>这样的接口才能满足 <strong>接口值 == nil</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#66d9ef">interface</span>{}
-<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span>) <span style="color:#75715e">// true
-</span></code></pre></div><h2 id="一个不包含任何值的-nil-接口值">一个不包含任何值的 nil 接口值:</h2>
+<pre><code class="language-go">var a interface{}
+fmt.Println(a == nil) // true
+</code></pre>
+<h2 id="一个不包含任何值的-nil-接口值">一个不包含任何值的 nil 接口值:</h2>
 <p>interface 类型变量的动态类型和动态值都为 nil.
 比如 nil, 或者:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#66d9ef">interface</span>{}
-<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>) <span style="color:#75715e">// a为nil
-</span></code></pre></div><h2 id="一个刚好包含-nil-指针的接口值">一个刚好包含 nil 指针的接口值:</h2>
+<pre><code class="language-go">var a interface{}
+fmt.Println(a) // a为nil
+</code></pre>
+<h2 id="一个刚好包含-nil-指针的接口值">一个刚好包含 nil 指针的接口值:</h2>
 <p>赋值给后，interface 类型变量的动态类型不为 nil，动态值为 nil.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#66d9ef">interface</span>{}
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">string</span>
-<span style="color:#a6e22e">a</span> = <span style="color:#a6e22e">b</span>
-<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>) <span style="color:#75715e">// 此时a的动态类型为*string，动态值为nil
-</span></code></pre></div><h2 id="这两种对象比较">这两种对象比较:</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#66d9ef">interface</span>{} <span style="color:#75715e">// nil
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">string</span>     <span style="color:#75715e">// nil
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">a</span> = <span style="color:#a6e22e">b</span>
+<pre><code class="language-go">var a interface{}
+var b *string
+a = b
+fmt.Println(a) // 此时a的动态类型为*string，动态值为nil
+</code></pre>
+<h2 id="这两种对象比较">这两种对象比较:</h2>
+<pre><code class="language-go">func main(){
+  var a interface{} // nil
+  var b *string     // nil
+  a = b
 
-  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span>) <span style="color:#75715e">// false
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">b</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span>) <span style="color:#75715e">// true
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">b</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">a</span>)   <span style="color:#75715e">// true
-</span><span style="color:#75715e"></span>}
-</code></pre></div><ol>
+  fmt.Println(a == nil) // false
+  fmt.Println(b == nil) // true
+  fmt.Println(b == a)   // true
+}
+</code></pre>
+<ol>
 <li>
 <p>a <code>= nil 为 false: b 赋值给 a, a 的动态类型为 *string, 动态值为 nil, 所以 a =</code> nil 为 false.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// 空接口
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">eface</span> <span style="color:#66d9ef">struct</span> {
-  <span style="color:#a6e22e">_type</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">_type</span>         <span style="color:#75715e">// 类型信息
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">data</span>  <span style="color:#a6e22e">unsafe</span>.<span style="color:#a6e22e">Pointer</span> <span style="color:#75715e">// 指向数据的指针
-</span><span style="color:#75715e"></span>}
+<pre><code class="language-go">// 空接口
+type eface struct {
+  _type *_type         // 类型信息
+  data  unsafe.Pointer // 指向数据的指针
+}
 
-<span style="color:#75715e">// 带有方法的接口
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">iface</span> <span style="color:#66d9ef">struct</span> {
-  <span style="color:#a6e22e">tab</span>  <span style="color:#f92672">*</span><span style="color:#a6e22e">itab</span>           <span style="color:#75715e">// 存储type信息还有结构实现方法的集合
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">data</span> <span style="color:#a6e22e">unsafe</span>.<span style="color:#a6e22e">Pointer</span>  <span style="color:#75715e">// 指向数据的指针
-</span><span style="color:#75715e"></span>}
-</code></pre></div></li>
+// 带有方法的接口
+type iface struct {
+  tab  *itab           // 存储type信息还有结构实现方法的集合
+  data unsafe.Pointer  // 指向数据的指针
+}
+</code></pre>
+</li>
 </ol>
 <p>根据 interface 的底层实现,  a = b 实则是 a.data = unsafe.Pointer(&amp;b). a = nil 才是 a.data = nil.</p>
 <ol>

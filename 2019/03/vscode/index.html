@@ -348,172 +348,173 @@
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">editor</span>
-  <span style="color:#f92672">&#34;editor.fontSize&#34;</span>: <span style="color:#ae81ff">14</span>,
-  <span style="color:#f92672">&#34;editor.snippetSuggestions&#34;</span>: <span style="color:#e6db74">&#34;top&#34;</span>,
-  <span style="color:#f92672">&#34;editor.formatOnSave&#34;</span>: <span style="color:#66d9ef">true</span>,
-  <span style="color:#f92672">&#34;explorer.confirmDragAndDrop&#34;</span>: <span style="color:#66d9ef">true</span>,
-  <span style="color:#f92672">&#34;explorer.confirmDelete&#34;</span>: <span style="color:#66d9ef">false</span>,
-  <span style="color:#f92672">&#34;editor.detectIndentation&#34;</span>: <span style="color:#66d9ef">false</span>,
-  <span style="color:#f92672">&#34;files.autoSave&#34;</span>: <span style="color:#e6db74">&#34;off&#34;</span>,
-  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#f92672">&#34;editor.fontFamily&#34;</span>: <span style="color:#e6db74">&#34;&#39;FuraCode&#39;, Menlo, Monaco, &#39;Courier New&#39;, monospace&#34;</span>,
-  <span style="color:#f92672">&#34;editor.fontLigatures&#34;</span>: <span style="color:#66d9ef">true</span>,
-  <span style="color:#f92672">&#34;workbench.iconTheme&#34;</span>: <span style="color:#e6db74">&#34;material-icon-theme&#34;</span>,
-  <span style="color:#f92672">&#34;workbench.colorTheme&#34;</span>: <span style="color:#e6db74">&#34;Nebula&#34;</span>,
+      <pre><code class="language-json">{
+  // editor
+  &quot;editor.fontSize&quot;: 14,
+  &quot;editor.snippetSuggestions&quot;: &quot;top&quot;,
+  &quot;editor.formatOnSave&quot;: true,
+  &quot;explorer.confirmDragAndDrop&quot;: true,
+  &quot;explorer.confirmDelete&quot;: false,
+  &quot;editor.detectIndentation&quot;: false,
+  &quot;files.autoSave&quot;: &quot;off&quot;,
+  // &quot;editor.fontFamily&quot;: &quot;'FuraCode', Menlo, Monaco, 'Courier New', monospace&quot;,
+  &quot;editor.fontLigatures&quot;: true,
+  &quot;workbench.iconTheme&quot;: &quot;material-icon-theme&quot;,
+  &quot;workbench.colorTheme&quot;: &quot;Nebula&quot;,
 
-  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">prettier</span>
-  <span style="color:#f92672">&#34;prettier.printWidth&#34;</span>: <span style="color:#ae81ff">120</span>,
-  <span style="color:#f92672">&#34;editor.tabSize&#34;</span>: <span style="color:#ae81ff">2</span>,
-  <span style="color:#f92672">&#34;prettier.singleQuote&#34;</span>: <span style="color:#66d9ef">true</span>,
-  <span style="color:#f92672">&#34;prettier.semi&#34;</span>: <span style="color:#66d9ef">true</span>,
+  // prettier
+  &quot;prettier.printWidth&quot;: 120,
+  &quot;editor.tabSize&quot;: 2,
+  &quot;prettier.singleQuote&quot;: true,
+  &quot;prettier.semi&quot;: true,
 
-  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">typescript</span>
-  <span style="color:#f92672">&#34;typescript.updateImportsOnFileMove.enabled&#34;</span>: <span style="color:#e6db74">&#34;always&#34;</span>,
+  // typescript
+  &quot;typescript.updateImportsOnFileMove.enabled&quot;: &quot;always&quot;,
 
-  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">emmet</span>
-  <span style="color:#f92672">&#34;emmet.includeLanguages&#34;</span>: {
-    <span style="color:#f92672">&#34;javascript&#34;</span>: <span style="color:#e6db74">&#34;javascriptreact&#34;</span>,
-    <span style="color:#f92672">&#34;typescript&#34;</span>: <span style="color:#e6db74">&#34;typescriptreact&#34;</span>
+  // emmet
+  &quot;emmet.includeLanguages&quot;: {
+    &quot;javascript&quot;: &quot;javascriptreact&quot;,
+    &quot;typescript&quot;: &quot;typescriptreact&quot;
   },
-  <span style="color:#f92672">&#34;emmet.triggerExpansionOnTab&#34;</span>: <span style="color:#66d9ef">true</span>,
+  &quot;emmet.triggerExpansionOnTab&quot;: true,
 
-  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">装饰器</span>
-  <span style="color:#f92672">&#34;javascript.implicitProjectConfig.experimentalDecorators&#34;</span>: <span style="color:#66d9ef">true</span>,
+  // 装饰器
+  &quot;javascript.implicitProjectConfig.experimentalDecorators&quot;: true,
 
-  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">stylus</span>
-  <span style="color:#f92672">&#34;stylusSupremacy.insertColons&#34;</span>: <span style="color:#66d9ef">false</span>, <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">是否插入冒号</span>
-  <span style="color:#f92672">&#34;stylusSupremacy.insertSemicolons&#34;</span>: <span style="color:#66d9ef">false</span>, <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">是否插入分好</span>
-  <span style="color:#f92672">&#34;stylusSupremacy.insertBraces&#34;</span>: <span style="color:#66d9ef">false</span>, <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">是否插入大括号</span>
-  <span style="color:#f92672">&#34;stylusSupremacy.insertNewLineAroundImports&#34;</span>: <span style="color:#66d9ef">true</span>, <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">import之后是否换行</span>
-  <span style="color:#f92672">&#34;stylusSupremacy.insertNewLineAroundBlocks&#34;</span>: <span style="color:#66d9ef">true</span>,
-  <span style="color:#f92672">&#34;stylusSupremacy.insertSpaceAfterComment&#34;</span>: <span style="color:#66d9ef">true</span>,
-  <span style="color:#f92672">&#34;window.zoomLevel&#34;</span>: <span style="color:#ae81ff">0</span>,
+  // stylus
+  &quot;stylusSupremacy.insertColons&quot;: false, // 是否插入冒号
+  &quot;stylusSupremacy.insertSemicolons&quot;: false, // 是否插入分好
+  &quot;stylusSupremacy.insertBraces&quot;: false, // 是否插入大括号
+  &quot;stylusSupremacy.insertNewLineAroundImports&quot;: true, // import之后是否换行
+  &quot;stylusSupremacy.insertNewLineAroundBlocks&quot;: true,
+  &quot;stylusSupremacy.insertSpaceAfterComment&quot;: true,
+  &quot;window.zoomLevel&quot;: 0,
 
-  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">Formatter</span>
-  <span style="color:#f92672">&#34;[javascript]&#34;</span>: {
-    <span style="color:#f92672">&#34;editor.defaultFormatter&#34;</span>: <span style="color:#e6db74">&#34;vscode.typescript-language-features&#34;</span>
+  // Formatter
+  &quot;[javascript]&quot;: {
+    &quot;editor.defaultFormatter&quot;: &quot;vscode.typescript-language-features&quot;
   },
-  <span style="color:#f92672">&#34;[typescript]&#34;</span>: {
-    <span style="color:#f92672">&#34;editor.defaultFormatter&#34;</span>: <span style="color:#e6db74">&#34;esbenp.prettier-vscode&#34;</span>
+  &quot;[typescript]&quot;: {
+    &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
   },
-  <span style="color:#f92672">&#34;[json]&#34;</span>: {
-    <span style="color:#f92672">&#34;editor.defaultFormatter&#34;</span>: <span style="color:#e6db74">&#34;esbenp.prettier-vscode&#34;</span>
+  &quot;[json]&quot;: {
+    &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
   },
-  <span style="color:#f92672">&#34;[jsonc]&#34;</span>: {
-    <span style="color:#f92672">&#34;editor.defaultFormatter&#34;</span>: <span style="color:#e6db74">&#34;esbenp.prettier-vscode&#34;</span>
+  &quot;[jsonc]&quot;: {
+    &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
   },
-  <span style="color:#f92672">&#34;[typescriptreact]&#34;</span>: {
-    <span style="color:#f92672">&#34;editor.defaultFormatter&#34;</span>: <span style="color:#e6db74">&#34;esbenp.prettier-vscode&#34;</span>
+  &quot;[typescriptreact]&quot;: {
+    &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
   },
-  <span style="color:#f92672">&#34;[html]&#34;</span>: {
-    <span style="color:#f92672">&#34;editor.defaultFormatter&#34;</span>: <span style="color:#e6db74">&#34;esbenp.prettier-vscode&#34;</span>
+  &quot;[html]&quot;: {
+    &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
   },
 
-  <span style="color:#f92672">&#34;search.followSymlinks&#34;</span>: <span style="color:#66d9ef">false</span>,
+  &quot;search.followSymlinks&quot;: false,
 
-  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">vim</span>
-  <span style="color:#f92672">&#34;vim.useSystemClipboard&#34;</span>: <span style="color:#66d9ef">true</span>,
-  <span style="color:#f92672">&#34;vim.hlsearch&#34;</span>: <span style="color:#66d9ef">true</span>,
-  <span style="color:#f92672">&#34;vim.smartcase&#34;</span>: <span style="color:#66d9ef">true</span>,
-  <span style="color:#f92672">&#34;vim.leader&#34;</span>: <span style="color:#e6db74">&#34;,&#34;</span>,
-  <span style="color:#f92672">&#34;vim.highlightedyank.enable&#34;</span>: <span style="color:#66d9ef">true</span>,
-  <span style="color:#f92672">&#34;vim.highlightedyank.duration&#34;</span>: <span style="color:#ae81ff">1000</span>,
-  <span style="color:#f92672">&#34;vim.highlightedyank.color&#34;</span>: <span style="color:#e6db74">&#34;rgba(250, 240, 170, 0.5)&#34;</span>,
-  <span style="color:#f92672">&#34;vim.history&#34;</span>: <span style="color:#ae81ff">100</span>,
-  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#f92672">&#34;vim.cursorStylePerMode.insert&#34;</span>: <span style="color:#e6db74">&#34;line&#34;</span>,
-  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#f92672">&#34;vim.cursorStylePerMode.normal&#34;</span>: <span style="color:#e6db74">&#34;underline&#34;</span>,
-  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#f92672">&#34;vim.cursorStylePerMode.replace&#34;</span>: <span style="color:#e6db74">&#34;underline&#34;</span>,
-  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#f92672">&#34;vim.cursorStylePerMode.visual&#34;</span>: <span style="color:#e6db74">&#34;blink&#34;</span>,
-  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#f92672">&#34;vim.cursorStylePerMode.visualblock&#34;</span>: <span style="color:#e6db74">&#34;blink&#34;</span>,
-  <span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#f92672">&#34;vim.cursorStylePerMode.visualline&#34;</span>: <span style="color:#e6db74">&#34;underline&#34;</span>,
-  <span style="color:#f92672">&#34;vim.easymotion&#34;</span>: <span style="color:#66d9ef">true</span>,
-  <span style="color:#f92672">&#34;vim.easymotionMarkerFontSize&#34;</span>: <span style="color:#e6db74">&#34;16&#34;</span>,
-  <span style="color:#f92672">&#34;vim.easymotionMarkerHeight&#34;</span>: <span style="color:#ae81ff">16</span>,
-  <span style="color:#f92672">&#34;vim.easymotionMarkerWidthPerChar&#34;</span>: <span style="color:#ae81ff">9</span>,
-  <span style="color:#f92672">&#34;vim.normalModeKeyBindings&#34;</span>: [],
-  <span style="color:#f92672">&#34;vim.normalModeKeyBindingsNonRecursive&#34;</span>: [
+  // vim
+  &quot;vim.useSystemClipboard&quot;: true,
+  &quot;vim.hlsearch&quot;: true,
+  &quot;vim.smartcase&quot;: true,
+  &quot;vim.leader&quot;: &quot;,&quot;,
+  &quot;vim.highlightedyank.enable&quot;: true,
+  &quot;vim.highlightedyank.duration&quot;: 1000,
+  &quot;vim.highlightedyank.color&quot;: &quot;rgba(250, 240, 170, 0.5)&quot;,
+  &quot;vim.history&quot;: 100,
+  // &quot;vim.cursorStylePerMode.insert&quot;: &quot;line&quot;,
+  // &quot;vim.cursorStylePerMode.normal&quot;: &quot;underline&quot;,
+  // &quot;vim.cursorStylePerMode.replace&quot;: &quot;underline&quot;,
+  // &quot;vim.cursorStylePerMode.visual&quot;: &quot;blink&quot;,
+  // &quot;vim.cursorStylePerMode.visualblock&quot;: &quot;blink&quot;,
+  // &quot;vim.cursorStylePerMode.visualline&quot;: &quot;underline&quot;,
+  &quot;vim.easymotion&quot;: true,
+  &quot;vim.easymotionMarkerFontSize&quot;: &quot;16&quot;,
+  &quot;vim.easymotionMarkerHeight&quot;: 16,
+  &quot;vim.easymotionMarkerWidthPerChar&quot;: 9,
+  &quot;vim.normalModeKeyBindings&quot;: [],
+  &quot;vim.normalModeKeyBindingsNonRecursive&quot;: [
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;d&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;\&#34;&#34;</span>, <span style="color:#e6db74">&#34;_&#34;</span>, <span style="color:#e6db74">&#34;d&#34;</span>]
+      &quot;before&quot;: [&quot;d&quot;],
+      &quot;after&quot;: [&quot;\&quot;&quot;, &quot;_&quot;, &quot;d&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;d&#34;</span>, <span style="color:#e6db74">&#34;d&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;\&#34;&#34;</span>, <span style="color:#e6db74">&#34;_&#34;</span>, <span style="color:#e6db74">&#34;d&#34;</span>, <span style="color:#e6db74">&#34;d&#34;</span>]
+      &quot;before&quot;: [&quot;d&quot;, &quot;d&quot;],
+      &quot;after&quot;: [&quot;\&quot;&quot;, &quot;_&quot;, &quot;d&quot;, &quot;d&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;D&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;\&#34;&#34;</span>, <span style="color:#e6db74">&#34;_&#34;</span>, <span style="color:#e6db74">&#34;D&#34;</span>]
+      &quot;before&quot;: [&quot;D&quot;],
+      &quot;after&quot;: [&quot;\&quot;&quot;, &quot;_&quot;, &quot;D&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;t&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;\&#34;&#34;</span>, <span style="color:#e6db74">&#34;_&#34;</span>, <span style="color:#e6db74">&#34;x&#34;</span>]
+      &quot;before&quot;: [&quot;t&quot;],
+      &quot;after&quot;: [&quot;\&quot;&quot;, &quot;_&quot;, &quot;x&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;X&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;\&#34;&#34;</span>, <span style="color:#e6db74">&#34;_&#34;</span>, <span style="color:#e6db74">&#34;X&#34;</span>]
+      &quot;before&quot;: [&quot;X&quot;],
+      &quot;after&quot;: [&quot;\&quot;&quot;, &quot;_&quot;, &quot;X&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;s&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;\&#34;&#34;</span>, <span style="color:#e6db74">&#34;_&#34;</span>, <span style="color:#e6db74">&#34;s&#34;</span>]
+      &quot;before&quot;: [&quot;s&quot;],
+      &quot;after&quot;: [&quot;\&quot;&quot;, &quot;_&quot;, &quot;s&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;S&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;\&#34;&#34;</span>, <span style="color:#e6db74">&#34;_&#34;</span>, <span style="color:#e6db74">&#34;S&#34;</span>]
+      &quot;before&quot;: [&quot;S&quot;],
+      &quot;after&quot;: [&quot;\&quot;&quot;, &quot;_&quot;, &quot;S&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;c&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;\&#34;&#34;</span>, <span style="color:#e6db74">&#34;_&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>]
+      &quot;before&quot;: [&quot;c&quot;],
+      &quot;after&quot;: [&quot;\&quot;&quot;, &quot;_&quot;, &quot;c&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;C&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;\&#34;&#34;</span>, <span style="color:#e6db74">&#34;_&#34;</span>, <span style="color:#e6db74">&#34;C&#34;</span>]
+      &quot;before&quot;: [&quot;C&quot;],
+      &quot;after&quot;: [&quot;\&quot;&quot;, &quot;_&quot;, &quot;C&quot;]
     }
   ],
-  <span style="color:#f92672">&#34;vim.visualModeKeyBindings&#34;</span>: [
+  &quot;vim.visualModeKeyBindings&quot;: [
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;s&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;\&#34;&#34;</span>, <span style="color:#e6db74">&#34;_&#34;</span>, <span style="color:#e6db74">&#34;s&#34;</span>]
+      &quot;before&quot;: [&quot;s&quot;],
+      &quot;after&quot;: [&quot;\&quot;&quot;, &quot;_&quot;, &quot;s&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;S&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;\&#34;&#34;</span>, <span style="color:#e6db74">&#34;_&#34;</span>, <span style="color:#e6db74">&#34;S&#34;</span>]
+      &quot;before&quot;: [&quot;S&quot;],
+      &quot;after&quot;: [&quot;\&quot;&quot;, &quot;_&quot;, &quot;S&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;z&#34;</span>, <span style="color:#e6db74">&#34;)&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;(&#34;</span>, <span style="color:#e6db74">&#34;)&#34;</span>, <span style="color:#e6db74">&#34;&lt;Esc&gt;&#34;</span>, <span style="color:#e6db74">&#34;h&#34;</span>, <span style="color:#e6db74">&#34;p&#34;</span>]
+      &quot;before&quot;: [&quot;z&quot;, &quot;)&quot;],
+      &quot;after&quot;: [&quot;c&quot;, &quot;(&quot;, &quot;)&quot;, &quot;&lt;Esc&gt;&quot;, &quot;h&quot;, &quot;p&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;z&#34;</span>, <span style="color:#e6db74">&#34;}&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;{&#34;</span>, <span style="color:#e6db74">&#34;}&#34;</span>, <span style="color:#e6db74">&#34;&lt;Esc&gt;&#34;</span>, <span style="color:#e6db74">&#34;h&#34;</span>, <span style="color:#e6db74">&#34;p&#34;</span>]
+      &quot;before&quot;: [&quot;z&quot;, &quot;}&quot;],
+      &quot;after&quot;: [&quot;c&quot;, &quot;{&quot;, &quot;}&quot;, &quot;&lt;Esc&gt;&quot;, &quot;h&quot;, &quot;p&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;z&#34;</span>, <span style="color:#e6db74">&#34;]&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;[&#34;</span>, <span style="color:#e6db74">&#34;]&#34;</span>, <span style="color:#e6db74">&#34;&lt;Esc&gt;&#34;</span>, <span style="color:#e6db74">&#34;h&#34;</span>, <span style="color:#e6db74">&#34;p&#34;</span>]
+      &quot;before&quot;: [&quot;z&quot;, &quot;]&quot;],
+      &quot;after&quot;: [&quot;c&quot;, &quot;[&quot;, &quot;]&quot;, &quot;&lt;Esc&gt;&quot;, &quot;h&quot;, &quot;p&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;z&#34;</span>, <span style="color:#e6db74">&#34;&#39;&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;&#39;&#34;</span>, <span style="color:#e6db74">&#34;&#39;&#34;</span>, <span style="color:#e6db74">&#34;&lt;Esc&gt;&#34;</span>, <span style="color:#e6db74">&#34;h&#34;</span>, <span style="color:#e6db74">&#34;p&#34;</span>]
+      &quot;before&quot;: [&quot;z&quot;, &quot;'&quot;],
+      &quot;after&quot;: [&quot;c&quot;, &quot;'&quot;, &quot;'&quot;, &quot;&lt;Esc&gt;&quot;, &quot;h&quot;, &quot;p&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;z&#34;</span>, <span style="color:#e6db74">&#34;\&#34;&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;\&#34;&#34;</span>, <span style="color:#e6db74">&#34;\&#34;&#34;</span>, <span style="color:#e6db74">&#34;&lt;Esc&gt;&#34;</span>, <span style="color:#e6db74">&#34;h&#34;</span>, <span style="color:#e6db74">&#34;p&#34;</span>]
+      &quot;before&quot;: [&quot;z&quot;, &quot;\&quot;&quot;],
+      &quot;after&quot;: [&quot;c&quot;, &quot;\&quot;&quot;, &quot;\&quot;&quot;, &quot;&lt;Esc&gt;&quot;, &quot;h&quot;, &quot;p&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;z&#34;</span>, <span style="color:#e6db74">&#34;&gt;&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;&lt;&#34;</span>, <span style="color:#e6db74">&#34;&gt;&#34;</span>, <span style="color:#e6db74">&#34;&lt;Esc&gt;&#34;</span>, <span style="color:#e6db74">&#34;h&#34;</span>, <span style="color:#e6db74">&#34;p&#34;</span>]
+      &quot;before&quot;: [&quot;z&quot;, &quot;&gt;&quot;],
+      &quot;after&quot;: [&quot;c&quot;, &quot;&lt;&quot;, &quot;&gt;&quot;, &quot;&lt;Esc&gt;&quot;, &quot;h&quot;, &quot;p&quot;]
     },
     {
-      <span style="color:#f92672">&#34;before&#34;</span>: [<span style="color:#e6db74">&#34;z&#34;</span>, <span style="color:#e6db74">&#34;`&#34;</span>],
-      <span style="color:#f92672">&#34;after&#34;</span>: [<span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;`&#34;</span>, <span style="color:#e6db74">&#34;`&#34;</span>, <span style="color:#e6db74">&#34;&lt;Esc&gt;&#34;</span>, <span style="color:#e6db74">&#34;h&#34;</span>, <span style="color:#e6db74">&#34;p&#34;</span>]
+      &quot;before&quot;: [&quot;z&quot;, &quot;`&quot;],
+      &quot;after&quot;: [&quot;c&quot;, &quot;`&quot;, &quot;`&quot;, &quot;&lt;Esc&gt;&quot;, &quot;h&quot;, &quot;p&quot;]
     }
   ],
-  <span style="color:#f92672">&#34;vim.handleKeys&#34;</span>: {
-    <span style="color:#f92672">&#34;&lt;C-a&gt;&#34;</span>: <span style="color:#66d9ef">false</span>,
-    <span style="color:#f92672">&#34;&lt;C-f&gt;&#34;</span>: <span style="color:#66d9ef">false</span>
+  &quot;vim.handleKeys&quot;: {
+    &quot;&lt;C-a&gt;&quot;: false,
+    &quot;&lt;C-f&gt;&quot;: false
   }
 }
-</code></pre></div>
+</code></pre>
+
     </div>
     <div class="article-footer">
 <blockquote class="mt-2x">

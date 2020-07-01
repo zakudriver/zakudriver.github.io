@@ -348,44 +348,45 @@
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># .clang-format</span>
+      <pre><code class="language-yaml"># .clang-format
 
-<span style="color:#66d9ef">BasedOnStyle</span>: LLVM
+BasedOnStyle: LLVM
 
 Language:	Cpp
 
-<span style="color:#66d9ef">IndentWidth </span>: <span style="color:#ae81ff">2</span>
+IndentWidth : 2
 
-<span style="color:#75715e"># 开括号(开圆括号、开尖括号、开方括号)后的对齐: Align, DontAlign, AlwaysBreak(总是在开括号后换行)</span>
+# 开括号(开圆括号、开尖括号、开方括号)后的对齐: Align, DontAlign, AlwaysBreak(总是在开括号后换行)
 AlignAfterOpenBracket:	Align
 
-<span style="color:#75715e"># 大括号换行，只有当BreakBeforeBraces设置为Custom时才有效</span>
-<span style="color:#66d9ef">BraceWrapping</span>:
-  <span style="color:#75715e"># class定义后面</span>
-  AfterClass:	<span style="color:#66d9ef">false</span>
-  <span style="color:#75715e"># 控制语句后面</span>
-  AfterControlStatement:	<span style="color:#66d9ef">false</span>
-  <span style="color:#75715e"># enum定义后面</span>
-  AfterEnum:	<span style="color:#66d9ef">false</span>
-  <span style="color:#75715e"># 函数定义后面</span>
-  AfterFunction:	<span style="color:#66d9ef">true</span>
-  <span style="color:#75715e"># 命名空间定义后面</span>
-  AfterNamespace:	<span style="color:#66d9ef">false</span>
-  <span style="color:#75715e"># ObjC定义后面</span>
-  AfterObjCDeclaration:	<span style="color:#66d9ef">false</span>
-  <span style="color:#75715e"># struct定义后面</span>
-  AfterStruct:	<span style="color:#66d9ef">false</span>
-  <span style="color:#75715e"># union定义后面</span>
-  AfterUnion:	<span style="color:#66d9ef">false</span>
-  <span style="color:#75715e"># catch之前</span>
-  BeforeCatch:	<span style="color:#66d9ef">true</span>
-  <span style="color:#75715e"># else之前</span>
-  BeforeElse:	<span style="color:#66d9ef">true</span>
-  <span style="color:#75715e"># 缩进大括号</span>
-  IndentBraces:	<span style="color:#66d9ef">false</span>
+# 大括号换行，只有当BreakBeforeBraces设置为Custom时才有效
+BraceWrapping:
+  # class定义后面
+  AfterClass:	false
+  # 控制语句后面
+  AfterControlStatement:	false
+  # enum定义后面
+  AfterEnum:	false
+  # 函数定义后面
+  AfterFunction:	true
+  # 命名空间定义后面
+  AfterNamespace:	false
+  # ObjC定义后面
+  AfterObjCDeclaration:	false
+  # struct定义后面
+  AfterStruct:	false
+  # union定义后面
+  AfterUnion:	false
+  # catch之前
+  BeforeCatch:	true
+  # else之前
+  BeforeElse:	true
+  # 缩进大括号
+  IndentBraces:	false
 
 BreakBeforeBraces:	Custom
-</code></pre></div>
+</code></pre>
+
     </div>
     <div class="article-footer">
 <blockquote class="mt-2x">
@@ -428,7 +429,7 @@ BreakBeforeBraces:	Custom
             </li>
             <li class="next">
                 <a href="https://rx-78-kum0.github.io/2020/02/typescript%E5%85%83%E7%BC%96%E7%A8%8B/"
-                    title="Typescript元编程"><span>Newer&nbsp;&nbsp;</span><i
+                    title="typescript元编程"><span>Newer&nbsp;&nbsp;</span><i
                         class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             

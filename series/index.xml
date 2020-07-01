@@ -15,7 +15,7 @@
       <pubDate>Tue, 23 Jun 2020 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/2020/06/gc%E4%BC%98%E5%8C%96/</guid>
-      <description>小对象要合并 函数频繁创建的简单的对象，直接返回对象，效果比返回指针效果要好 类型转换要注意，官方用法消耗特别大。 package string_util import ( &amp;#34;unsafe&amp;#34; ) func str2bytes(s string) []byte { x := (*[2]uintptr)(unsafe.Pointer(&amp;amp;s)) h</description>
+      <description>小对象要合并 函数频繁创建的简单的对象，直接返回对象，效果比返回指针效果要好 类型转换要注意，官方用法消耗特别大。 package string_util import ( &amp;quot;unsafe&amp;quot; ) func str2bytes(s string) []byte { x := (*[2]uintptr)(unsafe.Pointer(&amp;amp;s)) h</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Tue, 23 Jun 2020 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/2020/06/time/</guid>
-      <description>package util-time import ( &amp;#34;strconv&amp;#34; &amp;#34;time&amp;#34; ) // 获取当前的时间 - 字符串 func GetCurrentDate() string { return time.Now().Format(&amp;#34;2006/01/02 15:04:05&amp;#34;) } // 获取当前的时间 - Unix时间戳 func GetCurrentUnix() int64 { return time.Now().Unix() } // 获取当前的时间 - 毫秒级时间戳 func GetCurrentMilliUnix() int64 { return</description>
+      <description>package util-time import ( &amp;quot;strconv&amp;quot; &amp;quot;time&amp;quot; ) // 获取当前的时间 - 字符串 func GetCurrentDate() string { return time.Now().Format(&amp;quot;2006/01/02 15:04:05&amp;quot;) } // 获取当前的时间 - Unix时间戳 func GetCurrentUnix() int64 { return time.Now().Unix() } // 获取当前的时间 - 毫秒级时间戳 func GetCurrentMilliUnix() int64 { return</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@
       <pubDate>Wed, 10 Jun 2020 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/2020/06/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7home%E7%9B%AE%E5%BD%95%E8%B7%AF%E5%BE%84/</guid>
-      <description>func Home() (string, error) { user, err := user.Current() if nil == err { return user.HomeDir, nil } // cross compile support if runtime.GOOS == &amp;#34;windows&amp;#34; { return homeWindows() } // Unix-like system, so just assume Unix return homeUnix() } func homeUnix() (string, error) { // First prefer the HOME environmental variable if home := os.Getenv(&amp;#34;HOME&amp;#34;); home != &amp;#34;&amp;#34; { return home, nil } // If that fails, try the</description>
+      <description>func Home() (string, error) { user, err := user.Current() if nil == err { return user.HomeDir, nil } // cross compile support if runtime.GOOS == &amp;quot;windows&amp;quot; { return homeWindows() } // Unix-like system, so just assume Unix return homeUnix() } func homeUnix() (string, error) { // First prefer the HOME environmental variable if home := os.Getenv(&amp;quot;HOME&amp;quot;); home != &amp;quot;&amp;quot; { return home, nil } // If that fails, try the</description>
     </item>
     
     <item>
@@ -96,7 +96,7 @@
       <pubDate>Sat, 09 May 2020 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/2020/05/docker%E9%83%A8%E7%BD%B2mysql%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
-      <description>docker-compose 配置 version: &amp;#39;3&amp;#39; services: # mysql blog_mysql: image: mysql restart: always ports: - &amp;#39;3306:3306&amp;#39; environment: - MYSQL_ROOT_PASSWORD=xxxx volumes: - &amp;#39;/data/mysql:/var/lib/mysql&amp;#39; docker 安装完mysql 后客户端无法访问 进入镜像中的mysql docker exec -it container_id /bin/bash 登录mysql mysql -u root -p 修改ro</description>
+      <description>docker-compose 配置 version: &#39;3&#39; services: # mysql blog_mysql: image: mysql restart: always ports: - &#39;3306:3306&#39; environment: - MYSQL_ROOT_PASSWORD=xxxx volumes: - &#39;/data/mysql:/var/lib/mysql&#39; docker 安装完mysql 后客户端无法访问 进入镜像中的mysql docker exec -it container_id /bin/bash 登录mysql mysql -u root -p 修改ro</description>
     </item>
     
     <item>
@@ -123,7 +123,7 @@
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/2020/03/nyan/</guid>
-      <description>#!/usr/bin/env bash  # Print nyan cat # https://github.com/steckel/Git-Nyan-Graph/blob/master/nyan.sh # If you want big animated version: `telnet miku.acm.uiuc.edu` e=&amp;#39;\033&amp;#39; RESET=&amp;#34;$e[0m&amp;#34; BOLD=&amp;#34;$e[1m&amp;#34; CYAN=&amp;#34;$e[0;96m&amp;#34; RED=&amp;#34;$e[0;91m&amp;#34; YELLOW=&amp;#34;$e[0;93m&amp;#34; GREEN=&amp;#34;$e[0;92m&amp;#34; echo if [ $[$RANDOM%2] -eq &amp;#34;0&amp;#34; ]; then echo -en $RED&amp;#39;`·.,¸,.·*·.&amp;#39; echo -e $RESET$BOLD&amp;#39;╭━━━━╮&amp;#39;$RESET echo -en $YELLOW&amp;#39;`·.,¸,.·*·.&amp;#39; echo -e $RESET$BOLD&amp;#39;|::: /\_/\\&amp;#39;$RESET echo -en $GREEN&amp;#39;`·.,¸,.·*·.&amp;#39; echo -e $RESET$BOLD&amp;#39;|:::( ◕ᴥ◕)&amp;#39;$RESET echo -en $CYAN&amp;#39;`·.,¸,.·*·.&amp;#39; echo -e $RESET$BOLD&amp;#39;u-u━━-u--u&amp;#39;$RESET else echo -en $RED&amp;#39;-_-_-_-_-_-_-_&amp;#39; echo -e $RESET$BOLD&amp;#39;,------,&amp;#39;$RESET echo -en $YELLOW&amp;#39;_-_-_-_-_-_-_-&amp;#39; echo -e $RESET$BOLD&amp;#39;| /\_/\\&amp;#39;$RESET echo -en $GREEN&amp;#39;-_-_-_-_-_-_-&amp;#39; echo -e $RESET$BOLD&amp;#39;~|__( ^ .</description>
+      <description>#!/usr/bin/env bash # Print nyan cat # https://github.com/steckel/Git-Nyan-Graph/blob/master/nyan.sh # If you want big animated version: `telnet miku.acm.uiuc.edu` e=&#39;\033&#39; RESET=&amp;quot;$e[0m&amp;quot; BOLD=&amp;quot;$e[1m&amp;quot; CYAN=&amp;quot;$e[0;96m&amp;quot; RED=&amp;quot;$e[0;91m&amp;quot; YELLOW=&amp;quot;$e[0;93m&amp;quot; GREEN=&amp;quot;$e[0;92m&amp;quot; echo if [ $[$RANDOM%2] -eq &amp;quot;0&amp;quot; ]; then echo -en $RED&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;╭━━━━╮&#39;$RESET echo -en $YELLOW&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|::: /\_/\\&#39;$RESET echo -en $GREEN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|:::( ◕ᴥ◕)&#39;$RESET echo -en $CYAN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;u-u━━-u--u&#39;$RESET else echo -en $RED&#39;-_-_-_-_-_-_-_&#39; echo -e $RESET$BOLD&#39;,------,&#39;$RESET echo -en $YELLOW&#39;_-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;| /\_/\\&#39;$RESET echo -en $GREEN&#39;-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;~|__( ^ .</description>
     </item>
     
     <item>
@@ -172,7 +172,7 @@
     </item>
     
     <item>
-      <title>Typescript元编程</title>
+      <title>typescript元编程</title>
       <link>https://rx-78-kum0.github.io/2020/02/typescript%E5%85%83%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0800</pubDate>
       

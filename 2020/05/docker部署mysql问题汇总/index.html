@@ -20,7 +20,7 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    <meta name="description" content="docker-compose 配置 version: &amp;#39;3&amp;#39; services: # mysql blog_mysql: image: mysql restart: always ports: - &amp;#39;3306:3306&amp;#39; environment: - MYSQL_ROOT_PASSWORD=xxxx volumes: - &amp;#39;/data/mysql:/var/lib/mysql&amp;#39; docker 安装完mysql 后客户端无法访问 进入镜像中的mysql docker exec -it container_id /bin/bash 登录mysql mysql -u root -p 修改ro" />
+    <meta name="description" content="docker-compose 配置 version: &#39;3&#39; services: # mysql blog_mysql: image: mysql restart: always ports: - &#39;3306:3306&#39; environment: - MYSQL_ROOT_PASSWORD=xxxx volumes: - &#39;/data/mysql:/var/lib/mysql&#39; docker 安装完mysql 后客户端无法访问 进入镜像中的mysql docker exec -it container_id /bin/bash 登录mysql mysql -u root -p 修改ro" />
     <meta name="generator" content="Hugo 0.74.0-DEV with theme pure" />
     <title>docker部署mysql问题汇总 - rx-78-kum0</title>
     
@@ -350,27 +350,31 @@
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
       <h2 id="docker-compose-配置">docker-compose 配置</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;3&#39;</span>
+<pre><code class="language-yaml">version: '3'
 
-<span style="color:#66d9ef">services</span>:
-  <span style="color:#75715e"># mysql</span>
-  <span style="color:#66d9ef">blog_mysql</span>:
-    <span style="color:#66d9ef">image</span>: mysql
-    <span style="color:#66d9ef">restart</span>: always
-    <span style="color:#66d9ef">ports</span>:
-      - <span style="color:#e6db74">&#39;3306:3306&#39;</span>
-    <span style="color:#66d9ef">environment</span>:
+services:
+  # mysql
+  blog_mysql:
+    image: mysql
+    restart: always
+    ports:
+      - '3306:3306'
+    environment:
       - MYSQL_ROOT_PASSWORD=xxxx
-    <span style="color:#66d9ef">volumes</span>:
-      - <span style="color:#e6db74">&#39;/data/mysql:/var/lib/mysql&#39;</span>
-</code></pre></div><h2 id="docker-安装完mysql-后客户端无法访问">docker 安装完mysql 后客户端无法访问</h2>
+    volumes:
+      - '/data/mysql:/var/lib/mysql'
+</code></pre>
+<h2 id="docker-安装完mysql-后客户端无法访问">docker 安装完mysql 后客户端无法访问</h2>
 <h3 id="进入镜像中的mysql">进入镜像中的mysql</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker exec -it container_id /bin/bash
-</code></pre></div><h3 id="登录mysql">登录mysql</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mysql -u root -p
-</code></pre></div><h3 id="修改root账号-可以通过任何客户端连接">修改root账号, 可以通过任何客户端连接</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ALTER USER <span style="color:#e6db74">&#39;root&#39;</span>@<span style="color:#e6db74">&#39;%&#39;</span> IDENTIFIED WITH mysql_native_password BY <span style="color:#e6db74">&#39;xxxxx&#39;</span>;
-</code></pre></div>
+<pre><code class="language-shell">docker exec -it container_id /bin/bash
+</code></pre>
+<h3 id="登录mysql">登录mysql</h3>
+<pre><code class="language-shell">mysql -u root -p
+</code></pre>
+<h3 id="修改root账号-可以通过任何客户端连接">修改root账号, 可以通过任何客户端连接</h3>
+<pre><code class="language-shell">ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'xxxxx';
+</code></pre>
+
     </div>
     <div class="article-footer">
 <blockquote class="mt-2x">

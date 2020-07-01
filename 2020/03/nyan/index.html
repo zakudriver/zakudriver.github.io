@@ -348,42 +348,43 @@
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/usr/bin/env bash
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># Print nyan cat</span>
-<span style="color:#75715e"># https://github.com/steckel/Git-Nyan-Graph/blob/master/nyan.sh</span>
-<span style="color:#75715e"># If you want big animated version: `telnet miku.acm.uiuc.edu`</span>
+      <pre><code class="language-bash">#!/usr/bin/env bash
 
-e<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\033&#39;</span>
-RESET<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$e<span style="color:#e6db74">[0m&#34;</span>
-BOLD<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$e<span style="color:#e6db74">[1m&#34;</span>
-CYAN<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$e<span style="color:#e6db74">[0;96m&#34;</span>
-RED<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$e<span style="color:#e6db74">[0;91m&#34;</span>
-YELLOW<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$e<span style="color:#e6db74">[0;93m&#34;</span>
-GREEN<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$e<span style="color:#e6db74">[0;92m&#34;</span>
+# Print nyan cat
+# https://github.com/steckel/Git-Nyan-Graph/blob/master/nyan.sh
+# If you want big animated version: `telnet miku.acm.uiuc.edu`
+
+e='\033'
+RESET=&quot;$e[0m&quot;
+BOLD=&quot;$e[1m&quot;
+CYAN=&quot;$e[0;96m&quot;
+RED=&quot;$e[0;91m&quot;
+YELLOW=&quot;$e[0;93m&quot;
+GREEN=&quot;$e[0;92m&quot;
 
 echo
-<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $<span style="color:#f92672">[</span>$RANDOM%2<span style="color:#f92672">]</span> -eq <span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
-    echo -en $RED<span style="color:#e6db74">&#39;`·.,¸,.·*·.&#39;</span>
-    echo -e $RESET$BOLD<span style="color:#e6db74">&#39;╭━━━━╮&#39;</span>$RESET
-    echo -en $YELLOW<span style="color:#e6db74">&#39;`·.,¸,.·*·.&#39;</span>
-    echo -e $RESET$BOLD<span style="color:#e6db74">&#39;|::: /\_/\\&#39;</span>$RESET
-    echo -en $GREEN<span style="color:#e6db74">&#39;`·.,¸,.·*·.&#39;</span>
-    echo -e $RESET$BOLD<span style="color:#e6db74">&#39;|:::( ◕ᴥ◕)&#39;</span>$RESET
-    echo -en $CYAN<span style="color:#e6db74">&#39;`·.,¸,.·*·.&#39;</span>
-    echo -e $RESET$BOLD<span style="color:#e6db74">&#39;u-u━━-u--u&#39;</span>$RESET
-<span style="color:#66d9ef">else</span>
-    echo -en $RED<span style="color:#e6db74">&#39;-_-_-_-_-_-_-_&#39;</span>
-    echo -e $RESET$BOLD<span style="color:#e6db74">&#39;,------,&#39;</span>$RESET
-    echo -en $YELLOW<span style="color:#e6db74">&#39;_-_-_-_-_-_-_-&#39;</span>
-    echo -e $RESET$BOLD<span style="color:#e6db74">&#39;|   /\_/\\&#39;</span>$RESET
-    echo -en $GREEN<span style="color:#e6db74">&#39;-_-_-_-_-_-_-&#39;</span>
-    echo -e $RESET$BOLD<span style="color:#e6db74">&#39;~|__( ^ .^)&#39;</span>$RESET
-    echo -en $CYAN<span style="color:#e6db74">&#39;-_-_-_-_-_-_-&#39;</span>
-    echo -e $RESET$BOLD<span style="color:#e6db74">&#39;&#34;&#34;  &#34;&#34;&#39;</span>$RESET
-<span style="color:#66d9ef">fi</span>
+if [ $[$RANDOM%2] -eq &quot;0&quot; ]; then
+    echo -en $RED'`·.,¸,.·*·.'
+    echo -e $RESET$BOLD'╭━━━━╮'$RESET
+    echo -en $YELLOW'`·.,¸,.·*·.'
+    echo -e $RESET$BOLD'|::: /\_/\\'$RESET
+    echo -en $GREEN'`·.,¸,.·*·.'
+    echo -e $RESET$BOLD'|:::( ◕ᴥ◕)'$RESET
+    echo -en $CYAN'`·.,¸,.·*·.'
+    echo -e $RESET$BOLD'u-u━━-u--u'$RESET
+else
+    echo -en $RED'-_-_-_-_-_-_-_'
+    echo -e $RESET$BOLD',------,'$RESET
+    echo -en $YELLOW'_-_-_-_-_-_-_-'
+    echo -e $RESET$BOLD'|   /\_/\\'$RESET
+    echo -en $GREEN'-_-_-_-_-_-_-'
+    echo -e $RESET$BOLD'~|__( ^ .^)'$RESET
+    echo -en $CYAN'-_-_-_-_-_-_-'
+    echo -e $RESET$BOLD'&quot;&quot;  &quot;&quot;'$RESET
+fi
 echo
-</code></pre></div><figure>
+</code></pre>
+<figure>
     <img src="/ox-hugo/2020-06-29_23-28-37_nyan-img.png"/> 
 </figure>
 

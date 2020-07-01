@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>
-        Angular自定义双向绑定表单组件 - rx-78-kum0
+        angular自定义双向绑定表单组件 - rx-78-kum0
       </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -22,29 +22,29 @@
     
     <meta name="description" content="angular使用ControlValueAccessor抽象类实现响应式表单组件" />
     <meta name="generator" content="Hugo 0.74.0-DEV with theme pure" />
-    <title>Angular自定义双向绑定表单组件 - rx-78-kum0</title>
+    <title>angular自定义双向绑定表单组件 - rx-78-kum0</title>
     
     
     <link rel="stylesheet" href="https://rx-78-kum0.github.io/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="Angular自定义双向绑定表单组件" />
+    <meta property="og:title" content="angular自定义双向绑定表单组件" />
 <meta property="og:description" content="angular使用ControlValueAccessor抽象类实现响应式表单组件" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rx-78-kum0.github.io/2019/07/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/" />
 <meta property="article:published_time" content="2019-07-08T00:00:00+08:00" />
-<meta property="article:modified_time" content="2020-06-30T17:50:42+08:00" />
-<meta itemprop="name" content="Angular自定义双向绑定表单组件">
+<meta property="article:modified_time" content="2020-07-01T11:08:14+08:00" />
+<meta itemprop="name" content="angular自定义双向绑定表单组件">
 <meta itemprop="description" content="angular使用ControlValueAccessor抽象类实现响应式表单组件">
 <meta itemprop="datePublished" content="2019-07-08T00:00:00&#43;08:00" />
-<meta itemprop="dateModified" content="2020-06-30T17:50:42&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-01T11:08:14&#43;08:00" />
 <meta itemprop="wordCount" content="955">
 
 
 
 <meta itemprop="keywords" content="angular," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Angular自定义双向绑定表单组件"/>
+<meta name="twitter:title" content="angular自定义双向绑定表单组件"/>
 <meta name="twitter:description" content="angular使用ControlValueAccessor抽象类实现响应式表单组件"/>
 
     <!--[if lte IE 9]>
@@ -314,7 +314,7 @@
   <a
     class="article-title"
     href="/2019/07/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/"
-    >Angular自定义双向绑定表单组件</a
+    >angular自定义双向绑定表单组件</a
   >
 </h1>
 
@@ -356,28 +356,32 @@
 <!-- raw HTML omitted -->
 <p>毕竟响应式表单才是angular的利器.</p>
 <h2 id="controlvalueaccessor">ControlValueAccessor</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ControlValueAccessor</span> {
-  <span style="color:#a6e22e">writeValue</span>(<span style="color:#a6e22e">obj</span>: <span style="color:#66d9ef">any</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span>;
-  <span style="color:#a6e22e">registerOnChange</span>(<span style="color:#a6e22e">fn</span>: <span style="color:#66d9ef">any</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span>;
-  <span style="color:#a6e22e">registerOnTouched</span>(<span style="color:#a6e22e">fn</span>: <span style="color:#66d9ef">any</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span>;
-  <span style="color:#a6e22e">setDisabledState</span><span style="color:#f92672">?</span>(<span style="color:#a6e22e">isDisabled</span>: <span style="color:#66d9ef">boolean</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span>;
+<pre><code class="language-typescript">export interface ControlValueAccessor {
+  writeValue(obj: any): void;
+  registerOnChange(fn: any): void;
+  registerOnTouched(fn: any): void;
+  setDisabledState?(isDisabled: boolean): void;
 }
-</code></pre></div><h3 id="writevalue--obj-any">writeValue(obj: any):</h3>
+</code></pre>
+<h3 id="writevalue--obj-any">writeValue(obj: any):</h3>
 <p>该方法是接收模版中的ngModel.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#a6e22e">writeValue</span>(<span style="color:#a6e22e">value</span>: <span style="color:#66d9ef">any</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
- <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_renderer</span>.<span style="color:#a6e22e">setProperty</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_elementRef</span>.<span style="color:#a6e22e">nativeElement</span>, <span style="color:#e6db74">&#39;value&#39;</span>, <span style="color:#a6e22e">value</span>);
+<pre><code class="language-typescript">writeValue(value: any): void {
+ this._renderer.setProperty(this._elementRef.nativeElement, 'value', value);
 }
-</code></pre></div><h3 id="registeronchange--fn-any--void">registerOnChange(fn: any): void:</h3>
+</code></pre>
+<h3 id="registeronchange--fn-any--void">registerOnChange(fn: any): void:</h3>
 <p>该方法是组件接收到 change 事件的回调, 可以用来通知外部达成双向绑定, 即ngModelChange.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#a6e22e">registerOnChange</span>(<span style="color:#a6e22e">fn</span><span style="color:#f92672">:</span> (<span style="color:#a6e22e">_</span>: <span style="color:#66d9ef">any</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">void</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
- <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_onChange</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span>;
+<pre><code class="language-typescript">registerOnChange(fn: (_: any) =&gt; void): void {
+ this._onChange = fn;
 }
-</code></pre></div><h3 id="registerontouched--fn-any">registerOnTouched(fn: any):</h3>
+</code></pre>
+<h3 id="registerontouched--fn-any">registerOnTouched(fn: any):</h3>
 <p>接收到 touched 事件的回调.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#a6e22e">registerOnTouched</span>(<span style="color:#a6e22e">fn</span>: <span style="color:#66d9ef">any</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
-  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_onTouched</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span>;
+<pre><code class="language-typescript">registerOnTouched(fn: any): void {
+  this._onTouched = fn;
 }
-</code></pre></div><h3 id="setdisabledstate--isdisabled-boolean">setDisabledState?(isDisabled: boolean):</h3>
+</code></pre>
+<h3 id="setdisabledstate--isdisabled-boolean">setDisabledState?(isDisabled: boolean):</h3>
 <p>该方法是组件输入状态 disable &lt;=&gt; enable 变化时的回调。该方法会根据参数值，启用或禁用指定的DOM元素.</p>
 <h2 id="以下组件类实现了controlvalueaccessor接口-dot">以下组件类实现了ControlValueAccessor接口.</h2>
 <h3 id="checkboxcontrolvalueaccessor">CheckboxControlValueAccessor</h3>
@@ -445,105 +449,107 @@
 compareWith: (o1: any, o2: any) =&gt; boolean:比较函数. 例如option的ngValue是一个对象, 当选中项填入表单时, 需要编写一个比较函数来处理当前选中的对象是哪一个option.</p>
 <h2 id="eg">EG</h2>
 <h3 id="自定义表单组件代码结构">自定义表单组件代码结构</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">import</span> {
-  <span style="color:#a6e22e">Component</span>,
-  <span style="color:#a6e22e">OnInit</span>,
-  <span style="color:#a6e22e">HostListener</span>,
-  <span style="color:#a6e22e">ViewEncapsulation</span>,
-  <span style="color:#a6e22e">forwardRef</span>,
-  <span style="color:#a6e22e">Input</span>,
-  <span style="color:#a6e22e">OnDestroy</span>,
-  <span style="color:#a6e22e">ChangeDetectorRef</span>,
-  <span style="color:#a6e22e">ChangeDetectionStrategy</span>
-} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/core&#39;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">ControlValueAccessor</span>, <span style="color:#a6e22e">NG_VALUE_ACCESSOR</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/forms&#39;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Subject</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;rxjs&#39;</span>;
+<pre><code class="language-typescript">import {
+  Component,
+  OnInit,
+  HostListener,
+  ViewEncapsulation,
+  forwardRef,
+  Input,
+  OnDestroy,
+  ChangeDetectorRef,
+  ChangeDetectionStrategy
+} from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Subject } from 'rxjs';
 
-<span style="color:#66d9ef">@Component</span>({
-  <span style="color:#a6e22e">selector</span>       <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;[app-radiobox]&#39;</span>,
-  <span style="color:#a6e22e">templateUrl</span>    <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./radiobox.component.html&#39;</span>,
-  <span style="color:#a6e22e">styleUrls</span>      <span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;./radiobox.component.styl&#39;</span>],
-  <span style="color:#a6e22e">encapsulation</span>  : <span style="color:#66d9ef">ViewEncapsulation.None</span>,
-  <span style="color:#a6e22e">changeDetection</span>: <span style="color:#66d9ef">ChangeDetectionStrategy.OnPush</span>,
-  <span style="color:#a6e22e">host</span>           <span style="color:#f92672">:</span> {
-    <span style="color:#e6db74">&#39;[class.radio-wrapper]&#39;</span>        <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;true&#39;</span>,
-    <span style="color:#e6db74">&#39;[class.radio-wrapper-checked]&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;checked&#39;</span>
+@Component({
+  selector       : '[app-radiobox]',
+  templateUrl    : './radiobox.component.html',
+  styleUrls      : ['./radiobox.component.styl'],
+  encapsulation  : ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host           : {
+    '[class.radio-wrapper]'        : 'true',
+    '[class.radio-wrapper-checked]': 'checked'
   },
-  <span style="color:#a6e22e">providers</span><span style="color:#f92672">:</span> [
+  providers: [
     {
-      <span style="color:#a6e22e">provide</span>    : <span style="color:#66d9ef">NG_VALUE_ACCESSOR</span>,
-      <span style="color:#a6e22e">useExisting</span>: <span style="color:#66d9ef">forwardRef</span>(() <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">RadioboxComponent</span>),
-      <span style="color:#a6e22e">multi</span>      : <span style="color:#66d9ef">true</span>
+      provide    : NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() =&gt; RadioboxComponent),
+      multi      : true
     }
   ]
 })
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RadioboxComponent</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">OnInit</span>, <span style="color:#a6e22e">OnDestroy</span>, <span style="color:#a6e22e">ControlValueAccessor</span> {
-  <span style="color:#66d9ef">@Input</span>()
-  <span style="color:#a6e22e">value</span>: <span style="color:#66d9ef">boolean</span>;
-  <span style="color:#a6e22e">checked</span>: <span style="color:#66d9ef">boolean</span>;
-  <span style="color:#a6e22e">select$</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Subject</span>&lt;<span style="color:#f92672">RadioboxComponent</span>&gt;();
+export class RadioboxComponent implements OnInit, OnDestroy, ControlValueAccessor {
+  @Input()
+  value: boolean;
+  checked: boolean;
+  select$ = new Subject&lt;RadioboxComponent&gt;();
 
-  <span style="color:#a6e22e">onChange</span><span style="color:#f92672">:</span> (<span style="color:#a6e22e">_</span>: <span style="color:#66d9ef">any</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">void</span> <span style="color:#f92672">=</span> () <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">null</span>;
-  <span style="color:#a6e22e">onTouched</span><span style="color:#f92672">:</span> () <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">void</span> <span style="color:#f92672">=</span> () <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">null</span>;
+  onChange: (_: any) =&gt; void = () =&gt; null;
+  onTouched: () =&gt; void = () =&gt; null;
 
-  <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#a6e22e">_cdr</span>: <span style="color:#66d9ef">ChangeDetectorRef</span>) {}
+  constructor(private _cdr: ChangeDetectorRef) {}
 
-  <span style="color:#66d9ef">@HostListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, [<span style="color:#e6db74">&#39;$event&#39;</span>])
-  <span style="color:#a6e22e">onClick</span>(<span style="color:#a6e22e">e</span>: <span style="color:#66d9ef">MouseEvent</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
-    <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">stopPropagation</span>();
-    <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">checked</span> <span style="color:#f92672">=</span> <span style="color:#f92672">!</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">checked</span>;
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">onChange</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">checked</span>);
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">select$</span>.<span style="color:#a6e22e">next</span>(<span style="color:#66d9ef">this</span>);
+  @HostListener('click', ['$event'])
+  onClick(e: MouseEvent): void {
+    e.stopPropagation();
+    e.preventDefault();
+    this.checked = !this.checked;
+    this.onChange(this.checked);
+    this.select$.next(this);
   }
 
-  <span style="color:#a6e22e">writeValue</span>(<span style="color:#a6e22e">value</span>: <span style="color:#66d9ef">boolean</span>) {
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">checked</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>;
+  writeValue(value: boolean) {
+    this.checked = value;
   }
-  <span style="color:#a6e22e">registerOnChange</span>(<span style="color:#a6e22e">fn</span><span style="color:#f92672">:</span> (<span style="color:#a6e22e">_</span>: <span style="color:#66d9ef">boolean</span>) <span style="color:#f92672">=&gt;</span> {})<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">onChange</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span>;
+  registerOnChange(fn: (_: boolean) =&gt; {}): void {
+    this.onChange = fn;
   }
-  <span style="color:#a6e22e">registerOnTouched</span>(<span style="color:#a6e22e">fn</span><span style="color:#f92672">:</span> () <span style="color:#f92672">=&gt;</span> {})<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">onTouched</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span>;
+  registerOnTouched(fn: () =&gt; {}): void {
+    this.onTouched = fn;
   }
 
-  <span style="color:#a6e22e">ngOnInit() {</span>}
+  ngOnInit() {}
 
-  <span style="color:#a6e22e">ngOnDestroy() {</span>}
+  ngOnDestroy() {}
 }
-</code></pre></div><h3 id="调用">调用</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Component</span>, <span style="color:#a6e22e">OnInit</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/core&#39;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">FormBuilder</span>, <span style="color:#a6e22e">FormGroup</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/forms&#39;</span>;
+</code></pre>
+<h3 id="调用">调用</h3>
+<pre><code class="language-typescript">import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
-<span style="color:#66d9ef">@Component</span>({
-  <span style="color:#a6e22e">selector</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;app-example&#39;</span>,
-  <span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`
-</span><span style="color:#e6db74">    &lt;form [formGroup]=&#34;testForm&#34;&gt;
-</span><span style="color:#e6db74">      &lt;label&gt;试试&lt;/label&gt;
-</span><span style="color:#e6db74">      &lt;label app-radiobox formControlName=&#34;check&#34;&gt;check me&lt;/label&gt;
-</span><span style="color:#e6db74">    &lt;/form&gt;
-</span><span style="color:#e6db74">  `</span>
+@Component({
+  selector: 'app-example',
+  template: `
+    &lt;form [formGroup]=&quot;testForm&quot;&gt;
+      &lt;label&gt;试试&lt;/label&gt;
+      &lt;label app-radiobox formControlName=&quot;check&quot;&gt;check me&lt;/label&gt;
+    &lt;/form&gt;
+  `
 })
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ExampleComponent</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">OnInit</span> {
-  <span style="color:#a6e22e">testForm</span>: <span style="color:#66d9ef">FormGroup</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_fb</span>.<span style="color:#a6e22e">group</span>({
-    <span style="color:#a6e22e">check</span>: <span style="color:#66d9ef">false</span>
+export class ExampleComponent implements OnInit {
+  testForm: FormGroup = this._fb.group({
+    check: false
   });
-  <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#a6e22e">_fb</span>: <span style="color:#66d9ef">FormBuilder</span>) {}
+  constructor(private _fb: FormBuilder) {}
 
-  <span style="color:#a6e22e">ngOnInit() {</span>
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">testForm</span>.<span style="color:#a6e22e">valueChanges</span>.<span style="color:#a6e22e">subscribe</span>(<span style="color:#a6e22e">d</span> <span style="color:#f92672">=&gt;</span> {
-      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">d</span>);
+  ngOnInit() {
+    this.testForm.valueChanges.subscribe(d =&gt; {
+      console.log(d);
     });
   }
 }
-</code></pre></div>
+</code></pre>
+
     </div>
     <div class="article-footer">
 <blockquote class="mt-2x">
   <ul class="post-copyright list-unstyled">
     <li class="post-copyright-link hidden-xs">
       <strong>Permalink: </strong>
-      <a href="https://rx-78-kum0.github.io/2019/07/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/" title="Angular自定义双向绑定表单组件" target="_blank" rel="external">https://rx-78-kum0.github.io/2019/07/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/</a>
+      <a href="https://rx-78-kum0.github.io/2019/07/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/" title="angular自定义双向绑定表单组件" target="_blank" rel="external">https://rx-78-kum0.github.io/2019/07/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/</a>
     </li>
     <li class="post-copyright-license">
       <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
