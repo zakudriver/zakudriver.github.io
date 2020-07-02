@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+        vimrc - rx-78-kum0
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="vim配置" />
+    <meta name="generator" content="Hugo 0.74.0-DEV with theme pure" />
+    <title>vimrc - rx-78-kum0</title>
+    
+    
+    <link rel="stylesheet" href="https://rx-78-kum0.github.io/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="vimrc" />
+<meta property="og:description" content="vim配置" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rx-78-kum0.github.io/posts/vimrc/" />
+<meta property="article:published_time" content="2019-06-04T00:00:00+08:00" />
+<meta property="article:modified_time" content="2020-07-02T14:01:16+08:00" />
+<meta itemprop="name" content="vimrc">
+<meta itemprop="description" content="vim配置">
+<meta itemprop="datePublished" content="2019-06-04T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-02T14:01:16&#43;08:00" />
+<meta itemprop="wordCount" content="1594">
+
+
+
+<meta itemprop="keywords" content="vim," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="vimrc"/>
+<meta name="twitter:description" content="vim配置"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-purple" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://github.com/rx-78-kum0" target="_blank">
+            <img class="img-circle img-rotate" src="https://rx-78-kum0.github.io/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">kumo</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">rx-78-kum0 ( ‵▽′)ψ</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>Chengdu, China</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Archives</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Categories</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">Tags</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about/">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">Happy Hacking ;)
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://rx-78-kum0.github.io/categories/code/" class="category-list-link">code</a><span class="category-list-count">20</span></li>
+            <li class="category-list-item"><a href="https://rx-78-kum0.github.io/categories/configuration/" class="category-list-link">configuration</a><span class="category-list-count">5</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/angular/" class="tag-list-link">angular</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/css/" class="tag-list-link">css</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/docker/" class="tag-list-link">docker</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/emacs/" class="tag-list-link">emacs</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/golang/" class="tag-list-link">golang</a><span
+                    class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/mac/" class="tag-list-link">mac</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/mysql/" class="tag-list-link">mysql</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/nasm/" class="tag-list-link">nasm</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/shell/" class="tag-list-link">shell</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/tools/" class="tag-list-link">tools</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/typescript/" class="tag-list-link">typescript</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/vim/" class="tag-list-link">vim</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/vscode/" class="tag-list-link">vscode</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/web/" class="tag-list-link">web</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="tag-list-link">操作系统</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/%E6%B1%87%E7%BC%96/" class="tag-list-link">汇编</a><span
+                    class="tag-list-count">3</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/posts/gc%E4%BC%98%E5%8C%96/" class="title">golang gc优化</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-23 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-23</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/posts/time/" class="title">golang time工具函数</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-23 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-23</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/posts/gdtldt/" class="title">GDT&amp;LDT</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-11 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-11</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/posts/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7home%E7%9B%AE%E5%BD%95%E8%B7%AF%E5%BE%84/" class="title">获取用户home目录路径</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-10 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-10</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/posts/%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%87%E7%AD%BE/" class="title">变量和标签</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-06-09 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-09</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/posts/vimrc/"
+    >vimrc</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://rx-78-kum0.github.io/posts/vimrc/" class="article-date">
+  <time datetime="2019-06-04 00:00:00 &#43;0800 CST" itemprop="datePublished">2019-06-04</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/configuration/"> configuration </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/vim/"> vim </a>
+  </span>
+
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/posts/vimrc/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 1594words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 4minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <pre><code class="language-yaml">&quot; .vimrc
+
+&quot; Configuration file for vim
+set modelines=0
+&quot; Don't write backup file if vim is being called by &quot;crontab -e&quot;
+&quot; au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
+&quot; Don't write backup file if vim is being called by &quot;chpass&quot;
+&quot; au BufWrite /private/etc/pw.* set nowritebackup nobackup
+set nobackup
+set nowritebackup
+
+let skip_defaults_vim=1
+&quot; &lt;leader&gt;
+let g:mapleader=&quot;,&quot;
+
+&quot; 去掉有关vi一致性模式，避免以前版本的bug和局限
+set nocompatible
+&quot; 设置退格键可用
+set backspace=2
+&quot; utf-8
+set encoding=UTF-8
+&quot; 主题
+&quot; set background=dark
+&quot; colorscheme dracula
+&quot; 函数方法名加粗
+let g:enable_bold_font = 1
+&quot; 注释斜体
+let g:enable_italic_font = 1
+&quot; 透明背景
+let g:hybrid_transparent_background = 1
+&quot; airline_theme
+let g:airline_theme = &quot;hybrid&quot;
+&quot; 行号
+set nu!
+&quot; 高亮显示寻找匹配
+set hls
+&quot; 允许用指定语法高亮配色方案替换默认方案
+syntax on dracula
+&quot; 开启语法高亮
+syntax enable
+
+&quot; 设置匹配模式 (当输入一个左括号时会匹配相应的右括号)
+set showmatch
+&quot; 显示当前光标位置
+set ruler
+
+&quot; 使用系统剪切板
+set clipboard=unnamed
+&quot; 设置格式化时代码缩进为2个空格
+set shiftwidth=2
+&quot; tab键缩进为4格子
+set tabstop=2
+&quot;  把连续数量的空格视为一个制表符
+set softtabstop=2
+&quot; 禁止折行
+set nowrap
+&quot; tab键转换为空格
+set expandtab
+&quot; 智能缩进
+set smartindent
+&quot; 开启实时搜索功能
+set incsearch
+&quot; 搜索时大小写不敏感
+set ignorecase
+&quot; vim 自身命令行模式智能补全
+set wildmenu
+&quot; 开启文件类型侦测
+filetype on
+&quot; 根据侦测到的不同类型加载对应的插件
+filetype plugin on
+&quot; 自适应不同语言的智能缩进
+filetype indent on
+&quot; 将制表符扩展为空格
+set nofoldenable
+&quot; 基于缩进或语法进行代码折叠
+set foldmethod=syntax
+&quot; 启动 vim 时关闭折叠代码
+set nofoldenable
+&quot; 禁止光标闪烁
+set gcr=a:block-blinkon0
+&quot; 禁止显示滚动条
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+&quot; 高亮显示当前行/列
+set cursorline
+set cursorcolumn
+
+&quot; 让配置变更立即生效
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
+&quot; normal 模式 keymap
+nnoremap x &quot;_x
+nnoremap X &quot;_X
+nnoremap d &quot;_d
+nnoremap dd &quot;_dd
+nnoremap D &quot;_D
+nnoremap s &quot;_s
+nnoremap S &quot;_S
+nnoremap c &quot;_c
+nnoremap C &quot;_C
+
+&quot; insert 模式
+inoremap $( ()&lt;esc&gt;i
+inoremap $&lt; &lt;&gt;&lt;esc&gt;i
+inoremap ${ {}&lt;esc&gt;i
+inoremap $[ []&lt;esc&gt;i
+inoremap $' ''&lt;esc&gt;i
+inoremap $&quot; &quot;&quot;&lt;esc&gt;i
+
+&quot; visual 模式
+vnoremap s &quot;_s
+vnoremap S &quot;_S
+vnoremap z) c()&lt;esc&gt;hp
+vnoremap z} c{}&lt;esc&gt;hp
+vnoremap z] c[]&lt;esc&gt;hp
+vnoremap z' c''&lt;esc&gt;hp
+vnoremap z&quot; c&quot;&quot;&lt;esc&gt;hp
+vnoremap z&gt; c&lt;&gt;&lt;esc&gt;hp
+vnoremap z` c``&lt;esc&gt;hp
+
+&quot; NERDTree
+let g:NERDTreeIndicatorMapCustom = {
+    \ &quot;Modified&quot;  : &quot;✹&quot;,
+    \ &quot;Staged&quot;    : &quot;✚&quot;,
+    \ &quot;Untracked&quot; : &quot;✭&quot;,
+    \ &quot;Renamed&quot;   : &quot;➜&quot;,
+    \ &quot;Unmerged&quot;  : &quot;═&quot;,
+    \ &quot;Deleted&quot;   : &quot;✖&quot;,
+    \ &quot;Dirty&quot;     : &quot;✗&quot;,
+    \ &quot;Clean&quot;     : &quot;✔︎&quot;,
+    \ &quot;Unknown&quot;   : &quot;?&quot;
+    \ }
+&quot; 自动开启NERDTree
+&quot; autocmd vimenter * NERDTree
+
+&quot; UltiSnips
+let g:UltiSnipsExpandTrigger=&quot;&lt;Leader&gt;&lt;TAB&gt;&quot;
+let g:UltiSnipsJumpForwardTrigger=&quot;&lt;c-f&gt;&quot;
+let g:UltiSnipsJumpBackwardTrigger=&quot;&lt;c-b&gt;&quot;
+
+
+&quot;au BufRead,BufNewFile *.go set filetype=go
+
+&quot; ycm
+&quot; let g:ycm_key_list_select_completion=['&lt;c-n&gt;']
+&quot; let g:ycm_key_list_previous_completion=['&lt;c-p&gt;']
+&quot; let g:ycm_key_invoke_completion = '&lt;C-Space&gt;'
+&quot; &quot; 关闭加载.ycm_extra_conf.py提示
+&quot; let g:ycm_confirm_extra_conf=0
+&quot; &quot; 开启 YCM 基于标签引擎
+&quot; let g:ycm_collect_identifiers_from_tags_files=1
+&quot; &quot; 从第2个键入字符就开始罗列匹配项
+&quot; let g:ycm_min_num_of_chars_for_completion=1
+&quot; &quot; 禁止缓存匹配项,每次都重新生成匹配项
+&quot; let g:ycm_cache_omnifunc=0
+&quot; &quot; 语法关键字补全
+&quot; let g:ycm_seed_identifiers_with_syntax=1
+&quot; &quot; 设置在下面几种格式的文件上屏蔽ycm
+&quot; let g:ycm_filetype_blacklist = {
+&quot;       \ 'typescript.tsx' : 1,
+&quot;       \ 'typescript' : 1,
+&quot;       \}
+&quot; &quot; 注释和字符串中的文字也会被收入补全
+&quot; let g:ycm_collect_identifiers_from_comments_and_strings = 0
+&quot; &quot; 输入第2个字符开始补全
+&quot; let g:ycm_min_num_of_chars_for_completion=2
+
+
+&quot; 注释
+&quot; Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+&quot; Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+&quot; Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+&quot; Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+&quot; Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+&quot; Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+&quot; Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+&quot; Enable NERDCommenterToggle to check all selected lines is commented or not
+let g:NERDToggleCheckAllLines = 1
+
+
+&quot; coc
+let g:coc_global_extensions = [
+  \ 'coc-json',
+  \ 'coc-html',
+  \ 'coc-css',
+  \ ]
+
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
+
+au BufNewFile,BufRead *.ts setlocal filetype=typescript
+au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
+
+nmap &lt;silent&gt; gd &lt;Plug&gt;(coc-definition)
+nmap &lt;silent&gt; gy &lt;Plug&gt;(coc-type-definition)
+nmap &lt;silent&gt; gi &lt;Plug&gt;(coc-implementation)
+nmap &lt;silent&gt; gr &lt;Plug&gt;(coc-references)
+nmap &lt;leader&gt;rn &lt;Plug&gt;(coc-rename)
+nmap &lt;silent&gt; [c &lt;Plug&gt;(coc-diagnostic-prev)
+nmap &lt;silent&gt; ]c &lt;Plug&gt;(coc-diagnostic-next)
+nmap &lt;leader&gt;a  &lt;Plug&gt;(coc-codeaction-selected)
+nmap &lt;leader&gt;ac  &lt;Plug&gt;(coc-codeaction)
+nmap &lt;leader&gt;qf  &lt;Plug&gt;(coc-fix-current)
+nmap &lt;silent&gt; &lt;TAB&gt; &lt;Plug&gt;(coc-range-select)
+
+xmap &lt;silent&gt; &lt;TAB&gt; &lt;Plug&gt;(coc-range-select)
+xmap &lt;silent&gt; &lt;S-TAB&gt; &lt;Plug&gt;(coc-range-select-backword)
+xmap &lt;leader&gt;a  &lt;Plug&gt;(coc-codeaction-selected)
+
+&quot; 显示文档
+nnoremap &lt;silent&gt; K :call &lt;SID&gt;show_documentation()&lt;CR&gt;
+
+&quot; 回车：补全框?确认补全:回车可以撤回
+inoremap &lt;expr&gt; &lt;cr&gt; pumvisible() ? &quot;\&lt;C-y&gt;&quot; : &quot;\&lt;C-g&gt;u\&lt;CR&gt;&quot;
+&quot; &lt;c-c&gt;触发补全
+inoremap &lt;silent&gt;&lt;expr&gt; &lt;c-c&gt; coc#refresh()
+inoremap &lt;expr&gt;&lt;S-TAB&gt; pumvisible() ? &quot;\&lt;C-p&gt;&quot; : &quot;\&lt;C-h&gt;&quot;
+inoremap &lt;silent&gt;&lt;expr&gt; &lt;TAB&gt;
+      \ pumvisible() ? &quot;\&lt;C-n&gt;&quot; :
+      \ &lt;SID&gt;check_back_space() ? &quot;\&lt;TAB&gt;&quot; :
+      \ coc#refresh()
+
+&quot; Use `:Format` to format current buffer
+command! -nargs=0 Format :call CocAction('format')
+&quot; Use `:Fold` to fold current buffer
+command! -nargs=? Fold :call     CocAction('fold', &lt;f-args&gt;)
+
+&quot; set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+&quot; autocmd CursorHold * silent call CocActionAsync('highlight')
+
+function! s:show_documentation()
+  if (index(['vim','help'], &amp;filetype) &gt;= 0)
+    execute 'h '.expand('&lt;cword&gt;')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+
+
+&quot; -------------------- plug ------------------------
+call plug#begin('~/.vim/plugins')
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'mhinz/vim-startify'
+Plug 'SirVer/ultisnips'
+Plug 'jiangmiao/auto-pairs'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdcommenter'
+
+&quot; NERDTree
+Plug 'scrooloose/nerdtree'
+&quot; git
+Plug 'Xuyuanp/nerdtree-git-plugin'
+&quot; icon
+&quot; Plug 'ryanoasis/vim-devicons'
+
+&quot; coc
+&quot; Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile' }
+
+&quot; golang
+&quot; Plug 'fatih/vim-go'
+&quot; typescript
+&quot; Plug 'leafgarland/typescript-vim', {'for': ['typescript', 'typescript.tsx', 'js']}
+
+&quot; prettier
+&quot;Plug 'prettier/vim-prettier', {
+&quot;  \ 'do': 'yarn install',
+&quot;  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+&quot;Plug 'Valloric/YouCompleteMe'
+call plug#end()
+
+
+&quot; 替换函数
+&quot; 参数说明：
+&quot; confirm：是否替换前逐一确认
+&quot; wholeword：是否整词匹配
+&quot; replace：被替换字符串
+function! Replace(confirm, wholeword, replace)
+    wa
+    let flag = ''
+    if a:confirm
+        let flag .= 'gec'
+    else
+        let flag .= 'ge'
+    endif
+    let search = ''
+    if a:wholeword
+        let search .= '\&lt;' . escape(expand('&lt;cword&gt;'), '/\.*$^~[') . '\&gt;'
+    else
+        let search .= expand('&lt;cword&gt;')
+    endif
+    let replace = escape(a:replace, '/\&amp;~')
+    execute 'argdo %s/' . search . '/' . replace . '/' . flag . '| update'
+endfunction
+&quot; 不确认、非整词
+nnoremap &lt;Leader&gt;R :call Replace(0, 0, input('Replace '.expand('&lt;cword&gt;').' with: '))&lt;CR&gt;
+&quot; 不确认、整词
+nnoremap &lt;Leader&gt;rw :call Replace(0, 1, input('Replace '.expand('&lt;cword&gt;').' with: '))&lt;CR&gt;
+&quot; 确认、非整词
+nnoremap &lt;Leader&gt;rc :call Replace(1, 0, input('Replace '.expand('&lt;cword&gt;').' with: '))&lt;CR&gt;
+&quot; 确认、整词
+nnoremap &lt;Leader&gt;rcw :call Replace(1, 1, input('Replace '.expand('&lt;cword&gt;').' with: '))&lt;CR&gt;
+nnoremap &lt;Leader&gt;rwc :call Replace(1, 1, input('Replace '.expand('&lt;cword&gt;').' with: '))&lt;CR&gt;
+</code></pre>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="https://rx-78-kum0.github.io/posts/vimrc/" title="vimrc" target="_blank" rel="external">https://rx-78-kum0.github.io/posts/vimrc/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/rx-78-kum0" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://rx-78-kum0.github.io/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/rx-78-kum0" target="_blank"><span class="text-dark">kumo</span><small class="ml-1x">rx-78-kum0 ( ‵▽′)ψ</small></a></h3>
+        <div>obsessive ;)</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://rx-78-kum0.github.io/posts/%E4%B8%80%E4%B8%AA%E5%8C%85%E5%90%AB-nil-%E6%8C%87%E9%92%88%E7%9A%84%E6%8E%A5%E5%8F%A3%E4%B8%8D%E6%98%AF-nil-%E6%8E%A5%E5%8F%A3/" title="一个包含 nil 指针的接口不是 nil 接口"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            <li class="next">
+                <a href="https://rx-78-kum0.github.io/posts/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/"
+                    title="angular自定义双向绑定表单组件"><span>Newer&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="qq,wechat,google,weibo"
+                data-mobile-sites="qq,wechat,google,weibo"></div>
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/rx-78-kum0" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://rx-78-kum0.github.io/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2018  -
+    2020
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/go.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/typescript.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/lisp.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/shell.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/scss.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/dockerfile.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/sql.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/cpp.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://rx-78-kum0.github.io/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
+<script src="https://rx-78-kum0.github.io/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/rx-78-kum0.github.io\/',
+            CONTENT_URL: 'https:\/\/rx-78-kum0.github.io\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://rx-78-kum0.github.io/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </body>
+</html>
