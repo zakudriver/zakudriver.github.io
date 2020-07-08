@@ -38,6 +38,15 @@
     </item>
     
     <item>
+      <title>Hello_World</title>
+      <link>https://rx-78-kum0.github.io/2020/01/hello_world/</link>
+      <pubDate>Sat, 11 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/01/hello_world/</guid>
+      <description>Power by Hugo 现在，该博客改由 Hugo 强力驱动啦！ Hugo 是一个 golang 编写的静态网页生成器。同类型工具还有使用 node 编写的 Hexo。 Hugo的优点 快 基于 golang 编写的 简单 不仅</description>
+    </item>
+    
+    <item>
       <title>myclirc</title>
       <link>https://rx-78-kum0.github.io/2019/12/myclirc/</link>
       <pubDate>Tue, 10 Dec 2019 00:00:00 +0800</pubDate>
