@@ -42,7 +42,7 @@
       <pubDate>Sat, 11 Jan 2020 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/2020/01/hello_world/</guid>
-      <description>Power by Hugo 现在，该博客改由 Hugo 强力驱动啦！ Hugo 是一个 golang 编写的静态网页生成器。同类型工具还有使用 node 编写的 Hexo。 Hugo的优点 快 基于 golang 编写的 简单 不仅</description>
+      <description>Power by Hugo 现在，该博客改由 Hugo 强力驱动啦！ Hugo 是一个 golang 编写的静态网页生成器。同类型工具还有使用 node 编写的 Hexo。 Hugo的优点 - 快 基于 golang 编写的 - 简单</description>
     </item>
     
     <item>
@@ -60,7 +60,7 @@
       <pubDate>Mon, 08 Jul 2019 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/2019/07/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/</guid>
-      <description>angular的ControlValueAccessor是一个连接表单模型和视图DOM的抽象类接口 使自定义表单组件像原生input一样映射到</description>
+      <description>angular的ControlValueAccessor是一个连接表单模型和视图DOM的抽象类接口 .org-center { margin-left: auto; margin-right: auto; text-align: center; } 使自定义表单组件像原生i</description>
     </item>
     
     <item>

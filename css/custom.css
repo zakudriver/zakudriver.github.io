@@ -1,0 +1,18 @@
+.verse {
+  padding: 12px 10px;
+  background-color: #fafafa;
+  color: #333;
+  border-radius: 3px;
+}
+
+.EXPLAIN {
+  color: #666;
+  font-size: 13px;
+  border-bottom: 2px solid #eee;
+}
+
+.org-center {
+  align-items: center;
+  padding: 2px 12px;
+  font-weight: 500;
+}
