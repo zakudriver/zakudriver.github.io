@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>helloworld on rx-78-kum0</title>
+    <link>https://rx-78-kum0.github.io/tags/helloworld/</link>
+    <description>Recent content in helloworld on rx-78-kum0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 11 Jan 2020 00:00:00 +0800</lastBuildDate>
+    
+        <atom:link href="https://rx-78-kum0.github.io/tags/helloworld/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>redis发布订阅</title>
+      <link>https://rx-78-kum0.github.io/2020/07/redis%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/</link>
+      <pubDate>Thu, 02 Jul 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/07/redis%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/</guid>
+      <description>相比rabbitmq等专业消息队列的缺陷: 没有相应的机制保证消息的可靠消费，如果发布者发布一条消息，而没有对应的订阅者的话，这条消息将丢失，</description>
+    </item>
+    
+    <item>
+      <title>限制goroutine数量</title>
+      <link>https://rx-78-kum0.github.io/2020/07/%E9%99%90%E5%88%B6goroutine%E6%95%B0%E9%87%8F/</link>
+      <pubDate>Thu, 02 Jul 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/07/%E9%99%90%E5%88%B6goroutine%E6%95%B0%E9%87%8F/</guid>
+      <description>package main import ( &amp;quot;fmt&amp;quot; &amp;quot;sync&amp;quot; &amp;quot;time&amp;quot; ) type Glimit struct { n int c chan struct{} } func New(n int) *Glimit { return &amp;amp;Glimit{ n: n, c: make(chan struct{}, n), } } func (g *Glimit) Run(f func()) { g.c &amp;lt;- struct{}{} go func() { f() &amp;lt;-g.c }() } var wg = sync.WaitGroup{} func main() { number := 10 g := New(2) for i := 0; i &amp;lt; number; i++</description>
+    </item>
+    
+    <item>
+      <title>golang gc优化</title>
+      <link>https://rx-78-kum0.github.io/2020/06/gc%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/06/gc%E4%BC%98%E5%8C%96/</guid>
+      <description>小对象要合并 函数频繁创建的简单的对象，直接返回对象，效果比返回指针效果要好 类型转换要注意，官方用法消耗特别大。 package string_util import ( &amp;quot;unsafe&amp;quot; ) func str2bytes(s string) []byte { x := (*[2]uintptr)(unsafe.Pointer(&amp;amp;s)) h</description>
+    </item>
+    
+    <item>
+      <title>golang time工具函数</title>
+      <link>https://rx-78-kum0.github.io/2020/06/time/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/06/time/</guid>
+      <description>package util-time import ( &amp;quot;strconv&amp;quot; &amp;quot;time&amp;quot; ) // 获取当前的时间 - 字符串 func GetCurrentDate() string { return time.Now().Format(&amp;quot;2006/01/02 15:04:05&amp;quot;) } // 获取当前的时间 - Unix时间戳 func GetCurrentUnix() int64 { return time.Now().Unix() } // 获取当前的时间 - 毫秒级时间戳 func GetCurrentMilliUnix() int64 { return</description>
+    </item>
+    
+    <item>
+      <title>GDT&amp;LDT</title>
+      <link>https://rx-78-kum0.github.io/2020/06/gdtldt/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/06/gdtldt/</guid>
+      <description>GDT(Global Descriptor Table)全局描述符表 GDT是一个以 段描述符 为表项的数组类型的数据结构，在内存中线性存放。每个段描述符占 8 个字节。 GDTR寄存器存放G</description>
+    </item>
+    
+    <item>
+      <title>获取用户home目录路径</title>
+      <link>https://rx-78-kum0.github.io/2020/06/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7home%E7%9B%AE%E5%BD%95%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/06/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7home%E7%9B%AE%E5%BD%95%E8%B7%AF%E5%BE%84/</guid>
+      <description>func Home() (string, error) { user, err := user.Current() if nil == err { return user.HomeDir, nil } // cross compile support if runtime.GOOS == &amp;quot;windows&amp;quot; { return homeWindows() } // Unix-like system, so just assume Unix return homeUnix() } func homeUnix() (string, error) { // First prefer the HOME environmental variable if home := os.Getenv(&amp;quot;HOME&amp;quot;); home != &amp;quot;&amp;quot; { return home, nil } // If that fails, try the</description>
+    </item>
+    
+    <item>
+      <title>变量和标签</title>
+      <link>https://rx-78-kum0.github.io/2020/06/%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Tue, 09 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/06/%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%87%E7%AD%BE/</guid>
+      <description>标签(Label) 指向一大块的首地址。使用方法: LABEL_NAME: XXX XXX 局部Label 以(点)开头，比如.begin，.1，.2。在不同的段中可以使用相同的带</description>
+    </item>
+    
+    <item>
+      <title>irony-server-install</title>
+      <link>https://rx-78-kum0.github.io/2020/05/irony-server-install/</link>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/05/irony-server-install/</guid>
+      <description>Mac 首先需安装cmake和llvm brew install cmake llvm emacs里执行M-x irony-install-server得到安装执行命令 cmake -DCMAKE_INSTALL_PREFIX\=/Users/kumotyou/.emacs.d/irony/ \ /Users/kumotyou/.emacs.d/elpa/irony-20200130.849/server \ &amp;amp;&amp;amp; cmake --build . --use-stderr --config</description>
+    </item>
+    
+    <item>
+      <title>bochsrc</title>
+      <link>https://rx-78-kum0.github.io/2020/05/bochsrc/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/05/bochsrc/</guid>
+      <description>############################################################### # Configuration file for Bochs ############################################################### # how much memory the emulated machine will have megs: 32 # filename of ROM images romimage: file=/usr/local/share/bochs/BIOS-bochs-latest vgaromimage: file=/usr/local/share/bochs/VGABIOS-lgpl-latest # what disk images will be used floppya: 1_44=a.img, status=inserted # choose the boot disk. boot: floppy # where do we send log messages? # log: bochsout.txt # disable the mouse mouse: enabled=0 # enable key mapping, using US layout as default. #</description>
+    </item>
+    
+    <item>
+      <title>mac编译nasm问题汇总</title>
+      <link>https://rx-78-kum0.github.io/2020/05/mac%E7%BC%96%E8%AF%91nasm%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/05/mac%E7%BC%96%E8%AF%91nasm%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
+      <description>ld: dynamic main executables must link with libSystem.dylib for architecture x86_64 # -lSystem ld a.o -o a -lSystem</description>
+    </item>
+    
+    <item>
+      <title>汇编语言种类</title>
+      <link>https://rx-78-kum0.github.io/2020/05/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A7%8D%E7%B1%BB/</link>
+      <pubDate>Fri, 22 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/05/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A7%8D%E7%B1%BB/</guid>
+      <description>汇编语言和CPU息息相关，但是不能把汇编语言完全等同于CPU的机器指令。不同架构的CPU指令并不相同，如x86，powerpc，arm各有各</description>
+    </item>
+    
+    <item>
+      <title>docker部署mysql问题汇总</title>
+      <link>https://rx-78-kum0.github.io/2020/05/docker%E9%83%A8%E7%BD%B2mysql%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/05/docker%E9%83%A8%E7%BD%B2mysql%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
+      <description>docker-compose 配置 version: &#39;3&#39; services: # mysql blog_mysql: image: mysql restart: always ports: - &#39;3306:3306&#39; environment: - MYSQL_ROOT_PASSWORD=xxxx volumes: - &#39;/data/mysql:/var/lib/mysql&#39; docker 安装完mysql 后客户端无法访问 进入镜像中的mysql docker exec -it container_id /bin/bash 登录mysql mysql -u root -p 修改ro</description>
+    </item>
+    
+    <item>
+      <title>flex宽度失效</title>
+      <link>https://rx-78-kum0.github.io/2020/04/flex%E5%AE%BD%E5%BA%A6%E5%A4%B1%E6%95%88/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/04/flex%E5%AE%BD%E5%BA%A6%E5%A4%B1%E6%95%88/</guid>
+      <description>.flex { flex-shrink: 0; }</description>
+    </item>
+    
+    <item>
+      <title>canvas-drawImage</title>
+      <link>https://rx-78-kum0.github.io/2020/03/canvas-drawimage/</link>
+      <pubDate>Sun, 29 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/03/canvas-drawimage/</guid>
+      <description>context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height); img 规定要使用的图像, 画布或视频. sx 可选. 开始剪切的 x 坐标位置. sy 可选. 开始剪切的 y 坐标位置. swidth 可选. 被剪切图像的宽度. sheight 可选. 被剪切图像的</description>
+    </item>
+    
+    <item>
+      <title>nyan</title>
+      <link>https://rx-78-kum0.github.io/2020/03/nyan/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/03/nyan/</guid>
+      <description>#!/usr/bin/env bash # Print nyan cat # https://github.com/steckel/Git-Nyan-Graph/blob/master/nyan.sh # If you want big animated version: `telnet miku.acm.uiuc.edu` e=&#39;\033&#39; RESET=&amp;quot;$e[0m&amp;quot; BOLD=&amp;quot;$e[1m&amp;quot; CYAN=&amp;quot;$e[0;96m&amp;quot; RED=&amp;quot;$e[0;91m&amp;quot; YELLOW=&amp;quot;$e[0;93m&amp;quot; GREEN=&amp;quot;$e[0;92m&amp;quot; echo if [ $[$RANDOM%2] -eq &amp;quot;0&amp;quot; ]; then echo -en $RED&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;╭━━━━╮&#39;$RESET echo -en $YELLOW&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|::: /\_/\\&#39;$RESET echo -en $GREEN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|:::( ◕ᴥ◕)&#39;$RESET echo -en $CYAN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;u-u━━-u--u&#39;$RESET else echo -en $RED&#39;-_-_-_-_-_-_-_&#39; echo -e $RESET$BOLD&#39;,------,&#39;$RESET echo -en $YELLOW&#39;_-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;| /\_/\\&#39;$RESET echo -en $GREEN&#39;-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;~|__( ^ .</description>
+    </item>
+    
+    <item>
+      <title>浏览器显示emoji</title>
+      <link>https://rx-78-kum0.github.io/2020/03/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/03/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/</guid>
+      <description>// js 表情emoji转码 // 发送请求时将uft16转为utf-8 function utf16toEntities(str) { var patt = /[\ud800-\udbff][\udc00-\udfff]/g; // 检测utf16字符正则 return str.replace(patt, function(char) { var H, L, code; if (char.length === 2) { H = char.charCodeAt(0); // 取出高位</description>
+    </item>
+    
+    <item>
+      <title>interface类型</title>
+      <link>https://rx-78-kum0.github.io/2020/03/interface%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/03/interface%E7%B1%BB%E5%9E%8B/</guid>
+      <description>Go 语言与鸭子类型的关系 If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck. 如果某个东西长得像鸭子, 像鸭子一样游泳, 像鸭子一样嘎嘎叫, 那它就可以被看成是</description>
+    </item>
+    
+    <item>
+      <title>文字超出显示省略号</title>
+      <link>https://rx-78-kum0.github.io/2020/03/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/03/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/</guid>
+      <description>// 文字超出省略号 .text-overflow { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; } // 文字超出两行省略号, block元素 .text-overflow-2 { word-break: break-all; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; }</description>
+    </item>
+    
+    <item>
+      <title>多线程</title>
+      <link>https://rx-78-kum0.github.io/2020/03/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/03/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
+      <description>线程: 执行指令序列 保留了并发的优点, 避免了进程切换的代价. 实质: 映射表不变, PC指针变. 价值, 用处 浏览器 一个线程用来从服务器接收数据 一个线程</description>
+    </item>
+    
+    <item>
+      <title>多进程</title>
+      <link>https://rx-78-kum0.github.io/2020/02/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/02/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</guid>
+      <description>进程: 进行中的程序 进行中的程序与磁盘中的静态程序不一样. 进程是描述一个运行中的程序. 进程 = 资源(映射表) + 多个执行指令序列(线程) 进程只能在</description>
+    </item>
+    
+  </channel>
+</rss>
