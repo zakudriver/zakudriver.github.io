@@ -5,10 +5,19 @@
     <link>https://rx-78-kum0.github.io/categories/</link>
     <description>Recent content in Categories on rx-78-kum0</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 02 Jul 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2020 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://rx-78-kum0.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>多进程</title>
+      <link>https://rx-78-kum0.github.io/2020/02/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/02/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</guid>
+      <description>进程: 进行中的程序 进行中的程序与磁盘中的静态程序不一样. 进程是描述一个运行中的程序. 进程 = 资源(映射表) + 多个执行指令序列(线程) 进程只能在</description>
+    </item>
     
     <item>
       <title>typescript元编程</title>

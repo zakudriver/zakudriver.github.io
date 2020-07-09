@@ -35,11 +35,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rx-78-kum0.github.io/2020/06/gdtldt/" />
 <meta property="article:published_time" content="2020-06-11T00:00:00+08:00" />
-<meta property="article:modified_time" content="2020-07-02T14:01:10+08:00" />
+<meta property="article:modified_time" content="2020-07-09T11:10:15+08:00" />
 <meta itemprop="name" content="GDT&amp;LDT">
 <meta itemprop="description" content="GDT&amp;LDT笔记">
 <meta itemprop="datePublished" content="2020-06-11T00:00:00&#43;08:00" />
-<meta itemprop="dateModified" content="2020-07-02T14:01:10&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-09T11:10:15&#43;08:00" />
 <meta itemprop="wordCount" content="2421">
 
 
@@ -158,7 +158,7 @@
     <div class="widget-body">
         <ul class="category-list">
             <li class="category-list-item"><a href="https://rx-78-kum0.github.io/categories/balabala/" class="category-list-link">balabala</a><span class="category-list-count">1</span></li>
-            <li class="category-list-item"><a href="https://rx-78-kum0.github.io/categories/code/" class="category-list-link">code</a><span class="category-list-count">22</span></li>
+            <li class="category-list-item"><a href="https://rx-78-kum0.github.io/categories/code/" class="category-list-link">code</a><span class="category-list-count">23</span></li>
             <li class="category-list-item"><a href="https://rx-78-kum0.github.io/categories/configuration/" class="category-list-link">configuration</a><span class="category-list-count">5</span></li>
         </ul>
     </div>
@@ -182,7 +182,7 @@
             
             
             <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/emacs/" class="tag-list-link">emacs</a><span
-                    class="tag-list-count">1</span></li>
+                    class="tag-list-count">2</span></li>
             
             
             <li class="tag-list-item"><a href="https://rx-78-kum0.github.io/tags/golang/" class="tag-list-link">golang</a><span
@@ -248,6 +248,16 @@
             <li>
                 <div class="item-inner">
                     <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/2020/07/emacs%E7%AE%A1%E7%90%86%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B/" class="title">emacs管理博客写作流程</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-07-08 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-07-08</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
                         <a href="https://rx-78-kum0.github.io/2020/07/redis%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/" class="title">redis发布订阅</a>
                     </p>
                     <p class="item-date">
@@ -282,16 +292,6 @@
                     </p>
                     <p class="item-date">
                         <time datetime="2020-06-23 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-23</time>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://rx-78-kum0.github.io/2020/06/gdtldt/" class="title">GDT&amp;LDT</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2020-06-11 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-06-11</time>
                     </p>
                 </div>
             </li>
@@ -370,7 +370,7 @@
 <h2 id="段描述符--segment-descriptor">段描述符(Segment Descriptor)</h2>
 <p>每个段描述符占 8 个字节。由三部分组成: 线性基地址、段界限和段的访问属性。</p>
 <figure>
-    <img src="/ox-hugo/2020-06-12_18-50-34_929457-20161230154447711-2105143159.png"/> 
+    <img src="/ox-hugo/2020-07-09_11-10-00_929457-20161230154447711-2105143159.png"/> 
 </figure>
 
 <ul>
@@ -400,8 +400,11 @@
 </li>
 </ul>
 <h3 id="描述符类型">描述符类型</h3>
-<p><img src="/ox-hugo/2020-06-12_18-48-27_929457-20161230155710164-891968633.png" alt="">
-对于数据段来说， 这 4 位分别是 X、 E、 W、 A 位；而对于代码段来说，这 4 位则分别是 X、 C、 R、 A 位。</p>
+<figure>
+    <img src="/ox-hugo/2020-07-09_11-08-48_929457-20161230155710164-891968633.png"/> 
+</figure>
+
+<p>对于数据段来说， 这 4 位分别是 X、 E、 W、 A 位；而对于代码段来说，这 4 位则分别是 X、 C、 R、 A 位。</p>
 <h4 id="数据段">数据段</h4>
 <ul>
 <li>X: 表示是否可以执行（ eXecutable）。数据段总是不可执行的，X＝0。</li>
