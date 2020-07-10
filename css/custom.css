@@ -1,4 +1,4 @@
-.verse {
+.content .verse {
   padding: 12px 10px;
   background-color: #fafafa;
   color: #333;
@@ -6,14 +6,23 @@
   margin-top: 10px;
 }
 
-.EXPLAIN {
+.content .EXPLAIN {
   color: #666;
   font-size: 13px;
   border-bottom: 2px solid #eee;
 }
 
-.org-center {
+.content .org-center {
   align-items: center;
   padding: 2px 12px;
   font-weight: 500;
+}
+
+.content figure {
+  margin: 16px 0;
+}
+
+.content figure img {
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px #555;
 }
