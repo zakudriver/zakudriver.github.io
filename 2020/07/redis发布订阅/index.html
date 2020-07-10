@@ -35,12 +35,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rx-78-kum0.github.io/2020/07/redis%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/" />
 <meta property="article:published_time" content="2020-07-02T00:00:00+08:00" />
-<meta property="article:modified_time" content="2020-07-02T15:43:16+08:00" />
+<meta property="article:modified_time" content="2020-07-10T10:25:54+08:00" />
 <meta itemprop="name" content="redis发布订阅">
 <meta itemprop="description" content="golang实现redis发布订阅">
 <meta itemprop="datePublished" content="2020-07-02T00:00:00&#43;08:00" />
-<meta itemprop="dateModified" content="2020-07-02T15:43:16&#43;08:00" />
-<meta itemprop="wordCount" content="568">
+<meta itemprop="dateModified" content="2020-07-10T10:25:54&#43;08:00" />
+<meta itemprop="wordCount" content="577">
 
 
 
@@ -349,14 +349,16 @@
 	</span>
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/07/redis%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 568words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 577words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 2minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <blockquote>
+      <h2 id="redis发布订阅">redis发布订阅</h2>
+<div class="EXPLAIN">
+  <div></div>
 <p>相比rabbitmq等专业消息队列的缺陷: 没有相应的机制保证消息的可靠消费，如果发布者发布一条消息，而没有对应的订阅者的话，这条消息将丢失，不会存在内存中。</p>
-</blockquote>
+</div>
 <pre><code class="language-go">package main
 
 import (

@@ -24,7 +24,7 @@
       <pubDate>Thu, 02 Jul 2020 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/2020/07/redis%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/</guid>
-      <description>相比rabbitmq等专业消息队列的缺陷: 没有相应的机制保证消息的可靠消费，如果发布者发布一条消息，而没有对应的订阅者的话，这条消息将丢失，</description>
+      <description>redis发布订阅 相比rabbitmq等专业消息队列的缺陷: 没有相应的机制保证消息的可靠消费，如果发布者发布一条消息，而没有对应的订阅者的话</description>
     </item>
     
     <item>
