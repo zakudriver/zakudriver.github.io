@@ -5,10 +5,19 @@
     <link>https://rx-78-kum0.github.io/categories/</link>
     <description>Recent content in Categories on rx-78-kum0</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 08 Jul 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://rx-78-kum0.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>来自老婆的礼物</title>
+      <link>https://rx-78-kum0.github.io/2020/07/%E6%9D%A5%E8%87%AA%E8%80%81%E5%A9%86%E7%9A%84%E7%A4%BC%E7%89%A9/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/07/%E6%9D%A5%E8%87%AA%E8%80%81%E5%A9%86%E7%9A%84%E7%A4%BC%E7%89%A9/</guid>
+      <description>这是一篇迟到的博客。在上周五就收到了老婆的礼物，奈何没带电脑回去没法编写。 来自老婆的礼物 老婆: 256 黑色 我 : 64够了啊。256用不上。 老婆: 不够</description>
+    </item>
     
     <item>
       <title>emacs管理博客写作流程</title>
@@ -179,15 +188,6 @@
       
       <guid>https://rx-78-kum0.github.io/2020/03/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/</guid>
       <description>// 文字超出省略号 .text-overflow { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; } // 文字超出两行省略号, block元素 .text-overflow-2 { word-break: break-all; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; }</description>
-    </item>
-    
-    <item>
-      <title>多线程</title>
-      <link>https://rx-78-kum0.github.io/2020/03/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
-      <pubDate>Sun, 01 Mar 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://rx-78-kum0.github.io/2020/03/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
-      <description>线程: 执行指令序列 保留了并发的优点, 避免了进程切换的代价. 实质: 映射表不变, PC指针变. 价值, 用处 浏览器 一个线程用来从服务器接收数据 一个线程</description>
     </item>
     
   </channel>

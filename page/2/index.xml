@@ -5,10 +5,19 @@
     <link>https://rx-78-kum0.github.io/</link>
     <description>Recent content on rx-78-kum0</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 08 Jul 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://rx-78-kum0.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>多线程</title>
+      <link>https://rx-78-kum0.github.io/2020/03/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/03/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
+      <description>线程: 执行指令序列 保留了并发的优点, 避免了进程切换的代价. 实质: 映射表不变, PC指针变. 价值, 用处 浏览器 一个线程用来从服务器接收数据 一个线程</description>
+    </item>
     
     <item>
       <title>多进程</title>
