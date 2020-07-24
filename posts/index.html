@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rx-78-kum0.github.io/posts/" />
-<meta property="og:updated_time" content="2020-07-13T17:24:07+08:00" />
+<meta property="og:updated_time" content="2020-07-13T21:33:12+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -53,7 +53,7 @@
   
   
 
-  <body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <body class="main-center white" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
     <div class="slimContent">
       <div class="navbar-header">
         <div class="profile-block text-center">
@@ -511,6 +511,31 @@
     });
 </script>
 
+
+<script src="js/L2Dwidget.min.js"></script>
+<script>
+L2Dwidget.init({
+  model: {
+    jsonPath: 'live2d_models/hijiki/hijiki.model.json',
+    scale: 1,
+  },
+  display: {
+    superSample: 1,
+    width: 150,
+    height: 300,
+    position: 'left',
+    hOffset: 50,
+    vOffset: 0
+  },
+  mobile: {
+    show: false,
+    scale: 0.5,
+  },
+  react: {
+    opacity: 0.8
+  }
+});
+</script>
 
   </body>
 </html>
