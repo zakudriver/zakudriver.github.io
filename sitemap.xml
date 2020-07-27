@@ -3,35 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://rx-78-kum0.github.io/categories/balabala/</loc>
-    <lastmod>2020-07-13T21:33:12+08:00</lastmod>
+    <loc>https://rx-78-kum0.github.io/categories/</loc>
+    <lastmod>2020-07-27T18:07:39+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://rx-78-kum0.github.io/categories/</loc>
-    <lastmod>2020-07-13T21:33:12+08:00</lastmod>
+    <loc>https://rx-78-kum0.github.io/categories/code/</loc>
+    <lastmod>2020-07-27T18:07:39+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://rx-78-kum0.github.io/posts/</loc>
-    <lastmod>2020-07-13T21:33:12+08:00</lastmod>
+    <lastmod>2020-07-27T18:07:39+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://rx-78-kum0.github.io/</loc>
-    <lastmod>2020-07-13T21:33:12+08:00</lastmod>
+    <lastmod>2020-07-27T18:07:39+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://rx-78-kum0.github.io/tags/</loc>
+    <lastmod>2020-07-27T18:07:39+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rx-78-kum0.github.io/tags/web/</loc>
+    <lastmod>2020-07-27T18:07:39+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rx-78-kum0.github.io/2020/07/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E5%85%BB%E4%B8%80%E5%8F%AA%E7%8C%AB/</loc>
+    <lastmod>2020-07-27T18:07:39+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rx-78-kum0.github.io/categories/balabala/</loc>
     <lastmod>2020-07-13T21:33:12+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -47,13 +68,6 @@
   <url>
     <loc>https://rx-78-kum0.github.io/tags/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2020-07-13T21:33:12+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://rx-78-kum0.github.io/categories/code/</loc>
-    <lastmod>2020-07-10T10:25:54+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -228,13 +242,6 @@
   
   <url>
     <loc>https://rx-78-kum0.github.io/2020/03/canvas-drawimage/</loc>
-    <lastmod>2020-07-02T14:00:21+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://rx-78-kum0.github.io/tags/web/</loc>
     <lastmod>2020-07-02T14:00:21+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

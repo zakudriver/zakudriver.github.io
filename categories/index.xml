@@ -5,10 +5,19 @@
     <link>https://rx-78-kum0.github.io/categories/</link>
     <description>Recent content in Categories on rx-78-kum0</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2020 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://rx-78-kum0.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>在博客里养一只猫</title>
+      <link>https://rx-78-kum0.github.io/2020/07/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E5%85%BB%E4%B8%80%E5%8F%AA%E7%8C%AB/</link>
+      <pubDate>Mon, 27 Jul 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/07/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E5%85%BB%E4%B8%80%E5%8F%AA%E7%8C%AB/</guid>
+      <description>在博客里养一只猫 从今天起这里多了一只白色，高冷的看门喵。视线会一直跟着你的鼠标，鼠标靠近它就可以撸了！ 目前只设定让它在PC出现，在移动端显示</description>
+    </item>
     
     <item>
       <title>来自老婆的礼物</title>
@@ -179,15 +188,6 @@
       
       <guid>https://rx-78-kum0.github.io/2020/03/interface%E7%B1%BB%E5%9E%8B/</guid>
       <description>Go 语言与鸭子类型的关系 If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck. 如果某个东西长得像鸭子, 像鸭子一样游泳, 像鸭子一样嘎嘎叫, 那它就可以被看成是</description>
-    </item>
-    
-    <item>
-      <title>文字超出显示省略号</title>
-      <link>https://rx-78-kum0.github.io/2020/03/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/</link>
-      <pubDate>Wed, 04 Mar 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://rx-78-kum0.github.io/2020/03/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/</guid>
-      <description>// 文字超出省略号 .text-overflow { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; } // 文字超出两行省略号, block元素 .text-overflow-2 { word-break: break-all; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; }</description>
     </item>
     
   </channel>
