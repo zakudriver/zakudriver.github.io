@@ -5,7 +5,7 @@
     <link>https://rx-78-kum0.github.io/categories/balabala/</link>
     <description>Recent content in balabala on rx-78-kum0</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jan 2020 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://rx-78-kum0.github.io/categories/balabala/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,15 +26,6 @@
       
       <guid>https://rx-78-kum0.github.io/2020/07/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E5%85%BB%E4%B8%80%E5%8F%AA%E7%8C%AB/</guid>
       <description>从今天起这里多了一只白色，高冷的看门喵。视线会一直跟着你的鼠标，鼠标靠近它就可以撸了！ 目前只设定让它在PC出现，在移动端显示有些突兀。 养猫攻</description>
-    </item>
-    
-    <item>
-      <title>来自老婆的礼物</title>
-      <link>https://rx-78-kum0.github.io/2020/07/%E6%9D%A5%E8%87%AA%E8%80%81%E5%A9%86%E7%9A%84%E7%A4%BC%E7%89%A9/</link>
-      <pubDate>Mon, 13 Jul 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://rx-78-kum0.github.io/2020/07/%E6%9D%A5%E8%87%AA%E8%80%81%E5%A9%86%E7%9A%84%E7%A4%BC%E7%89%A9/</guid>
-      <description>这是一篇迟到的博客。在上周五就收到了老婆的礼物，奈何没带电脑回去没法编写。 来自老婆的礼物 老婆: 256 黑色 我 : 64够了啊。256用不上。 老婆: 不够</description>
     </item>
     
     <item>
@@ -188,6 +179,15 @@
       
       <guid>https://rx-78-kum0.github.io/2020/03/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/</guid>
       <description>// js 表情emoji转码 // 发送请求时将uft16转为utf-8 function utf16toEntities(str) { var patt = /[\ud800-\udbff][\udc00-\udfff]/g; // 检测utf16字符正则 return str.replace(patt, function(char) { var H, L, code; if (char.length === 2) { H = char.charCodeAt(0); // 取出高位</description>
+    </item>
+    
+    <item>
+      <title>interface类型</title>
+      <link>https://rx-78-kum0.github.io/2020/03/interface%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/03/interface%E7%B1%BB%E5%9E%8B/</guid>
+      <description>Go 语言与鸭子类型的关系 If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck. 如果某个东西长得像鸭子, 像鸭子一样游泳, 像鸭子一样嘎嘎叫, 那它就可以被看成是</description>
     </item>
     
   </channel>
