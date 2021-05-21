@@ -21,7 +21,7 @@
     
     
     <meta name="description" content="GDT&LDT笔记" />
-    <meta name="generator" content="Hugo 0.74.0-DEV with theme pure" />
+    <meta name="generator" content="Hugo 0.80.0 with theme pure" />
     <title>GDT&amp;LDT - rx-78-kum0</title>
     
     
@@ -38,13 +38,14 @@
 <meta property="article:modified_time" content="2020-07-09T11:10:15+08:00" />
 <meta itemprop="name" content="GDT&amp;LDT">
 <meta itemprop="description" content="GDT&amp;LDT笔记">
-<meta itemprop="datePublished" content="2020-06-11T00:00:00&#43;08:00" />
-<meta itemprop="dateModified" content="2020-07-09T11:10:15&#43;08:00" />
-<meta itemprop="wordCount" content="2421">
+<meta itemprop="datePublished" content="2020-06-11T00:00:00+08:00" />
+<meta itemprop="dateModified" content="2020-07-09T11:10:15+08:00" />
+<meta itemprop="wordCount" content="2415">
 
 
 
-<meta itemprop="keywords" content="操作系统," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="操作系统," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="GDT&amp;LDT"/>
 <meta name="twitter:description" content="GDT&amp;LDT笔记"/>
 
@@ -248,6 +249,16 @@
             <li>
                 <div class="item-inner">
                     <p class="item-title">
+                        <a href="https://rx-78-kum0.github.io/2021/05/golang%E5%B9%B6%E5%8F%91%E5%86%99slice/" class="title">golang并发写slice</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-05-21 00:00:00 &#43;0800 CST" itemprop="datePublished">2021-05-21</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
                         <a href="https://rx-78-kum0.github.io/2020/08/h5%E5%A4%8D%E5%88%B6%E6%96%87%E5%AD%97%E5%88%B0%E5%89%AA%E5%88%87%E6%9D%BF/" class="title">H5复制文字到剪切板</a>
                     </p>
                     <p class="item-date">
@@ -279,16 +290,6 @@
                 <div class="item-inner">
                     <p class="item-title">
                         <a href="https://rx-78-kum0.github.io/2020/07/redis%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/" class="title">redis发布订阅</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2020-07-02 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-07-02</time>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://rx-78-kum0.github.io/2020/07/%E9%99%90%E5%88%B6goroutine%E6%95%B0%E9%87%8F/" class="title">限制goroutine数量</a>
                     </p>
                     <p class="item-date">
                         <time datetime="2020-07-02 00:00:00 &#43;0800 CST" itemprop="datePublished">2020-07-02</time>
@@ -349,7 +350,7 @@
 	</span>
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/06/gdtldt/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 2421words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 2415words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 5minutes </span>
       </div>
     </div>
@@ -375,19 +376,19 @@
 
 <ul>
 <li>
-<p>G: 粒度位，用于解释段界限的含义。当 G 位是&quot;0&quot;时，段界限以字节为单位。此时，段的扩展范围是从 1 字节到 1 兆字节（ 1B～1MB），因为描述符中的界限值是 20 位的。相反，如果该位是&quot;1&rdquo;，那么，段界限是以 4KB 为单位的。这样，段的扩展范围是从 4KB到 4GB。</p>
+<p>G: 粒度位，用于解释段界限的含义。当 G 位是&quot;0&quot;时，段界限以字节为单位。此时，段的扩展范围是从 1 字节到 1 兆字节（ 1B～1MB），因为描述符中的界限值是 20 位的。相反，如果该位是&quot;1&quot;，那么，段界限是以 4KB 为单位的。这样，段的扩展范围是从 4KB到 4GB。</p>
 </li>
 <li>
-<p>D/B: &ldquo;默认的操作数大小&rdquo;(Default Operation Size)或者&quot;默认的堆栈指针大小&rdquo;，又或者&quot;上部边界&quot;标志。设立该标志位，主要是为了能够在 32 位处理器上兼容运行 16 位保护模式的程序。D＝0 表示指令中的偏移地址或者操作数是 16 位的； D＝1，指示 32 位的偏移地址或者操作数。</p>
+<p>D/B: &ldquo;默认的操作数大小&rdquo;(Default Operation Size)或者&quot;默认的堆栈指针大小&quot;，又或者&quot;上部边界&quot;标志。设立该标志位，主要是为了能够在 32 位处理器上兼容运行 16 位保护模式的程序。D＝0 表示指令中的偏移地址或者操作数是 16 位的； D＝1，指示 32 位的偏移地址或者操作数。</p>
 </li>
 <li>
-<p>L:  64 位代码段标志。保留此位给 64 位处理器使用。32位将此位置&quot;0&rdquo;。</p>
+<p>L:  64 位代码段标志。保留此位给 64 位处理器使用。32位将此位置&quot;0&quot;。</p>
 </li>
 <li>
 <p>AVL: 保留位。可以被系统软件使用。</p>
 </li>
 <li>
-<p>P: 段存在位(Segment Present)。 P 位用于指示描述符所对应的段是否存在。一般来说，描述符所指示的段都位于内存中。但是，当内存空间紧张时，有可能只是建立了描述符，对应的内存空间并不存在，这时，就应当把描述符的 P 位清零，表示段并不存在。P 位是由处理器负责检查的。每当通过描述符访问内存中的段时，如果 P 位是&quot;0&rdquo;，处理器就会产生一个异常中断。</p>
+<p>P: 段存在位(Segment Present)。 P 位用于指示描述符所对应的段是否存在。一般来说，描述符所指示的段都位于内存中。但是，当内存空间紧张时，有可能只是建立了描述符，对应的内存空间并不存在，这时，就应当把描述符的 P 位清零，表示段并不存在。P 位是由处理器负责检查的。每当通过描述符访问内存中的段时，如果 P 位是&quot;0&quot;，处理器就会产生一个异常中断。</p>
 </li>
 <li>
 <p>DPL: 描述符的特权级(Descriptor Privilege Level， DPL)。这两位用于指定段的特权级。共有 4 种处理器支持的特权级别，分别是 0、 1、 2、 3，其中 0 是最高特权级别， 3 是最低特权级别。刚进入保护模式时执行的代码具有最高特权级 0(可以看成是从处理器那里继承来的)，这些代码通常都是操作系统代码(内核段)，因此它的特权级别最高。每当操作系统加载一个用户程序时，它通常都会指定一个稍低的特权级(用户段)，比如 3 特权级。不同特权级别的程序是互相隔离的，其互访是严格限制的，而且有些处理器指令(特权指令)只能由 0 特权级的程序来执行，为的就是安全。这里再次点明了为何叫保护模式。</p>
@@ -410,7 +411,7 @@
 <li>X: 表示是否可以执行（ eXecutable）。数据段总是不可执行的，X＝0。</li>
 <li>E: 针对数据段。E 位指示段的扩展方向。 E＝0 是向上扩展的，也就是向高地址方向扩展的，是普通的数据段； E＝1 是向下扩展的，也就是向低地址方向扩展的，通常是堆栈段。</li>
 <li>W: 段的读写属性，W＝0 的段是不允许写入的，否则会引发处理器异常中断； W＝1的段是可以正常写入的。</li>
-<li>A: 已访问位，用于指示它所指向的段最近是否被访问过。在描述符创建的时候，应该清零。之后，每当该段被访问时，处理器自动将该位置&quot;1&rdquo;。</li>
+<li>A: 已访问位，用于指示它所指向的段最近是否被访问过。在描述符创建的时候，应该清零。之后，每当该段被访问时，处理器自动将该位置&quot;1&quot;。</li>
 </ul>
 <h4 id="代码段">代码段</h4>
 <ul>
@@ -427,7 +428,7 @@
 </blockquote>
 </li>
 <li>
-<p>A: 已访问位，用于指示它所指向的段最近是否被访问过。在描述符创建的时候，应该清零。之后，每当该段被访问时，处理器自动将该位置&quot;1&rdquo;。</p>
+<p>A: 已访问位，用于指示它所指向的段最近是否被访问过。在描述符创建的时候，应该清零。之后，每当该段被访问时，处理器自动将该位置&quot;1&quot;。</p>
 </li>
 </ul>
 
@@ -503,7 +504,7 @@
 </ul>
   <div class="copyright">
     &copy;2018  -
-    2020
+    2021
     <div class="publishby">
         Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
     </div>

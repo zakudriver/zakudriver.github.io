@@ -5,10 +5,19 @@
     <link>https://rx-78-kum0.github.io/</link>
     <description>Recent content on rx-78-kum0</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 06 Aug 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 May 2021 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://rx-78-kum0.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>golang并发写slice</title>
+      <link>https://rx-78-kum0.github.io/2021/05/golang%E5%B9%B6%E5%8F%91%E5%86%99slice/</link>
+      <pubDate>Fri, 21 May 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2021/05/golang%E5%B9%B6%E5%8F%91%E5%86%99slice/</guid>
+      <description>package sliceSafe type SliceSafe struct { channel chan int `desc:&amp;quot;即将加入到数据slice的数据&amp;quot;` data []int `desc:&amp;quot;数据slice&amp;quot;</description>
+    </item>
     
     <item>
       <title>H5复制文字到剪切板</title>
@@ -179,15 +188,6 @@
       
       <guid>https://rx-78-kum0.github.io/2020/03/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/</guid>
       <description>// js 表情emoji转码 // 发送请求时将uft16转为utf-8 function utf16toEntities(str) { var patt = /[\ud800-\udbff][\udc00-\udfff]/g; // 检测utf16字符正则 return str.replace(patt, function(char) { var H, L, code; if (char.length === 2) { H = char.charCodeAt(0); // 取出高位</description>
-    </item>
-    
-    <item>
-      <title>interface类型</title>
-      <link>https://rx-78-kum0.github.io/2020/03/interface%E7%B1%BB%E5%9E%8B/</link>
-      <pubDate>Mon, 09 Mar 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://rx-78-kum0.github.io/2020/03/interface%E7%B1%BB%E5%9E%8B/</guid>
-      <description>Go 语言与鸭子类型的关系 If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck. 如果某个东西长得像鸭子, 像鸭子一样游泳, 像鸭子一样嘎嘎叫, 那它就可以被看成是</description>
     </item>
     
   </channel>
