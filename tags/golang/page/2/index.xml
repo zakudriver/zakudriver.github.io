@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>浏览器显示emoji</title>
+      <link>https://rx-78-kum0.github.io/2020/03/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/03/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/</guid>
+      <description>// js 表情emoji转码 // 发送请求时将uft16转为utf-8 function utf16toEntities(str) { var patt = /[\ud800-\udbff][\udc00-\udfff]/g; // 检测utf16字符正则 return str.replace(patt, function(char) { var H, L, code; if (char.length === 2) { H = char.charCodeAt(0); // 取出高位</description>
+    </item>
+    
+    <item>
       <title>interface类型</title>
       <link>https://rx-78-kum0.github.io/2020/03/interface%E7%B1%BB%E5%9E%8B/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0800</pubDate>

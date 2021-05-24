@@ -19,6 +19,15 @@
     </item>
     
     <item>
+      <title>常用的typescript类型推导公式</title>
+      <link>https://rx-78-kum0.github.io/2021/05/%E5%B8%B8%E7%94%A8%E7%9A%84typescript%E7%B1%BB%E5%9E%8B%E5%85%AC%E5%BC%8F/</link>
+      <pubDate>Fri, 21 May 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2021/05/%E5%B8%B8%E7%94%A8%E7%9A%84typescript%E7%B1%BB%E5%9E%8B%E5%85%AC%E5%BC%8F/</guid>
+      <description>函数参数类型 type FuncParamsType&amp;lt;T&amp;gt; = T extends (arg: infer P) =&amp;gt; void ? P : string; function func(arg: string) {} type ParamsType = FuncParamsType&amp;lt;typeof func&amp;gt;; // ParamsType: string 同理，函数返回值类型 type FuncReturnType&amp;lt;T&amp;gt; = T extends (arg: any) =&amp;gt; infer P ? P : string; function func(arg: string): number {} type ReturnType = FuncReturnType&amp;lt;typeof func&amp;gt;; // ReturnType: number 数</description>
+    </item>
+    
+    <item>
       <title>H5复制文字到剪切板</title>
       <link>https://rx-78-kum0.github.io/2020/08/h5%E5%A4%8D%E5%88%B6%E6%96%87%E5%AD%97%E5%88%B0%E5%89%AA%E5%88%87%E6%9D%BF/</link>
       <pubDate>Thu, 06 Aug 2020 00:00:00 +0800</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>https://rx-78-kum0.github.io/2020/03/nyan/</guid>
       <description>#!/usr/bin/env bash # Print nyan cat # https://github.com/steckel/Git-Nyan-Graph/blob/master/nyan.sh # If you want big animated version: `telnet miku.acm.uiuc.edu` e=&#39;\033&#39; RESET=&amp;quot;$e[0m&amp;quot; BOLD=&amp;quot;$e[1m&amp;quot; CYAN=&amp;quot;$e[0;96m&amp;quot; RED=&amp;quot;$e[0;91m&amp;quot; YELLOW=&amp;quot;$e[0;93m&amp;quot; GREEN=&amp;quot;$e[0;92m&amp;quot; echo if [ $[$RANDOM%2] -eq &amp;quot;0&amp;quot; ]; then echo -en $RED&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;╭━━━━╮&#39;$RESET echo -en $YELLOW&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|::: /\_/\\&#39;$RESET echo -en $GREEN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|:::( ◕ᴥ◕)&#39;$RESET echo -en $CYAN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;u-u━━-u--u&#39;$RESET else echo -en $RED&#39;-_-_-_-_-_-_-_&#39; echo -e $RESET$BOLD&#39;,------,&#39;$RESET echo -en $YELLOW&#39;_-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;| /\_/\\&#39;$RESET echo -en $GREEN&#39;-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;~|__( ^ .</description>
-    </item>
-    
-    <item>
-      <title>浏览器显示emoji</title>
-      <link>https://rx-78-kum0.github.io/2020/03/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/</link>
-      <pubDate>Thu, 12 Mar 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://rx-78-kum0.github.io/2020/03/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/</guid>
-      <description>// js 表情emoji转码 // 发送请求时将uft16转为utf-8 function utf16toEntities(str) { var patt = /[\ud800-\udbff][\udc00-\udfff]/g; // 检测utf16字符正则 return str.replace(patt, function(char) { var H, L, code; if (char.length === 2) { H = char.charCodeAt(0); // 取出高位</description>
     </item>
     
   </channel>
