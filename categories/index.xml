@@ -25,7 +25,7 @@
       <pubDate>Fri, 21 May 2021 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/2021/05/%E5%B8%B8%E7%94%A8%E7%9A%84typescript%E7%B1%BB%E5%9E%8B%E5%85%AC%E5%BC%8F/</guid>
-      <description>函数参数类型 type FuncParamsType&amp;lt;T&amp;gt; = T extends (arg: infer P) =&amp;gt; void ? P : string; function func(arg: string) {} type ParamsType = FuncParamsType&amp;lt;typeof func&amp;gt;; // ParamsType: string 同理，函数返回值类型 type FuncReturnType&amp;lt;T&amp;gt; = T extends (arg: any) =&amp;gt; infer P ? P : string; function func(arg: string): number {} type ReturnType = FuncReturnType&amp;lt;typeof func&amp;gt;; // ReturnType: number 数</description>
+      <description>函数参数类型 type FuncParamsType&amp;lt;T&amp;gt; = T extends (arg: infer P) =&amp;gt; void ? P : string; function func(arg: string) {} type ParamsType = FuncParamsType&amp;lt;typeof func&amp;gt;; // ParamsType: string 函数返回值类型 type FuncReturnType&amp;lt;T&amp;gt; = T extends (arg: any) =&amp;gt; infer P ? P : string; function func(arg: string): number {} type ReturnType = FuncReturnType&amp;lt;typeof func&amp;gt;; // ReturnType: number 数组成员</description>
     </item>
     
     <item>
