@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vim on rx-78-kum0</title>
+    <title>vim on 自在之物🤔</title>
     <link>https://rx-78-kum0.github.io/tags/vim/</link>
-    <description>Recent content in vim on rx-78-kum0</description>
+    <description>Recent content in vim on 自在之物🤔</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://rx-78-kum0.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>nyan</title>
+      <link>https://rx-78-kum0.github.io/2020/03/nyan/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/03/nyan/</guid>
+      <description>#!/usr/bin/env bash # Print nyan cat # https://github.com/steckel/Git-Nyan-Graph/blob/master/nyan.sh # If you want big animated version: `telnet miku.acm.uiuc.edu` e=&#39;\033&#39; RESET=&amp;quot;$e[0m&amp;quot; BOLD=&amp;quot;$e[1m&amp;quot; CYAN=&amp;quot;$e[0;96m&amp;quot; RED=&amp;quot;$e[0;91m&amp;quot; YELLOW=&amp;quot;$e[0;93m&amp;quot; GREEN=&amp;quot;$e[0;92m&amp;quot; echo if [ $[$RANDOM%2] -eq &amp;quot;0&amp;quot; ]; then echo -en $RED&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;╭━━━━╮&#39;$RESET echo -en $YELLOW&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|::: /\_/\\&#39;$RESET echo -en $GREEN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|:::( ◕ᴥ◕)&#39;$RESET echo -en $CYAN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;u-u━━-u--u&#39;$RESET else echo -en $RED&#39;-_-_-_-_-_-_-_&#39; echo -e $RESET$BOLD&#39;,------,&#39;$RESET echo -en $YELLOW&#39;_-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;| /\_/\\&#39;$RESET echo -en $GREEN&#39;-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;~|__( ^ .</description>
+    </item>
     
     <item>
       <title>浏览器显示emoji</title>
@@ -79,7 +88,7 @@
       <pubDate>Sat, 22 Feb 2020 00:00:00 +0800</pubDate>
       
       <guid>https://rx-78-kum0.github.io/about/</guid>
-      <description> obsessive;) JavaScript/Typescript, Golang, Elisp, Dart. Emacser/Vimer. Happy Hacking.  </description>
+      <description>所有的快乐，其本质都是否定的，而痛苦的本质却是肯定的。</description>
     </item>
     
     <item>

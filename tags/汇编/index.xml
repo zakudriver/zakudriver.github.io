@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>汇编 on rx-78-kum0</title>
+    <title>汇编 on 自在之物🤔</title>
     <link>https://rx-78-kum0.github.io/tags/%E6%B1%87%E7%BC%96/</link>
-    <description>Recent content in 汇编 on rx-78-kum0</description>
+    <description>Recent content in 汇编 on 自在之物🤔</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 09 Jun 2020 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://rx-78-kum0.github.io/tags/%E6%B1%87%E7%BC%96/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>手把手教你读财报</title>
+      <link>https://rx-78-kum0.github.io/2021/06/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E8%AF%BB%E8%B4%A2%E6%8A%A5/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2021/06/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E8%AF%BB%E8%B4%A2%E6%8A%A5/</guid>
+      <description>财报重要内容 要点 会计政策的改变； 会计政策的改变； 会计事务所出具 “标准无保留意见”； 上市时间长于5年； 某科目出现大比例变话，查看附注； 与同行对</description>
+    </item>
     
     <item>
       <title>golang并发写slice</title>
@@ -179,15 +188,6 @@
       
       <guid>https://rx-78-kum0.github.io/2020/03/canvas-drawimage/</guid>
       <description>context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height); img 规定要使用的图像, 画布或视频. sx 可选. 开始剪切的 x 坐标位置. sy 可选. 开始剪切的 y 坐标位置. swidth 可选. 被剪切图像的宽度. sheight 可选. 被剪切图像的</description>
-    </item>
-    
-    <item>
-      <title>nyan</title>
-      <link>https://rx-78-kum0.github.io/2020/03/nyan/</link>
-      <pubDate>Sat, 14 Mar 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://rx-78-kum0.github.io/2020/03/nyan/</guid>
-      <description>#!/usr/bin/env bash # Print nyan cat # https://github.com/steckel/Git-Nyan-Graph/blob/master/nyan.sh # If you want big animated version: `telnet miku.acm.uiuc.edu` e=&#39;\033&#39; RESET=&amp;quot;$e[0m&amp;quot; BOLD=&amp;quot;$e[1m&amp;quot; CYAN=&amp;quot;$e[0;96m&amp;quot; RED=&amp;quot;$e[0;91m&amp;quot; YELLOW=&amp;quot;$e[0;93m&amp;quot; GREEN=&amp;quot;$e[0;92m&amp;quot; echo if [ $[$RANDOM%2] -eq &amp;quot;0&amp;quot; ]; then echo -en $RED&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;╭━━━━╮&#39;$RESET echo -en $YELLOW&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|::: /\_/\\&#39;$RESET echo -en $GREEN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|:::( ◕ᴥ◕)&#39;$RESET echo -en $CYAN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;u-u━━-u--u&#39;$RESET else echo -en $RED&#39;-_-_-_-_-_-_-_&#39; echo -e $RESET$BOLD&#39;,------,&#39;$RESET echo -en $YELLOW&#39;_-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;| /\_/\\&#39;$RESET echo -en $GREEN&#39;-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;~|__( ^ .</description>
     </item>
     
   </channel>
