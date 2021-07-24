@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>Elisp中的interactive参数</title>
+      <link>https://rx-78-kum0.github.io/2021/07/elisp%E4%B8%AD%E7%9A%84interactive%E5%8F%82%E6%95%B0/</link>
+      <pubDate>Tue, 20 Jul 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2021/07/elisp%E4%B8%AD%E7%9A%84interactive%E5%8F%82%E6%95%B0/</guid>
+      <description>interactive 参数的含义 若一个函数带有交互模式声明，则它是一个命令函数。即可以通过 M-x(execute-command) 来调用。 声明格式 (defun kumo-interactive-func () (interactive &amp;quot;code-string&amp;quot;) ;; do something...) 种类 Completion: 提供补全。TAB，SPC 和 RET 完</description>
+    </item>
+    
+    <item>
       <title>手把手教你读财报</title>
       <link>https://rx-78-kum0.github.io/2021/06/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E8%AF%BB%E8%B4%A2%E6%8A%A5/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0800</pubDate>
@@ -178,15 +187,6 @@
       
       <guid>https://rx-78-kum0.github.io/2020/04/flex%E5%AE%BD%E5%BA%A6%E5%A4%B1%E6%95%88/</guid>
       <description>.flex { flex-shrink: 0; }</description>
-    </item>
-    
-    <item>
-      <title>canvas-drawImage</title>
-      <link>https://rx-78-kum0.github.io/2020/03/canvas-drawimage/</link>
-      <pubDate>Sun, 29 Mar 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://rx-78-kum0.github.io/2020/03/canvas-drawimage/</guid>
-      <description>context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height); img 规定要使用的图像, 画布或视频. sx 可选. 开始剪切的 x 坐标位置. sy 可选. 开始剪切的 y 坐标位置. swidth 可选. 被剪切图像的宽度. sheight 可选. 被剪切图像的</description>
     </item>
     
   </channel>

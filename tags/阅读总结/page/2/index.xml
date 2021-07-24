@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>canvas-drawImage</title>
+      <link>https://rx-78-kum0.github.io/2020/03/canvas-drawimage/</link>
+      <pubDate>Sun, 29 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://rx-78-kum0.github.io/2020/03/canvas-drawimage/</guid>
+      <description>context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height); img 规定要使用的图像, 画布或视频. sx 可选. 开始剪切的 x 坐标位置. sy 可选. 开始剪切的 y 坐标位置. swidth 可选. 被剪切图像的宽度. sheight 可选. 被剪切图像的</description>
+    </item>
+    
+    <item>
       <title>nyan</title>
       <link>https://rx-78-kum0.github.io/2020/03/nyan/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0800</pubDate>
