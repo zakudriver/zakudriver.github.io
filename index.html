@@ -178,6 +178,25 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>elisp文档</h2>
+  </header>
+  <section class="entry-content">
+    <p>有三种方式可以加载文件：  load autoload require  使用eval-after-load可以推迟一段代码的执行 (eval-after-load “触发条件的文件” 待执行的代码) 这里，第一个参数的值必须跟上面三种方式加载文件时的值一模一样
+emacs中的变量作用域 buffer-local变量 声明buffer-local变量  make-variable-buffer-local  各个缓冲区都有各自的buffer-local变量
+ make-local-variable  当前缓冲区产生一个局部变量,其他缓冲区仍然使用全局变量(推荐使用)
+buffer相关函数    with-current-buffer
+;使其中的body表达式在指定的缓冲区里执行(使用指定buffer的配置信息执行body表达式) (with-current-buffer buffer body)      get-buffer
+;得到缓冲区名字的对应缓冲区对象,如果没有这个名字的缓冲区,返回nil (get-buffer buffer-name)      default-value
+;访问符号的全局变量的值 (default-value symbol)      setq-default
+;修改符号作为全局变量的值 (setq-default symbol-name)      local-variable-p
+;测试变量是不是buffer-local的 (local-variable-p symbol [buffer对象])      buffer-local-value...</p>
+  </section>
+  <footer class="entry-footer">July 25, 2021&nbsp;·&nbsp;88 min&nbsp;·&nbsp;rx-78-kum0</footer>
+  <a class="entry-link" aria-label="post link to elisp文档" href="https://rx-78-kum0.github.io/posts/elisp%E6%96%87%E6%A1%A3/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Elisp中的interactive参数</h2>
   </header>
   <section class="entry-content">
@@ -228,17 +247,6 @@
   </section>
   <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;rx-78-kum0</footer>
   <a class="entry-link" aria-label="post link to 常用的typescript类型推导公式" href="https://rx-78-kum0.github.io/posts/%E5%B8%B8%E7%94%A8%E7%9A%84typescript%E7%B1%BB%E5%9E%8B%E5%85%AC%E5%BC%8F/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>H5复制文字到剪切板</h2>
-  </header>
-  <section class="entry-content">
-    <p>// 复制文字 // copyText(&#39;h5实现一键复制到粘贴板 兼容ios&#39;) /*兼容性补充： 移动端： 安卓手机: 微信（chrome）和几个手机浏览器都可以用。 苹果手机: 微信里面和sarafi浏览器里也都可以， PC: sarafi版本必须在10.2以上，其他浏览器可以. */ export function copyText(text: string | number) { // number类型没有 .length 不能执行selectText 需要转化成字符串  const textString = text.toString(); let input: HTMLInputElement | null = document.querySelector(&#39;#copy-input&#39;); if (!input) { input = document.createElement(&#39;input&#39;); input.id = &#39;copy-input&#39;; input.readOnly = true; // 防止ios聚焦触发键盘事件  input.style.position = &#39;absolute&#39;; input.style.left = &#39;-1000px&#39;; input.style.zIndex = &#39;-1000&#39;; document.body.appendChild(input); } input.value = textString; // ios必须先选中文字且不支持 input.select();  selectText(input, 0, textString....</p>
-  </section>
-  <footer class="entry-footer">August 6, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;rx-78-kum0</footer>
-  <a class="entry-link" aria-label="post link to H5复制文字到剪切板" href="https://rx-78-kum0.github.io/posts/h5%E5%A4%8D%E5%88%B6%E6%96%87%E5%AD%97%E5%88%B0%E5%89%AA%E5%88%87%E6%9D%BF/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

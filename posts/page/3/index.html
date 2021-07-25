@@ -153,6 +153,17 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>golang gc优化</h2>
+  </header>
+  <section class="entry-content">
+    <p>小对象要合并 函数频繁创建的简单的对象，直接返回对象，效果比返回指针效果要好 类型转换要注意，官方用法消耗特别大。 package string_util import ( &#34;unsafe&#34; ) func str2bytes(s string) []byte { x := (*[2]uintptr)(unsafe.Pointer(&amp;s)) h := [3]uintptr{x[0], x[1], x[1]} return *(*[]byte)(unsafe.Pointer(&amp;h)) } func bytes2str(b []byte) string { return *(*string)(unsafe.Pointer(&amp;b)) } 避免反复创建slice，map func(r*Reader)Read()([]byte,error) // 此函数没有形参，每次调用的时候返回一个[]byte。 func(r*Reader)Read(buf[]byte)(int,error) // 此函数个函数在每次迪调用的时候，会重用形参声明。  避免使用&#34;&#43;“拼接字符串 package string_utils import ( &#34;strings&#34; ) func strAppend(s string, ss ...string) string { var r strings.Builder r.WriteString(s) for _, v := range ss { r.WriteString(v) } return r.String() } </p>
+  </section>
+  <footer class="entry-footer">June 23, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;rx-78-kum0</footer>
+  <a class="entry-link" aria-label="post link to golang gc优化" href="https://rx-78-kum0.github.io/posts/gc%E4%BC%98%E5%8C%96/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>golang time工具函数</h2>
   </header>
   <section class="entry-content">
@@ -202,22 +213,6 @@ GDTR寄存器存放GDT表的基地址和表长界限(高32位存放GDT基址，�
   </section>
   <footer class="entry-footer">June 9, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;rx-78-kum0</footer>
   <a class="entry-link" aria-label="post link to 变量和标签" href="https://rx-78-kum0.github.io/posts/%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%87%E7%AD%BE/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>irony-server-install</h2>
-  </header>
-  <section class="entry-content">
-    <p>Mac   首先需安装cmake和llvm
-brew install cmake llvm   emacs里执行M-x irony-install-server得到安装执行命令
-cmake -DCMAKE_INSTALL_PREFIX\=/Users/kumotyou/.emacs.d/irony/ \ /Users/kumotyou/.emacs.d/elpa/irony-20200130.849/server \ &amp;&amp; cmake --build . --use-stderr --config Release --target install   添加环境变量
--DCMAKE_PREFIX_PATH=/usr/local/opt/llvm -DCMAKE_INSTALL_RPATH_USE_LINK_PATH=ON -DLIBCLANG_INCLUDE_DIR=/usr/local/opt/llvm/include -DLIBCLANG_LIBRARY=/usr/local/opt/llvm/lib/libclang.dylib   最终编译命令
-cmake -DCMAKE_INSTALL_PREFIX\=/Users/kumotyou/.emacs.d/irony/ \ -DCMAKE_PREFIX_PATH=/usr/local/opt/llvm \ -DCMAKE_INSTALL_RPATH_USE_LINK_PATH=ON \ -DLIBCLANG_INCLUDE_DIR=/usr/local/opt/llvm/include \ -DLIBCLANG_LIBRARY=/usr/local/opt/llvm/lib/libclang.dylib \ /Users/kumotyou/.emacs.d/elpa/irony-20200130.849/server \ &amp;&amp; cmake --build . --use-stderr --config Release --target install   Ubuntu   拉取ccls源码, 并进入ccls根目录
-git clone https://github.com/MaskRay/ccls cd ccls   拉取第三方依赖....</p>
-  </section>
-  <footer class="entry-footer">May 29, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;rx-78-kum0</footer>
-  <a class="entry-link" aria-label="post link to irony-server-install" href="https://rx-78-kum0.github.io/posts/irony-server-install/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

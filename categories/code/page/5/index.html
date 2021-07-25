@@ -138,6 +138,17 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2>nyan</h2>
+  </header>
+  <section class="entry-content">
+    <p>#!/usr/bin/env bash  # Print nyan cat # https://github.com/steckel/Git-Nyan-Graph/blob/master/nyan.sh # If you want big animated version: `telnet miku.acm.uiuc.edu` e=&#39;\033&#39; RESET=&#34;$e[0m&#34; BOLD=&#34;$e[1m&#34; CYAN=&#34;$e[0;96m&#34; RED=&#34;$e[0;91m&#34; YELLOW=&#34;$e[0;93m&#34; GREEN=&#34;$e[0;92m&#34; echo if [ $[$RANDOM%2] -eq &#34;0&#34; ]; then echo -en $RED&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;╭━━━━╮&#39;$RESET echo -en $YELLOW&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|::: /\_/\\&#39;$RESET echo -en $GREEN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|:::( ◕ᴥ◕)&#39;$RESET echo -en $CYAN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;u-u━━-u--u&#39;$RESET else echo -en $RED&#39;-_-_-_-_-_-_-_&#39; echo -e $RESET$BOLD&#39;,------,&#39;$RESET echo -en $YELLOW&#39;_-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;| /\_/\\&#39;$RESET echo -en $GREEN&#39;-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;~|__( ^ ....</p>
+  </section>
+  <footer class="entry-footer">March 14, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;rx-78-kum0</footer>
+  <a class="entry-link" aria-label="post link to nyan" href="https://rx-78-kum0.github.io/posts/nyan/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2>浏览器显示emoji</h2>
   </header>
   <section class="entry-content">
@@ -188,23 +199,6 @@ void ThreadCeate(A) { TCB *tcb = malloc(); // 申请内存创建TCB  *stack = ma
   </section>
   <footer class="entry-footer">March 1, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;rx-78-kum0</footer>
   <a class="entry-link" aria-label="post link to 多线程" href="https://rx-78-kum0.github.io/posts/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>多进程</h2>
-  </header>
-  <section class="entry-content">
-    <p>进程: 进行中的程序 进行中的程序与磁盘中的静态程序不一样. 进程是描述一个运行中的程序. 进程 = 资源(映射表) &#43; 多个执行指令序列(线程) 进程只能在内核. 要分配资源, 访问文件.
- 有开始, 结束 走走停停(切换) 需要记录  为了充分使用CPU 一次IO操作对应数百万(很多很多)次CPU计算操作. 为了充分合理使用CPU, 需要多个进程交替执行. – [并发]
-多进程是操作系统的核心 操作系统的核心就是记录, 管理, 合理推进多个进程. 使用计算机就是启用多个进程.
-多进程的组织 PCB &#43; 状态 &#43; 队列
-PCB(Proess Control Block) 记录进程信息的数据结构. 便于切回时继续执行.
-状态  就绪态 阻塞态 运行态  就绪态 ——–» 运行态 \ / \ / 阻塞态
-队列  就绪队列 PCB1 – PCB3 – PCB5 磁盘等待队列 PCB2 – PCB4 – PCB6  多进程的交替 队列 &#43; 调度 &#43; 切换...</p>
-  </section>
-  <footer class="entry-footer">February 29, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;rx-78-kum0</footer>
-  <a class="entry-link" aria-label="post link to 多进程" href="https://rx-78-kum0.github.io/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
