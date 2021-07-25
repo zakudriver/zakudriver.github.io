@@ -138,25 +138,6 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>elisp文档</h2>
-  </header>
-  <section class="entry-content">
-    <p>有三种方式可以加载文件：  load autoload require  使用eval-after-load可以推迟一段代码的执行 (eval-after-load “触发条件的文件” 待执行的代码) 这里，第一个参数的值必须跟上面三种方式加载文件时的值一模一样
-emacs中的变量作用域 buffer-local变量 声明buffer-local变量  make-variable-buffer-local  各个缓冲区都有各自的buffer-local变量
- make-local-variable  当前缓冲区产生一个局部变量,其他缓冲区仍然使用全局变量(推荐使用)
-buffer相关函数    with-current-buffer
-;使其中的body表达式在指定的缓冲区里执行(使用指定buffer的配置信息执行body表达式) (with-current-buffer buffer body)      get-buffer
-;得到缓冲区名字的对应缓冲区对象,如果没有这个名字的缓冲区,返回nil (get-buffer buffer-name)      default-value
-;访问符号的全局变量的值 (default-value symbol)      setq-default
-;修改符号作为全局变量的值 (setq-default symbol-name)      local-variable-p
-;测试变量是不是buffer-local的 (local-variable-p symbol [buffer对象])      buffer-local-value...</p>
-  </section>
-  <footer class="entry-footer">July 25, 2021&nbsp;·&nbsp;88 min&nbsp;·&nbsp;rx-78-kum0</footer>
-  <a class="entry-link" aria-label="post link to elisp文档" href="https://rx-78-kum0.github.io/posts/elisp%E6%96%87%E6%A1%A3/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
     <h2>Elisp中的interactive参数</h2>
   </header>
   <section class="entry-content">
@@ -203,6 +184,24 @@ buffer相关函数    with-current-buffer
   </section>
   <footer class="entry-footer">August 6, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;rx-78-kum0</footer>
   <a class="entry-link" aria-label="post link to H5复制文字到剪切板" href="https://rx-78-kum0.github.io/posts/h5%E5%A4%8D%E5%88%B6%E6%96%87%E5%AD%97%E5%88%B0%E5%89%AA%E5%88%87%E6%9D%BF/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>在博客养一只猫</h2>
+  </header>
+  <section class="entry-content">
+    <p>从今天起这里多了一只白色，高冷的看门喵。视线会一直跟着你的鼠标，鼠标靠近它就可以撸了！
+目前只设定让它在PC出现，在移动端显示有些突兀。
+养猫攻略  喵喵基于 live2d 绘图技术，在前端使用canvas绘制。
+  使用hexo搭建的站点可以直接使用 hexo-helper-live2d 快速养猫 使用 live2d-widget.js 源码导入  打包源码 # 拉取源码 $ git clone https://github.com/xiazeyu/live2d-widget.js.git # 下载依赖 $ yarn # 打包源码 $ npm run build:prod lib文件夹里就是打包成果。
+在hugo中使用   将打包后的lib路径中的 L2Dwidget.min.js 文件放到hugo根目录的 static/js 目录中。
+  在这儿下载喜欢的 live2d 模型放到hugo根目录的 static/live2d_models 目录中。
+  在当前使用的主题模板中导入和执行以上代码。一般是在 hugo/themes/xx/layouts/partials/script.html 中，这个文件是页面导入的script部分(虽是html文件，但是编辑时不能使用prettier-js格式化，会破坏hugo的模板语法)。
+&lt;script src=&#34;/js/L2Dwidget.min.js&#34;&gt;&lt;/script&gt; &lt;script&gt; /** ​ * The init function ​ * @param {Object} [userConfig] User&#39;s custom config 用户自定义设置 ​ * @param {String} [userConfig....</p>
+  </section>
+  <footer class="entry-footer">July 27, 2020&nbsp;·&nbsp;2 min&nbsp;·&nbsp;rx-78-kum0</footer>
+  <a class="entry-link" aria-label="post link to 在博客养一只猫" href="https://rx-78-kum0.github.io/posts/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E5%85%BB%E4%B8%80%E5%8F%AA%E7%8C%AB/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Categories | 谟涅摩绪涅📖</title>
+<title>docs | 谟涅摩绪涅📖</title>
 <meta name="keywords" content="" />
 <meta name="description" content="谟涅摩绪涅📖; code, archives">
 <meta name="author" content="rx-78-kum0, kumo, zyhua">
-<link rel="canonical" href="https://rx-78-kum0.github.io/categories/" />
+<link rel="canonical" href="https://rx-78-kum0.github.io/categories/docs/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.d9015f4cb657fd3539b79b29ffbd11de4175ccd105ad7591beffaadfafb48488.css" integrity="sha256-2QFfTLZX/TU5t5sp/70R3kF1zNEFrXWRvv&#43;q36&#43;0hIg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://rx-78-kum0.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://rx-78-kum0.github.io/favicon-16x16.png">
@@ -19,14 +19,14 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.80.0" />
-<link rel="alternate" type="application/rss+xml" href="https://rx-78-kum0.github.io/categories/index.xml">
-<meta property="og:title" content="Categories" />
+<link rel="alternate" type="application/rss+xml" href="https://rx-78-kum0.github.io/categories/docs/index.xml">
+<meta property="og:title" content="docs" />
 <meta property="og:description" content="谟涅摩绪涅📖; code, archives" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://rx-78-kum0.github.io/categories/" />
+<meta property="og:url" content="https://rx-78-kum0.github.io/categories/docs/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
+<meta name="twitter:title" content="docs"/>
 <meta name="twitter:description" content="谟涅摩绪涅📖; code, archives"/>
 
 </head>
@@ -115,7 +115,7 @@
             </li>
             <li>
                 <a href="https://rx-78-kum0.github.io/categories" title="Categories">
-                    <span class="active">Categories</span>
+                    <span>Categories</span>
                 </a>
             </li>
             <li>
@@ -131,28 +131,29 @@
         </ul>
     </nav>
 </header>
-<main class="main">
-<header class="page-header">
-    <h1>Categories</h1>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://rx-78-kum0.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://rx-78-kum0.github.io/categories/">Categories</a></div>
+  <h1>docs</h1>
 </header>
 
-<ul class="terms-tags">
-    <li>
-        <a href="https://rx-78-kum0.github.io/categories/balabala/">balabala <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://rx-78-kum0.github.io/categories/code/">code <sup><strong><sup>28</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://rx-78-kum0.github.io/categories/configuration/">configuration <sup><strong><sup>5</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://rx-78-kum0.github.io/categories/docs/">docs <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://rx-78-kum0.github.io/categories/%E9%98%85%E8%AF%BB/">阅读 <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-</ul>
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>elisp文档</h2>
+  </header>
+  <section class="entry-content">
+    <p>有三种方式可以加载文件：  load autoload require  使用eval-after-load可以推迟一段代码的执行 (eval-after-load “触发条件的文件” 待执行的代码) 这里，第一个参数的值必须跟上面三种方式加载文件时的值一模一样
+emacs中的变量作用域 buffer-local变量 声明buffer-local变量  make-variable-buffer-local  各个缓冲区都有各自的buffer-local变量
+ make-local-variable  当前缓冲区产生一个局部变量,其他缓冲区仍然使用全局变量(推荐使用)
+buffer相关函数    with-current-buffer
+;使其中的body表达式在指定的缓冲区里执行(使用指定buffer的配置信息执行body表达式) (with-current-buffer buffer body)      get-buffer
+;得到缓冲区名字的对应缓冲区对象,如果没有这个名字的缓冲区,返回nil (get-buffer buffer-name)      default-value
+;访问符号的全局变量的值 (default-value symbol)      setq-default
+;修改符号作为全局变量的值 (setq-default symbol-name)      local-variable-p
+;测试变量是不是buffer-local的 (local-variable-p symbol [buffer对象])      buffer-local-value...</p>
+  </section>
+  <footer class="entry-footer">July 25, 2021&nbsp;·&nbsp;88 min&nbsp;·&nbsp;rx-78-kum0</footer>
+  <a class="entry-link" aria-label="post link to elisp文档" href="https://rx-78-kum0.github.io/posts/elisp%E6%96%87%E6%A1%A3/"></a>
+</article>
     </main>
     <footer class="footer">
     <span>&copy; 2021 <a href="https://rx-78-kum0.github.io/">谟涅摩绪涅📖</a></span>

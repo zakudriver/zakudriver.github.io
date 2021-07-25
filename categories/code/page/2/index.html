@@ -138,24 +138,6 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>在博客养一只猫</h2>
-  </header>
-  <section class="entry-content">
-    <p>从今天起这里多了一只白色，高冷的看门喵。视线会一直跟着你的鼠标，鼠标靠近它就可以撸了！
-目前只设定让它在PC出现，在移动端显示有些突兀。
-养猫攻略  喵喵基于 live2d 绘图技术，在前端使用canvas绘制。
-  使用hexo搭建的站点可以直接使用 hexo-helper-live2d 快速养猫 使用 live2d-widget.js 源码导入  打包源码 # 拉取源码 $ git clone https://github.com/xiazeyu/live2d-widget.js.git # 下载依赖 $ yarn # 打包源码 $ npm run build:prod lib文件夹里就是打包成果。
-在hugo中使用   将打包后的lib路径中的 L2Dwidget.min.js 文件放到hugo根目录的 static/js 目录中。
-  在这儿下载喜欢的 live2d 模型放到hugo根目录的 static/live2d_models 目录中。
-  在当前使用的主题模板中导入和执行以上代码。一般是在 hugo/themes/xx/layouts/partials/script.html 中，这个文件是页面导入的script部分(虽是html文件，但是编辑时不能使用prettier-js格式化，会破坏hugo的模板语法)。
-&lt;script src=&#34;/js/L2Dwidget.min.js&#34;&gt;&lt;/script&gt; &lt;script&gt; /** ​ * The init function ​ * @param {Object} [userConfig] User&#39;s custom config 用户自定义设置 ​ * @param {String} [userConfig....</p>
-  </section>
-  <footer class="entry-footer">July 27, 2020&nbsp;·&nbsp;2 min&nbsp;·&nbsp;rx-78-kum0</footer>
-  <a class="entry-link" aria-label="post link to 在博客养一只猫" href="https://rx-78-kum0.github.io/posts/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E5%85%BB%E4%B8%80%E5%8F%AA%E7%8C%AB/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
     <h2>emacs管理博客写作流程</h2>
   </header>
   <section class="entry-content">
@@ -199,6 +181,17 @@
   </section>
   <footer class="entry-footer">June 23, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;rx-78-kum0</footer>
   <a class="entry-link" aria-label="post link to golang gc优化" href="https://rx-78-kum0.github.io/posts/gc%E4%BC%98%E5%8C%96/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>golang time工具函数</h2>
+  </header>
+  <section class="entry-content">
+    <p>package util-time import ( &#34;strconv&#34; &#34;time&#34; ) // 获取当前的时间 - 字符串 func GetCurrentDate() string { return time.Now().Format(&#34;2006/01/02 15:04:05&#34;) } // 获取当前的时间 - Unix时间戳 func GetCurrentUnix() int64 { return time.Now().Unix() } // 获取当前的时间 - 毫秒级时间戳 func GetCurrentMilliUnix() int64 { return time.Now().UnixNano() / 1000000 } // 获取当前的时间 - 纳秒级时间戳 func GetCurrentNanoUnix() int64 { return time.Now().UnixNano() } func GetCurrentTime() string { var cstSh, _ = time.LoadLocation(&#34;Asia/Shanghai&#34;) t := time.Now().In(cstSh).Format(&#34;2006/01/02/ 15:04:05&#34;) return t } func GetCurrentHour() int { var cstSh, _ = time....</p>
+  </section>
+  <footer class="entry-footer">June 23, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;rx-78-kum0</footer>
+  <a class="entry-link" aria-label="post link to golang time工具函数" href="https://rx-78-kum0.github.io/posts/time/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
