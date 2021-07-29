@@ -8,22 +8,22 @@
 <title>typescript | 谟涅摩绪涅📖</title>
 <meta name="keywords" content="" />
 <meta name="description" content="谟涅摩绪涅📖; code, archives">
-<meta name="author" content="rx-78-kum0, kumo, zyhua">
-<link rel="canonical" href="https://rx-78-kum0.github.io/tags/typescript/" />
+<meta name="author" content="dingansichKum0, kumo, zyhua">
+<link rel="canonical" href="https://dingansichKum0.github.io/tags/typescript/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.d9015f4cb657fd3539b79b29ffbd11de4175ccd105ad7591beffaadfafb48488.css" integrity="sha256-2QFfTLZX/TU5t5sp/70R3kF1zNEFrXWRvv&#43;q36&#43;0hIg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://rx-78-kum0.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://rx-78-kum0.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://rx-78-kum0.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://rx-78-kum0.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://rx-78-kum0.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="https://dingansichKum0.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dingansichKum0.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dingansichKum0.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://dingansichKum0.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://dingansichKum0.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.80.0" />
-<link rel="alternate" type="application/rss+xml" href="https://rx-78-kum0.github.io/tags/typescript/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://dingansichKum0.github.io/tags/typescript/index.xml">
 <meta property="og:title" content="typescript" />
 <meta property="og:description" content="谟涅摩绪涅📖; code, archives" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://rx-78-kum0.github.io/tags/typescript/" />
+<meta property="og:url" content="https://dingansichKum0.github.io/tags/typescript/" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="typescript"/>
@@ -83,7 +83,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://rx-78-kum0.github.io/" accesskey="h" title="谟涅摩绪涅📖 (Alt + H)">谟涅摩绪涅📖</a>
+            <a href="https://dingansichKum0.github.io/" accesskey="h" title="谟涅摩绪涅📖 (Alt + H)">谟涅摩绪涅📖</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -109,22 +109,22 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://rx-78-kum0.github.io/archives" title="Archive">
+                <a href="https://dingansichKum0.github.io/archives" title="Archive">
                     <span>Archive</span>
                 </a>
             </li>
             <li>
-                <a href="https://rx-78-kum0.github.io/categories" title="Categories">
+                <a href="https://dingansichKum0.github.io/categories" title="Categories">
                     <span>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="https://rx-78-kum0.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://dingansichKum0.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
             <li>
-                <a href="https://rx-78-kum0.github.io/tags" title="Tags">
+                <a href="https://dingansichKum0.github.io/tags" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -132,7 +132,7 @@
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://rx-78-kum0.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://rx-78-kum0.github.io/tags/">Tags</a></div>
+<header class="page-header"><div class="breadcrumbs"><a href="https://dingansichKum0.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://dingansichKum0.github.io/tags/">Tags</a></div>
   <h1>typescript</h1>
 </header>
 
@@ -143,8 +143,8 @@
   <section class="entry-content">
     <p>函数参数类型 type FuncParamsType&lt;T&gt; = T extends (arg: infer P) =&gt; void ? P : string; function func(arg: string) {} type ParamsType = FuncParamsType&lt;typeof func&gt;; // ParamsType: string 函数返回值类型 type FuncReturnType&lt;T&gt; = T extends (arg: any) =&gt; infer P ? P : string; function func(arg: string): number {} type ReturnType = FuncReturnType&lt;typeof func&gt;; // ReturnType: number 数组成员作为键约束 const keys = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;] as const; type Keys = typeof keys[number] type KeysMap = Record&lt;Keys, string&gt; // KeysMap: { a: string; b: string; c: string; }  可选键约束 type Key = &#34;a&#34; | &#34;b&#34;; type OptionalKeyMap={ // optionalKeyMap: { &#34;a&#34; | &#34;b&#34;: number }  [K in Key]?...</p>
   </section>
-  <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;rx-78-kum0</footer>
-  <a class="entry-link" aria-label="post link to 常用的typescript类型推导公式" href="https://rx-78-kum0.github.io/posts/%E5%B8%B8%E7%94%A8%E7%9A%84typescript%E7%B1%BB%E5%9E%8B%E5%85%AC%E5%BC%8F/"></a>
+  <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <a class="entry-link" aria-label="post link to 常用的typescript类型推导公式" href="https://dingansichKum0.github.io/posts/%E5%B8%B8%E7%94%A8%E7%9A%84typescript%E7%B1%BB%E5%9E%8B%E5%85%AC%E5%BC%8F/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -154,12 +154,12 @@
   <section class="entry-content">
     <p>// 硬编码一个二进制 trie type BinaryTrie = [ [ [ [ [[[[0, 1], [2, 3]], [[4, 5], [6, 7]]], [[[8, 9], [10, 11]], [[12, 13], [14, 15]]]], [[[[16, 17], [18, 19]], [[20, 21], [22, 23]]], [[[24, 25], [26, 27]], [[28, 29], [30, 31]]]] ], [ [[[[32, 33], [34, 35]], [[36, 37], [38, 39]]], [[[40, 41], [42, 43]], [[44, 45], [46, 47]]]], [[[[48, 49], [50, 51]], [[52, 53], [54, 55]]], [[[56, 57], [58, 59]], [[60, 61], [62, 63]]]] ] ], [ [ [[[[64, 65], [66, 67]], [[68, 69], [70, 71]]], [[[72, 73], [74, 75]], [[76, 77], [78, 79]]]], [[[[80, 81], [82, 83]], [[84, 85], [86, 87]]], [[[88, 89], [90, 91]], [[92, 93], [94, 95]]]] ], [ [[[[96, 97], [98, 99]], [[100, 101], [102, 103]]], [[[104, 105], [106, 107]], [[108, 109], [110, 111]]]], [[[[112, 113], [114, 115]], [[116, 117], [118, 119]]], [[[120, 121], [122, 123]], [[124, 125], [126, 127]]]] ] ] ], [ [ [ [[[[128, 129], [130, 131]], [[132, 133], [134, 135]]], [[[136, 137], [138, 139]], [[140, 141], [142, 143]]]], [[[[144, 145], [146, 147]], [[148, 149], [150, 151]]], [[[152, 153], [154, 155]], [[156, 157], [158, 159]]]] ], [ [[[[160, 161], [162, 163]], [[164, 165], [166, 167]]], [[[168, 169], [170, 171]], [[172, 173], [174, 175]]]], [[[[176, 177], [178, 179]], [[180, 181], [182, 183]]], [[[184, 185], [186, 187]], [[188, 189], [190, 191]]]] ] ], [ [ [[[[192, 193], [194, 195]], [[196, 197], [198, 199]]], [[[200, 201], [202, 203]], [[204, 205], [206, 207]]]], [[[[208, 209], [210, 211]], [[212, 213], [214, 215]]], [[[216, 217], [218, 219]], [[220, 221], [222, 223]]]] ], [ [[[[224, 225], [226, 227]], [[228, 229], [230, 231]]], [[[232, 233], [234, 235]], [[236, 237], [238, 239]]]], [[[[240, 241], [242, 243]], [[244, 245], [246, 247]]], [[[248, 249], [250, 251]], [[252, 253], [254, 255]]]] ] ] ] ]; // 数组操作 type Copy&lt;T, S extends any&gt; = { [P in keyof T]: S[P] }; type Unshift&lt;T, A&gt; = ((a: A, ....</p>
   </section>
-  <footer class="entry-footer">February 27, 2020&nbsp;·&nbsp;7 min&nbsp;·&nbsp;rx-78-kum0</footer>
-  <a class="entry-link" aria-label="post link to typescript元编程" href="https://rx-78-kum0.github.io/posts/typescript%E5%85%83%E7%BC%96%E7%A8%8B/"></a>
+  <footer class="entry-footer">February 27, 2020&nbsp;·&nbsp;7 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <a class="entry-link" aria-label="post link to typescript元编程" href="https://dingansichKum0.github.io/posts/typescript%E5%85%83%E7%BC%96%E7%A8%8B/"></a>
 </article>
     </main>
     <footer class="footer">
-    <span>&copy; 2021 <a href="https://rx-78-kum0.github.io/">谟涅摩绪涅📖</a></span>
+    <span>&copy; 2021 <a href="https://dingansichKum0.github.io/">谟涅摩绪涅📖</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

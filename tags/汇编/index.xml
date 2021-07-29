@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>汇编 on 谟涅摩绪涅📖</title>
-    <link>https://rx-78-kum0.github.io/tags/%E6%B1%87%E7%BC%96/</link>
+    <link>https://dingansichKum0.github.io/tags/%E6%B1%87%E7%BC%96/</link>
     <description>Recent content in 汇编 on 谟涅摩绪涅📖</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 09 Jun 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://rx-78-kum0.github.io/tags/%E6%B1%87%E7%BC%96/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Jun 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://dingansichKum0.github.io/tags/%E6%B1%87%E7%BC%96/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>变量和标签</title>
-      <link>https://rx-78-kum0.github.io/posts/%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%87%E7%AD%BE/</link>
+      <link>https://dingansichKum0.github.io/posts/%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%87%E7%AD%BE/</link>
       <pubDate>Tue, 09 Jun 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://rx-78-kum0.github.io/posts/%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%87%E7%AD%BE/</guid>
+      <guid>https://dingansichKum0.github.io/posts/%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%87%E7%AD%BE/</guid>
       <description>汇编语言 变量和标签</description>
     </item>
     
     <item>
       <title>mac编译nasm问题汇总</title>
-      <link>https://rx-78-kum0.github.io/posts/mac%E7%BC%96%E8%AF%91nasm%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
+      <link>https://dingansichKum0.github.io/posts/mac%E7%BC%96%E8%AF%91nasm%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
       <pubDate>Tue, 26 May 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://rx-78-kum0.github.io/posts/mac%E7%BC%96%E8%AF%91nasm%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
+      <guid>https://dingansichKum0.github.io/posts/mac%E7%BC%96%E8%AF%91nasm%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
       <description>mac编译nasm的坑</description>
     </item>
     
     <item>
       <title>汇编语言种类</title>
-      <link>https://rx-78-kum0.github.io/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A7%8D%E7%B1%BB/</link>
+      <link>https://dingansichKum0.github.io/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A7%8D%E7%B1%BB/</link>
       <pubDate>Fri, 22 May 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://rx-78-kum0.github.io/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A7%8D%E7%B1%BB/</guid>
+      <guid>https://dingansichKum0.github.io/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A7%8D%E7%B1%BB/</guid>
       <description>汇编语言种类</description>
     </item>
     
