@@ -178,6 +178,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>typescript的重载(Overload)</h2>
+  </header>
+  <section class="entry-content">
+    <p>重载允许函数（方法）接收不同类型或数量的参数时，做出不同的处理。
+js本身作为动态脚本语言是支持重载的，typescript的重载更多的是类型系统的补全。
+函数 function func(arg: number): number; function func(arg: string): string; function func(arg: number | string): number | string { if (typeof arg === &#34;number&#34;) { return 0; } return &#34;0&#34;; } 箭头函数 箭头函数的重载需要通过定义 type 实现。
+type TFunc = { (x: number): number; (x: number, y: string): string; }; export const func: TFunc = (x: number, y = &#34;&#34;): any =&gt; { if (y) { return `optional: ${y}`; } return x; }; 方法 静态方法 class C { static method(arg: string): string; static method(): void; static method(arg?...</p>
+  </section>
+  <footer class="entry-footer">October 5, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <a class="entry-link" aria-label="post link to typescript的重载(Overload)" href="https://dingansichKum0.github.io/posts/typescript%E7%9A%84%E9%87%8D%E8%BD%BDoverload/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>elisp文档</h2>
   </header>
   <section class="entry-content">
@@ -236,17 +250,6 @@ buffer相关函数    with-current-buffer
   </section>
   <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
   <a class="entry-link" aria-label="post link to golang并发写slice" href="https://dingansichKum0.github.io/posts/golang%E5%B9%B6%E5%8F%91%E5%86%99slice/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>常用的typescript类型推导公式</h2>
-  </header>
-  <section class="entry-content">
-    <p>函数参数类型 type TFuncParameterType&lt;T&gt; = T extends (arg: infer P) =&gt; void ? P : string; // e.g function func(arg: string) {} type TParamsType = TFuncParameterType&lt;typeof func&gt;; // string 函数返回值类型 type TFuncReturnType&lt;T&gt; = T extends (arg: any) =&gt; infer P ? P : string; // e.g function func(arg: string): number {} type TReturnType = TFuncReturnType&lt;typeof func&gt;; // number 数组成员作为键约束 const keys = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;] as const; type TKeysMap = Record&lt;typeof keys[number], string&gt; // KeysMap: { a: string; b: string; c: string; } 数组元素类型 type ArrayElement&lt;T extends readonly unknown[]&gt; = T extends readonly (infer P)[] ?...</p>
-  </section>
-  <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to 常用的typescript类型推导公式" href="https://dingansichKum0.github.io/posts/%E5%B8%B8%E7%94%A8%E7%9A%84typescript%E7%B1%BB%E5%9E%8B%E5%85%AC%E5%BC%8F/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

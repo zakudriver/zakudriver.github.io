@@ -149,6 +149,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>interface类型</h2>
+  </header>
+  <section class="entry-content">
+    <p>Go 语言与鸭子类型的关系  If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck.
+如果某个东西长得像鸭子, 像鸭子一样游泳, 像鸭子一样嘎嘎叫, 那它就可以被看成是一只鸭子.
+在 Go 语言中, 如果类型的方法集完全包含接口的方法集，则可认为该类型实现了该接口.
+ 鸭子类型是一种动态语言的风格, 在这种风格中, 一个对象有效的语义, 不是由继承自特定的类或实现特定的接口, 而是由它&#34;当前方法和属性的集合&#34;决定. Go 作为一种静态语言, 通过接口实现了 鸭子类型, 实际上是 Go 的编译器在其中作了隐匿的转换工作.
+值接收者和指针接收者的区别 package main import &#34;fmt&#34; type Person struct { age int } func (p Person) howOld() int { return p.age } func (p *Person) growUp() { p....</p>
+  </section>
+  <footer class="entry-footer">March 9, 2020&nbsp;·&nbsp;11 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <a class="entry-link" aria-label="post link to interface类型" href="https://dingansichKum0.github.io/posts/interface%E7%B1%BB%E5%9E%8B/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>文字超出显示省略号</h2>
   </header>
   <section class="entry-content">
@@ -201,17 +216,6 @@ PCB(Proess Control Block) 记录进程信息的数据结构. 便于切回时继�
   </section>
   <footer class="entry-footer">February 27, 2020&nbsp;·&nbsp;7 min&nbsp;·&nbsp;dingansichKum0</footer>
   <a class="entry-link" aria-label="post link to typescript元编程" href="https://dingansichKum0.github.io/posts/typescript%E5%85%83%E7%BC%96%E7%A8%8B/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>clang-format</h2>
-  </header>
-  <section class="entry-content">
-    <p># .clang-format BasedOnStyle: LLVM Language:	Cpp IndentWidth : 2 # 开括号(开圆括号、开尖括号、开方括号)后的对齐: Align, DontAlign, AlwaysBreak(总是在开括号后换行) AlignAfterOpenBracket:	Align # 大括号换行，只有当BreakBeforeBraces设置为Custom时才有效 BraceWrapping: # class定义后面 AfterClass:	false # 控制语句后面 AfterControlStatement:	false # enum定义后面 AfterEnum:	false # 函数定义后面 AfterFunction:	true # 命名空间定义后面 AfterNamespace:	false # ObjC定义后面 AfterObjCDeclaration:	false # struct定义后面 AfterStruct:	false # union定义后面 AfterUnion:	false # catch之前 BeforeCatch:	true # else之前 BeforeElse:	true # 缩进大括号 IndentBraces:	false BreakBeforeBraces:	Custom </p>
-  </section>
-  <footer class="entry-footer">February 25, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to clang-format" href="https://dingansichKum0.github.io/posts/clang-format/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -149,6 +149,17 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>docker部署mysql问题汇总</h2>
+  </header>
+  <section class="entry-content">
+    <p>docker-compose 配置 version: &#39;3&#39; services: # mysql blog_mysql: image: mysql restart: always ports: - &#39;3306:3306&#39; environment: - MYSQL_ROOT_PASSWORD=xxxx volumes: - &#39;/data/mysql:/var/lib/mysql&#39; docker 安装完mysql 后客户端无法访问 进入镜像中的mysql docker exec -it container_id /bin/bash 登录mysql mysql -u root -p 修改root账号, 可以通过任何客户端连接 ALTER USER &#39;root&#39;@&#39;%&#39; IDENTIFIED WITH mysql_native_password BY &#39;xxxxx&#39;; </p>
+  </section>
+  <footer class="entry-footer">May 9, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <a class="entry-link" aria-label="post link to docker部署mysql问题汇总" href="https://dingansichKum0.github.io/posts/docker%E9%83%A8%E7%BD%B2mysql%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>flex宽度失效</h2>
   </header>
   <section class="entry-content">
@@ -189,21 +200,6 @@
   </section>
   <footer class="entry-footer">March 12, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
   <a class="entry-link" aria-label="post link to 浏览器显示emoji" href="https://dingansichKum0.github.io/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>interface类型</h2>
-  </header>
-  <section class="entry-content">
-    <p>Go 语言与鸭子类型的关系  If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck.
-如果某个东西长得像鸭子, 像鸭子一样游泳, 像鸭子一样嘎嘎叫, 那它就可以被看成是一只鸭子.
-在 Go 语言中, 如果类型的方法集完全包含接口的方法集，则可认为该类型实现了该接口.
- 鸭子类型是一种动态语言的风格, 在这种风格中, 一个对象有效的语义, 不是由继承自特定的类或实现特定的接口, 而是由它&#34;当前方法和属性的集合&#34;决定. Go 作为一种静态语言, 通过接口实现了 鸭子类型, 实际上是 Go 的编译器在其中作了隐匿的转换工作.
-值接收者和指针接收者的区别 package main import &#34;fmt&#34; type Person struct { age int } func (p Person) howOld() int { return p.age } func (p *Person) growUp() { p....</p>
-  </section>
-  <footer class="entry-footer">March 9, 2020&nbsp;·&nbsp;11 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to interface类型" href="https://dingansichKum0.github.io/posts/interface%E7%B1%BB%E5%9E%8B/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

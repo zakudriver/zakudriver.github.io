@@ -5,7 +5,16 @@
     <link>https://dingansichKum0.github.io/categories/code/</link>
     <description>Recent content in code on 谟涅摩绪涅📖</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://dingansichKum0.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Oct 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://dingansichKum0.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>typescript的重载(Overload)</title>
+      <link>https://dingansichKum0.github.io/posts/typescript%E7%9A%84%E9%87%8D%E8%BD%BDoverload/</link>
+      <pubDate>Tue, 05 Oct 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://dingansichKum0.github.io/posts/typescript%E7%9A%84%E9%87%8D%E8%BD%BDoverload/</guid>
+      <description>函数、箭头函数、方法（静态方法，实例方法）、react组件重载</description>
+    </item>
+    
     <item>
       <title>Elisp中的interactive参数</title>
       <link>https://dingansichKum0.github.io/posts/elisp%E4%B8%AD%E7%9A%84interactive%E5%8F%82%E6%95%B0/</link>

@@ -153,6 +153,17 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>clang-format</h2>
+  </header>
+  <section class="entry-content">
+    <p># .clang-format BasedOnStyle: LLVM Language:	Cpp IndentWidth : 2 # 开括号(开圆括号、开尖括号、开方括号)后的对齐: Align, DontAlign, AlwaysBreak(总是在开括号后换行) AlignAfterOpenBracket:	Align # 大括号换行，只有当BreakBeforeBraces设置为Custom时才有效 BraceWrapping: # class定义后面 AfterClass:	false # 控制语句后面 AfterControlStatement:	false # enum定义后面 AfterEnum:	false # 函数定义后面 AfterFunction:	true # 命名空间定义后面 AfterNamespace:	false # ObjC定义后面 AfterObjCDeclaration:	false # struct定义后面 AfterStruct:	false # union定义后面 AfterUnion:	false # catch之前 BeforeCatch:	true # else之前 BeforeElse:	true # 缩进大括号 IndentBraces:	false BreakBeforeBraces:	Custom </p>
+  </section>
+  <footer class="entry-footer">February 25, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <a class="entry-link" aria-label="post link to clang-format" href="https://dingansichKum0.github.io/posts/clang-format/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Hello_World</h2>
   </header>
   <section class="entry-content">
@@ -205,23 +216,6 @@ registerOnTouched(fn: any): void { this....</p>
   </section>
   <footer class="entry-footer">June 4, 2019&nbsp;·&nbsp;5 min&nbsp;·&nbsp;dingansichKum0</footer>
   <a class="entry-link" aria-label="post link to vimrc" href="https://dingansichKum0.github.io/posts/vimrc/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>一个包含 nil 指针的接口不是 nil 接口</h2>
-  </header>
-  <section class="entry-content">
-    <p>golang 接口值: 一个包含 nil 指针的接口不是 nil 接口.
-一个不包含任何值的 nil 接口值和一个刚好包含 nil 指针的接口值是不同的.
- 接口值由两个部分组成:
- 一个具体的类型 那个类型的值  它们被称为接口的动态类型和动态值.
-   type value     x x    接口的零值是指动态类型为nil, 动态值也为nil.
-   type value     nil nil    这样的接口才能满足 接口值 == nil.
-var a interface{} fmt.Println(a == nil) // true 一个不包含任何值的 nil 接口值: interface 类型变量的动态类型和动态值都为 nil. 比如 nil, 或者:...</p>
-  </section>
-  <footer class="entry-footer">March 25, 2019&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to 一个包含 nil 指针的接口不是 nil 接口" href="https://dingansichKum0.github.io/posts/%E4%B8%80%E4%B8%AA%E5%8C%85%E5%90%AB-nil-%E6%8C%87%E9%92%88%E7%9A%84%E6%8E%A5%E5%8F%A3%E4%B8%8D%E6%98%AF-nil-%E6%8E%A5%E5%8F%A3/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

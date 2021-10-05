@@ -153,6 +153,23 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>一个包含 nil 指针的接口不是 nil 接口</h2>
+  </header>
+  <section class="entry-content">
+    <p>golang 接口值: 一个包含 nil 指针的接口不是 nil 接口.
+一个不包含任何值的 nil 接口值和一个刚好包含 nil 指针的接口值是不同的.
+ 接口值由两个部分组成:
+ 一个具体的类型 那个类型的值  它们被称为接口的动态类型和动态值.
+   type value     x x    接口的零值是指动态类型为nil, 动态值也为nil.
+   type value     nil nil    这样的接口才能满足 接口值 == nil.
+var a interface{} fmt.Println(a == nil) // true 一个不包含任何值的 nil 接口值: interface 类型变量的动态类型和动态值都为 nil. 比如 nil, 或者:...</p>
+  </section>
+  <footer class="entry-footer">March 25, 2019&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <a class="entry-link" aria-label="post link to 一个包含 nil 指针的接口不是 nil 接口" href="https://dingansichKum0.github.io/posts/%E4%B8%80%E4%B8%AA%E5%8C%85%E5%90%AB-nil-%E6%8C%87%E9%92%88%E7%9A%84%E6%8E%A5%E5%8F%A3%E4%B8%8D%E6%98%AF-nil-%E6%8E%A5%E5%8F%A3/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>vscode</h2>
   </header>
   <section class="entry-content">
