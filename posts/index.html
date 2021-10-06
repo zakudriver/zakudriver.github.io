@@ -158,7 +158,7 @@
   <section class="entry-content">
     <p>重载允许函数（方法）接收不同类型或数量的参数时，做出不同的处理。
 js本身作为动态脚本语言是支持重载的，typescript的重载更多的是类型系统的补全。
-函数 function func(arg: number): number; function func(arg: string): string; function func(arg: number | string): number | string { if (typeof arg === &#34;number&#34;) { return 0; } return &#34;0&#34;; } 箭头函数 箭头函数的重载需要通过定义 type 实现。
+函数 function func(arg: number): number; function func(arg: string): string; function func(arg: number | string): number | string { if (typeof arg === &#34;number&#34;) { return 0; } return &#34;0&#34;; } lambda lambda的重载需要通过定义 type 实现。
 type TFunc = { (x: number): number; (x: number, y: string): string; }; export const func: TFunc = (x: number, y = &#34;&#34;): any =&gt; { if (y) { return `optional: ${y}`; } return x; }; 方法 静态方法 class C { static method(arg: string): string; static method(): void; static method(arg?...</p>
   </section>
   <footer class="entry-footer">October 5, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dingansichKum0</footer>
