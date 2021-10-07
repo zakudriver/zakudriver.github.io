@@ -26,7 +26,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dingansichKum0.github.io/posts/%E5%B8%B8%E7%94%A8%E7%9A%84typescript%E7%B1%BB%E5%9E%8B%E5%85%AC%E5%BC%8F/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-05-21T00:00:00&#43;08:00" />
-<meta property="article:modified_time" content="2021-09-30T15:42:14&#43;08:00" />
+<meta property="article:modified_time" content="2021-10-07T16:12:36&#43;08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="常用的typescript类型推导公式"/>
@@ -63,11 +63,11 @@
   "keywords": [
     "typescript"
   ],
-  "articleBody": "函数参数类型 type TFuncParameterTypeT = T extends (arg: infer P) = void ? P : string; // e.g function func(arg: string) {} type TParamsType = TFuncParameterTypetypeof func; // string 函数返回值类型 type TFuncReturnTypeT = T extends (arg: any) = infer P ? P : string; // e.g function func(arg: string): number {} type TReturnType = TFuncReturnTypetypeof func; // number 数组成员作为键约束 const keys = [\"a\", \"b\", \"c\"] as const; type TKeysMap = Recordtypeof keys[number], string // KeysMap: { a: string; b: string; c: string; } 数组元素类型 type ArrayElementT extends readonly unknown[] = T extends readonly (infer P)[] ? P : never; // e.g const arr = [0, 1]; type TArr = ArrayElementtypeof arr // number 属性覆写 type OverwriteT, R = OmitT, keyof R \u0026 R; // e.g interface IA { a: number; b: string; } type TA = OverwriteIA, {a: string} // {a: string; b:string} 元祖作为键约束 type TuplesAsKeyT extends readonly any[], P = { [K in T[number]]: P; }; // e.g const keys = [\"x\", \"y\"] as const; type TA = TuplesAsKeytypeof keys, string; // {x: string, y: string} 函数类型省略this type OmitThisParameterT = unknown extends ThisParameterTypeT ? T : T extends (...args: infer A) = infer R ? (...args: A) = R : number; // e.g const func = (this: void, arg: string) = {}; type TFunc = OmitThisParametertypeof func; // type TFunc = (arg: string) = void 继承父类方法调用返回子类 class Foo { static instance: any; static getInstanceT extends typeof Foo(this: T): InstanceTypeT { if (this.instance) { return this.instance as InstanceTypeT; } return new this() as InstanceTypeT; } } class Bar extends Foo {} Bar.getInstance(); // Bar ",
-  "wordCount" : "263",
+  "articleBody": "函数参数类型 type TFuncParameterTypeT = T extends (arg: infer P) = void ? P : string; // e.g function func(arg: string) {} type TParamsType = TFuncParameterTypetypeof func; // string 函数返回值类型 type TFuncReturnTypeT = T extends (arg: any) = infer P ? P : string; // e.g function func(arg: string): number {} type TReturnType = TFuncReturnTypetypeof func; // number 数组成员作为键约束 const keys = [\"a\", \"b\", \"c\"] as const; type TKeysMap = Recordtypeof keys[number], string // KeysMap: { a: string; b: string; c: string; } 数组元素类型 type ArrayElementT extends readonly unknown[] = T extends readonly (infer P)[] ? P : never; // e.g const arr = [0, 1]; type TArr = ArrayElementtypeof arr // number 属性覆写 type OverwriteT, R = OmitT, keyof R \u0026 R; // e.g interface IA { a: number; b: string; } type TA = OverwriteIA, {a: string} // {a: string; b:string} 元祖作为键约束 type TuplesAsKeyT extends readonly any[], P = { [K in T[number]]: P; }; // e.g const keys = [\"x\", \"y\"] as const; type TA = TuplesAsKeytypeof keys, string; // {x: string, y: string} 函数类型省略this type OmitThisParameterT = unknown extends ThisParameterTypeT ? T : T extends (...args: infer A) = infer R ? (...args: A) = R : number; // e.g const func = (this: void, arg: string) = {}; type TFunc = OmitThisParametertypeof func; // type TFunc = (arg: string) = void 继承父类方法调用返回子类 class Foo { static instance: any; static getInstanceT extends typeof Foo(this: T): InstanceTypeT { if (this.instance) { return this.instance as InstanceTypeT; } return new this() as InstanceTypeT; } } class Bar extends Foo {} Bar.getInstance(); // Bar 元祖类型 type _TupleOfT, N extends number, R extends unknown[] = R[\"length\"] extends N ? R : _TupleOfT, N, [T, ...R]; type TupleT, N extends number = N extends N ? (number extends N ? T[] : _TupleOfT, N, []) : never; // e.g type TTuple = Tuplestring, 4; // [string, string, string. string] ",
+  "wordCount" : "316",
   "inLanguage": "en",
   "datePublished": "2021-05-21T00:00:00+08:00",
-  "dateModified": "2021-09-30T15:42:14+08:00",
+  "dateModified": "2021-10-07T16:12:36+08:00",
   "author":[{
     "@type": "Person",
     "name": "dingansichKum0"
@@ -222,7 +222,9 @@
                 <li>
                     <a href="#%e5%87%bd%e6%95%b0%e7%b1%bb%e5%9e%8b%e7%9c%81%e7%95%a5this" aria-label="函数类型省略this">函数类型省略this</a></li>
                 <li>
-                    <a href="#%e7%bb%a7%e6%89%bf%e7%88%b6%e7%b1%bb%e6%96%b9%e6%b3%95%e8%b0%83%e7%94%a8%e8%bf%94%e5%9b%9e%e5%ad%90%e7%b1%bb" aria-label="继承父类方法调用返回子类">继承父类方法调用返回子类</a>
+                    <a href="#%e7%bb%a7%e6%89%bf%e7%88%b6%e7%b1%bb%e6%96%b9%e6%b3%95%e8%b0%83%e7%94%a8%e8%bf%94%e5%9b%9e%e5%ad%90%e7%b1%bb" aria-label="继承父类方法调用返回子类">继承父类方法调用返回子类</a></li>
+                <li>
+                    <a href="#%e5%85%83%e7%a5%96%e7%b1%bb%e5%9e%8b" aria-label="元祖类型">元祖类型</a>
                 </li>
             </ul>
         </div>
@@ -295,6 +297,12 @@
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Bar</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Foo</span> {}
 
 <span style="color:#a6e22e">Bar</span>.<span style="color:#a6e22e">getInstance</span>(); <span style="color:#75715e">// Bar
+</span></code></pre></div><h2 id="元祖类型">元祖类型<a hidden class="anchor" aria-hidden="true" href="#元祖类型">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">_TupleOf</span>&lt;<span style="color:#f92672">T</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#a6e22e">N</span> <span style="color:#a6e22e">extends</span> <span style="color:#a6e22e">number</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#a6e22e">R</span> <span style="color:#a6e22e">extends</span> <span style="color:#a6e22e">unknown</span><span style="color:#960050;background-color:#1e0010">[]</span>&gt; <span style="color:#f92672">=</span> <span style="color:#a6e22e">R</span>[<span style="color:#e6db74">&#34;length&#34;</span>] <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">N</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">R</span> : <span style="color:#66d9ef">_TupleOf</span>&lt;<span style="color:#f92672">T</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#a6e22e">N</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">T</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#a6e22e">...R</span><span style="color:#960050;background-color:#1e0010">]</span>&gt;;
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Tuple</span>&lt;<span style="color:#f92672">T</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#a6e22e">N</span> <span style="color:#a6e22e">extends</span> <span style="color:#a6e22e">number</span>&gt; <span style="color:#f92672">=</span> <span style="color:#a6e22e">N</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">N</span> <span style="color:#f92672">?</span> (<span style="color:#66d9ef">number</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">N</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">T</span>[] <span style="color:#f92672">:</span> <span style="color:#a6e22e">_TupleOf</span>&lt;<span style="color:#f92672">T</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#a6e22e">N</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#960050;background-color:#1e0010">[]</span>&gt;) <span style="color:#f92672">:</span> <span style="color:#66d9ef">never</span>;
+
+<span style="color:#75715e">// e.g
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">TTuple</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Tuple</span>&lt;<span style="color:#f92672">string</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#a6e22e">4</span>&gt;; <span style="color:#75715e">// [string, string, string. string]
 </span></code></pre></div>
 
   </div>
