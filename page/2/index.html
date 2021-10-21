@@ -160,17 +160,6 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>常用的typescript类型推导公式</h2>
-  </header>
-  <section class="entry-content">
-    <p>函数参数类型 type TFuncParameterType&lt;T&gt; = T extends (arg: infer P) =&gt; void ? P : string; // e.g function func(arg: string) {} type TParamsType = TFuncParameterType&lt;typeof func&gt;; // string 函数返回值类型 type TFuncReturnType&lt;T&gt; = T extends (arg: any) =&gt; infer P ? P : string; // e.g function func(arg: string): number {} type TReturnType = TFuncReturnType&lt;typeof func&gt;; // number 数组成员作为键约束 const keys = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;] as const; type TKeysMap = Record&lt;typeof keys[number], string&gt; // KeysMap: { a: string; b: string; c: string; } 数组元素类型 type ArrayElement&lt;T extends readonly unknown[]&gt; = T extends readonly (infer P)[] ?...</p>
-  </section>
-  <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to 常用的typescript类型推导公式" href="https://dingansichKum0.github.io/posts/%E5%B8%B8%E7%94%A8%E7%9A%84typescript%E7%B1%BB%E5%9E%8B%E5%85%AC%E5%BC%8F/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
     <h2>H5复制文字到剪切板</h2>
   </header>
   <section class="entry-content">
@@ -209,6 +198,18 @@
   </section>
   <footer class="entry-footer">July 8, 2020&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dingansichKum0</footer>
   <a class="entry-link" aria-label="post link to emacs管理博客写作流程" href="https://dingansichKum0.github.io/posts/emacs%E7%AE%A1%E7%90%86%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>redis发布订阅</h2>
+  </header>
+  <section class="entry-content">
+    <p>redis发布订阅  相比rabbitmq等专业消息队列的缺陷: 没有相应的机制保证消息的可靠消费，如果发布者发布一条消息，而没有对应的订阅者的话，这条消息将丢失，不会存在内存中。
+ package main import ( &#34;context&#34; &#34;fmt&#34; &#34;log&#34; &#34;strconv&#34; &#34;time&#34; &#34;github.com/gomodule/redigo/redis&#34; ) // ConsumeFunc consumes message at the channel. type ConsumeFunc func(channel string, message []byte) error // RedisClient represents a redis client with connection pool. type RedisClient struct { pool *redis.Pool } // NewRedisClient returns a RedisClient. func NewRedisClient(addr string, passwd string) *RedisClient { pool := &amp;redis.Pool{ MaxIdle: 10, IdleTimeout: 300 * time.Second, Dial: func() (redis.Conn, error) { c, err := redis....</p>
+  </section>
+  <footer class="entry-footer">July 2, 2020&nbsp;·&nbsp;3 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <a class="entry-link" aria-label="post link to redis发布订阅" href="https://dingansichKum0.github.io/posts/redis%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

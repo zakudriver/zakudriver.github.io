@@ -138,23 +138,6 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>多线程</h2>
-  </header>
-  <section class="entry-content">
-    <p>线程: 执行指令序列 保留了并发的优点, 避免了进程切换的代价. 实质: 映射表不变, PC指针变.
-价值, 用处 浏览器
- 一个线程用来从服务器接收数据 一个线程用来显示文本 一个线程用来处理图片(解压缩) 一个线程用来显示图片  接收数据线程等待时可以切换到另一个线程(如显示文本), 更加高效利用CPU, 程序交互更加人性化.
-线程切换 多线程执行互不干扰, 所以一个线程执行序列对应一个(或套)栈. 线程切换就是切换TCB.
-TCB (Thread Control Block) 保存线程的信息(执行序列的栈). 与PCB相似, 只是比PCB储存的信息少而已.
-用户级线程 用户态切来切去. CPL为3. TCB在用户程序中.
-void ThreadCeate(A) { TCB *tcb = malloc(); // 申请内存创建TCB  *stack = malloc(); // 创建栈  *stack = A; // 保存栈  tcb.esp = stack } // 线程切换 void Yield() { TCB2.esp = esp; esp = TCB1....</p>
-  </section>
-  <footer class="entry-footer">March 1, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to 多线程" href="https://dingansichKum0.github.io/posts/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
     <h2>多进程</h2>
   </header>
   <section class="entry-content">
