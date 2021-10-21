@@ -180,6 +180,17 @@ type TFunc = { (x: number): number; (x: number, y: string): string; }; export co
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2>typescript常用的泛型</h2>
+  </header>
+  <section class="entry-content">
+    <p>函数参数类型 type TFuncParameterType&lt;T&gt; = T extends (arg: infer P) =&gt; void ? P : string; // e.g function func(arg: string) {} type TParamsType = TFuncParameterType&lt;typeof func&gt;; // string 函数返回值类型 type TFuncReturnType&lt;T&gt; = T extends (arg: any) =&gt; infer P ? P : string; // e.g function func(arg: string): number {} type TReturnType = TFuncReturnType&lt;typeof func&gt;; // number 数组成员作为键约束 const keys = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;] as const; type TKeysMap = Record&lt;typeof keys[number], string&gt; // KeysMap: { a: string; b: string; c: string; } 数组元素类型 type ArrayElement&lt;T extends readonly unknown[]&gt; = T extends readonly (infer P)[] ?...</p>
+  </section>
+  <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <a class="entry-link" aria-label="post link to typescript常用的泛型" href="https://dingansichKum0.github.io/posts/typescript%E5%B8%B8%E7%94%A8%E7%9A%84%E6%B3%9B%E5%9E%8B/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2>常用的typescript类型推导公式</h2>
   </header>
   <section class="entry-content">
@@ -187,17 +198,6 @@ type TFunc = { (x: number): number; (x: number, y: string): string; }; export co
   </section>
   <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dingansichKum0</footer>
   <a class="entry-link" aria-label="post link to 常用的typescript类型推导公式" href="https://dingansichKum0.github.io/posts/%E5%B8%B8%E7%94%A8%E7%9A%84typescript%E7%B1%BB%E5%9E%8B%E5%85%AC%E5%BC%8F/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>H5复制文字到剪切板</h2>
-  </header>
-  <section class="entry-content">
-    <p>// 复制文字 // copyText(&#39;h5实现一键复制到粘贴板 兼容ios&#39;) /*兼容性补充： 移动端： 安卓手机: 微信（chrome）和几个手机浏览器都可以用。 苹果手机: 微信里面和sarafi浏览器里也都可以， PC: sarafi版本必须在10.2以上，其他浏览器可以. */ export function copyText(text: string | number) { // number类型没有 .length 不能执行selectText 需要转化成字符串  const textString = text.toString(); let input: HTMLInputElement | null = document.querySelector(&#39;#copy-input&#39;); if (!input) { input = document.createElement(&#39;input&#39;); input.id = &#39;copy-input&#39;; input.readOnly = true; // 防止ios聚焦触发键盘事件  input.style.position = &#39;absolute&#39;; input.style.left = &#39;-1000px&#39;; input.style.zIndex = &#39;-1000&#39;; document.body.appendChild(input); } input.value = textString; // ios必须先选中文字且不支持 input.select();  selectText(input, 0, textString....</p>
-  </section>
-  <footer class="entry-footer">August 6, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to H5复制文字到剪切板" href="https://dingansichKum0.github.io/posts/h5%E5%A4%8D%E5%88%B6%E6%96%87%E5%AD%97%E5%88%B0%E5%89%AA%E5%88%87%E6%9D%BF/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

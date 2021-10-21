@@ -138,6 +138,22 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2>irony-server-install</h2>
+  </header>
+  <section class="entry-content">
+    <p>Mac   首先需安装cmake和llvm
+brew install cmake llvm   emacs里执行M-x irony-install-server得到安装执行命令
+cmake -DCMAKE_INSTALL_PREFIX\=/Users/kumotyou/.emacs.d/irony/ \ /Users/kumotyou/.emacs.d/elpa/irony-20200130.849/server \ &amp;&amp; cmake --build . --use-stderr --config Release --target install   添加环境变量
+-DCMAKE_PREFIX_PATH=/usr/local/opt/llvm -DCMAKE_INSTALL_RPATH_USE_LINK_PATH=ON -DLIBCLANG_INCLUDE_DIR=/usr/local/opt/llvm/include -DLIBCLANG_LIBRARY=/usr/local/opt/llvm/lib/libclang.dylib   最终编译命令
+cmake -DCMAKE_INSTALL_PREFIX\=/Users/kumotyou/.emacs.d/irony/ \ -DCMAKE_PREFIX_PATH=/usr/local/opt/llvm \ -DCMAKE_INSTALL_RPATH_USE_LINK_PATH=ON \ -DLIBCLANG_INCLUDE_DIR=/usr/local/opt/llvm/include \ -DLIBCLANG_LIBRARY=/usr/local/opt/llvm/lib/libclang.dylib \ /Users/kumotyou/.emacs.d/elpa/irony-20200130.849/server \ &amp;&amp; cmake --build . --use-stderr --config Release --target install   Ubuntu   拉取ccls源码, 并进入ccls根目录
+git clone https://github.com/MaskRay/ccls cd ccls   拉取第三方依赖....</p>
+  </section>
+  <footer class="entry-footer">May 29, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <a class="entry-link" aria-label="post link to irony-server-install" href="https://dingansichKum0.github.io/posts/irony-server-install/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2>mac编译nasm问题汇总</h2>
   </header>
   <section class="entry-content">
@@ -183,17 +199,6 @@ AT&amp;T格式 GUN汇编器的缺省格式
   </section>
   <footer class="entry-footer">April 16, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
   <a class="entry-link" aria-label="post link to flex宽度失效" href="https://dingansichKum0.github.io/posts/flex%E5%AE%BD%E5%BA%A6%E5%A4%B1%E6%95%88/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>canvas-drawImage</h2>
-  </header>
-  <section class="entry-content">
-    <p>context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);  img 规定要使用的图像, 画布或视频. sx 可选. 开始剪切的 x 坐标位置. sy 可选. 开始剪切的 y 坐标位置. swidth 可选. 被剪切图像的宽度. sheight 可选. 被剪切图像的高度. x 在画布上放置图像的 x 坐标位置. y 在画布上放置图像的 y 坐标位置. width 可选. 要使用的图像的宽度.(伸展或缩小图像) height 可选. 要使用的图像的高度.(伸展或缩小图像)  </p>
-  </section>
-  <footer class="entry-footer">March 29, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to canvas-drawImage" href="https://dingansichKum0.github.io/posts/canvas-drawimage/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
