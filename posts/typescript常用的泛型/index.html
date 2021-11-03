@@ -26,7 +26,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dingansichKum0.github.io/posts/typescript%E5%B8%B8%E7%94%A8%E7%9A%84%E6%B3%9B%E5%9E%8B/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-05-21T00:00:00&#43;08:00" />
-<meta property="article:modified_time" content="2021-10-21T17:59:47&#43;08:00" />
+<meta property="article:modified_time" content="2021-11-03T14:58:03&#43;08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="typescript常用的泛型"/>
@@ -63,11 +63,11 @@
   "keywords": [
     "typescript"
   ],
-  "articleBody": "函数参数类型 type TFuncParameterTypeT = T extends (arg: infer P) = void ? P : string; // e.g function func(arg: string) {} type TParamsType = TFuncParameterTypetypeof func; // string 函数返回值类型 type TFuncReturnTypeT = T extends (arg: any) = infer P ? P : string; // e.g function func(arg: string): number {} type TReturnType = TFuncReturnTypetypeof func; // number 数组成员作为键约束 const keys = [\"a\", \"b\", \"c\"] as const; type TKeysMap = Recordtypeof keys[number], string // KeysMap: { a: string; b: string; c: string; } 数组元素类型 type ArrayElementT extends readonly unknown[] = T extends readonly (infer P)[] ? P : never; // e.g const arr = [0, 1]; type TArr = ArrayElementtypeof arr // number 属性覆写 type OverwriteT, R = OmitT, keyof R \u0026 R; // e.g interface IA { a: number; b: string; } type TA = OverwriteIA, {a: string} // {a: string; b:string} 元祖作为键约束 type TuplesAsKeyT extends readonly any[], P = { [K in T[number]]: P; }; // e.g const keys = [\"x\", \"y\"] as const; type TA = TuplesAsKeytypeof keys, string; // {x: string, y: string} 函数类型省略this type OmitThisParameterT = unknown extends ThisParameterTypeT ? T : T extends (...args: infer A) = infer R ? (...args: A) = R : number; // e.g const func = (this: void, arg: string) = {}; type TFunc = OmitThisParametertypeof func; // type TFunc = (arg: string) = void 继承父类方法调用返回子类 class Foo { static instance: any; static getInstanceT extends typeof Foo(this: T): InstanceTypeT { if (this.instance) { return this.instance as InstanceTypeT; } return new this() as InstanceTypeT; } } class Bar extends Foo {} Bar.getInstance(); // Bar 元祖类型 type _TupleOfT, N extends number, R extends unknown[] = R[\"length\"] extends N ? R : _TupleOfT, N, [T, ...R]; type TupleT, N extends number = N extends N ? (number extends N ? T[] : _TupleOfT, N, []) : never; // e.g type TTuple = Tuplestring, 4; // [string, string, string. string] 函数第二个参数类型有第一个参数决定(第一个参数是Key，第二个参数是Value) export class Foo { private _data = { a: 1, b: \"2\", }; public setK extends keyof Foo[\"_data\"](key: K, value: Foo[\"_data\"][K]): void { this._data[key] = value; } } ",
-  "wordCount" : "345",
+  "articleBody": "函数参数类型 type TFuncParameterTypeT = T extends (arg: infer P) = void ? P : string; // e.g function func(arg: string) {} type TParamsType = TFuncParameterTypetypeof func; // string 函数返回值类型 type TFuncReturnTypeT = T extends (arg: any) = infer P ? P : string; // e.g function func(arg: string): number {} type TReturnType = TFuncReturnTypetypeof func; // number 元祖成员作为键约束 const keys = [\"a\", \"b\", \"c\"] as const; type TKeysMap = Recordtypeof keys[number], string // KeysMap: { a: string; b: string; c: string; } 数组元素类型 type ArrayElementT extends readonly unknown[] = T extends readonly (infer P)[] ? P : never; // e.g const arr = [0, 1]; type TArr = ArrayElementtypeof arr // number 属性覆写 type OverwriteT, R = OmitT, keyof R \u0026 R; // e.g interface IA { a: number; b: string; } type TA = OverwriteIA, {a: string} // {a: string; b:string} 元祖作为键约束 type TuplesAsKeyT extends readonly any[], P = { [K in T[number]]: P; }; // e.g const keys = [\"x\", \"y\"] as const; type TA = TuplesAsKeytypeof keys, string; // {x: string, y: string} 函数类型省略this type OmitThisParameterT = unknown extends ThisParameterTypeT ? T : T extends (...args: infer A) = infer R ? (...args: A) = R : number; // e.g const func = (this: void, arg: string) = {}; type TFunc = OmitThisParametertypeof func; // type TFunc = (arg: string) = void 继承父类方法调用返回子类 class Foo { static instance: any; static getInstanceT extends typeof Foo(this: T): InstanceTypeT { if (this.instance) { return this.instance as InstanceTypeT; } return new this() as InstanceTypeT; } } class Bar extends Foo {} Bar.getInstance(); // Bar 元祖类型 type _TupleOfT, N extends number, R extends unknown[] = R[\"length\"] extends N ? R : _TupleOfT, N, [T, ...R]; type TupleT, N extends number = N extends N ? (number extends N ? T[] : _TupleOfT, N, []) : never; // e.g type TTuple = Tuplestring, 4; // [string, string, string. string] 函数第二个参数类型有第一个参数决定(第一个参数是Key，第二个参数是Value) export class Foo { private _data = { a: 1, b: \"2\", }; public setK extends keyof Foo[\"_data\"](key: K, value: Foo[\"_data\"][K]): void { this._data[key] = value; } } 元祖转联合类型 const arr = const[\"foo\", \"bar\", \"baz\"]; type Ts = typeof arr[number]; // \"foo\" | \"bar\" | \"baz\" 联合类型转元祖 type UnionToIntersectionU = (U extends any ? (k: U) = void : never) extends (k: infer I) = void ? I : never; type LastOfT = UnionToIntersectionT extends any ? () = T : never extends () = infer R ? R : never; type PushT extends any[], V = [...T, V]; type TuplifyUnionT, L = LastOfT, N = [T] extends [never] ? true : false = true extends N ? [] : PushTuplifyUnionExcludeT, L, L; type abc = \"a\" | \"b\" | \"c\"; type t = TuplifyUnionabc; // [\"a\", \"b\", \"c\"] 键值对的键构建联合类型 const kv = { foo: 1, bar: 2, baz: 3, } as const; type Ts = keyof typeof kv; // \"foo\" | \"bar\" | \"baz;\" 键值对的值构建联合类型 const kv = { foo: 1, bar: 2, baz: 3, } as const; type Ts = typeof kv[keyof typeof kv]; // 1 | 2 | 3 数组项的某一字段值构建联合类型 const kvs = [ { name: \"foo\", other: \"something\" }, { name: \"bar\", other: \"something\" }, { name: \"baz\", other: \"something\" }, ] as const; type Ts = typeof kvs[number][\"name\"]; // \"foo\" | \"bar\" | \"baz\" ",
+  "wordCount" : "546",
   "inLanguage": "en",
   "datePublished": "2021-05-21T00:00:00+08:00",
-  "dateModified": "2021-10-21T17:59:47+08:00",
+  "dateModified": "2021-11-03T14:58:03+08:00",
   "author":[{
     "@type": "Person",
     "name": "dingansichKum0"
@@ -199,7 +199,7 @@
     <div class="post-description">
       常用的泛型汇总
     </div>
-    <div class="post-meta">May 21, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dingansichKum0
+    <div class="post-meta">May 21, 2021&nbsp;·&nbsp;3 min&nbsp;·&nbsp;dingansichKum0
 </div>
   </header> <div class="toc">
     <details >
@@ -212,7 +212,7 @@
                 <li>
                     <a href="#%e5%87%bd%e6%95%b0%e8%bf%94%e5%9b%9e%e5%80%bc%e7%b1%bb%e5%9e%8b" aria-label="函数返回值类型">函数返回值类型</a></li>
                 <li>
-                    <a href="#%e6%95%b0%e7%bb%84%e6%88%90%e5%91%98%e4%bd%9c%e4%b8%ba%e9%94%ae%e7%ba%a6%e6%9d%9f" aria-label="数组成员作为键约束">数组成员作为键约束</a></li>
+                    <a href="#%e5%85%83%e7%a5%96%e6%88%90%e5%91%98%e4%bd%9c%e4%b8%ba%e9%94%ae%e7%ba%a6%e6%9d%9f" aria-label="元祖成员作为键约束">元祖成员作为键约束</a></li>
                 <li>
                     <a href="#%e6%95%b0%e7%bb%84%e5%85%83%e7%b4%a0%e7%b1%bb%e5%9e%8b" aria-label="数组元素类型">数组元素类型</a></li>
                 <li>
@@ -226,7 +226,17 @@
                 <li>
                     <a href="#%e5%85%83%e7%a5%96%e7%b1%bb%e5%9e%8b" aria-label="元祖类型">元祖类型</a></li>
                 <li>
-                    <a href="#%e5%87%bd%e6%95%b0%e7%ac%ac%e4%ba%8c%e4%b8%aa%e5%8f%82%e6%95%b0%e7%b1%bb%e5%9e%8b%e6%9c%89%e7%ac%ac%e4%b8%80%e4%b8%aa%e5%8f%82%e6%95%b0%e5%86%b3%e5%ae%9a--%e7%ac%ac%e4%b8%80%e4%b8%aa%e5%8f%82%e6%95%b0%e6%98%afkey-%e7%ac%ac%e4%ba%8c%e4%b8%aa%e5%8f%82%e6%95%b0%e6%98%afvalue" aria-label="函数第二个参数类型有第一个参数决定(第一个参数是Key，第二个参数是Value)">函数第二个参数类型有第一个参数决定(第一个参数是Key，第二个参数是Value)</a>
+                    <a href="#%e5%87%bd%e6%95%b0%e7%ac%ac%e4%ba%8c%e4%b8%aa%e5%8f%82%e6%95%b0%e7%b1%bb%e5%9e%8b%e6%9c%89%e7%ac%ac%e4%b8%80%e4%b8%aa%e5%8f%82%e6%95%b0%e5%86%b3%e5%ae%9a--%e7%ac%ac%e4%b8%80%e4%b8%aa%e5%8f%82%e6%95%b0%e6%98%afkey-%e7%ac%ac%e4%ba%8c%e4%b8%aa%e5%8f%82%e6%95%b0%e6%98%afvalue" aria-label="函数第二个参数类型有第一个参数决定(第一个参数是Key，第二个参数是Value)">函数第二个参数类型有第一个参数决定(第一个参数是Key，第二个参数是Value)</a></li>
+                <li>
+                    <a href="#%e5%85%83%e7%a5%96%e8%bd%ac%e8%81%94%e5%90%88%e7%b1%bb%e5%9e%8b" aria-label="元祖转联合类型">元祖转联合类型</a></li>
+                <li>
+                    <a href="#%e8%81%94%e5%90%88%e7%b1%bb%e5%9e%8b%e8%bd%ac%e5%85%83%e7%a5%96" aria-label="联合类型转元祖">联合类型转元祖</a></li>
+                <li>
+                    <a href="#%e9%94%ae%e5%80%bc%e5%af%b9%e7%9a%84%e9%94%ae%e6%9e%84%e5%bb%ba%e8%81%94%e5%90%88%e7%b1%bb%e5%9e%8b" aria-label="键值对的键构建联合类型">键值对的键构建联合类型</a></li>
+                <li>
+                    <a href="#%e9%94%ae%e5%80%bc%e5%af%b9%e7%9a%84%e5%80%bc%e6%9e%84%e5%bb%ba%e8%81%94%e5%90%88%e7%b1%bb%e5%9e%8b" aria-label="键值对的值构建联合类型">键值对的值构建联合类型</a></li>
+                <li>
+                    <a href="#%e6%95%b0%e7%bb%84%e9%a1%b9%e7%9a%84%e6%9f%90%e4%b8%80%e5%ad%97%e6%ae%b5%e5%80%bc%e6%9e%84%e5%bb%ba%e8%81%94%e5%90%88%e7%b1%bb%e5%9e%8b" aria-label="数组项的某一字段值构建联合类型">数组项的某一字段值构建联合类型</a>
                 </li>
             </ul>
         </div>
@@ -245,8 +255,9 @@
 <span style="color:#75715e">// e.g
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">func</span>(<span style="color:#a6e22e">arg</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">number</span> {}
 <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">TReturnType</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">TFuncReturnType</span>&lt;<span style="color:#f92672">typeof</span> <span style="color:#a6e22e">func</span>&gt;; <span style="color:#75715e">// number
-</span></code></pre></div><h2 id="数组成员作为键约束">数组成员作为键约束<a hidden class="anchor" aria-hidden="true" href="#数组成员作为键约束">#</a></h2>
+</span></code></pre></div><h2 id="元祖成员作为键约束">元祖成员作为键约束<a hidden class="anchor" aria-hidden="true" href="#元祖成员作为键约束">#</a></h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">keys</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>] <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">const</span>;
+
 <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">TKeysMap</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Record</span>&lt;<span style="color:#f92672">typeof</span> <span style="color:#a6e22e">keys</span><span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">number</span><span style="color:#960050;background-color:#1e0010">],</span> <span style="color:#a6e22e">string</span>&gt; <span style="color:#75715e">// KeysMap: { a: string; b: string; c: string; }
 </span></code></pre></div><h2 id="数组元素类型">数组元素类型<a hidden class="anchor" aria-hidden="true" href="#数组元素类型">#</a></h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">ArrayElement</span>&lt;<span style="color:#f92672">T</span> <span style="color:#a6e22e">extends</span> <span style="color:#a6e22e">readonly</span> <span style="color:#a6e22e">unknown</span><span style="color:#960050;background-color:#1e0010">[]</span>&gt; <span style="color:#f92672">=</span> <span style="color:#a6e22e">T</span> <span style="color:#66d9ef">extends</span> <span style="color:#66d9ef">readonly</span> (<span style="color:#66d9ef">infer</span> <span style="color:#a6e22e">P</span>)[]
@@ -316,7 +327,47 @@
     <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_data</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>;
   }
 }
-</code></pre></div>
+</code></pre></div><h2 id="元祖转联合类型">元祖转联合类型<a hidden class="anchor" aria-hidden="true" href="#元祖转联合类型">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> &lt;<span style="color:#f92672">const</span>&gt;[<span style="color:#e6db74">&#34;foo&#34;</span>, <span style="color:#e6db74">&#34;bar&#34;</span>, <span style="color:#e6db74">&#34;baz&#34;</span>];
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Ts</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">arr</span>[<span style="color:#66d9ef">number</span>]; <span style="color:#75715e">// &#34;foo&#34; | &#34;bar&#34; | &#34;baz&#34;
+</span></code></pre></div><h2 id="联合类型转元祖">联合类型转元祖<a hidden class="anchor" aria-hidden="true" href="#联合类型转元祖">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">UnionToIntersection</span>&lt;<span style="color:#f92672">U</span>&gt; <span style="color:#f92672">=</span> (<span style="color:#a6e22e">U</span> <span style="color:#66d9ef">extends</span> <span style="color:#66d9ef">any</span> <span style="color:#f92672">?</span> (<span style="color:#a6e22e">k</span>: <span style="color:#66d9ef">U</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">void</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">never</span>) <span style="color:#66d9ef">extends</span> (<span style="color:#a6e22e">k</span>: <span style="color:#66d9ef">infer</span> <span style="color:#a6e22e">I</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">void</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">I</span> : <span style="color:#66d9ef">never</span>;
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">LastOf</span>&lt;<span style="color:#f92672">T</span>&gt; <span style="color:#f92672">=</span> <span style="color:#a6e22e">UnionToIntersection</span>&lt;<span style="color:#f92672">T</span> <span style="color:#a6e22e">extends</span> <span style="color:#a6e22e">any</span> <span style="color:#960050;background-color:#1e0010">?</span> <span style="color:#960050;background-color:#1e0010">()</span> <span style="color:#960050;background-color:#1e0010">=</span>&gt; <span style="color:#a6e22e">T</span> : <span style="color:#66d9ef">never</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">extends</span> () <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">infer</span> <span style="color:#a6e22e">R</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">R</span> : <span style="color:#66d9ef">never</span>;
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Push</span>&lt;<span style="color:#f92672">T</span> <span style="color:#a6e22e">extends</span> <span style="color:#a6e22e">any</span><span style="color:#960050;background-color:#1e0010">[],</span> <span style="color:#a6e22e">V</span>&gt; <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">T</span>, <span style="color:#a6e22e">V</span>];
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">TuplifyUnion</span>&lt;<span style="color:#f92672">T</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#a6e22e">L </span><span style="color:#f92672">=</span> <span style="color:#a6e22e">LastOf</span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">T</span>&gt;, <span style="color:#a6e22e">N</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">T</span>] <span style="color:#66d9ef">extends</span> [<span style="color:#66d9ef">never</span>] <span style="color:#f92672">?</span> <span style="color:#66d9ef">true</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">N</span>
+  <span style="color:#f92672">?</span> []
+  <span style="color:#f92672">:</span> <span style="color:#a6e22e">Push</span>&lt;<span style="color:#f92672">TuplifyUnion</span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">Exclude</span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">T</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#a6e22e">L</span>&gt;<span style="color:#f92672">&gt;</span>, <span style="color:#a6e22e">L</span><span style="color:#f92672">&gt;</span>;
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">abc</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#34;c&#34;</span>;
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">TuplifyUnion</span>&lt;<span style="color:#f92672">abc</span>&gt;; <span style="color:#75715e">// [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;]
+</span></code></pre></div><h2 id="键值对的键构建联合类型">键值对的键构建联合类型<a hidden class="anchor" aria-hidden="true" href="#键值对的键构建联合类型">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">kv</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">foo</span>: <span style="color:#66d9ef">1</span>,
+  <span style="color:#a6e22e">bar</span>: <span style="color:#66d9ef">2</span>,
+  <span style="color:#a6e22e">baz</span>: <span style="color:#66d9ef">3</span>,
+} <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">const</span>;
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Ts</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">keyof</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">kv</span>; <span style="color:#75715e">// &#34;foo&#34; | &#34;bar&#34; | &#34;baz;&#34;
+</span></code></pre></div><h2 id="键值对的值构建联合类型">键值对的值构建联合类型<a hidden class="anchor" aria-hidden="true" href="#键值对的值构建联合类型">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">kv</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">foo</span>: <span style="color:#66d9ef">1</span>,
+  <span style="color:#a6e22e">bar</span>: <span style="color:#66d9ef">2</span>,
+  <span style="color:#a6e22e">baz</span>: <span style="color:#66d9ef">3</span>,
+} <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">const</span>;
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Ts</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">kv</span>[<span style="color:#66d9ef">keyof</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">kv</span>]; <span style="color:#75715e">// 1 | 2 | 3
+</span></code></pre></div><h2 id="数组项的某一字段值构建联合类型">数组项的某一字段值构建联合类型<a hidden class="anchor" aria-hidden="true" href="#数组项的某一字段值构建联合类型">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">kvs</span> <span style="color:#f92672">=</span> [
+  { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;foo&#34;</span>, <span style="color:#a6e22e">other</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;something&#34;</span> },
+  { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;bar&#34;</span>, <span style="color:#a6e22e">other</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;something&#34;</span> },
+  { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;baz&#34;</span>, <span style="color:#a6e22e">other</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;something&#34;</span> },
+] <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">const</span>;
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Ts</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">kvs</span>[<span style="color:#66d9ef">number</span>][<span style="color:#e6db74">&#34;name&#34;</span>]; <span style="color:#75715e">// &#34;foo&#34; | &#34;bar&#34; | &#34;baz&#34;
+</span></code></pre></div>
 
   </div>
   <footer class="post-footer">
