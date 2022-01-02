@@ -153,6 +153,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>汇编语言种类</h2>
+  </header>
+  <section class="entry-content">
+    <p> 汇编语言和CPU息息相关，但是不能把汇编语言完全等同于CPU的机器指令。 不同架构的CPU指令并不相同，如x86，powerpc，arm各有各的指令系统；甚至同一种架构的CPU有几套指令集，典型的如arm除了有32位的指令集外，还有一套16位的thumb指令集。但是作为开发语言的汇编，本质上是一套语法规则和助记符的集合，它可以包容不同的指令集。 如果从CPU体系来划分，常见的汇编有两种：IBM PC汇编和ARM汇编。 IBM PC汇编也就是Intel的汇编，因为IBM 最早推出PC机，后来的体系很多都要和它兼容，所以也使用了相同的汇编语言。ARM压根没考虑过兼容，它的指令集和x86完全是两个体系，所以汇编语言也独立发展出一套。 CPU只是限定了机器码，作为开发语言的汇编，其实还和编译器息息相关。汇编语言出现的早，没有像C语言一样定义出标准，所以编译器的厂商各搞一套。到现在，最有名的也是两家：MASM和GNU ASM。 前者是微软的，只支持x86，用在DOS/Windows平台中；后者是开源产品，主要用在Linux中，基本上支持大部分的CPU架构。这两者的区别在于伪指令的不同，伪指令是用来告诉编译器如何工作的，和编译器相关，和CPU无关。 其实汇编的编译相当简单，这两套伪指令只是符号不相同，含义是大同小异，明白了一种，看另一种就很容易了。
+ CPU体系分类  IBM PC汇编 ARM汇编  汇编格式分类 Intel格式 windows平台常见，后者最早由贝尔实验室推出，用于Unix中
+AT&amp;T格式 GUN汇编器的缺省格式
+ GNU的汇编器和调试器gdb对这两种格式都支持，可以随便切换。MASM只支持Intel格式。Intel格式和AT&amp;T格式的区别只是符号系统的区别，这与x86和arm的区别可不一样，后者是CPU体系的区别。
+内嵌汇编 用于C语言和汇编语言混合编程的，所以和编译器也关系紧密。
+ GNU的内嵌汇编 (不是很容易看懂，需要专门学习) MASM的内嵌汇编 (MASM的内嵌汇编和普通汇编的区别则不大)  </p>
+  </section>
+  <footer class="entry-footer">May 22, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <a class="entry-link" aria-label="post link to 汇编语言种类" href="https://dingansichKum0.github.io/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A7%8D%E7%B1%BB/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>docker部署mysql问题汇总</h2>
   </header>
   <section class="entry-content">
@@ -194,17 +210,6 @@
   <footer class="entry-footer">March 14, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
   <a class="entry-link" aria-label="post link to nyan" href="https://dingansichKum0.github.io/posts/nyan/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>浏览器显示emoji</h2>
-  </header>
-  <section class="entry-content">
-    <p>// js 表情emoji转码 // 发送请求时将uft16转为utf-8 function utf16toEntities(str) { var patt = /[\ud800-\udbff][\udc00-\udfff]/g; // 检测utf16字符正则  return str.replace(patt, function(char) { var H, L, code; if (char.length === 2) { H = char.charCodeAt(0); // 取出高位  L = char.charCodeAt(1); // 取出低位  code = (H - 0xd800) * 0x400 &#43; 0x10000 &#43; L - 0xdc00; // 转换算法  return &#39;&amp;#&#39; &#43; code &#43; &#39;;&#39;; } else { return char; } }); } // 收到后端的数据时展示emoji function entitiesToUtf16(str) { return str....</p>
-  </section>
-  <footer class="entry-footer">March 12, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to 浏览器显示emoji" href="https://dingansichKum0.github.io/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://dingansichKum0.github.io/posts/page/4/">« Prev Page</a>
@@ -213,7 +218,7 @@
 </footer>
     </main>
     <footer class="footer">
-    <span>&copy; 2021 <a href="https://dingansichKum0.github.io/">谟涅摩绪涅📖</a></span>
+    <span>&copy; 2022 <a href="https://dingansichKum0.github.io/">谟涅摩绪涅📖</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

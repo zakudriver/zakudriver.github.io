@@ -149,6 +149,18 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>redis发布订阅</h2>
+  </header>
+  <section class="entry-content">
+    <p>redis发布订阅  相比rabbitmq等专业消息队列的缺陷: 没有相应的机制保证消息的可靠消费，如果发布者发布一条消息，而没有对应的订阅者的话，这条消息将丢失，不会存在内存中。
+ package main import ( &#34;context&#34; &#34;fmt&#34; &#34;log&#34; &#34;strconv&#34; &#34;time&#34; &#34;github.com/gomodule/redigo/redis&#34; ) // ConsumeFunc consumes message at the channel. type ConsumeFunc func(channel string, message []byte) error // RedisClient represents a redis client with connection pool. type RedisClient struct { pool *redis.Pool } // NewRedisClient returns a RedisClient. func NewRedisClient(addr string, passwd string) *RedisClient { pool := &amp;redis.Pool{ MaxIdle: 10, IdleTimeout: 300 * time.Second, Dial: func() (redis.Conn, error) { c, err := redis....</p>
+  </section>
+  <footer class="entry-footer">July 2, 2020&nbsp;·&nbsp;3 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <a class="entry-link" aria-label="post link to redis发布订阅" href="https://dingansichKum0.github.io/posts/redis%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>限制goroutine数量</h2>
   </header>
   <section class="entry-content">
@@ -195,17 +207,6 @@ GDTR寄存器存放GDT表的基地址和表长界限(高32位存放GDT基址，�
   <footer class="entry-footer">June 11, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
   <a class="entry-link" aria-label="post link to GDT&amp;LDT" href="https://dingansichKum0.github.io/posts/gdtldt/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>获取用户home目录路径</h2>
-  </header>
-  <section class="entry-content">
-    <p>func Home() (string, error) { user, err := user.Current() if nil == err { return user.HomeDir, nil } // cross compile support  if runtime.GOOS == &#34;windows&#34; { return homeWindows() } // Unix-like system, so just assume Unix  return homeUnix() } func homeUnix() (string, error) { // First prefer the HOME environmental variable  if home := os.Getenv(&#34;HOME&#34;); home != &#34;&#34; { return home, nil } // If that fails, try the shell  var stdout bytes....</p>
-  </section>
-  <footer class="entry-footer">June 10, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to 获取用户home目录路径" href="https://dingansichKum0.github.io/posts/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7home%E7%9B%AE%E5%BD%95%E8%B7%AF%E5%BE%84/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://dingansichKum0.github.io/page/2/">« Prev Page</a>
@@ -214,7 +215,7 @@ GDTR寄存器存放GDT表的基地址和表长界限(高32位存放GDT基址，�
 </footer>
     </main>
     <footer class="footer">
-    <span>&copy; 2021 <a href="https://dingansichKum0.github.io/">谟涅摩绪涅📖</a></span>
+    <span>&copy; 2022 <a href="https://dingansichKum0.github.io/">谟涅摩绪涅📖</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

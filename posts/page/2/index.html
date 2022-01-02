@@ -153,6 +153,17 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>golang并发写slice</h2>
+  </header>
+  <section class="entry-content">
+    <p>package sliceSafe type SliceSafe struct { channel chan int `desc:&#34;即将加入到数据slice的数据&#34;` data []int `desc:&#34;数据slice&#34;` } // 新建一个size大小缓存的active object对象 func New(size int, done func()) *SliceSafe { s := &amp;SliceSafe{ channel: make(chan int, size), data: make([]int, 0), } go func() { s.schedule() done() }() return s } // 把管道中的数据append到slice中 func (s *SliceSafe) schedule() { for v := range s.channel { s.data = append(s.data, v) } } // 增加一个值 func (s *SliceSafe) Add(v int) { s....</p>
+  </section>
+  <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <a class="entry-link" aria-label="post link to golang并发写slice" href="https://dingansichKum0.github.io/posts/golang%E5%B9%B6%E5%8F%91%E5%86%99slice/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>typescript常用的泛型</h2>
   </header>
   <section class="entry-content">
@@ -203,18 +214,6 @@
   <footer class="entry-footer">July 8, 2020&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dingansichKum0</footer>
   <a class="entry-link" aria-label="post link to emacs管理博客写作流程" href="https://dingansichKum0.github.io/posts/emacs%E7%AE%A1%E7%90%86%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>redis发布订阅</h2>
-  </header>
-  <section class="entry-content">
-    <p>redis发布订阅  相比rabbitmq等专业消息队列的缺陷: 没有相应的机制保证消息的可靠消费，如果发布者发布一条消息，而没有对应的订阅者的话，这条消息将丢失，不会存在内存中。
- package main import ( &#34;context&#34; &#34;fmt&#34; &#34;log&#34; &#34;strconv&#34; &#34;time&#34; &#34;github.com/gomodule/redigo/redis&#34; ) // ConsumeFunc consumes message at the channel. type ConsumeFunc func(channel string, message []byte) error // RedisClient represents a redis client with connection pool. type RedisClient struct { pool *redis.Pool } // NewRedisClient returns a RedisClient. func NewRedisClient(addr string, passwd string) *RedisClient { pool := &amp;redis.Pool{ MaxIdle: 10, IdleTimeout: 300 * time.Second, Dial: func() (redis.Conn, error) { c, err := redis....</p>
-  </section>
-  <footer class="entry-footer">July 2, 2020&nbsp;·&nbsp;3 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to redis发布订阅" href="https://dingansichKum0.github.io/posts/redis%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://dingansichKum0.github.io/posts/">« Prev Page</a>
@@ -223,7 +222,7 @@
 </footer>
     </main>
     <footer class="footer">
-    <span>&copy; 2021 <a href="https://dingansichKum0.github.io/">谟涅摩绪涅📖</a></span>
+    <span>&copy; 2022 <a href="https://dingansichKum0.github.io/">谟涅摩绪涅📖</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
