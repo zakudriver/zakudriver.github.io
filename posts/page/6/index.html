@@ -153,12 +153,34 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Stack</h2>
+  </header>
+  <section class="entry-content">
+    <p>c&#43;&#43; #include &lt;iostream&gt;#include &lt;vector&gt;using namespace std; class Stack { private: vector&lt;int&gt; data; public: void push(int x) { data.push_back(x); } bool isEmpty() { return data.empty(); } int top() { return data.back(); } bool pop() { if (isEmpty()) { return false; } data.pop_back(); return true; } }; int main() { Stack s; s.push(1); s.push(2); s.push(3); for (int i = 0; i &lt; 4; &#43;&#43;i) { if (!s.isEmpty()) { cout &lt;&lt; s.top() &lt;&lt; endl; } cout &lt;&lt; (s....</p>
+  </section>
+  <footer class="entry-footer">March 13, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
+  <a class="entry-link" aria-label="post link to Stack" href="https://zakudriver.github.io/posts/stack/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Queue</h2>
+  </header>
+  <section class="entry-content">
+    <p>C&#43;&#43; #include &lt;iostream&gt;#include &lt;vector&gt;using namespace std; typedef int Data; class ArrayQueue { private: vector&lt;Data&gt; data; int p_start; public: ArrayQueue() { p_start = 0; } bool enQueue(int x) { data.push_back(x); return true; } bool deQueue() { if (isEmpty()) { return false; } p_start&#43;&#43;; return true; }; int Front() { return data[p_start]; }; bool isEmpty() { return p_start &gt;= data.size(); } }; class CircularQueue { private: vector&lt;Data&gt; data; int head; int tail; int size; public: CircularQueue(int k) { data....</p>
+  </section>
+  <footer class="entry-footer">March 12, 2020&nbsp;·&nbsp;2 min&nbsp;·&nbsp;zakudriver</footer>
+  <a class="entry-link" aria-label="post link to Queue" href="https://zakudriver.github.io/posts/queue/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>浏览器显示emoji</h2>
   </header>
   <section class="entry-content">
     <p>// js 表情emoji转码 // 发送请求时将uft16转为utf-8 function utf16toEntities(str) { var patt = /[\ud800-\udbff][\udc00-\udfff]/g; // 检测utf16字符正则  return str.replace(patt, function(char) { var H, L, code; if (char.length === 2) { H = char.charCodeAt(0); // 取出高位  L = char.charCodeAt(1); // 取出低位  code = (H - 0xd800) * 0x400 &#43; 0x10000 &#43; L - 0xdc00; // 转换算法  return &#39;&amp;#&#39; &#43; code &#43; &#39;;&#39;; } else { return char; } }); } // 收到后端的数据时展示emoji function entitiesToUtf16(str) { return str....</p>
   </section>
-  <footer class="entry-footer">March 12, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">March 12, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to 浏览器显示emoji" href="https://zakudriver.github.io/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/"></a>
 </article>
 
@@ -173,53 +195,19 @@
  鸭子类型是一种动态语言的风格, 在这种风格中, 一个对象有效的语义, 不是由继承自特定的类或实现特定的接口, 而是由它&#34;当前方法和属性的集合&#34;决定. Go 作为一种静态语言, 通过接口实现了 鸭子类型, 实际上是 Go 的编译器在其中作了隐匿的转换工作.
 值接收者和指针接收者的区别 package main import &#34;fmt&#34; type Person struct { age int } func (p Person) howOld() int { return p.age } func (p *Person) growUp() { p....</p>
   </section>
-  <footer class="entry-footer">March 9, 2020&nbsp;·&nbsp;11 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">March 9, 2020&nbsp;·&nbsp;11 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to interface类型" href="https://zakudriver.github.io/posts/interface%E7%B1%BB%E5%9E%8B/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>文字超出显示省略号</h2>
+    <h2>LinkedList</h2>
   </header>
   <section class="entry-content">
-    <p>// 文字超出省略号 .text-overflow { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; } // 文字超出两行省略号, block元素 .text-overflow-2 { word-break: break-all; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; } </p>
+    <p>C&#43;&#43; #include &lt;iostream&gt;using namespace std; typedef int Data; struct Node { Data data; Node *next; Node(Data d = 0, Node *n = NULL) : data(d), next(n){}; }; class LinkedList { public: LinkedList(int len) : len(len), head(NULL){}; bool is_empty(); Data get(int); void insert(int, Data); void remove(int); void modify(int, Data); void print_all(); private: Node *head; int len; void check_index(int); Node *get_by_index(int); }; void LinkedList::check_index(int index) { if (index &gt; len || index &lt; 0) { printf(&#34;error: 索引越界....</p>
   </section>
-  <footer class="entry-footer">March 4, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to 文字超出显示省略号" href="https://zakudriver.github.io/posts/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>多线程</h2>
-  </header>
-  <section class="entry-content">
-    <p>线程: 执行指令序列 保留了并发的优点, 避免了进程切换的代价. 实质: 映射表不变, PC指针变.
-价值, 用处 浏览器
- 一个线程用来从服务器接收数据 一个线程用来显示文本 一个线程用来处理图片(解压缩) 一个线程用来显示图片  接收数据线程等待时可以切换到另一个线程(如显示文本), 更加高效利用CPU, 程序交互更加人性化.
-线程切换 多线程执行互不干扰, 所以一个线程执行序列对应一个(或套)栈. 线程切换就是切换TCB.
-TCB (Thread Control Block) 保存线程的信息(执行序列的栈). 与PCB相似, 只是比PCB储存的信息少而已.
-用户级线程 用户态切来切去. CPL为3. TCB在用户程序中.
-void ThreadCeate(A) { TCB *tcb = malloc(); // 申请内存创建TCB  *stack = malloc(); // 创建栈  *stack = A; // 保存栈  tcb.esp = stack } // 线程切换 void Yield() { TCB2.esp = esp; esp = TCB1....</p>
-  </section>
-  <footer class="entry-footer">March 1, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to 多线程" href="https://zakudriver.github.io/posts/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>多进程</h2>
-  </header>
-  <section class="entry-content">
-    <p>进程: 进行中的程序 进行中的程序与磁盘中的静态程序不一样. 进程是描述一个运行中的程序. 进程 = 资源(映射表) &#43; 多个执行指令序列(线程) 进程只能在内核. 要分配资源, 访问文件.
- 有开始, 结束 走走停停(切换) 需要记录  为了充分使用CPU 一次IO操作对应数百万(很多很多)次CPU计算操作. 为了充分合理使用CPU, 需要多个进程交替执行. – [并发]
-多进程是操作系统的核心 操作系统的核心就是记录, 管理, 合理推进多个进程. 使用计算机就是启用多个进程.
-多进程的组织 PCB &#43; 状态 &#43; 队列
-PCB(Proess Control Block) 记录进程信息的数据结构. 便于切回时继续执行.
-状态  就绪态 阻塞态 运行态  就绪态 ——–» 运行态 \ / \ / 阻塞态
-队列  就绪队列 PCB1 – PCB3 – PCB5 磁盘等待队列 PCB2 – PCB4 – PCB6  多进程的交替 队列 &#43; 调度 &#43; 切换...</p>
-  </section>
-  <footer class="entry-footer">February 29, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to 多进程" href="https://zakudriver.github.io/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B/"></a>
+  <footer class="entry-footer">March 5, 2020&nbsp;·&nbsp;3 min&nbsp;·&nbsp;zakudriver</footer>
+  <a class="entry-link" aria-label="post link to LinkedList" href="https://zakudriver.github.io/posts/linkedlist/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

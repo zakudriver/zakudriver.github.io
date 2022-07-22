@@ -154,7 +154,7 @@
   <section class="entry-content">
     <p>func Home() (string, error) { user, err := user.Current() if nil == err { return user.HomeDir, nil } // cross compile support  if runtime.GOOS == &#34;windows&#34; { return homeWindows() } // Unix-like system, so just assume Unix  return homeUnix() } func homeUnix() (string, error) { // First prefer the HOME environmental variable  if home := os.Getenv(&#34;HOME&#34;); home != &#34;&#34; { return home, nil } // If that fails, try the shell  var stdout bytes....</p>
   </section>
-  <footer class="entry-footer">June 10, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">June 10, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to 获取用户home目录路径" href="https://zakudriver.github.io/posts/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7home%E7%9B%AE%E5%BD%95%E8%B7%AF%E5%BE%84/"></a>
 </article>
 
@@ -169,7 +169,7 @@
 普通变量 使用equ生成的纯的变量(宏) 比如：TopOfStack equ $ - LABEL_STACK - 1
 使用db dd dw生成的变量(地址) 生成的各种变量分别指向的是不同的数据类型(冒号可加可不加) 比如： _dwDispPos: dd (80 * 6 &#43; 0) * 2</p>
   </section>
-  <footer class="entry-footer">June 9, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">June 9, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to 变量和标签" href="https://zakudriver.github.io/posts/%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%87%E7%AD%BE/"></a>
 </article>
 
@@ -185,7 +185,7 @@ cmake -DCMAKE_INSTALL_PREFIX\=/Users/kumotyou/.emacs.d/irony/ \ /Users/kumotyou/
 cmake -DCMAKE_INSTALL_PREFIX\=/Users/kumotyou/.emacs.d/irony/ \ -DCMAKE_PREFIX_PATH=/usr/local/opt/llvm \ -DCMAKE_INSTALL_RPATH_USE_LINK_PATH=ON \ -DLIBCLANG_INCLUDE_DIR=/usr/local/opt/llvm/include \ -DLIBCLANG_LIBRARY=/usr/local/opt/llvm/lib/libclang.dylib \ /Users/kumotyou/.emacs.d/elpa/irony-20200130.849/server \ &amp;&amp; cmake --build . --use-stderr --config Release --target install   Ubuntu   拉取ccls源码, 并进入ccls根目录
 git clone https://github.com/MaskRay/ccls cd ccls   拉取第三方依赖....</p>
   </section>
-  <footer class="entry-footer">May 29, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">May 29, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to irony-server-install" href="https://zakudriver.github.io/posts/irony-server-install/"></a>
 </article>
 
@@ -196,7 +196,7 @@ git clone https://github.com/MaskRay/ccls cd ccls   拉取第三方依赖....</p
   <section class="entry-content">
     <p>############################################################### # Configuration file for Bochs ############################################################### # how much memory the emulated machine will have megs: 32 # filename of ROM images romimage: file=/usr/local/share/bochs/BIOS-bochs-latest vgaromimage: file=/usr/local/share/bochs/VGABIOS-lgpl-latest # what disk images will be used floppya: 1_44=a.img, status=inserted # choose the boot disk. boot: floppy # where do we send log messages? # log: bochsout.txt # disable the mouse mouse: enabled=0 # enable key mapping, using US layout as default. # keyboard_mapping: enabled=1, map=/usr/local/share/bochs/keymaps/x11-pc-us....</p>
   </section>
-  <footer class="entry-footer">May 26, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">May 26, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to bochsrc" href="https://zakudriver.github.io/posts/bochsrc/"></a>
 </article>
 

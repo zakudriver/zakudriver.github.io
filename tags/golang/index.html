@@ -143,7 +143,7 @@
   <section class="entry-content">
     <p>package sliceSafe type SliceSafe struct { channel chan int `desc:&#34;即将加入到数据slice的数据&#34;` data []int `desc:&#34;数据slice&#34;` } // 新建一个size大小缓存的active object对象 func New(size int, done func()) *SliceSafe { s := &amp;SliceSafe{ channel: make(chan int, size), data: make([]int, 0), } go func() { s.schedule() done() }() return s } // 把管道中的数据append到slice中 func (s *SliceSafe) schedule() { for v := range s.channel { s.data = append(s.data, v) } } // 增加一个值 func (s *SliceSafe) Add(v int) { s....</p>
   </section>
-  <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to golang并发写slice" href="https://zakudriver.github.io/posts/golang%E5%B9%B6%E5%8F%91%E5%86%99slice/"></a>
 </article>
 
@@ -152,10 +152,10 @@
     <h2>redis发布订阅</h2>
   </header>
   <section class="entry-content">
-    <p>redis发布订阅  相比rabbitmq等专业消息队列的缺陷: 没有相应的机制保证消息的可靠消费，如果发布者发布一条消息，而没有对应的订阅者的话，这条消息将丢失，不会存在内存中。
+    <p>redis发布订阅 相比rabbitmq等专业消息队列的缺陷: 没有相应的机制保证消息的可靠消费，如果发布者发布一条消息，而没有对应的订阅者的话，这条消息将丢失，不会存在内存中。
  package main import ( &#34;context&#34; &#34;fmt&#34; &#34;log&#34; &#34;strconv&#34; &#34;time&#34; &#34;github.com/gomodule/redigo/redis&#34; ) // ConsumeFunc consumes message at the channel. type ConsumeFunc func(channel string, message []byte) error // RedisClient represents a redis client with connection pool. type RedisClient struct { pool *redis.Pool } // NewRedisClient returns a RedisClient. func NewRedisClient(addr string, passwd string) *RedisClient { pool := &amp;redis.Pool{ MaxIdle: 10, IdleTimeout: 300 * time.Second, Dial: func() (redis.Conn, error) { c, err := redis....</p>
   </section>
-  <footer class="entry-footer">July 2, 2020&nbsp;·&nbsp;3 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">July 2, 2020&nbsp;·&nbsp;3 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to redis发布订阅" href="https://zakudriver.github.io/posts/redis%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/"></a>
 </article>
 
@@ -166,7 +166,7 @@
   <section class="entry-content">
     <p>package main import ( &#34;fmt&#34; &#34;sync&#34; &#34;time&#34; ) type Glimit struct { n int c chan struct{} } func New(n int) *Glimit { return &amp;Glimit{ n: n, c: make(chan struct{}, n), } } func (g *Glimit) Run(f func()) { g.c &lt;- struct{}{} go func() { f() &lt;-g.c }() } var wg = sync.WaitGroup{} func main() { number := 10 g := New(2) for i := 0; i &lt; number; i&#43;&#43; { wg....</p>
   </section>
-  <footer class="entry-footer">July 2, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">July 2, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to 限制goroutine数量" href="https://zakudriver.github.io/posts/%E9%99%90%E5%88%B6goroutine%E6%95%B0%E9%87%8F/"></a>
 </article>
 
@@ -177,7 +177,7 @@
   <section class="entry-content">
     <p>小对象要合并 函数频繁创建的简单的对象，直接返回对象，效果比返回指针效果要好 类型转换要注意，官方用法消耗特别大。 package string_util import ( &#34;unsafe&#34; ) func str2bytes(s string) []byte { x := (*[2]uintptr)(unsafe.Pointer(&amp;s)) h := [3]uintptr{x[0], x[1], x[1]} return *(*[]byte)(unsafe.Pointer(&amp;h)) } func bytes2str(b []byte) string { return *(*string)(unsafe.Pointer(&amp;b)) } 避免反复创建slice，map func(r*Reader)Read()([]byte,error) // 此函数没有形参，每次调用的时候返回一个[]byte。 func(r*Reader)Read(buf[]byte)(int,error) // 此函数个函数在每次迪调用的时候，会重用形参声明。  避免使用&#34;&#43;“拼接字符串 package string_utils import ( &#34;strings&#34; ) func strAppend(s string, ss ...string) string { var r strings.Builder r.WriteString(s) for _, v := range ss { r.WriteString(v) } return r.String() } </p>
   </section>
-  <footer class="entry-footer">June 23, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">June 23, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to golang gc优化" href="https://zakudriver.github.io/posts/gc%E4%BC%98%E5%8C%96/"></a>
 </article>
 
@@ -188,7 +188,7 @@
   <section class="entry-content">
     <p>package util-time import ( &#34;strconv&#34; &#34;time&#34; ) // 获取当前的时间 - 字符串 func GetCurrentDate() string { return time.Now().Format(&#34;2006/01/02 15:04:05&#34;) } // 获取当前的时间 - Unix时间戳 func GetCurrentUnix() int64 { return time.Now().Unix() } // 获取当前的时间 - 毫秒级时间戳 func GetCurrentMilliUnix() int64 { return time.Now().UnixNano() / 1000000 } // 获取当前的时间 - 纳秒级时间戳 func GetCurrentNanoUnix() int64 { return time.Now().UnixNano() } func GetCurrentTime() string { var cstSh, _ = time.LoadLocation(&#34;Asia/Shanghai&#34;) t := time.Now().In(cstSh).Format(&#34;2006/01/02/ 15:04:05&#34;) return t } func GetCurrentHour() int { var cstSh, _ = time....</p>
   </section>
-  <footer class="entry-footer">June 23, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">June 23, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to golang time工具函数" href="https://zakudriver.github.io/posts/time/"></a>
 </article>
 <footer class="page-footer">

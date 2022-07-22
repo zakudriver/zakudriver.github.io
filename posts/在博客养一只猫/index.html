@@ -8,7 +8,7 @@
 <title>在博客养一只猫 | 谟涅摩绪涅📖</title>
 <meta name="keywords" content="web" />
 <meta name="description" content="在博客里养一只喵">
-<meta name="author" content="dingansichKum0">
+<meta name="author" content="zakudriver">
 <link rel="canonical" href="https://zakudriver.github.io/posts/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E5%85%BB%E4%B8%80%E5%8F%AA%E7%8C%AB/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.d9015f4cb657fd3539b79b29ffbd11de4175ccd105ad7591beffaadfafb48488.css" integrity="sha256-2QFfTLZX/TU5t5sp/70R3kF1zNEFrXWRvv&#43;q36&#43;0hIg=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
@@ -26,7 +26,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://zakudriver.github.io/posts/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E5%85%BB%E4%B8%80%E5%8F%AA%E7%8C%AB/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-07-27T00:00:00&#43;08:00" />
-<meta property="article:modified_time" content="2021-07-29T18:06:01&#43;08:00" />
+<meta property="article:modified_time" content="2022-07-22T10:17:23&#43;08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="在博客养一只猫"/>
@@ -63,14 +63,14 @@
   "keywords": [
     "web"
   ],
-  "articleBody": "从今天起这里多了一只白色，高冷的看门喵。视线会一直跟着你的鼠标，鼠标靠近它就可以撸了！\n目前只设定让它在PC出现，在移动端显示有些突兀。\n养猫攻略  喵喵基于 live2d 绘图技术，在前端使用canvas绘制。\n  使用hexo搭建的站点可以直接使用 hexo-helper-live2d 快速养猫 使用 live2d-widget.js 源码导入  打包源码 # 拉取源码 $ git clone https://github.com/xiazeyu/live2d-widget.js.git # 下载依赖 $ yarn # 打包源码 $ npm run build:prod lib文件夹里就是打包成果。\n在hugo中使用   将打包后的lib路径中的 L2Dwidget.min.js 文件放到hugo根目录的 static/js 目录中。\n  在这儿下载喜欢的 live2d 模型放到hugo根目录的 static/live2d_models 目录中。\n  在当前使用的主题模板中导入和执行以上代码。一般是在 hugo/themes/xx/layouts/partials/script.html 中，这个文件是页面导入的script部分(虽是html文件，但是编辑时不能使用prettier-js格式化，会破坏hugo的模板语法)。\nscript src=\"/js/L2Dwidget.min.js\"/script script /** ​ * The init function ​ * @param {Object} [userConfig] User's custom config 用户自定义设置 ​ * @param {String} [userConfig.model.jsonPath = ''] Path to Live2D model's main json eg. `https://test.com/miku.model.json` model主文件路径 ​ * @param {Number} [userConfig.model.scale = 1] Scale between the model and the canvas 模型与canvas的缩放 ​ * @param {Number} [userConfig.display.superSample = 2] rate for super sampling rate 超采样等级 ​ * @param {Number} [userConfig.display.width = 150] Width to the canvas which shows the model canvas的长度 ​ * @param {Number} [userConfig.display.height = 300] Height to the canvas which shows the model canvas的高度 ​ * @param {String} [userConfig.display.position = 'right'] Left of right side to show 显示位置：左或右 ​ * @param {Number} [userConfig.display.hOffset = 0] Horizontal offset of the canvas canvas水平偏移 ​ * @param {Number} [userConfig.display.vOffset = -20] Vertical offset of the canvas canvas垂直偏移 ​ * @param {Boolean} [userConfig.mobile.show = true] Whether to show on mobile device 是否在移动设备上显示 ​ * @param {Number} [userConfig.mobile.scale = 0.5] Scale on mobile device 移动设备上的缩放 ​ * @param {String} [userConfig.name.canvas = 'live2dcanvas'] ID name of the canvas canvas元素的ID ​ * @param {String} [userConfig.name.div = 'live2d-widget'] ID name of the div div元素的ID ​ * @param {Number} [userConfig.react.opacity = 0.7] opacity 透明度 ​ * @param {Boolean} [userConfig.dev.border = false] Whether to show border around the canvas 在canvas周围显示边界 ​ * @param {Boolean} [userConfig.dialog.enable = false] Display dialog 显示人物对话框 ​ * @param {Boolean} [userConfig.dialog.hitokoto = false] Enable hitokoto 使用一言API ​ * @return {null} */ L2Dwidget.init({ model: { jsonPath: '/live2d_models/tororo/tororo.model.json', scale: 1, }, display: { superSample: 1, width: 150, height: 300, position: 'left', hOffset: 60, vOffset: 0 }, mobile: { show: false, scale: 0.5, }, react: { opacity: 0.8 } }); /script   大功告成 有猫了有猫了\n",
+  "articleBody": "从今天起这里多了一只白色，高冷的看门喵。视线会一直跟着你的鼠标，鼠标靠近它就可以撸了！\n目前只设定让它在PC出现，在移动端显示有些突兀。\n 养猫攻略  喵喵基于 live2d 绘图技术，在前端使用canvas绘制。\n  使用hexo搭建的站点可以直接使用 hexo-helper-live2d 快速养猫 使用 live2d-widget.js 源码导入  打包源码 # 拉取源码 $ git clone https://github.com/xiazeyu/live2d-widget.js.git # 下载依赖 $ yarn # 打包源码 $ npm run build:prod lib文件夹里就是打包成果。\n在hugo中使用   将打包后的lib路径中的 L2Dwidget.min.js 文件放到hugo根目录的 static/js 目录中。\n  在这儿下载喜欢的 live2d 模型放到hugo根目录的 static/live2d_models 目录中。\n  在当前使用的主题模板中导入和执行以上代码。一般是在 hugo/themes/xx/layouts/partials/script.html 中，这个文件是页面导入的script部分(虽是html文件，但是编辑时不能使用prettier-js格式化，会破坏hugo的模板语法)。\nscript src=\"/js/L2Dwidget.min.js\"/script script /** ​ * The init function ​ * @param {Object} [userConfig] User's custom config 用户自定义设置 ​ * @param {String} [userConfig.model.jsonPath = ''] Path to Live2D model's main json eg. `https://test.com/miku.model.json` model主文件路径 ​ * @param {Number} [userConfig.model.scale = 1] Scale between the model and the canvas 模型与canvas的缩放 ​ * @param {Number} [userConfig.display.superSample = 2] rate for super sampling rate 超采样等级 ​ * @param {Number} [userConfig.display.width = 150] Width to the canvas which shows the model canvas的长度 ​ * @param {Number} [userConfig.display.height = 300] Height to the canvas which shows the model canvas的高度 ​ * @param {String} [userConfig.display.position = 'right'] Left of right side to show 显示位置：左或右 ​ * @param {Number} [userConfig.display.hOffset = 0] Horizontal offset of the canvas canvas水平偏移 ​ * @param {Number} [userConfig.display.vOffset = -20] Vertical offset of the canvas canvas垂直偏移 ​ * @param {Boolean} [userConfig.mobile.show = true] Whether to show on mobile device 是否在移动设备上显示 ​ * @param {Number} [userConfig.mobile.scale = 0.5] Scale on mobile device 移动设备上的缩放 ​ * @param {String} [userConfig.name.canvas = 'live2dcanvas'] ID name of the canvas canvas元素的ID ​ * @param {String} [userConfig.name.div = 'live2d-widget'] ID name of the div div元素的ID ​ * @param {Number} [userConfig.react.opacity = 0.7] opacity 透明度 ​ * @param {Boolean} [userConfig.dev.border = false] Whether to show border around the canvas 在canvas周围显示边界 ​ * @param {Boolean} [userConfig.dialog.enable = false] Display dialog 显示人物对话框 ​ * @param {Boolean} [userConfig.dialog.hitokoto = false] Enable hitokoto 使用一言API ​ * @return {null} */ L2Dwidget.init({ model: { jsonPath: '/live2d_models/tororo/tororo.model.json', scale: 1, }, display: { superSample: 1, width: 150, height: 300, position: 'left', hOffset: 60, vOffset: 0 }, mobile: { show: false, scale: 0.5, }, react: { opacity: 0.8 } }); /script   大功告成 有猫了有猫了\n",
   "wordCount" : "318",
   "inLanguage": "en",
   "datePublished": "2020-07-27T00:00:00+08:00",
-  "dateModified": "2021-07-29T18:06:01+08:00",
+  "dateModified": "2022-07-22T10:17:23+08:00",
   "author":[{
     "@type": "Person",
-    "name": "dingansichKum0"
+    "name": "zakudriver"
   }],
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -199,7 +199,7 @@
     <div class="post-description">
       在博客里养一只喵
     </div>
-    <div class="post-meta">July 27, 2020&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dingansichKum0
+    <div class="post-meta">July 27, 2020&nbsp;·&nbsp;2 min&nbsp;·&nbsp;zakudriver
 </div>
   </header> <div class="toc">
     <details >
@@ -224,11 +224,11 @@
     </details>
 </div>
 
-  <div class="post-content"><p class="verse">
-从今天起这里多了一只白色，高冷的看门喵。视线会一直跟着你的鼠标，鼠标靠近它就可以撸了！<br />
+  <div class="post-content"><div class="verse">
+<p>从今天起这里多了一只白色，高冷的看门喵。视线会一直跟着你的鼠标，鼠标靠近它就可以撸了！<br />
 <br />
-目前只设定让它在PC出现，在移动端显示有些突兀。<br />
-</p>
+目前只设定让它在PC出现，在移动端显示有些突兀。<br /></p>
+</div>
 <h2 id="养猫攻略">养猫攻略<a hidden class="anchor" aria-hidden="true" href="#养猫攻略">#</a></h2>
 <blockquote>
 <p>喵喵基于 live2d 绘图技术，在前端使用canvas绘制。</p>

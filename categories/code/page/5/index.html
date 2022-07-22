@@ -143,7 +143,7 @@
   <section class="entry-content">
     <p>#!/usr/bin/env bash  # Print nyan cat # https://github.com/steckel/Git-Nyan-Graph/blob/master/nyan.sh # If you want big animated version: `telnet miku.acm.uiuc.edu` e=&#39;\033&#39; RESET=&#34;$e[0m&#34; BOLD=&#34;$e[1m&#34; CYAN=&#34;$e[0;96m&#34; RED=&#34;$e[0;91m&#34; YELLOW=&#34;$e[0;93m&#34; GREEN=&#34;$e[0;92m&#34; echo if [ $[$RANDOM%2] -eq &#34;0&#34; ]; then echo -en $RED&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;╭━━━━╮&#39;$RESET echo -en $YELLOW&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|::: /\_/\\&#39;$RESET echo -en $GREEN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|:::( ◕ᴥ◕)&#39;$RESET echo -en $CYAN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;u-u━━-u--u&#39;$RESET else echo -en $RED&#39;-_-_-_-_-_-_-_&#39; echo -e $RESET$BOLD&#39;,------,&#39;$RESET echo -en $YELLOW&#39;_-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;| /\_/\\&#39;$RESET echo -en $GREEN&#39;-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;~|__( ^ ....</p>
   </section>
-  <footer class="entry-footer">March 14, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">March 14, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to nyan" href="https://zakudriver.github.io/posts/nyan/"></a>
 </article>
 
@@ -154,7 +154,7 @@
   <section class="entry-content">
     <p>// js 表情emoji转码 // 发送请求时将uft16转为utf-8 function utf16toEntities(str) { var patt = /[\ud800-\udbff][\udc00-\udfff]/g; // 检测utf16字符正则  return str.replace(patt, function(char) { var H, L, code; if (char.length === 2) { H = char.charCodeAt(0); // 取出高位  L = char.charCodeAt(1); // 取出低位  code = (H - 0xd800) * 0x400 &#43; 0x10000 &#43; L - 0xdc00; // 转换算法  return &#39;&amp;#&#39; &#43; code &#43; &#39;;&#39;; } else { return char; } }); } // 收到后端的数据时展示emoji function entitiesToUtf16(str) { return str....</p>
   </section>
-  <footer class="entry-footer">March 12, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">March 12, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to 浏览器显示emoji" href="https://zakudriver.github.io/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/"></a>
 </article>
 
@@ -169,7 +169,7 @@
  鸭子类型是一种动态语言的风格, 在这种风格中, 一个对象有效的语义, 不是由继承自特定的类或实现特定的接口, 而是由它&#34;当前方法和属性的集合&#34;决定. Go 作为一种静态语言, 通过接口实现了 鸭子类型, 实际上是 Go 的编译器在其中作了隐匿的转换工作.
 值接收者和指针接收者的区别 package main import &#34;fmt&#34; type Person struct { age int } func (p Person) howOld() int { return p.age } func (p *Person) growUp() { p....</p>
   </section>
-  <footer class="entry-footer">March 9, 2020&nbsp;·&nbsp;11 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">March 9, 2020&nbsp;·&nbsp;11 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to interface类型" href="https://zakudriver.github.io/posts/interface%E7%B1%BB%E5%9E%8B/"></a>
 </article>
 
@@ -180,7 +180,7 @@
   <section class="entry-content">
     <p>// 文字超出省略号 .text-overflow { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; } // 文字超出两行省略号, block元素 .text-overflow-2 { word-break: break-all; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; } </p>
   </section>
-  <footer class="entry-footer">March 4, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">March 4, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to 文字超出显示省略号" href="https://zakudriver.github.io/posts/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/"></a>
 </article>
 
@@ -197,7 +197,7 @@ TCB (Thread Control Block) 保存线程的信息(执行序列的栈). 与PCB相�
 用户级线程 用户态切来切去. CPL为3. TCB在用户程序中.
 void ThreadCeate(A) { TCB *tcb = malloc(); // 申请内存创建TCB  *stack = malloc(); // 创建栈  *stack = A; // 保存栈  tcb.esp = stack } // 线程切换 void Yield() { TCB2.esp = esp; esp = TCB1....</p>
   </section>
-  <footer class="entry-footer">March 1, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">March 1, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to 多线程" href="https://zakudriver.github.io/posts/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"></a>
 </article>
 <footer class="page-footer">

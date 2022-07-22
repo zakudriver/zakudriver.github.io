@@ -143,10 +143,10 @@
   <section class="entry-content">
     <p>重载允许函数（方法）接收不同类型或数量的参数时，做出不同的处理。
 js本身作为动态脚本语言是支持重载的，typescript的重载更多的是类型系统的补全。
-函数 function func(arg: number): number; function func(arg: string): string; function func(arg: number | string): number | string { if (typeof arg === &#34;number&#34;) { return 0; } return &#34;0&#34;; } lambda lambda的重载需要通过定义 type 实现。
+ 函数 function func(arg: number): number; function func(arg: string): string; function func(arg: number | string): number | string { if (typeof arg === &#34;number&#34;) { return 0; } return &#34;0&#34;; } lambda lambda的重载需要通过定义 type 实现。
 type TFunc = { (x: number): number; (x: number, y: string): string; }; export const func: TFunc = (x: number, y = &#34;&#34;): any =&gt; { if (y) { return `optional: ${y}`; } return x; }; 方法 静态方法 class C { static method(arg: string): string; static method(): void; static method(arg?...</p>
   </section>
-  <footer class="entry-footer">October 5, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">October 5, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to typescript的重载(Overload)" href="https://zakudriver.github.io/posts/typescript%E7%9A%84%E9%87%8D%E8%BD%BDoverload/"></a>
 </article>
 
@@ -157,7 +157,7 @@ type TFunc = { (x: number): number; (x: number, y: string): string; }; export co
   <section class="entry-content">
     <p>函数参数类型 type TFuncParameterType&lt;T&gt; = T extends (arg: infer P) =&gt; void ? P : string; // e.g function func(arg: string) {} type TParamsType = TFuncParameterType&lt;typeof func&gt;; // string 函数返回值类型 type TFuncReturnType&lt;T&gt; = T extends (arg: any) =&gt; infer P ? P : string; // e.g function func(arg: string): number {} type TReturnType = TFuncReturnType&lt;typeof func&gt;; // number 元祖成员作为键约束 const keys = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;] as const; type TKeysMap = Record&lt;typeof keys[number], string&gt; // KeysMap: { a: string; b: string; c: string; } 数组元素类型 type ArrayElement&lt;T extends readonly unknown[]&gt; = T extends readonly (infer P)[] ?...</p>
   </section>
-  <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;3 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;3 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to typescript常用的泛型" href="https://zakudriver.github.io/posts/typescript%E5%B8%B8%E7%94%A8%E7%9A%84%E6%B3%9B%E5%9E%8B/"></a>
 </article>
 
@@ -168,7 +168,7 @@ type TFunc = { (x: number): number; (x: number, y: string): string; }; export co
   <section class="entry-content">
     <p>// 硬编码一个二进制 trie type BinaryTrie = [ [ [ [ [[[[0, 1], [2, 3]], [[4, 5], [6, 7]]], [[[8, 9], [10, 11]], [[12, 13], [14, 15]]]], [[[[16, 17], [18, 19]], [[20, 21], [22, 23]]], [[[24, 25], [26, 27]], [[28, 29], [30, 31]]]] ], [ [[[[32, 33], [34, 35]], [[36, 37], [38, 39]]], [[[40, 41], [42, 43]], [[44, 45], [46, 47]]]], [[[[48, 49], [50, 51]], [[52, 53], [54, 55]]], [[[56, 57], [58, 59]], [[60, 61], [62, 63]]]] ] ], [ [ [[[[64, 65], [66, 67]], [[68, 69], [70, 71]]], [[[72, 73], [74, 75]], [[76, 77], [78, 79]]]], [[[[80, 81], [82, 83]], [[84, 85], [86, 87]]], [[[88, 89], [90, 91]], [[92, 93], [94, 95]]]] ], [ [[[[96, 97], [98, 99]], [[100, 101], [102, 103]]], [[[104, 105], [106, 107]], [[108, 109], [110, 111]]]], [[[[112, 113], [114, 115]], [[116, 117], [118, 119]]], [[[120, 121], [122, 123]], [[124, 125], [126, 127]]]] ] ] ], [ [ [ [[[[128, 129], [130, 131]], [[132, 133], [134, 135]]], [[[136, 137], [138, 139]], [[140, 141], [142, 143]]]], [[[[144, 145], [146, 147]], [[148, 149], [150, 151]]], [[[152, 153], [154, 155]], [[156, 157], [158, 159]]]] ], [ [[[[160, 161], [162, 163]], [[164, 165], [166, 167]]], [[[168, 169], [170, 171]], [[172, 173], [174, 175]]]], [[[[176, 177], [178, 179]], [[180, 181], [182, 183]]], [[[184, 185], [186, 187]], [[188, 189], [190, 191]]]] ] ], [ [ [[[[192, 193], [194, 195]], [[196, 197], [198, 199]]], [[[200, 201], [202, 203]], [[204, 205], [206, 207]]]], [[[[208, 209], [210, 211]], [[212, 213], [214, 215]]], [[[216, 217], [218, 219]], [[220, 221], [222, 223]]]] ], [ [[[[224, 225], [226, 227]], [[228, 229], [230, 231]]], [[[232, 233], [234, 235]], [[236, 237], [238, 239]]]], [[[[240, 241], [242, 243]], [[244, 245], [246, 247]]], [[[248, 249], [250, 251]], [[252, 253], [254, 255]]]] ] ] ] ]; // 数组操作 type Copy&lt;T, S extends any&gt; = { [P in keyof T]: S[P] }; type Unshift&lt;T, A&gt; = ((a: A, ....</p>
   </section>
-  <footer class="entry-footer">February 27, 2020&nbsp;·&nbsp;7 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">February 27, 2020&nbsp;·&nbsp;7 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to typescript元编程" href="https://zakudriver.github.io/posts/typescript%E5%85%83%E7%BC%96%E7%A8%8B/"></a>
 </article>
     </main>

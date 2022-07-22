@@ -232,6 +232,24 @@
     </item>
     
     <item>
+      <title>Stack</title>
+      <link>https://zakudriver.github.io/posts/stack/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/stack/</guid>
+      <description>c++ #include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std; class Stack { private: vector&amp;lt;int&amp;gt; data; public: void push(int x) { data.push_back(x); } bool isEmpty() { return data.empty(); } int top() { return data.back(); } bool pop() { if (isEmpty()) { return false; } data.pop_back(); return true; } }; int main() { Stack s; s.push(1); s.push(2); s.push(3); for (int i = 0; i &amp;lt; 4; ++i) { if (!s.isEmpty()) { cout &amp;lt;&amp;lt; s.top() &amp;lt;&amp;lt; endl; } cout &amp;lt;&amp;lt; (s.</description>
+    </item>
+    
+    <item>
+      <title>Queue</title>
+      <link>https://zakudriver.github.io/posts/queue/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/queue/</guid>
+      <description>C++ #include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std; typedef int Data; class ArrayQueue { private: vector&amp;lt;Data&amp;gt; data; int p_start; public: ArrayQueue() { p_start = 0; } bool enQueue(int x) { data.push_back(x); return true; } bool deQueue() { if (isEmpty()) { return false; } p_start++; return true; }; int Front() { return data[p_start]; }; bool isEmpty() { return p_start &amp;gt;= data.size(); } }; class CircularQueue { private: vector&amp;lt;Data&amp;gt; data; int head; int tail; int size; public: CircularQueue(int k) { data.</description>
+    </item>
+    
+    <item>
       <title>浏览器显示emoji</title>
       <link>https://zakudriver.github.io/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/</link>
       <pubDate>Thu, 12 Mar 2020 00:00:00 +0800</pubDate>
@@ -250,12 +268,30 @@
     </item>
     
     <item>
+      <title>LinkedList</title>
+      <link>https://zakudriver.github.io/posts/linkedlist/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/linkedlist/</guid>
+      <description>C++ #include &amp;lt;iostream&amp;gt;using namespace std; typedef int Data; struct Node { Data data; Node *next; Node(Data d = 0, Node *n = NULL) : data(d), next(n){}; }; class LinkedList { public: LinkedList(int len) : len(len), head(NULL){}; bool is_empty(); Data get(int); void insert(int, Data); void remove(int); void modify(int, Data); void print_all(); private: Node *head; int len; void check_index(int); Node *get_by_index(int); }; void LinkedList::check_index(int index) { if (index &amp;gt; len || index &amp;lt; 0) { printf(&amp;#34;error: 索引越界.</description>
+    </item>
+    
+    <item>
       <title>文字超出显示省略号</title>
       <link>https://zakudriver.github.io/posts/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0800</pubDate>
       
       <guid>https://zakudriver.github.io/posts/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/</guid>
       <description>css实现文字超出显示省略号</description>
+    </item>
+    
+    <item>
+      <title>List</title>
+      <link>https://zakudriver.github.io/posts/list/</link>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/list/</guid>
+      <description>#include &amp;lt;iostream&amp;gt;#include &amp;lt;stack&amp;gt;#include &amp;lt;stdlib.h&amp;gt;using namespace std; class List { public: List(int len = 10) : len(len) { used = 0; p = (int *)malloc(sizeof(int) * len); } int len; int used; int *p; bool is_full(); bool is_empty(); void push(int); int get(int); void insert(int, int); void remove(int); void print_all(); private: void check_index(int); }; bool List::is_full() { return len == used; } bool List::is_empty() { return used == 0; } void List::check_index(int index) { if (index &amp;gt; len - 1 || index &amp;lt; 0) { printf(&amp;#34;error: 索引越界.</description>
     </item>
     
     <item>

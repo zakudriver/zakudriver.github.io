@@ -143,7 +143,7 @@
   <section class="entry-content">
     <p>func Home() (string, error) { user, err := user.Current() if nil == err { return user.HomeDir, nil } // cross compile support  if runtime.GOOS == &#34;windows&#34; { return homeWindows() } // Unix-like system, so just assume Unix  return homeUnix() } func homeUnix() (string, error) { // First prefer the HOME environmental variable  if home := os.Getenv(&#34;HOME&#34;); home != &#34;&#34; { return home, nil } // If that fails, try the shell  var stdout bytes....</p>
   </section>
-  <footer class="entry-footer">June 10, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">June 10, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to 获取用户home目录路径" href="https://zakudriver.github.io/posts/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7home%E7%9B%AE%E5%BD%95%E8%B7%AF%E5%BE%84/"></a>
 </article>
 
@@ -158,7 +158,7 @@
  鸭子类型是一种动态语言的风格, 在这种风格中, 一个对象有效的语义, 不是由继承自特定的类或实现特定的接口, 而是由它&#34;当前方法和属性的集合&#34;决定. Go 作为一种静态语言, 通过接口实现了 鸭子类型, 实际上是 Go 的编译器在其中作了隐匿的转换工作.
 值接收者和指针接收者的区别 package main import &#34;fmt&#34; type Person struct { age int } func (p Person) howOld() int { return p.age } func (p *Person) growUp() { p....</p>
   </section>
-  <footer class="entry-footer">March 9, 2020&nbsp;·&nbsp;11 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">March 9, 2020&nbsp;·&nbsp;11 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to interface类型" href="https://zakudriver.github.io/posts/interface%E7%B1%BB%E5%9E%8B/"></a>
 </article>
 
@@ -175,7 +175,7 @@
    type value     nil nil    这样的接口才能满足 接口值 == nil.
 var a interface{} fmt.Println(a == nil) // true 一个不包含任何值的 nil 接口值: interface 类型变量的动态类型和动态值都为 nil. 比如 nil, 或者:...</p>
   </section>
-  <footer class="entry-footer">March 25, 2019&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">March 25, 2019&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to 一个包含 nil 指针的接口不是 nil 接口" href="https://zakudriver.github.io/posts/%E4%B8%80%E4%B8%AA%E5%8C%85%E5%90%AB-nil-%E6%8C%87%E9%92%88%E7%9A%84%E6%8E%A5%E5%8F%A3%E4%B8%8D%E6%98%AF-nil-%E6%8E%A5%E5%8F%A3/"></a>
 </article>
 <footer class="page-footer">

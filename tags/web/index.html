@@ -143,7 +143,7 @@
   <section class="entry-content">
     <p>// 复制文字 // copyText(&#39;h5实现一键复制到粘贴板 兼容ios&#39;) /*兼容性补充： 移动端： 安卓手机: 微信（chrome）和几个手机浏览器都可以用。 苹果手机: 微信里面和sarafi浏览器里也都可以， PC: sarafi版本必须在10.2以上，其他浏览器可以. */ export function copyText(text: string | number) { // number类型没有 .length 不能执行selectText 需要转化成字符串  const textString = text.toString(); let input: HTMLInputElement | null = document.querySelector(&#39;#copy-input&#39;); if (!input) { input = document.createElement(&#39;input&#39;); input.id = &#39;copy-input&#39;; input.readOnly = true; // 防止ios聚焦触发键盘事件  input.style.position = &#39;absolute&#39;; input.style.left = &#39;-1000px&#39;; input.style.zIndex = &#39;-1000&#39;; document.body.appendChild(input); } input.value = textString; // ios必须先选中文字且不支持 input.select();  selectText(input, 0, textString....</p>
   </section>
-  <footer class="entry-footer">August 6, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">August 6, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to H5复制文字到剪切板" href="https://zakudriver.github.io/posts/h5%E5%A4%8D%E5%88%B6%E6%96%87%E5%AD%97%E5%88%B0%E5%89%AA%E5%88%87%E6%9D%BF/"></a>
 </article>
 
@@ -154,14 +154,14 @@
   <section class="entry-content">
     <p>从今天起这里多了一只白色，高冷的看门喵。视线会一直跟着你的鼠标，鼠标靠近它就可以撸了！
 目前只设定让它在PC出现，在移动端显示有些突兀。
-养猫攻略  喵喵基于 live2d 绘图技术，在前端使用canvas绘制。
+ 养猫攻略  喵喵基于 live2d 绘图技术，在前端使用canvas绘制。
   使用hexo搭建的站点可以直接使用 hexo-helper-live2d 快速养猫 使用 live2d-widget.js 源码导入  打包源码 # 拉取源码 $ git clone https://github.com/xiazeyu/live2d-widget.js.git # 下载依赖 $ yarn # 打包源码 $ npm run build:prod lib文件夹里就是打包成果。
 在hugo中使用   将打包后的lib路径中的 L2Dwidget.min.js 文件放到hugo根目录的 static/js 目录中。
   在这儿下载喜欢的 live2d 模型放到hugo根目录的 static/live2d_models 目录中。
   在当前使用的主题模板中导入和执行以上代码。一般是在 hugo/themes/xx/layouts/partials/script.html 中，这个文件是页面导入的script部分(虽是html文件，但是编辑时不能使用prettier-js格式化，会破坏hugo的模板语法)。
 &lt;script src=&#34;/js/L2Dwidget.min.js&#34;&gt;&lt;/script&gt; &lt;script&gt; /** ​ * The init function ​ * @param {Object} [userConfig] User&#39;s custom config 用户自定义设置 ​ * @param {String} [userConfig....</p>
   </section>
-  <footer class="entry-footer">July 27, 2020&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">July 27, 2020&nbsp;·&nbsp;2 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to 在博客养一只猫" href="https://zakudriver.github.io/posts/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E5%85%BB%E4%B8%80%E5%8F%AA%E7%8C%AB/"></a>
 </article>
 
@@ -172,7 +172,7 @@
   <section class="entry-content">
     <p>context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);  img 规定要使用的图像, 画布或视频. sx 可选. 开始剪切的 x 坐标位置. sy 可选. 开始剪切的 y 坐标位置. swidth 可选. 被剪切图像的宽度. sheight 可选. 被剪切图像的高度. x 在画布上放置图像的 x 坐标位置. y 在画布上放置图像的 y 坐标位置. width 可选. 要使用的图像的宽度.(伸展或缩小图像) height 可选. 要使用的图像的高度.(伸展或缩小图像)  </p>
   </section>
-  <footer class="entry-footer">March 29, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">March 29, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to canvas-drawImage" href="https://zakudriver.github.io/posts/canvas-drawimage/"></a>
 </article>
 
@@ -183,7 +183,7 @@
   <section class="entry-content">
     <p>// js 表情emoji转码 // 发送请求时将uft16转为utf-8 function utf16toEntities(str) { var patt = /[\ud800-\udbff][\udc00-\udfff]/g; // 检测utf16字符正则  return str.replace(patt, function(char) { var H, L, code; if (char.length === 2) { H = char.charCodeAt(0); // 取出高位  L = char.charCodeAt(1); // 取出低位  code = (H - 0xd800) * 0x400 &#43; 0x10000 &#43; L - 0xdc00; // 转换算法  return &#39;&amp;#&#39; &#43; code &#43; &#39;;&#39;; } else { return char; } }); } // 收到后端的数据时展示emoji function entitiesToUtf16(str) { return str....</p>
   </section>
-  <footer class="entry-footer">March 12, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">March 12, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to 浏览器显示emoji" href="https://zakudriver.github.io/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/"></a>
 </article>
     </main>

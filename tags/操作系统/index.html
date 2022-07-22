@@ -148,7 +148,7 @@ GDTR寄存器存放GDT表的基地址和表长界限(高32位存放GDT基址，�
 段描述符(Segment Descriptor) 每个段描述符占 8 个字节。由三部分组成: 线性基地址、段界限和段的访问属性。
     G: 粒度位，用于解释段界限的含义。当 G 位是&#34;0&#34;时，段界限以字节为单位。此时，段的扩展范围是从 1 字节到 1 兆字节（ 1B～1MB），因为描述符中的界限值是 20 位的。 相反，如果该位是&#34;1&#34;，那么，段界限是以 4KB 为单位的。这样，段的扩展范围是从 4KB到 4GB。...</p>
   </section>
-  <footer class="entry-footer">June 11, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">June 11, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to GDT&amp;LDT" href="https://zakudriver.github.io/posts/gdtldt/"></a>
 </article>
 
@@ -165,7 +165,7 @@ TCB (Thread Control Block) 保存线程的信息(执行序列的栈). 与PCB相�
 用户级线程 用户态切来切去. CPL为3. TCB在用户程序中.
 void ThreadCeate(A) { TCB *tcb = malloc(); // 申请内存创建TCB  *stack = malloc(); // 创建栈  *stack = A; // 保存栈  tcb.esp = stack } // 线程切换 void Yield() { TCB2.esp = esp; esp = TCB1....</p>
   </section>
-  <footer class="entry-footer">March 1, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">March 1, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to 多线程" href="https://zakudriver.github.io/posts/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"></a>
 </article>
 
@@ -179,10 +179,10 @@ void ThreadCeate(A) { TCB *tcb = malloc(); // 申请内存创建TCB  *stack = ma
 多进程是操作系统的核心 操作系统的核心就是记录, 管理, 合理推进多个进程. 使用计算机就是启用多个进程.
 多进程的组织 PCB &#43; 状态 &#43; 队列
 PCB(Proess Control Block) 记录进程信息的数据结构. 便于切回时继续执行.
-状态  就绪态 阻塞态 运行态  就绪态 ——–» 运行态 \ / \ / 阻塞态
+状态  就绪态 阻塞态 运行态  就绪态 ——–&gt;&gt; 运行态 \ / \ / 阻塞态
 队列  就绪队列 PCB1 – PCB3 – PCB5 磁盘等待队列 PCB2 – PCB4 – PCB6  多进程的交替 队列 &#43; 调度 &#43; 切换...</p>
   </section>
-  <footer class="entry-footer">February 29, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
+  <footer class="entry-footer">February 29, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to 多进程" href="https://zakudriver.github.io/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B/"></a>
 </article>
     </main>
