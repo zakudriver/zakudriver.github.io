@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>tools on 谟涅摩绪涅📖</title>
-    <link>https://dingansichKum0.github.io/tags/tools/</link>
+    <link>https://zakudriver.github.io/tags/tools/</link>
     <description>Recent content in tools on 谟涅摩绪涅📖</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://dingansichKum0.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://zakudriver.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>clang-format</title>
-      <link>https://dingansichKum0.github.io/posts/clang-format/</link>
+      <link>https://zakudriver.github.io/posts/clang-format/</link>
       <pubDate>Tue, 25 Feb 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://dingansichKum0.github.io/posts/clang-format/</guid>
+      <guid>https://zakudriver.github.io/posts/clang-format/</guid>
       <description>clang-format格式化工具配置</description>
     </item>
     
     <item>
       <title>myclirc</title>
-      <link>https://dingansichKum0.github.io/posts/myclirc/</link>
+      <link>https://zakudriver.github.io/posts/myclirc/</link>
       <pubDate>Tue, 10 Dec 2019 00:00:00 +0800</pubDate>
       
-      <guid>https://dingansichKum0.github.io/posts/myclirc/</guid>
+      <guid>https://zakudriver.github.io/posts/myclirc/</guid>
       <description>myclirc配置</description>
     </item>
     

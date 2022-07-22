@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>css on 谟涅摩绪涅📖</title>
-    <link>https://dingansichKum0.github.io/tags/css/</link>
+    <link>https://zakudriver.github.io/tags/css/</link>
     <description>Recent content in css on 谟涅摩绪涅📖</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 16 Apr 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://dingansichKum0.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Apr 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://zakudriver.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>flex宽度失效</title>
-      <link>https://dingansichKum0.github.io/posts/flex%E5%AE%BD%E5%BA%A6%E5%A4%B1%E6%95%88/</link>
+      <link>https://zakudriver.github.io/posts/flex%E5%AE%BD%E5%BA%A6%E5%A4%B1%E6%95%88/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://dingansichKum0.github.io/posts/flex%E5%AE%BD%E5%BA%A6%E5%A4%B1%E6%95%88/</guid>
+      <guid>https://zakudriver.github.io/posts/flex%E5%AE%BD%E5%BA%A6%E5%A4%B1%E6%95%88/</guid>
       <description>flex布局成员宽度失效</description>
     </item>
     
     <item>
       <title>文字超出显示省略号</title>
-      <link>https://dingansichKum0.github.io/posts/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/</link>
+      <link>https://zakudriver.github.io/posts/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://dingansichKum0.github.io/posts/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/</guid>
+      <guid>https://zakudriver.github.io/posts/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/</guid>
       <description>css实现文字超出显示省略号</description>
     </item>
     

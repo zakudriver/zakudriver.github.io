@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>docker on 谟涅摩绪涅📖</title>
-    <link>https://dingansichKum0.github.io/tags/docker/</link>
+    <link>https://zakudriver.github.io/tags/docker/</link>
     <description>Recent content in docker on 谟涅摩绪涅📖</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 09 May 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://dingansichKum0.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 May 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://zakudriver.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>docker部署mysql问题汇总</title>
-      <link>https://dingansichKum0.github.io/posts/docker%E9%83%A8%E7%BD%B2mysql%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
+      <link>https://zakudriver.github.io/posts/docker%E9%83%A8%E7%BD%B2mysql%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://dingansichKum0.github.io/posts/docker%E9%83%A8%E7%BD%B2mysql%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
+      <guid>https://zakudriver.github.io/posts/docker%E9%83%A8%E7%BD%B2mysql%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
       <description>docker部署mysql问题汇总</description>
     </item>
     

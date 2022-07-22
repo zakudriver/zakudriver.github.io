@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>typescript on 谟涅摩绪涅📖</title>
-    <link>https://dingansichKum0.github.io/tags/typescript/</link>
+    <link>https://zakudriver.github.io/tags/typescript/</link>
     <description>Recent content in typescript on 谟涅摩绪涅📖</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 05 Oct 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://dingansichKum0.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Oct 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://zakudriver.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>typescript的重载(Overload)</title>
-      <link>https://dingansichKum0.github.io/posts/typescript%E7%9A%84%E9%87%8D%E8%BD%BDoverload/</link>
+      <link>https://zakudriver.github.io/posts/typescript%E7%9A%84%E9%87%8D%E8%BD%BDoverload/</link>
       <pubDate>Tue, 05 Oct 2021 00:00:00 +0800</pubDate>
       
-      <guid>https://dingansichKum0.github.io/posts/typescript%E7%9A%84%E9%87%8D%E8%BD%BDoverload/</guid>
+      <guid>https://zakudriver.github.io/posts/typescript%E7%9A%84%E9%87%8D%E8%BD%BDoverload/</guid>
       <description>函数、lambda、方法（静态方法，实例方法）、react组件重载</description>
     </item>
     
     <item>
       <title>typescript常用的泛型</title>
-      <link>https://dingansichKum0.github.io/posts/typescript%E5%B8%B8%E7%94%A8%E7%9A%84%E6%B3%9B%E5%9E%8B/</link>
+      <link>https://zakudriver.github.io/posts/typescript%E5%B8%B8%E7%94%A8%E7%9A%84%E6%B3%9B%E5%9E%8B/</link>
       <pubDate>Fri, 21 May 2021 00:00:00 +0800</pubDate>
       
-      <guid>https://dingansichKum0.github.io/posts/typescript%E5%B8%B8%E7%94%A8%E7%9A%84%E6%B3%9B%E5%9E%8B/</guid>
+      <guid>https://zakudriver.github.io/posts/typescript%E5%B8%B8%E7%94%A8%E7%9A%84%E6%B3%9B%E5%9E%8B/</guid>
       <description>常用的泛型汇总</description>
     </item>
     
     <item>
       <title>typescript元编程</title>
-      <link>https://dingansichKum0.github.io/posts/typescript%E5%85%83%E7%BC%96%E7%A8%8B/</link>
+      <link>https://zakudriver.github.io/posts/typescript%E5%85%83%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://dingansichKum0.github.io/posts/typescript%E5%85%83%E7%BC%96%E7%A8%8B/</guid>
+      <guid>https://zakudriver.github.io/posts/typescript%E5%85%83%E7%BC%96%E7%A8%8B/</guid>
       <description>typescript类型系统居然图灵完备！？</description>
     </item>
     

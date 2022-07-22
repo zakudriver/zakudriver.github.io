@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>操作系统 on 谟涅摩绪涅📖</title>
-    <link>https://dingansichKum0.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+    <link>https://zakudriver.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
     <description>Recent content in 操作系统 on 谟涅摩绪涅📖</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 11 Jun 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://dingansichKum0.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Jun 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://zakudriver.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GDT&amp;LDT</title>
-      <link>https://dingansichKum0.github.io/posts/gdtldt/</link>
+      <link>https://zakudriver.github.io/posts/gdtldt/</link>
       <pubDate>Thu, 11 Jun 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://dingansichKum0.github.io/posts/gdtldt/</guid>
+      <guid>https://zakudriver.github.io/posts/gdtldt/</guid>
       <description>GDT&amp;amp;LDT笔记</description>
     </item>
     
     <item>
       <title>多线程</title>
-      <link>https://dingansichKum0.github.io/posts/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+      <link>https://zakudriver.github.io/posts/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://dingansichKum0.github.io/posts/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
+      <guid>https://zakudriver.github.io/posts/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
       <description>多线程简介</description>
     </item>
     
     <item>
       <title>多进程</title>
-      <link>https://dingansichKum0.github.io/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</link>
+      <link>https://zakudriver.github.io/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</link>
       <pubDate>Sat, 29 Feb 2020 00:00:00 +0800</pubDate>
       
-      <guid>https://dingansichKum0.github.io/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</guid>
+      <guid>https://zakudriver.github.io/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</guid>
       <description>多进程简介</description>
     </item>
     

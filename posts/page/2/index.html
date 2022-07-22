@@ -8,22 +8,22 @@
 <title>Posts | 谟涅摩绪涅📖</title>
 <meta name="keywords" content="" />
 <meta name="description" content="谟涅摩绪涅📖; code, archives">
-<meta name="author" content="dingansichKum0, kumo, zyhua">
-<link rel="canonical" href="https://dingansichKum0.github.io/posts/" />
+<meta name="author" content="zakudriver">
+<link rel="canonical" href="https://zakudriver.github.io/posts/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.d9015f4cb657fd3539b79b29ffbd11de4175ccd105ad7591beffaadfafb48488.css" integrity="sha256-2QFfTLZX/TU5t5sp/70R3kF1zNEFrXWRvv&#43;q36&#43;0hIg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://dingansichKum0.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://dingansichKum0.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://dingansichKum0.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://dingansichKum0.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://dingansichKum0.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="https://zakudriver.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://zakudriver.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://zakudriver.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://zakudriver.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://zakudriver.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.80.0" />
-<link rel="alternate" type="application/rss+xml" href="https://dingansichKum0.github.io/posts/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://zakudriver.github.io/posts/index.xml">
 <meta property="og:title" content="Posts" />
 <meta property="og:description" content="谟涅摩绪涅📖; code, archives" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://dingansichKum0.github.io/posts/" />
+<meta property="og:url" content="https://zakudriver.github.io/posts/" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -39,7 +39,7 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://dingansichKum0.github.io/posts/"
+      "item": "https://zakudriver.github.io/posts/"
     }
   ]
 }
@@ -98,7 +98,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://dingansichKum0.github.io/" accesskey="h" title="谟涅摩绪涅📖 (Alt + H)">谟涅摩绪涅📖</a>
+            <a href="https://zakudriver.github.io/" accesskey="h" title="谟涅摩绪涅📖 (Alt + H)">谟涅摩绪涅📖</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -124,22 +124,22 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://dingansichKum0.github.io/archives" title="Archive">
+                <a href="https://zakudriver.github.io/archives" title="Archive">
                     <span>Archive</span>
                 </a>
             </li>
             <li>
-                <a href="https://dingansichKum0.github.io/categories" title="Categories">
+                <a href="https://zakudriver.github.io/categories" title="Categories">
                     <span>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="https://dingansichKum0.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://zakudriver.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
             <li>
-                <a href="https://dingansichKum0.github.io/tags" title="Tags">
+                <a href="https://zakudriver.github.io/tags" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -147,7 +147,7 @@
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://dingansichKum0.github.io/">Home</a></div>
+<header class="page-header"><div class="breadcrumbs"><a href="https://zakudriver.github.io/">Home</a></div>
   <h1>Posts</h1>
 </header>
 
@@ -159,7 +159,7 @@
     <p>package sliceSafe type SliceSafe struct { channel chan int `desc:&#34;即将加入到数据slice的数据&#34;` data []int `desc:&#34;数据slice&#34;` } // 新建一个size大小缓存的active object对象 func New(size int, done func()) *SliceSafe { s := &amp;SliceSafe{ channel: make(chan int, size), data: make([]int, 0), } go func() { s.schedule() done() }() return s } // 把管道中的数据append到slice中 func (s *SliceSafe) schedule() { for v := range s.channel { s.data = append(s.data, v) } } // 增加一个值 func (s *SliceSafe) Add(v int) { s....</p>
   </section>
   <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to golang并发写slice" href="https://dingansichKum0.github.io/posts/golang%E5%B9%B6%E5%8F%91%E5%86%99slice/"></a>
+  <a class="entry-link" aria-label="post link to golang并发写slice" href="https://zakudriver.github.io/posts/golang%E5%B9%B6%E5%8F%91%E5%86%99slice/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -170,7 +170,7 @@
     <p>函数参数类型 type TFuncParameterType&lt;T&gt; = T extends (arg: infer P) =&gt; void ? P : string; // e.g function func(arg: string) {} type TParamsType = TFuncParameterType&lt;typeof func&gt;; // string 函数返回值类型 type TFuncReturnType&lt;T&gt; = T extends (arg: any) =&gt; infer P ? P : string; // e.g function func(arg: string): number {} type TReturnType = TFuncReturnType&lt;typeof func&gt;; // number 元祖成员作为键约束 const keys = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;] as const; type TKeysMap = Record&lt;typeof keys[number], string&gt; // KeysMap: { a: string; b: string; c: string; } 数组元素类型 type ArrayElement&lt;T extends readonly unknown[]&gt; = T extends readonly (infer P)[] ?...</p>
   </section>
   <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;3 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to typescript常用的泛型" href="https://dingansichKum0.github.io/posts/typescript%E5%B8%B8%E7%94%A8%E7%9A%84%E6%B3%9B%E5%9E%8B/"></a>
+  <a class="entry-link" aria-label="post link to typescript常用的泛型" href="https://zakudriver.github.io/posts/typescript%E5%B8%B8%E7%94%A8%E7%9A%84%E6%B3%9B%E5%9E%8B/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -181,7 +181,7 @@
     <p>// 复制文字 // copyText(&#39;h5实现一键复制到粘贴板 兼容ios&#39;) /*兼容性补充： 移动端： 安卓手机: 微信（chrome）和几个手机浏览器都可以用。 苹果手机: 微信里面和sarafi浏览器里也都可以， PC: sarafi版本必须在10.2以上，其他浏览器可以. */ export function copyText(text: string | number) { // number类型没有 .length 不能执行selectText 需要转化成字符串  const textString = text.toString(); let input: HTMLInputElement | null = document.querySelector(&#39;#copy-input&#39;); if (!input) { input = document.createElement(&#39;input&#39;); input.id = &#39;copy-input&#39;; input.readOnly = true; // 防止ios聚焦触发键盘事件  input.style.position = &#39;absolute&#39;; input.style.left = &#39;-1000px&#39;; input.style.zIndex = &#39;-1000&#39;; document.body.appendChild(input); } input.value = textString; // ios必须先选中文字且不支持 input.select();  selectText(input, 0, textString....</p>
   </section>
   <footer class="entry-footer">August 6, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to H5复制文字到剪切板" href="https://dingansichKum0.github.io/posts/h5%E5%A4%8D%E5%88%B6%E6%96%87%E5%AD%97%E5%88%B0%E5%89%AA%E5%88%87%E6%9D%BF/"></a>
+  <a class="entry-link" aria-label="post link to H5复制文字到剪切板" href="https://zakudriver.github.io/posts/h5%E5%A4%8D%E5%88%B6%E6%96%87%E5%AD%97%E5%88%B0%E5%89%AA%E5%88%87%E6%9D%BF/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -199,7 +199,7 @@
 &lt;script src=&#34;/js/L2Dwidget.min.js&#34;&gt;&lt;/script&gt; &lt;script&gt; /** ​ * The init function ​ * @param {Object} [userConfig] User&#39;s custom config 用户自定义设置 ​ * @param {String} [userConfig....</p>
   </section>
   <footer class="entry-footer">July 27, 2020&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to 在博客养一只猫" href="https://dingansichKum0.github.io/posts/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E5%85%BB%E4%B8%80%E5%8F%AA%E7%8C%AB/"></a>
+  <a class="entry-link" aria-label="post link to 在博客养一只猫" href="https://zakudriver.github.io/posts/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E5%85%BB%E4%B8%80%E5%8F%AA%E7%8C%AB/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -212,17 +212,17 @@
    easy-hugo 配置 (use-package easy-hugo :commands easy-hugo :bind (:map easy-hugo-mode-map (&#34;SPC&#34; . general-simulate-C-c) (&#34;G&#34; . kumo-easy-hugo-github-deploy)) :custom (easy-hugo-org-header t) (easy-hugo-basedir kumo/easy-hugo-basedir) (easy-hugo-postdir kumo/easy-hugo-postdir) (easy-hugo-url kumo/easy-hugo-url) (easy-hugo-preview-url kumo/easy-hugo-preview-url) (easy-hugo-github-deploy-script kumo/easy-hugo-github-deploy-script) (easy-hugo-default-ext &#34;....</p>
   </section>
   <footer class="entry-footer">July 8, 2020&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dingansichKum0</footer>
-  <a class="entry-link" aria-label="post link to emacs管理博客写作流程" href="https://dingansichKum0.github.io/posts/emacs%E7%AE%A1%E7%90%86%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B/"></a>
+  <a class="entry-link" aria-label="post link to emacs管理博客写作流程" href="https://zakudriver.github.io/posts/emacs%E7%AE%A1%E7%90%86%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
-    <a class="prev" href="https://dingansichKum0.github.io/posts/">« Prev Page</a>
-    <a class="next" href="https://dingansichKum0.github.io/posts/page/3/">Next Page »</a>
+    <a class="prev" href="https://zakudriver.github.io/posts/">« Prev Page</a>
+    <a class="next" href="https://zakudriver.github.io/posts/page/3/">Next Page »</a>
   </nav>
 </footer>
     </main>
     <footer class="footer">
-    <span>&copy; 2022 <a href="https://dingansichKum0.github.io/">谟涅摩绪涅📖</a></span>
+    <span>&copy; 2022 <a href="https://zakudriver.github.io/">谟涅摩绪涅📖</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
