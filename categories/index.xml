@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on 谟涅摩绪涅📖</title>
+    <link>https://zakudriver.github.io/categories/</link>
+    <description>Recent content in Categories on 谟涅摩绪涅📖</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 02 Jan 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://zakudriver.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>阅读</title>
+      <link>https://zakudriver.github.io/categories/%E9%98%85%E8%AF%BB/</link>
+      <pubDate>Sun, 02 Jan 2022 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/categories/%E9%98%85%E8%AF%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code</title>
+      <link>https://zakudriver.github.io/categories/code/</link>
+      <pubDate>Tue, 05 Oct 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/categories/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docs</title>
+      <link>https://zakudriver.github.io/categories/docs/</link>
+      <pubDate>Sun, 25 Jul 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/categories/docs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>configuration</title>
+      <link>https://zakudriver.github.io/categories/configuration/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/categories/configuration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>balabala</title>
+      <link>https://zakudriver.github.io/categories/balabala/</link>
+      <pubDate>Sat, 11 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/categories/balabala/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

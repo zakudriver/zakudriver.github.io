@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on 谟涅摩绪涅📖</title>
+    <link>https://zakudriver.github.io/posts/</link>
+    <description>Recent content in Posts on 谟涅摩绪涅📖</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 02 Jan 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://zakudriver.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>彼得·林奇的成功投资</title>
+      <link>https://zakudriver.github.io/posts/%E5%BD%BC%E5%BE%97%E6%9E%97%E5%A5%87%E7%9A%84%E6%88%90%E5%8A%9F%E6%8A%95%E8%B5%84/</link>
+      <pubDate>Sun, 02 Jan 2022 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/%E5%BD%BC%E5%BE%97%E6%9E%97%E5%A5%87%E7%9A%84%E6%88%90%E5%8A%9F%E6%8A%95%E8%B5%84/</guid>
+      <description>投资的原理很简单，选几只好股票，克服贪婪和恐惧的内心，剩下的就只是时间问题</description>
+    </item>
+    
+    <item>
+      <title>typescript的重载(Overload)</title>
+      <link>https://zakudriver.github.io/posts/typescript%E7%9A%84%E9%87%8D%E8%BD%BDoverload/</link>
+      <pubDate>Tue, 05 Oct 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/typescript%E7%9A%84%E9%87%8D%E8%BD%BDoverload/</guid>
+      <description>函数、lambda、方法（静态方法，实例方法）、react组件重载</description>
+    </item>
+    
+    <item>
+      <title>elisp文档</title>
+      <link>https://zakudriver.github.io/posts/elisp%E6%96%87%E6%A1%A3/</link>
+      <pubDate>Sun, 25 Jul 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/elisp%E6%96%87%E6%A1%A3/</guid>
+      <description>emacs lisp 指南</description>
+    </item>
+    
+    <item>
+      <title>Elisp中的interactive参数</title>
+      <link>https://zakudriver.github.io/posts/elisp%E4%B8%AD%E7%9A%84interactive%E5%8F%82%E6%95%B0/</link>
+      <pubDate>Tue, 20 Jul 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/elisp%E4%B8%AD%E7%9A%84interactive%E5%8F%82%E6%95%B0/</guid>
+      <description>interactive 参数的含义</description>
+    </item>
+    
+    <item>
+      <title>手把手教你读财报</title>
+      <link>https://zakudriver.github.io/posts/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E8%AF%BB%E8%B4%A2%E6%8A%A5/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E8%AF%BB%E8%B4%A2%E6%8A%A5/</guid>
+      <description>财报是用来排除企业的</description>
+    </item>
+    
+    <item>
+      <title>golang并发写slice</title>
+      <link>https://zakudriver.github.io/posts/golang%E5%B9%B6%E5%8F%91%E5%86%99slice/</link>
+      <pubDate>Fri, 21 May 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/golang%E5%B9%B6%E5%8F%91%E5%86%99slice/</guid>
+      <description>线程安全的slice</description>
+    </item>
+    
+    <item>
+      <title>typescript常用的泛型</title>
+      <link>https://zakudriver.github.io/posts/typescript%E5%B8%B8%E7%94%A8%E7%9A%84%E6%B3%9B%E5%9E%8B/</link>
+      <pubDate>Fri, 21 May 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/typescript%E5%B8%B8%E7%94%A8%E7%9A%84%E6%B3%9B%E5%9E%8B/</guid>
+      <description>常用的泛型汇总</description>
+    </item>
+    
+    <item>
+      <title>H5复制文字到剪切板</title>
+      <link>https://zakudriver.github.io/posts/h5%E5%A4%8D%E5%88%B6%E6%96%87%E5%AD%97%E5%88%B0%E5%89%AA%E5%88%87%E6%9D%BF/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/h5%E5%A4%8D%E5%88%B6%E6%96%87%E5%AD%97%E5%88%B0%E5%89%AA%E5%88%87%E6%9D%BF/</guid>
+      <description>H5复制文字到剪切板</description>
+    </item>
+    
+    <item>
+      <title>在博客养一只猫</title>
+      <link>https://zakudriver.github.io/posts/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E5%85%BB%E4%B8%80%E5%8F%AA%E7%8C%AB/</link>
+      <pubDate>Mon, 27 Jul 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E5%85%BB%E4%B8%80%E5%8F%AA%E7%8C%AB/</guid>
+      <description>在博客里养一只喵</description>
+    </item>
+    
+    <item>
+      <title>emacs管理博客写作流程</title>
+      <link>https://zakudriver.github.io/posts/emacs%E7%AE%A1%E7%90%86%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/emacs%E7%AE%A1%E7%90%86%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B/</guid>
+      <description>使用emacs作为hugo博客客户端</description>
+    </item>
+    
+    <item>
+      <title>redis发布订阅</title>
+      <link>https://zakudriver.github.io/posts/redis%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/</link>
+      <pubDate>Thu, 02 Jul 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/redis%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/</guid>
+      <description>golang实现redis发布订阅</description>
+    </item>
+    
+    <item>
+      <title>限制goroutine数量</title>
+      <link>https://zakudriver.github.io/posts/%E9%99%90%E5%88%B6goroutine%E6%95%B0%E9%87%8F/</link>
+      <pubDate>Thu, 02 Jul 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/%E9%99%90%E5%88%B6goroutine%E6%95%B0%E9%87%8F/</guid>
+      <description>golang限制goroutine数量</description>
+    </item>
+    
+    <item>
+      <title>golang gc优化</title>
+      <link>https://zakudriver.github.io/posts/gc%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/gc%E4%BC%98%E5%8C%96/</guid>
+      <description>golang gc优化</description>
+    </item>
+    
+    <item>
+      <title>golang time工具函数</title>
+      <link>https://zakudriver.github.io/posts/time/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/time/</guid>
+      <description>golang常用时间工具函数</description>
+    </item>
+    
+    <item>
+      <title>GDT&amp;LDT</title>
+      <link>https://zakudriver.github.io/posts/gdtldt/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/gdtldt/</guid>
+      <description>GDT&amp;amp;LDT笔记</description>
+    </item>
+    
+    <item>
+      <title>获取用户home目录路径</title>
+      <link>https://zakudriver.github.io/posts/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7home%E7%9B%AE%E5%BD%95%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7home%E7%9B%AE%E5%BD%95%E8%B7%AF%E5%BE%84/</guid>
+      <description>golang 获取用户home目录路径</description>
+    </item>
+    
+    <item>
+      <title>变量和标签</title>
+      <link>https://zakudriver.github.io/posts/%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Tue, 09 Jun 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%87%E7%AD%BE/</guid>
+      <description>汇编语言 变量和标签</description>
+    </item>
+    
+    <item>
+      <title>irony-server-install</title>
+      <link>https://zakudriver.github.io/posts/irony-server-install/</link>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/irony-server-install/</guid>
+      <description>安装c&#43;&#43;补全后端irony</description>
+    </item>
+    
+    <item>
+      <title>bochsrc</title>
+      <link>https://zakudriver.github.io/posts/bochsrc/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/bochsrc/</guid>
+      <description>nasm编译配置</description>
+    </item>
+    
+    <item>
+      <title>mac编译nasm问题汇总</title>
+      <link>https://zakudriver.github.io/posts/mac%E7%BC%96%E8%AF%91nasm%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/mac%E7%BC%96%E8%AF%91nasm%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
+      <description>mac编译nasm的坑</description>
+    </item>
+    
+    <item>
+      <title>汇编语言种类</title>
+      <link>https://zakudriver.github.io/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A7%8D%E7%B1%BB/</link>
+      <pubDate>Fri, 22 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A7%8D%E7%B1%BB/</guid>
+      <description>汇编语言种类</description>
+    </item>
+    
+    <item>
+      <title>docker部署mysql问题汇总</title>
+      <link>https://zakudriver.github.io/posts/docker%E9%83%A8%E7%BD%B2mysql%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/docker%E9%83%A8%E7%BD%B2mysql%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
+      <description>docker部署mysql问题汇总</description>
+    </item>
+    
+    <item>
+      <title>flex宽度失效</title>
+      <link>https://zakudriver.github.io/posts/flex%E5%AE%BD%E5%BA%A6%E5%A4%B1%E6%95%88/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/flex%E5%AE%BD%E5%BA%A6%E5%A4%B1%E6%95%88/</guid>
+      <description>flex布局成员宽度失效</description>
+    </item>
+    
+    <item>
+      <title>canvas-drawImage</title>
+      <link>https://zakudriver.github.io/posts/canvas-drawimage/</link>
+      <pubDate>Sun, 29 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/canvas-drawimage/</guid>
+      <description>canvas drawImage方法</description>
+    </item>
+    
+    <item>
+      <title>nyan</title>
+      <link>https://zakudriver.github.io/posts/nyan/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/nyan/</guid>
+      <description>(=｀ω´=)~</description>
+    </item>
+    
+    <item>
+      <title>Stack</title>
+      <link>https://zakudriver.github.io/posts/stack/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/stack/</guid>
+      <description>c++ #include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std; class Stack { private: vector&amp;lt;int&amp;gt; data; public: void push(int x) { data.push_back(x); } bool isEmpty() { return data.empty(); } int top() { return data.back(); } bool pop() { if (isEmpty()) { return false; } data.pop_back(); return true; } }; int main() { Stack s; s.push(1); s.push(2); s.push(3); for (int i = 0; i &amp;lt; 4; ++i) { if (!s.isEmpty()) { cout &amp;lt;&amp;lt; s.top() &amp;lt;&amp;lt; endl; } cout &amp;lt;&amp;lt; (s.</description>
+    </item>
+    
+    <item>
+      <title>Queue</title>
+      <link>https://zakudriver.github.io/posts/queue/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/queue/</guid>
+      <description>C++ #include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std; typedef int Data; class ArrayQueue { private: vector&amp;lt;Data&amp;gt; data; int p_start; public: ArrayQueue() { p_start = 0; } bool enQueue(int x) { data.push_back(x); return true; } bool deQueue() { if (isEmpty()) { return false; } p_start++; return true; }; int Front() { return data[p_start]; }; bool isEmpty() { return p_start &amp;gt;= data.size(); } }; class CircularQueue { private: vector&amp;lt;Data&amp;gt; data; int head; int tail; int size; public: CircularQueue(int k) { data.</description>
+    </item>
+    
+    <item>
+      <title>浏览器显示emoji</title>
+      <link>https://zakudriver.github.io/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%BE%E7%A4%BAemoji/</guid>
+      <description>浏览器显示emoji需要做的处理</description>
+    </item>
+    
+    <item>
+      <title>interface类型</title>
+      <link>https://zakudriver.github.io/posts/interface%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/interface%E7%B1%BB%E5%9E%8B/</guid>
+      <description>golang interface类型</description>
+    </item>
+    
+    <item>
+      <title>LinkedList</title>
+      <link>https://zakudriver.github.io/posts/linkedlist/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/linkedlist/</guid>
+      <description>C++ #include &amp;lt;iostream&amp;gt;using namespace std; typedef int Data; struct Node { Data data; Node *next; Node(Data d = 0, Node *n = NULL) : data(d), next(n){}; }; class LinkedList { public: LinkedList(int len) : len(len), head(NULL){}; bool is_empty(); Data get(int); void insert(int, Data); void remove(int); void modify(int, Data); void print_all(); private: Node *head; int len; void check_index(int); Node *get_by_index(int); }; void LinkedList::check_index(int index) { if (index &amp;gt; len || index &amp;lt; 0) { printf(&amp;#34;error: 索引越界.</description>
+    </item>
+    
+    <item>
+      <title>文字超出显示省略号</title>
+      <link>https://zakudriver.github.io/posts/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7/</guid>
+      <description>css实现文字超出显示省略号</description>
+    </item>
+    
+    <item>
+      <title>List</title>
+      <link>https://zakudriver.github.io/posts/list/</link>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/list/</guid>
+      <description>#include &amp;lt;iostream&amp;gt;#include &amp;lt;stack&amp;gt;#include &amp;lt;stdlib.h&amp;gt;using namespace std; class List { public: List(int len = 10) : len(len) { used = 0; p = (int *)malloc(sizeof(int) * len); } int len; int used; int *p; bool is_full(); bool is_empty(); void push(int); int get(int); void insert(int, int); void remove(int); void print_all(); private: void check_index(int); }; bool List::is_full() { return len == used; } bool List::is_empty() { return used == 0; } void List::check_index(int index) { if (index &amp;gt; len - 1 || index &amp;lt; 0) { printf(&amp;#34;error: 索引越界.</description>
+    </item>
+    
+    <item>
+      <title>多线程</title>
+      <link>https://zakudriver.github.io/posts/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
+      <description>多线程简介</description>
+    </item>
+    
+    <item>
+      <title>多进程</title>
+      <link>https://zakudriver.github.io/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</guid>
+      <description>多进程简介</description>
+    </item>
+    
+    <item>
+      <title>typescript元编程</title>
+      <link>https://zakudriver.github.io/posts/typescript%E5%85%83%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/typescript%E5%85%83%E7%BC%96%E7%A8%8B/</guid>
+      <description>typescript类型系统居然图灵完备！？</description>
+    </item>
+    
+    <item>
+      <title>clang-format</title>
+      <link>https://zakudriver.github.io/posts/clang-format/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/clang-format/</guid>
+      <description>clang-format格式化工具配置</description>
+    </item>
+    
+    <item>
+      <title>Hello_World</title>
+      <link>https://zakudriver.github.io/posts/hello_world/</link>
+      <pubDate>Sat, 11 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/hello_world/</guid>
+      <description>hello world. ;)</description>
+    </item>
+    
+    <item>
+      <title>myclirc</title>
+      <link>https://zakudriver.github.io/posts/myclirc/</link>
+      <pubDate>Tue, 10 Dec 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/myclirc/</guid>
+      <description>myclirc配置</description>
+    </item>
+    
+    <item>
+      <title>angular自定义双向绑定表单组件</title>
+      <link>https://zakudriver.github.io/posts/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/</guid>
+      <description>angular使用ControlValueAccessor抽象类实现响应式表单组件</description>
+    </item>
+    
+    <item>
+      <title>vimrc</title>
+      <link>https://zakudriver.github.io/posts/vimrc/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/vimrc/</guid>
+      <description>vim配置</description>
+    </item>
+    
+    <item>
+      <title>一个包含 nil 指针的接口不是 nil 接口</title>
+      <link>https://zakudriver.github.io/posts/%E4%B8%80%E4%B8%AA%E5%8C%85%E5%90%AB-nil-%E6%8C%87%E9%92%88%E7%9A%84%E6%8E%A5%E5%8F%A3%E4%B8%8D%E6%98%AF-nil-%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/%E4%B8%80%E4%B8%AA%E5%8C%85%E5%90%AB-nil-%E6%8C%87%E9%92%88%E7%9A%84%E6%8E%A5%E5%8F%A3%E4%B8%8D%E6%98%AF-nil-%E6%8E%A5%E5%8F%A3/</guid>
+      <description>golang 接口值: 一个包含 nil 指针的接口不是 nil 接口.</description>
+    </item>
+    
+    <item>
+      <title>vscode</title>
+      <link>https://zakudriver.github.io/posts/vscode/</link>
+      <pubDate>Sat, 02 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://zakudriver.github.io/posts/vscode/</guid>
+      <description>vscode配置</description>
+    </item>
+    
+  </channel>
+</rss>
