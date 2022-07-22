@@ -153,6 +153,17 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>nyan</h2>
+  </header>
+  <section class="entry-content">
+    <p>#!/usr/bin/env bash  # Print nyan cat # https://github.com/steckel/Git-Nyan-Graph/blob/master/nyan.sh # If you want big animated version: `telnet miku.acm.uiuc.edu` e=&#39;\033&#39; RESET=&#34;$e[0m&#34; BOLD=&#34;$e[1m&#34; CYAN=&#34;$e[0;96m&#34; RED=&#34;$e[0;91m&#34; YELLOW=&#34;$e[0;93m&#34; GREEN=&#34;$e[0;92m&#34; echo if [ $[$RANDOM%2] -eq &#34;0&#34; ]; then echo -en $RED&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;╭━━━━╮&#39;$RESET echo -en $YELLOW&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|::: /\_/\\&#39;$RESET echo -en $GREEN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;|:::( ◕ᴥ◕)&#39;$RESET echo -en $CYAN&#39;`·.,¸,.·*·.&#39; echo -e $RESET$BOLD&#39;u-u━━-u--u&#39;$RESET else echo -en $RED&#39;-_-_-_-_-_-_-_&#39; echo -e $RESET$BOLD&#39;,------,&#39;$RESET echo -en $YELLOW&#39;_-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;| /\_/\\&#39;$RESET echo -en $GREEN&#39;-_-_-_-_-_-_-&#39; echo -e $RESET$BOLD&#39;~|__( ^ ....</p>
+  </section>
+  <footer class="entry-footer">March 14, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
+  <a class="entry-link" aria-label="post link to nyan" href="https://zakudriver.github.io/posts/nyan/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Stack</h2>
   </header>
   <section class="entry-content">
@@ -197,17 +208,6 @@
   </section>
   <footer class="entry-footer">March 9, 2020&nbsp;·&nbsp;11 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to interface类型" href="https://zakudriver.github.io/posts/interface%E7%B1%BB%E5%9E%8B/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>LinkedList</h2>
-  </header>
-  <section class="entry-content">
-    <p>C&#43;&#43; #include &lt;iostream&gt;using namespace std; typedef int Data; struct Node { Data data; Node *next; Node(Data d = 0, Node *n = NULL) : data(d), next(n){}; }; class LinkedList { public: LinkedList(int len) : len(len), head(NULL){}; bool is_empty(); Data get(int); void insert(int, Data); void remove(int); void modify(int, Data); void print_all(); private: Node *head; int len; void check_index(int); Node *get_by_index(int); }; void LinkedList::check_index(int index) { if (index &gt; len || index &lt; 0) { printf(&#34;error: 索引越界....</p>
-  </section>
-  <footer class="entry-footer">March 5, 2020&nbsp;·&nbsp;3 min&nbsp;·&nbsp;zakudriver</footer>
-  <a class="entry-link" aria-label="post link to LinkedList" href="https://zakudriver.github.io/posts/linkedlist/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

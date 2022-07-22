@@ -153,6 +153,17 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>LinkedList</h2>
+  </header>
+  <section class="entry-content">
+    <p>C&#43;&#43; #include &lt;iostream&gt;using namespace std; typedef int Data; struct Node { Data data; Node *next; Node(Data d = 0, Node *n = NULL) : data(d), next(n){}; }; class LinkedList { public: LinkedList(int len) : len(len), head(NULL){}; bool is_empty(); Data get(int); void insert(int, Data); void remove(int); void modify(int, Data); void print_all(); private: Node *head; int len; void check_index(int); Node *get_by_index(int); }; void LinkedList::check_index(int index) { if (index &gt; len || index &lt; 0) { printf(&#34;error: 索引越界....</p>
+  </section>
+  <footer class="entry-footer">March 5, 2020&nbsp;·&nbsp;3 min&nbsp;·&nbsp;zakudriver</footer>
+  <a class="entry-link" aria-label="post link to LinkedList" href="https://zakudriver.github.io/posts/linkedlist/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>文字超出显示省略号</h2>
   </header>
   <section class="entry-content">
@@ -205,17 +216,6 @@ PCB(Proess Control Block) 记录进程信息的数据结构. 便于切回时继�
   </section>
   <footer class="entry-footer">February 29, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to 多进程" href="https://zakudriver.github.io/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>typescript元编程</h2>
-  </header>
-  <section class="entry-content">
-    <p>// 硬编码一个二进制 trie type BinaryTrie = [ [ [ [ [[[[0, 1], [2, 3]], [[4, 5], [6, 7]]], [[[8, 9], [10, 11]], [[12, 13], [14, 15]]]], [[[[16, 17], [18, 19]], [[20, 21], [22, 23]]], [[[24, 25], [26, 27]], [[28, 29], [30, 31]]]] ], [ [[[[32, 33], [34, 35]], [[36, 37], [38, 39]]], [[[40, 41], [42, 43]], [[44, 45], [46, 47]]]], [[[[48, 49], [50, 51]], [[52, 53], [54, 55]]], [[[56, 57], [58, 59]], [[60, 61], [62, 63]]]] ] ], [ [ [[[[64, 65], [66, 67]], [[68, 69], [70, 71]]], [[[72, 73], [74, 75]], [[76, 77], [78, 79]]]], [[[[80, 81], [82, 83]], [[84, 85], [86, 87]]], [[[88, 89], [90, 91]], [[92, 93], [94, 95]]]] ], [ [[[[96, 97], [98, 99]], [[100, 101], [102, 103]]], [[[104, 105], [106, 107]], [[108, 109], [110, 111]]]], [[[[112, 113], [114, 115]], [[116, 117], [118, 119]]], [[[120, 121], [122, 123]], [[124, 125], [126, 127]]]] ] ] ], [ [ [ [[[[128, 129], [130, 131]], [[132, 133], [134, 135]]], [[[136, 137], [138, 139]], [[140, 141], [142, 143]]]], [[[[144, 145], [146, 147]], [[148, 149], [150, 151]]], [[[152, 153], [154, 155]], [[156, 157], [158, 159]]]] ], [ [[[[160, 161], [162, 163]], [[164, 165], [166, 167]]], [[[168, 169], [170, 171]], [[172, 173], [174, 175]]]], [[[[176, 177], [178, 179]], [[180, 181], [182, 183]]], [[[184, 185], [186, 187]], [[188, 189], [190, 191]]]] ] ], [ [ [[[[192, 193], [194, 195]], [[196, 197], [198, 199]]], [[[200, 201], [202, 203]], [[204, 205], [206, 207]]]], [[[[208, 209], [210, 211]], [[212, 213], [214, 215]]], [[[216, 217], [218, 219]], [[220, 221], [222, 223]]]] ], [ [[[[224, 225], [226, 227]], [[228, 229], [230, 231]]], [[[232, 233], [234, 235]], [[236, 237], [238, 239]]]], [[[[240, 241], [242, 243]], [[244, 245], [246, 247]]], [[[248, 249], [250, 251]], [[252, 253], [254, 255]]]] ] ] ] ]; // 数组操作 type Copy&lt;T, S extends any&gt; = { [P in keyof T]: S[P] }; type Unshift&lt;T, A&gt; = ((a: A, ....</p>
-  </section>
-  <footer class="entry-footer">February 27, 2020&nbsp;·&nbsp;7 min&nbsp;·&nbsp;zakudriver</footer>
-  <a class="entry-link" aria-label="post link to typescript元编程" href="https://zakudriver.github.io/posts/typescript%E5%85%83%E7%BC%96%E7%A8%8B/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
