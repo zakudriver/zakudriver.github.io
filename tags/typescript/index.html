@@ -157,7 +157,7 @@ type TFunc = { (x: number): number; (x: number, y: string): string; }; export co
   <section class="entry-content">
     <p>函数参数类型 type TFuncParameterType&lt;T&gt; = T extends (arg: infer P) =&gt; void ? P : string; // e.g function func(arg: string) {} type TParamsType = TFuncParameterType&lt;typeof func&gt;; // string 函数返回值类型 type TFuncReturnType&lt;T&gt; = T extends (arg: any) =&gt; infer P ? P : string; // e.g function func(arg: string): number {} type TReturnType = TFuncReturnType&lt;typeof func&gt;; // number 元祖成员作为键约束 const keys = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;] as const; type TKeysMap = Record&lt;typeof keys[number], string&gt; // KeysMap: { a: string; b: string; c: string; } 数组元素类型 type ArrayElement&lt;T extends readonly unknown[]&gt; = T extends readonly (infer P)[] ?...</p>
   </section>
-  <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;3 min&nbsp;·&nbsp;zakudriver</footer>
+  <footer class="entry-footer">May 21, 2021&nbsp;·&nbsp;4 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to typescript常用的泛型" href="https://zakudriver.github.io/posts/typescript%E5%B8%B8%E7%94%A8%E7%9A%84%E6%B3%9B%E5%9E%8B/"></a>
 </article>
 
@@ -173,7 +173,7 @@ type TFunc = { (x: number): number; (x: number, y: string): string; }; export co
 </article>
     </main>
     <footer class="footer">
-    <span>&copy; 2022 <a href="https://zakudriver.github.io/">谟涅摩绪涅📖</a></span>
+    <span>&copy; 2023 <a href="https://zakudriver.github.io/">谟涅摩绪涅📖</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
