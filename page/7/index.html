@@ -149,6 +149,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>interface类型</h2>
+  </header>
+  <section class="entry-content">
+    <p>Go 语言与鸭子类型的关系  If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck.
+如果某个东西长得像鸭子, 像鸭子一样游泳, 像鸭子一样嘎嘎叫, 那它就可以被看成是一只鸭子.
+在 Go 语言中, 如果类型的方法集完全包含接口的方法集，则可认为该类型实现了该接口.
+ 鸭子类型是一种动态语言的风格, 在这种风格中, 一个对象有效的语义, 不是由继承自特定的类或实现特定的接口, 而是由它&#34;当前方法和属性的集合&#34;决定. Go 作为一种静态语言, 通过接口实现了 鸭子类型, 实际上是 Go 的编译器在其中作了隐匿的转换工作.
+值接收者和指针接收者的区别 package main import &#34;fmt&#34; type Person struct { age int } func (p Person) howOld() int { return p.age } func (p *Person) growUp() { p....</p>
+  </section>
+  <footer class="entry-footer">March 9, 2020&nbsp;·&nbsp;11 min&nbsp;·&nbsp;zakudriver</footer>
+  <a class="entry-link" aria-label="post link to interface类型" href="https://zakudriver.github.io/posts/interface%E7%B1%BB%E5%9E%8B/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>LinkedList</h2>
   </header>
   <section class="entry-content">
@@ -195,23 +210,6 @@ void ThreadCeate(A) { TCB *tcb = malloc(); // 申请内存创建TCB  *stack = ma
   </section>
   <footer class="entry-footer">March 1, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to 多线程" href="https://zakudriver.github.io/posts/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>多进程</h2>
-  </header>
-  <section class="entry-content">
-    <p>进程: 进行中的程序 进行中的程序与磁盘中的静态程序不一样. 进程是描述一个运行中的程序. 进程 = 资源(映射表) &#43; 多个执行指令序列(线程) 进程只能在内核. 要分配资源, 访问文件.
- 有开始, 结束 走走停停(切换) 需要记录  为了充分使用CPU 一次IO操作对应数百万(很多很多)次CPU计算操作. 为了充分合理使用CPU, 需要多个进程交替执行. – [并发]
-多进程是操作系统的核心 操作系统的核心就是记录, 管理, 合理推进多个进程. 使用计算机就是启用多个进程.
-多进程的组织 PCB &#43; 状态 &#43; 队列
-PCB(Proess Control Block) 记录进程信息的数据结构. 便于切回时继续执行.
-状态  就绪态 阻塞态 运行态  就绪态 ——–&gt;&gt; 运行态 \ / \ / 阻塞态
-队列  就绪队列 PCB1 – PCB3 – PCB5 磁盘等待队列 PCB2 – PCB4 – PCB6  多进程的交替 队列 &#43; 调度 &#43; 切换...</p>
-  </section>
-  <footer class="entry-footer">February 29, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
-  <a class="entry-link" aria-label="post link to 多进程" href="https://zakudriver.github.io/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

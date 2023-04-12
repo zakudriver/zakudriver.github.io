@@ -153,6 +153,23 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>多进程</h2>
+  </header>
+  <section class="entry-content">
+    <p>进程: 进行中的程序 进行中的程序与磁盘中的静态程序不一样. 进程是描述一个运行中的程序. 进程 = 资源(映射表) &#43; 多个执行指令序列(线程) 进程只能在内核. 要分配资源, 访问文件.
+ 有开始, 结束 走走停停(切换) 需要记录  为了充分使用CPU 一次IO操作对应数百万(很多很多)次CPU计算操作. 为了充分合理使用CPU, 需要多个进程交替执行. – [并发]
+多进程是操作系统的核心 操作系统的核心就是记录, 管理, 合理推进多个进程. 使用计算机就是启用多个进程.
+多进程的组织 PCB &#43; 状态 &#43; 队列
+PCB(Proess Control Block) 记录进程信息的数据结构. 便于切回时继续执行.
+状态  就绪态 阻塞态 运行态  就绪态 ——–&gt;&gt; 运行态 \ / \ / 阻塞态
+队列  就绪队列 PCB1 – PCB3 – PCB5 磁盘等待队列 PCB2 – PCB4 – PCB6  多进程的交替 队列 &#43; 调度 &#43; 切换...</p>
+  </section>
+  <footer class="entry-footer">February 29, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
+  <a class="entry-link" aria-label="post link to 多进程" href="https://zakudriver.github.io/posts/%E5%A4%9A%E8%BF%9B%E7%A8%8B/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>typescript元编程</h2>
   </header>
   <section class="entry-content">
@@ -199,23 +216,6 @@
   </section>
   <footer class="entry-footer">December 10, 2019&nbsp;·&nbsp;3 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to myclirc" href="https://zakudriver.github.io/posts/myclirc/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>angular自定义双向绑定表单组件</h2>
-  </header>
-  <section class="entry-content">
-    <p>angular的ControlValueAccessor是一个连接表单模型和视图DOM的抽象类接口
-.org-center { margin-left: auto; margin-right: auto; text-align: center; } 使自定义表单组件像原生input一样映射到form表单模型中, 拥有自定义表单组件的form也能使用响应式表单. (也就是使自定义表单组件拥有formControlName属性和ngModel接口.)
- 毕竟响应式表单才是angular的利器.
-ControlValueAccessor export interface ControlValueAccessor { writeValue(obj: any): void; registerOnChange(fn: any): void; registerOnTouched(fn: any): void; setDisabledState?(isDisabled: boolean): void; } writeValue(obj: any): 该方法是接收模版中的ngModel.
-writeValue(value: any): void { this._renderer.setProperty(this._elementRef.nativeElement, &#39;value&#39;, value); } registerOnChange(fn: any): void: 该方法是组件接收到 change 事件的回调, 可以用来通知外部达成双向绑定, 即ngModelChange.
-registerOnChange(fn: (_: any) =&gt; void): void { this._onChange = fn; } registerOnTouched(fn: any): 接收到 touched 事件的回调.
-registerOnTouched(fn: any): void { this....</p>
-  </section>
-  <footer class="entry-footer">July 8, 2019&nbsp;·&nbsp;2 min&nbsp;·&nbsp;zakudriver</footer>
-  <a class="entry-link" aria-label="post link to angular自定义双向绑定表单组件" href="https://zakudriver.github.io/posts/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

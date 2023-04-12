@@ -153,6 +153,23 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>angular自定义双向绑定表单组件</h2>
+  </header>
+  <section class="entry-content">
+    <p>angular的ControlValueAccessor是一个连接表单模型和视图DOM的抽象类接口
+.org-center { margin-left: auto; margin-right: auto; text-align: center; } 使自定义表单组件像原生input一样映射到form表单模型中, 拥有自定义表单组件的form也能使用响应式表单. (也就是使自定义表单组件拥有formControlName属性和ngModel接口.)
+ 毕竟响应式表单才是angular的利器.
+ControlValueAccessor export interface ControlValueAccessor { writeValue(obj: any): void; registerOnChange(fn: any): void; registerOnTouched(fn: any): void; setDisabledState?(isDisabled: boolean): void; } writeValue(obj: any): 该方法是接收模版中的ngModel.
+writeValue(value: any): void { this._renderer.setProperty(this._elementRef.nativeElement, &#39;value&#39;, value); } registerOnChange(fn: any): void: 该方法是组件接收到 change 事件的回调, 可以用来通知外部达成双向绑定, 即ngModelChange.
+registerOnChange(fn: (_: any) =&gt; void): void { this._onChange = fn; } registerOnTouched(fn: any): 接收到 touched 事件的回调.
+registerOnTouched(fn: any): void { this....</p>
+  </section>
+  <footer class="entry-footer">July 8, 2019&nbsp;·&nbsp;2 min&nbsp;·&nbsp;zakudriver</footer>
+  <a class="entry-link" aria-label="post link to angular自定义双向绑定表单组件" href="https://zakudriver.github.io/posts/angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>vimrc</h2>
   </header>
   <section class="entry-content">

@@ -149,6 +149,23 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Elisp中的interactive参数</h2>
+  </header>
+  <section class="entry-content">
+    <p>interactive 参数的含义 若一个函数带有交互模式声明，则它是一个命令函数。即可以通过 M-x(execute-command) 来调用。
+声明格式 (defun kumo-interactive-func () (interactive &#34;code-string&#34;) ;; do something...) 种类  Completion: 提供补全。TAB，SPC 和 RET 完成补全。 Existing: 必须是存在的对象名。不接受无效名称。如果输入无效则不会退出 minibuffer。 Default: 如果未输入则使用默认值。 No I/O: 不读取任何输入。因此不会使用提示符。 Prompt: 放在提示符或\n之前。 Special: 只能放在交互式字符参数前。  含义   接收多个输入以 \n 来分隔。
+  *: 如果当前buffer处于read-only-mode时提示。 [Special]
+  @: 在第一个鼠标事件触发的window调用。[Special]
+  ^: 通过 shift 调用前需要标记区域，没有公共 shift 调用则停止标记。[Special]
+  a: 一个函数定义的符号名。[Existing, Completion, Prompt]
+(defun with-func-arg (arg) (interactive &#34;aEnter a function:&#34;) (funcall arg))   b: buffer名（已存在）。[Existing, Completion, Default, Prompt]...</p>
+  </section>
+  <footer class="entry-footer">July 20, 2021&nbsp;·&nbsp;2 min&nbsp;·&nbsp;zakudriver</footer>
+  <a class="entry-link" aria-label="post link to Elisp中的interactive参数" href="https://zakudriver.github.io/posts/elisp%E4%B8%AD%E7%9A%84interactive%E5%8F%82%E6%95%B0/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>手把手教你读财报</h2>
   </header>
   <section class="entry-content">
@@ -193,24 +210,6 @@
   </section>
   <footer class="entry-footer">August 6, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to H5复制文字到剪切板" href="https://zakudriver.github.io/posts/h5%E5%A4%8D%E5%88%B6%E6%96%87%E5%AD%97%E5%88%B0%E5%89%AA%E5%88%87%E6%9D%BF/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>在博客养一只猫</h2>
-  </header>
-  <section class="entry-content">
-    <p>从今天起这里多了一只白色，高冷的看门喵。视线会一直跟着你的鼠标，鼠标靠近它就可以撸了！
-目前只设定让它在PC出现，在移动端显示有些突兀。
- 养猫攻略  喵喵基于 live2d 绘图技术，在前端使用canvas绘制。
-  使用hexo搭建的站点可以直接使用 hexo-helper-live2d 快速养猫 使用 live2d-widget.js 源码导入  打包源码 # 拉取源码 $ git clone https://github.com/xiazeyu/live2d-widget.js.git # 下载依赖 $ yarn # 打包源码 $ npm run build:prod lib文件夹里就是打包成果。
-在hugo中使用   将打包后的lib路径中的 L2Dwidget.min.js 文件放到hugo根目录的 static/js 目录中。
-  在这儿下载喜欢的 live2d 模型放到hugo根目录的 static/live2d_models 目录中。
-  在当前使用的主题模板中导入和执行以上代码。一般是在 hugo/themes/xx/layouts/partials/script.html 中，这个文件是页面导入的script部分(虽是html文件，但是编辑时不能使用prettier-js格式化，会破坏hugo的模板语法)。
-&lt;script src=&#34;/js/L2Dwidget.min.js&#34;&gt;&lt;/script&gt; &lt;script&gt; /** ​ * The init function ​ * @param {Object} [userConfig] User&#39;s custom config 用户自定义设置 ​ * @param {String} [userConfig....</p>
-  </section>
-  <footer class="entry-footer">July 27, 2020&nbsp;·&nbsp;2 min&nbsp;·&nbsp;zakudriver</footer>
-  <a class="entry-link" aria-label="post link to 在博客养一只猫" href="https://zakudriver.github.io/posts/%E5%9C%A8%E5%8D%9A%E5%AE%A2%E5%85%BB%E4%B8%80%E5%8F%AA%E7%8C%AB/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

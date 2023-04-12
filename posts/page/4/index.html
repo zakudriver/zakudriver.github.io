@@ -153,6 +153,17 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>golang time工具函数</h2>
+  </header>
+  <section class="entry-content">
+    <p>package util-time import ( &#34;strconv&#34; &#34;time&#34; ) // 获取当前的时间 - 字符串 func GetCurrentDate() string { return time.Now().Format(&#34;2006/01/02 15:04:05&#34;) } // 获取当前的时间 - Unix时间戳 func GetCurrentUnix() int64 { return time.Now().Unix() } // 获取当前的时间 - 毫秒级时间戳 func GetCurrentMilliUnix() int64 { return time.Now().UnixNano() / 1000000 } // 获取当前的时间 - 纳秒级时间戳 func GetCurrentNanoUnix() int64 { return time.Now().UnixNano() } func GetCurrentTime() string { var cstSh, _ = time.LoadLocation(&#34;Asia/Shanghai&#34;) t := time.Now().In(cstSh).Format(&#34;2006/01/02/ 15:04:05&#34;) return t } func GetCurrentHour() int { var cstSh, _ = time....</p>
+  </section>
+  <footer class="entry-footer">June 23, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
+  <a class="entry-link" aria-label="post link to golang time工具函数" href="https://zakudriver.github.io/posts/time/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>GDT&amp;LDT</h2>
   </header>
   <section class="entry-content">
@@ -207,17 +218,6 @@ git clone https://github.com/MaskRay/ccls cd ccls   拉取第三方依赖....</p
   </section>
   <footer class="entry-footer">May 29, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
   <a class="entry-link" aria-label="post link to irony-server-install" href="https://zakudriver.github.io/posts/irony-server-install/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>bochsrc</h2>
-  </header>
-  <section class="entry-content">
-    <p>############################################################### # Configuration file for Bochs ############################################################### # how much memory the emulated machine will have megs: 32 # filename of ROM images romimage: file=/usr/local/share/bochs/BIOS-bochs-latest vgaromimage: file=/usr/local/share/bochs/VGABIOS-lgpl-latest # what disk images will be used floppya: 1_44=a.img, status=inserted # choose the boot disk. boot: floppy # where do we send log messages? # log: bochsout.txt # disable the mouse mouse: enabled=0 # enable key mapping, using US layout as default. # keyboard_mapping: enabled=1, map=/usr/local/share/bochs/keymaps/x11-pc-us....</p>
-  </section>
-  <footer class="entry-footer">May 26, 2020&nbsp;·&nbsp;1 min&nbsp;·&nbsp;zakudriver</footer>
-  <a class="entry-link" aria-label="post link to bochsrc" href="https://zakudriver.github.io/posts/bochsrc/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
